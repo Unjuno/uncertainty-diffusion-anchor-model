@@ -120,3 +120,73 @@ U < T - K - R
 ### Meaning
 
 In fixed-bound cases, increasing `R` while the bound is still unreached can shrink the admissible range of `U`. This is stronger than relative dilution.
+
+## Proposition 8: Observation can have non-negative decision value under ideal conditions
+
+Let `S` be a latent state and `y` an observation produced by a re-anchoring action.
+
+Without observation:
+
+```text
+V_no_obs = max_a E[V(a, S)]
+```
+
+With observation:
+
+```text
+V_obs = E_y[max_a E[V(a, S) | y]] - C(obs)
+```
+
+If observation cost is zero and the agent uses the observation optimally, then:
+
+```text
+E_y[max_a E[V(a, S) | y]] >= max_a E[V(a, S)]
+```
+
+### Meaning
+
+Observation can help because it enables conditional action. It can reveal both hidden upside and hidden downside.
+
+## Proposition 9: Observation is favorable when observability value is positive
+
+Define:
+
+```text
+OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
+```
+
+If:
+
+```text
+OV > 0
+```
+
+then the observation or re-anchoring action is favorable.
+
+### Meaning
+
+Observation is not automatically good. It is good only when improved conditional action exceeds observation cost.
+
+## Proposition 10: Fixed-target disbelief can suppress a favorable re-anchor
+
+In the fixed-target core model, suppose the re-anchor value is:
+
+```text
+V_reanchor_core = I_position(a) + B(a) - C(a)
+```
+
+If the agent discounts the fixed target by a subjective relevance weight `π_hat < 1`, perceived value becomes:
+
+```text
+V_reanchor_perceived = π_hat · I_position(a) + B(a) - C(a)
+```
+
+The agent fails to re-anchor despite positive core value when:
+
+```text
+π_hat · I_position(a) + B(a) <= C(a) < I_position(a) + B(a)
+```
+
+### Meaning
+
+This captures fixed-target disbelief: the target is fixed in the model, but the agent discounts it, so a positive re-anchor becomes subjectively unattractive.
