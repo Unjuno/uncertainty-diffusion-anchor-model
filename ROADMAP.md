@@ -327,7 +327,20 @@ Goal: keep future work focused after the stabilization pass.
 - [x] update `AGENTS.md` preferred next tasks
 - [x] update README development notes with stabilization-pass documents
 
-Status: first-pass complete. Remaining work is now mainly safe changelog insertion, paper draft cleanup, optional older diagram rendering, English-stable Japanese sync, optional simulation extensions, and empirical validation only if a concrete study design exists.
+Status: first-pass complete. Remaining work is now mainly safe changelog insertion, optional older diagram rendering, English-stable Japanese sync, optional simulation extensions, and empirical validation only if a concrete study design exists.
+
+## v0.24: Draft cleanup first pass
+
+Goal: prevent downstream drafts from being mistaken for source-of-truth documents.
+
+- [x] add direct source-of-truth disclaimer to `drafts/paper_outline.md`
+- [x] soften paper title and abstract wording from unconditional rationality to conditional rationality
+- [x] add direct source-of-truth disclaimer to `drafts/blog_post_jp.md`
+- [x] add direct source-of-truth disclaimer to `drafts/short_manifesto.md`
+- [x] update `docs/47_remaining_work_register.md`
+- [x] update `AGENTS.md` preferred next tasks
+
+Status: first-pass complete. Drafts now more clearly present the model without defining the model. Full prose-level paper rewrite and citation insertion remain optional future work.
 
 ## v1.0: Stable theory note
 
@@ -336,8 +349,8 @@ Goal: Publish a coherent theory note with definitions, propositions, proofs, exa
 Remaining work:
 
 - safely insert the compact CHANGELOG catch-up entry if the file can be patched without risky full-file replacement;
-- clean paper drafts using `AGENTS.md` and `docs/43_notation_consistency_audit.md` as constraints;
 - optionally render older non-Stage-3 diagrams;
 - expand Japanese examples only after English stabilization;
 - optionally tighten notation for paper format, especially local index roles;
+- optionally perform a full prose-level paper rewrite and citation insertion after source wording is finalized;
 - continue simulation work only as toy demonstration / sanity check unless an empirical study design is defined.
