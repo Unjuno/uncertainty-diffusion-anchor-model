@@ -17,7 +17,7 @@ Possible states:
 ```text
 busy
 neutral
-uncertain
+unclear
 less engaged
 ```
 
@@ -39,6 +39,18 @@ Example:
 No rush. Just checking whether this week still works for you.
 ```
 
+## If you are in this situation, do this now
+
+```text
+1. Write one low-pressure, specific message.
+2. Send it once.
+3. Classify the response pattern: normal / busy / unclear / no reply.
+```
+
+Do not use the message to force the other person to decide.
+
+Use it to make the social state more observable.
+
 ## Observation result
 
 The result separates possible states:
@@ -51,6 +63,15 @@ no reply
 ```
 
 Each result changes the next action.
+
+## Next action map
+
+```text
+normal reply -> continue normally
+busy reply -> wait or reschedule
+unclear reply -> ask one clarifying question later
+no reply -> stop repeated checking and update the state cautiously
+```
 
 ## UDAM interpretation
 
