@@ -1,0 +1,21 @@
+flowchart TD
+    A[Anchor loss] --> B[Uncertainty diffusion]
+    B --> C[Choose small state-informative observation]
+    C --> D{Is observation state-informative?}
+    D -- no --> E[Not a valid re-anchor]
+    D -- yes --> F[Observe result y]
+    F --> G[Update belief p(S | y)]
+    G --> H{Can next action change?}
+    H -- no --> I[Stop observing or act with current plan]
+    H -- yes --> J[Choose conditional action a(y)]
+    J --> K{Repeat observation useful?}
+    K -- yes --> C
+    K -- no --> L{Response supports expansion?}
+    L -- no --> M[Keep scope small or switch probe]
+    L -- yes --> N[Choose expansion factor r_i]
+    N --> O[Next scope s_{i+1} = r_i s_i]
+    O --> P{Adverse boundary risk acceptable?}
+    P -- yes --> Q[Expand scope]
+    P -- no --> R[Reduce r_i or observe sooner]
+    Q --> C
+    R --> C
