@@ -32,11 +32,11 @@ For each item, check:
 | Exploration is useful but costly | multi-armed bandits / exploration-exploitation | verified: direct support | Regret formalizes that exploratory action can have opportunity cost |
 | Geometric expansion can reduce search cost when scale is unknown | exponential search / doubling search | verified: direct / partial support | See `docs/26_literature_verification_exponential_search.md`; direct for ordered or spatial search, partial for UDAM practical expansion |
 | Doubling is always optimal | exponential search / doubling search | not supported | Doubling is a useful default example in some search settings, not a universal rule |
+| Robust rules matter when the offline optimum is unavailable | online algorithms | verified: direct / partial support | See `docs/27_literature_verification_online_algorithms.md`; direct for offline optimum unavailable, partial for UDAM-specific expansion rules |
+| Repeated small cost versus one large decision | ski-rental-type tradeoffs | verified: direct / analogy support | Direct for rent-or-buy under unknown horizon; analogy for broader UDAM applications |
 | Action can be chosen partly to gain information | active inference / epistemic value | to verify | partial; UDAM is narrower |
-| If-result-then-action mapping improves usability | implementation intentions | to verify | likely practical support |
+| If-result-then-action mapping improves usability | implementation intentions | to verify | likely practical support; next priority |
 | Small successful steps can justify gradual expansion | shaping / successive approximations | to verify | partial; be careful outside behavioral context |
-| Robust rules matter when the offline optimum is unavailable | online algorithms | to verify | partial; next priority |
-| Repeated small cost versus one large decision | ski-rental-type tradeoffs | to verify | analogy only unless formalized |
 | Small action after collapse can matter | behavioral activation | to verify | partial; avoid clinical overclaiming |
 
 ## Verified notes
@@ -48,6 +48,7 @@ Current verified notes:
 - `docs/24_literature_verification_sequential_analysis.md`
 - `docs/25_literature_verification_multi_armed_bandits.md`
 - `docs/26_literature_verification_exponential_search.md`
+- `docs/27_literature_verification_online_algorithms.md`
 
 Key result:
 
@@ -58,6 +59,7 @@ Bayesian experimental design -> direct support for utility-guided observation ch
 sequential analysis / stopping rules -> direct support for treating repeated observation as a continue-or-stop problem; partial support for UDAM's MOV_i notation
 multi-armed bandits -> direct support for action-with-feedback and exploration-exploitation tradeoff; partial support for UDAM's practical small-probe framing
 exponential search -> direct support for geometric expansion under unknown scale in structured search domains; partial support for UDAM expansion; no support for universal doubling
+online algorithms -> direct support for unavailable offline optimum and robust-rule framing; partial support for UDAM-specific expansion rules unless a formal cost model is defined
 ```
 
 ## Current caution
@@ -83,6 +85,8 @@ feedback-producing != favorable
 local probe success != global expansion permission
 unknown scale != unknown state
 doubling is not always optimal
+robust != optimal
+competitive ratio != expected utility
 ```
 
 ## Priority
@@ -96,22 +100,22 @@ Bayesian experimental design: verified first pass
 sequential analysis / stopping rules: verified first pass
 multi-armed bandits / exploration-exploitation: verified first pass
 exponential search / doubling strategies: verified first pass
+online algorithms / robust decision rules: verified first pass
 ```
 
 Second priority:
 
 ```text
-online algorithms
 implementation intentions
+active inference
 ```
 
 Third priority:
 
 ```text
-active inference
 behavioral activation
 shaping / successive approximations
-ski-rental-type tradeoffs
+ski-rental-type tradeoffs: verified as direct/analogy under online algorithms
 ```
 
 ## Status
