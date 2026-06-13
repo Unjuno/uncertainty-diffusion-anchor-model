@@ -18,6 +18,7 @@ This directory contains the formal components of the Uncertainty-Diffusion Ancho
 | `timer_three_layer_model.md` | formal timer-specific refinement |
 | `deterministic_event_scope.md` | fixed-target scope of the timer seed model |
 | `controllability_boundary.md` | boundary between actionable uncertainty and uncontrollable external uncertainty |
+| `diffusion_rate_conditions.md` | conditions under which positive uncertainty diffusion is appropriate |
 | `observability_value.md` | formal value of observation, upside/downside uncertainty, and fixed-target disbelief |
 | `diminishing_information_value.md` | declining marginal value of repeated observation and checking boundaries |
 | `upside_uncertainty.md` | favorable-state discovery through re-anchoring |
@@ -37,6 +38,12 @@ Uncertainty diffusion:
 
 ```text
 P_{t+Δt} = P_t + QΔt
+```
+
+Composite diffusion rate:
+
+```text
+Q_total = Q_state + Q_memory + Q_dependency + Q_context
 ```
 
 Action value:
@@ -79,6 +86,14 @@ A compact version:
 absolute uncertainty may increase
 relative influence may decrease
 ```
+
+## Diffusion-rate caution
+
+UDAM should not assume `Q > 0` merely because time passes.
+
+A positive diffusion rate is appropriate when unobserved time can make the agent's belief about the relevant state less reliable through state change, memory decay, dependency change, context loss, or increased sensitivity to position error.
+
+If these do not hold, `Q` may be zero.
 
 ## Fixed-target and controllability caution
 
