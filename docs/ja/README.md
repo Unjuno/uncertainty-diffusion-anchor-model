@@ -12,7 +12,7 @@
 
 ```text
 1. 発想の直感を残す
-2. 中学生でも読める説明にする
+2. 平易な日本語で説明する
 3. 英語版の理論構造と対応させる
 ```
 
@@ -54,8 +54,8 @@ R = そこから再開して新しくわかった部分
 
 ## 読む順番
 
-1. [`00_chugaku_explanation.md`](00_chugaku_explanation.md)  
-   中学生向けの説明。
+1. [`00_plain_explanation.md`](00_plain_explanation.md)  
+   平易な説明。
 2. [`01_timer_model.md`](01_timer_model.md)  
    タイマー問題からの出発点。
 3. [`02_practical_protocol.md`](02_practical_protocol.md)  
@@ -69,7 +69,7 @@ R = そこから再開して新しくわかった部分
 
 | 日本語版 | 英語版 |
 |---|---|
-| `00_chugaku_explanation.md` | `docs/00_overview.md` |
+| `00_plain_explanation.md` | `docs/00_overview.md` |
 | `01_timer_model.md` | `docs/01_timer_model.md` |
 | `02_practical_protocol.md` | `docs/14_practical_reanchor_protocol.md` |
 | `03_failure_cases.md` | `docs/06_failure_cases.md` |
