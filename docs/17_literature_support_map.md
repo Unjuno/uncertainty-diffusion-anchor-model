@@ -17,6 +17,7 @@ For detailed verification notes, see:
 - `docs/24_literature_verification_sequential_analysis.md`
 - `docs/25_literature_verification_multi_armed_bandits.md`
 - `docs/26_literature_verification_exponential_search.md`
+- `docs/27_literature_verification_online_algorithms.md`
 - `notes/literature_verification.md`
 
 ## 1. Value of information
@@ -494,7 +495,8 @@ Nearby literature:
 - online algorithms;
 - competitive analysis;
 - ski-rental-type tradeoffs;
-- robust sequential decision-making.
+- robust sequential decision-making;
+- risk-sensitive online algorithms.
 
 UDAM interpretation:
 
@@ -517,8 +519,44 @@ what expansion factor is not too bad under uncertainty?
 Verification status:
 
 ```text
-to verify
+verified: direct support for unavailable offline optimum and robust-rule framing
+verified: direct support for repeated small cost versus one larger commitment in ski-rental-type problems
+verified: partial support for UDAM-specific expansion rules unless a formal cost model is defined
 ```
+
+Correction:
+
+```text
+competitive ratio != expected utility
+```
+
+Additional correction:
+
+```text
+robust != optimal
+```
+
+Recommended wording:
+
+```text
+Online algorithms support UDAM's robust-rule framing: when future inputs or durations are unknown, the relevant practical question is often how to choose a rule that is not too bad without future knowledge, not how to compute an unavailable offline optimum.
+```
+
+Avoid:
+
+```text
+UDAM gives the optimal expansion factor.
+```
+
+Avoid:
+
+```text
+UDAM's expansion inequality is a competitive ratio.
+```
+
+See:
+
+- `docs/27_literature_verification_online_algorithms.md`
 
 ## 11. What the literature supports
 
@@ -537,10 +575,11 @@ action-with-feedback small probes: verified direct / partial support
 exploration-exploitation as value tradeoff: verified direct support
 geometric expansion under unknown scale: verified direct support in structured search settings
 boundary-risk-constrained expansion: analogy only / UDAM-specific
+robust-rule framing under unavailable future information: verified direct support
+repeated small cost versus one larger commitment: verified direct support in ski-rental-type problems, analogy for UDAM
 actions can be chosen for epistemic value: to verify
 if-then mappings improve action execution: to verify
 small steps can support gradual expansion: to verify
-online rules can be useful when offline optimum is unavailable: to verify
 ```
 
 ## 12. What remains UDAM-specific
@@ -572,15 +611,15 @@ Bayesian experimental design
 sequential analysis / stopping rules
 multi-armed bandits / exploration-exploitation
 exponential search / doubling strategies
+online algorithms / robust decision rules
 ```
 
 Priority remaining sources:
 
 ```text
-online algorithms
 implementation intentions
 active inference
 successive approximations
 behavioral activation
-ski-rental-type tradeoffs
+ski-rental-type tradeoffs: verified as direct/analogy under online algorithms
 ```
