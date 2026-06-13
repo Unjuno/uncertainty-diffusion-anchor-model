@@ -1,8 +1,14 @@
 # Uncertainty-Diffusion Anchor Model
 
-**Uncertainty-Diffusion Anchor Model**, or **UDAM**, is a theoretical model describing how uncertainty expands when an anchor is lost, and how small informative actions can re-anchor an agent's belief state.
+**Uncertainty-Diffusion Anchor Model**, or **UDAM**, is a timer-derived practical synthesis describing how uncertainty expands when an anchor is lost, and how small informative actions can re-anchor an agent's belief state.
 
 日本語名：**不確実性拡散アンカーモデル**
+
+UDAM is not proposed as a replacement for existing decision theory. Its value is in organizing existing ideas around a simple timer-derived structure:
+
+```text
+τ = K + U + R
+```
 
 ## One-sentence summary
 
@@ -19,6 +25,18 @@ A person is counting toward a fixed upper time bound. They count accurately for 
 The lost interval remains uncertain. However, the newly counted interval is not meaningless. It becomes a new anchor.
 
 This simple structure generalizes to learning, work recovery, health tracking, relationship uncertainty, and life strategy after failure.
+
+The distinctive framing is not:
+
+```text
+small action is always good
+```
+
+but:
+
+```text
+lost anchor does not imply future anchor invalidation
+```
 
 ## If you want to use it now
 
@@ -165,7 +183,8 @@ The FAQ covers:
 - why uncontrollable event-occurrence uncertainty is excluded;
 - how high-stakes examples should be interpreted;
 - why re-anchoring does not always reduce absolute uncertainty;
-- how observability explains happy miscalculation, false comfort, and fixed-target disbelief.
+- how observability explains happy miscalculation, false comfort, and fixed-target disbelief;
+- why doubling is a possible default, not a universal optimum.
 
 ## General model
 
@@ -238,6 +257,21 @@ belief dynamics: P_t changes
 If uncertainty diffuses in the absence of anchors, then low-cost informative actions can be advantageous because they reduce or constrain uncertainty growth, reveal hidden upside, reveal hidden downside early, or enable better conditional action.
 
 This does **not** justify arbitrary action. It supports actions that return information, improve the state, or both, at sufficiently low cost.
+
+## Novelty position
+
+UDAM should not be read as a wholly new mathematical theory of uncertainty.
+
+A safer position is:
+
+> UDAM is a timer-derived practical synthesis of belief uncertainty, re-anchoring, observability value, conditional action, and boundary-risk-constrained expansion after anchor loss.
+
+Its distinctive contribution is the organizing metaphor and decomposition:
+
+```text
+partial uncertainty does not imply total invalidation
+τ = K + U + R
+```
 
 ## Repository map
 
