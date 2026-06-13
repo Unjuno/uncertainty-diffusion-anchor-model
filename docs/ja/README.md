@@ -4,6 +4,32 @@
 
 英語版と別リポジトリに分けず、同じリポジトリ内で管理します。
 
+## Source-of-truth status
+
+現時点では、英語版 Markdown が source of truth です。
+
+日本語版は下流の説明レイヤーであり、英語版より強い主張を追加しません。
+
+特に、次の主張は避けます。
+
+```text
+UDAM は証明済み
+UDAM は実証済み
+UDAM はシミュレーションで確認済み
+UDAM は既存の意思決定理論を置き換える
+UDAM は治療法である
+```
+
+英語版の編集・安定化方針は、主に次を優先します。
+
+```text
+AGENTS.md
+docs/33_project_note_consolidation.md
+docs/43_notation_consistency_audit.md
+docs/45_publication_readiness_audit.md
+docs/47_remaining_work_register.md
+```
+
 ## 目的
 
 日本語版の目的は、英語版の完全な直訳ではありません。
