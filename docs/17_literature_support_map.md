@@ -19,6 +19,7 @@ For detailed verification notes, see:
 - `docs/26_literature_verification_exponential_search.md`
 - `docs/27_literature_verification_online_algorithms.md`
 - `docs/28_literature_verification_implementation_intentions.md`
+- `docs/29_literature_verification_active_inference.md`
 - `notes/literature_verification.md`
 
 ## 1. Value of information
@@ -323,21 +324,62 @@ Nearby literature:
 - active inference;
 - epistemic value;
 - expected free energy;
-- information-seeking action.
+- information-seeking action;
+- Bayesian optimal design under expected free energy.
 
-UDAM is narrower than active inference.
-
-It focuses on:
+UDAM expression:
 
 ```text
-anchor loss -> small state-informative observation -> conditional action
+V(a) = I(a) + B(a) - C(a)
+```
+
+Interpretation:
+
+```text
+a small action can be selected partly because it produces information that improves later belief or action
 ```
 
 Verification status:
 
 ```text
-to verify
+verified: direct support for epistemic action and information-seeking policy selection
+verified: partial support for UDAM's practical I(a) term
+verified: not support for treating I(a) as expected free energy without formal mapping
 ```
+
+Correction:
+
+```text
+I(a) != expected free energy unless formally mapped
+```
+
+Additional correction:
+
+```text
+epistemic value != automatic favorability
+```
+
+Recommended wording:
+
+```text
+Active inference supports UDAM's epistemic-action layer: actions can be selected partly because they are expected to reveal information that improves later belief or action.
+```
+
+Avoid:
+
+```text
+I(a) is expected free energy.
+```
+
+Avoid:
+
+```text
+UDAM is active inference.
+```
+
+See:
+
+- `docs/29_literature_verification_active_inference.md`
 
 ## 7. Implementation intentions
 
@@ -617,7 +659,8 @@ robust-rule framing under unavailable future information: verified direct suppor
 repeated small cost versus one larger commitment: verified direct support in ski-rental-type problems, analogy for UDAM
 if-result-then-action execution mapping: verified direct support
 concrete cue and feasible response requirements: verified direct support
-actions can be chosen for epistemic value: to verify
+epistemic action and information-seeking policy selection: verified direct support
+I(a) as active-inference expected free energy: not supported without formal mapping
 small steps can support gradual expansion: to verify
 ```
 
@@ -652,13 +695,13 @@ multi-armed bandits / exploration-exploitation
 exponential search / doubling strategies
 online algorithms / robust decision rules
 implementation intentions / if-then planning
+active inference / epistemic value
 ```
 
 Priority remaining sources:
 
 ```text
-active inference
-successive approximations
 behavioral activation
+successive approximations
 ski-rental-type tradeoffs: verified as direct/analogy under online algorithms
 ```
