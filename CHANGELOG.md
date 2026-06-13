@@ -1,5 +1,42 @@
 # Changelog
 
+## 0.7.9 - Bayesian experimental design literature verification
+
+Continued Stage 2 literature verification with Bayesian experimental design.
+
+Added:
+
+- `docs/23_literature_verification_bayesian_experimental_design.md`
+
+Changed:
+
+- `notes/literature_verification.md` now marks Bayesian experimental design as verified first-pass support for utility-guided observation choice and prior-posterior updating.
+- `docs/17_literature_support_map.md` now records Bayesian experimental design as verified direct support for observation selection, direct support for prior-posterior updating, and partial-to-direct support for conditional action when utility is decision-relevant.
+- ROADMAP now records Bayesian experimental design as part of the active Stage 2 verification sequence.
+
+Core result:
+
+```text
+Bayesian experimental design -> direct support for utility-guided observation choice
+Bayesian experimental design -> direct support for prior-observation-posterior updating
+Bayesian experimental design -> partial to direct support for conditional action when utility is decision-relevant
+```
+
+Required wording corrections:
+
+```text
+Bayesian experimental design supports UDAM components, not the whole timer-derived synthesis
+state-informative != favorable
+valid re-anchor framing remains UDAM-specific
+MOV_i still needs sequential-analysis / stopping-rule verification
+```
+
+Status:
+
+- Stage 2 has verified one more literature area.
+- The next literature check should cover sequential analysis / stopping rules.
+- Japanese expansion remains deferred until English structure stabilizes.
+
 ## 0.7.8 - Initial literature verification pass
 
 Started Stage 2 literature verification with value of information and Blackwell informativeness.
