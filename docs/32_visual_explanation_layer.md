@@ -74,6 +74,54 @@ It summarizes the full flow as one page:
 10. Never infer global safety from local success alone.
 ```
 
+## Second visual artifact
+
+The second Stage 3 diagram is:
+
+```text
+assets/diagrams/anchor_reanchor_timeline.mmd
+```
+
+It is intended to make the timer seed model visible:
+
+```text
+tau = K + U + R
+```
+
+The diagram separates:
+
+```text
+K: known interval before anchor loss
+U: unknown interval after anchor loss
+R: re-anchored interval after valid new observation
+```
+
+Its main visual claim is:
+
+```text
+U being unknown does not automatically invalidate R.
+```
+
+The diagram should preserve three warnings:
+
+```text
+do not erase K
+do not pretend U is known
+do not invalidate R merely because U is unknown
+```
+
+This diagram supports the core UDAM proposition:
+
+```text
+partial uncertainty does not imply total invalidation
+```
+
+and the practical re-anchor rule:
+
+```text
+future anchor validity must be checked locally, not globally rejected because of past anchor loss
+```
+
 ## Diagram inventory for Stage 3
 
 Planned Stage 3 visual set:
@@ -81,7 +129,7 @@ Planned Stage 3 visual set:
 | Diagram | Purpose | Status |
 |---|---|---:|
 | `one_page_udam_flow.mmd` | compact full flow from anchor loss to risk-constrained expansion | added |
-| anchor-loss-to-reanchor timeline | show `K + U + R` visually | planned |
+| `anchor_reanchor_timeline.mmd` | show `K + U + R` and why unknown `U` does not erase valid `R` | added |
 | observation-value decision diagram | show `OV > 0` and action change | planned |
 | expansion-with-boundary-risk diagram | show why expansion is not automatic doubling | planned |
 | literature-support map figure | show which components are directly supported, partial, analogy-only, unsupported | planned |
@@ -93,6 +141,7 @@ Recommended reader order after Stage 3 begins:
 ```text
 README
 -> one-page UDAM flow diagram
+-> anchor-reanchor timeline
 -> failure decision tree
 -> logical synthesis review
 -> literature support map
@@ -128,11 +177,40 @@ More information is always better
 UDAM proves optimal action
 ```
 
+## Timeline diagram text
+
+The timeline diagram should keep the timer seed model visually simple.
+
+Preferred node labels:
+
+```text
+Known interval K
+Anchor lost
+Unknown interval U
+Re-anchored interval R
+Current position tau
+tau = K + U + R
+Do not invalidate R because U is unknown
+```
+
+Avoid node labels such as:
+
+```text
+U means everything is invalid
+R fixes all uncertainty
+Past anchor loss proves future observations are useless
+```
+
 ## Status
 
 Stage 3 has started.
 
-The current visual work adds the first one-page flow source.
+The current visual work adds:
+
+```text
+assets/diagrams/one_page_udam_flow.mmd
+assets/diagrams/anchor_reanchor_timeline.mmd
+```
 
 Rendered figures can be added later under:
 
