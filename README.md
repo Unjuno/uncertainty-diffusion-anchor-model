@@ -278,8 +278,9 @@ English-first practical reading order:
 27. [`docs/35_overview_consolidation_audit.md`](docs/35_overview_consolidation_audit.md)
 28. [`docs/36_literature_claims_routing_audit.md`](docs/36_literature_claims_routing_audit.md)
 29. [`docs/37_formal_claims_routing_audit.md`](docs/37_formal_claims_routing_audit.md)
-30. [`docs/39_simulation_sanity_checks.md`](docs/39_simulation_sanity_checks.md)
-31. [`simulations/README.md`](simulations/README.md)
+30. [`docs/38_visual_claims_routing_audit.md`](docs/38_visual_claims_routing_audit.md)
+31. [`docs/39_simulation_sanity_checks.md`](docs/39_simulation_sanity_checks.md)
+32. [`simulations/README.md`](simulations/README.md)
 
 Japanese documentation, to be synchronized after English stabilization:
 
@@ -318,6 +319,10 @@ For formal-claims routing rules, see:
 
 - [`docs/37_formal_claims_routing_audit.md`](docs/37_formal_claims_routing_audit.md)
 
+For visual-claims routing rules, see:
+
+- [`docs/38_visual_claims_routing_audit.md`](docs/38_visual_claims_routing_audit.md)
+
 For toy simulation sanity checks, see:
 
 - [`docs/39_simulation_sanity_checks.md`](docs/39_simulation_sanity_checks.md)
@@ -330,6 +335,7 @@ For toy simulation sanity checks, see:
 - [`docs/35_overview_consolidation_audit.md`](docs/35_overview_consolidation_audit.md): first-pass audit of overview duplication and conceptual-boundary role.
 - [`docs/36_literature_claims_routing_audit.md`](docs/36_literature_claims_routing_audit.md): routing rules for literature claims and verification status.
 - [`docs/37_formal_claims_routing_audit.md`](docs/37_formal_claims_routing_audit.md): routing rules for variables, propositions, proofs, counterexamples, and formal refinement.
+- [`docs/38_visual_claims_routing_audit.md`](docs/38_visual_claims_routing_audit.md): routing rules for diagrams, rendered figures, and visual summaries.
 - [`docs/39_simulation_sanity_checks.md`](docs/39_simulation_sanity_checks.md): first-pass toy simulation sanity-check summary.
 - [`simulations/README.md`](simulations/README.md): reproducible toy simulation scripts and result files.
 - [`notes/literature_verification.md`](notes/literature_verification.md): checklist for verifying related-work claims before treating them as citations.
@@ -350,7 +356,7 @@ failure boundaries: strong
 literature verification: first-pass complete
 visual explanation: first-pass Mermaid source set complete; Stage 3 SVG figures available
 simulation sanity checks: first toy set recorded; not empirical validation
-project-note consolidation: formal-claims routing audit complete as first pass
+project-note consolidation: visual-claims routing audit complete as first pass
 Japanese layer: minimal, deferred for later sync
 ```
 
