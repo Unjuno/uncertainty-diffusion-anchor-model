@@ -78,9 +78,9 @@ This does **not** justify arbitrary action. It supports actions that return info
 | Path | Role |
 |---|---|
 | `docs/` | readable theory explanation |
-| `theory/` | definitions, assumptions, axioms, propositions, proofs, counterexamples |
+| `theory/` | definitions, assumptions, axioms, propositions, proofs, counterexamples, consistency review |
 | `examples/` | structured applications |
-| `notes/` | origin notes, terminology, research notes |
+| `notes/` | origin notes, terminology, research notes, chat synthesis |
 | `assets/` | diagrams and figures |
 | `drafts/` | paper, blog, and manifesto drafts |
 
@@ -96,6 +96,11 @@ This does **not** justify arbitrary action. It supports actions that return info
 8. [`docs/07_applications.md`](docs/07_applications.md)
 9. [`docs/08_related_work.md`](docs/08_related_work.md)
 10. [`docs/09_open_questions.md`](docs/09_open_questions.md)
+
+## Development notes
+
+- [`notes/chat_content_synthesis.md`](notes/chat_content_synthesis.md): organized synthesis of the original discussion.
+- [`theory/consistency_review.md`](theory/consistency_review.md): known corrections, open issues, and consistency checks.
 
 ## Applications
 
@@ -129,6 +134,7 @@ This repository is currently a theory repository. The first goal is not simulati
 5. counterexamples
 6. applications
 7. related work
+8. consistency review
 
 ## License
 
