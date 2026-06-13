@@ -96,6 +96,7 @@ This does **not** justify arbitrary action. It supports actions that return info
 8. [`docs/07_applications.md`](docs/07_applications.md)
 9. [`docs/08_related_work.md`](docs/08_related_work.md)
 10. [`docs/09_open_questions.md`](docs/09_open_questions.md)
+11. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
 
 ## Development notes
 
@@ -135,6 +136,7 @@ This repository is currently a theory repository. The first goal is not simulati
 6. applications
 7. related work
 8. consistency review
+9. formal refinement
 
 ## License
 
