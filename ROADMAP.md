@@ -220,8 +220,9 @@ Goal: move from theory construction to evidence, clarity, and verification.
 - [x] continue Stage 2 literature verification with Bayesian experimental design
 - [x] continue Stage 2 literature verification with sequential analysis and stopping rules
 - [x] continue Stage 2 literature verification with multi-armed bandits and exploration-exploitation
+- [x] continue Stage 2 literature verification with exponential search and doubling strategies
 
-Status: active strategic refinement layer. Stage 1 has a compact failure diagnostic tree. Stage 2 now has first-pass verification for value of information, Blackwell informativeness, Bayesian experimental design, sequential analysis / stopping rules, and multi-armed bandits / exploration-exploitation. Japanese expansion is deferred until the English version stabilizes.
+Status: active strategic refinement layer. Stage 1 has a compact failure diagnostic tree. Stage 2 now has first-pass verification for value of information, Blackwell informativeness, Bayesian experimental design, sequential analysis / stopping rules, multi-armed bandits / exploration-exploitation, and exponential search / doubling strategies. Japanese expansion is deferred until the English version stabilizes.
 
 ## v1.0: Stable theory note
 
@@ -231,7 +232,7 @@ Remaining work:
 
 - refine definitions;
 - add rendered figures;
-- continue related-work verification with exponential search and online algorithms;
+- continue related-work verification with online algorithms and implementation intentions;
 - expand Japanese examples only after English stabilization;
 - audit notation consistency across timer, action-value, observability, and expansion layers;
 - decide whether contraction needs a separate rule from expansion;
