@@ -1,5 +1,43 @@
 # Changelog
 
+## 0.7.11 - Multi-armed bandit literature verification
+
+Continued Stage 2 literature verification with multi-armed bandits and exploration-exploitation.
+
+Added:
+
+- `docs/25_literature_verification_multi_armed_bandits.md`
+
+Changed:
+
+- `notes/literature_verification.md` now marks multi-armed bandits / exploration-exploitation as verified first-pass support for action-with-feedback and exploration-exploitation tradeoff.
+- `docs/17_literature_support_map.md` now records bandit theory as direct support for the action-with-feedback structure, direct support for exploration as a costly value tradeoff, and partial support for UDAM's practical small-probe framing.
+- ROADMAP now records multi-armed bandits / exploration-exploitation as part of the active Stage 2 verification sequence.
+
+Core result:
+
+```text
+multi-armed bandits -> direct support for action-with-feedback
+exploration-exploitation -> direct support for learning/action tradeoff
+regret analysis -> direct support that exploration is costly, not automatically favorable
+```
+
+Required wording corrections:
+
+```text
+small != useful
+feedback-producing != favorable
+local probe success != global expansion permission
+UDAM is not a bandit algorithm
+bandit theory supports one component, not the whole timer-derived UDAM synthesis
+```
+
+Status:
+
+- Stage 2 has verified one more literature area.
+- The next literature check should cover exponential search / doubling strategies.
+- Japanese expansion remains deferred until English structure stabilizes.
+
 ## 0.7.10 - Sequential analysis literature verification
 
 Continued Stage 2 literature verification with sequential analysis and stopping rules.
