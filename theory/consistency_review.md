@@ -64,7 +64,7 @@ P_{after action} < P_{before action}
 
 The latter may hold for strong observations, but it should not be assumed universally.
 
-## Issue 2a: Timer-specific dilution rather than absolute reduction
+## Issue 2a: Timer-specific dilution even under increasing absolute uncertainty
 
 Status: Fixed as refinement.
 
@@ -82,7 +82,22 @@ Var(τ | K, R) = Var(U)
 
 Therefore, restarting the count does not necessarily reduce absolute variance.
 
-However, the uncertainty is localized in `U`, while known time accumulates in `R`.
+A stricter version also allows absolute uncertainty to increase:
+
+```text
+Var(U_{t+Δt}) = Var(U_t) + Q_U Δt
+```
+
+when:
+
+```text
+Q_U > 0
+Δt > 0
+```
+
+So the most precise timer-specific claim is:
+
+> Absolute uncertainty in `U` may remain or increase, while the relative influence of `U` can still decrease if the total reference scale grows faster than the uncertainty scale.
 
 A relative uncertainty ratio can be defined as:
 
@@ -96,15 +111,11 @@ Since:
 E[τ] = K + E[U] + R
 ```
 
-increasing `R` reduces `ρ` when `Var(U)` and `E[U]` are fixed.
+`ρ` can decrease as `R` increases when `sqrt(Var(U))` grows more slowly than `E[τ]`.
 
-Thus the timer-specific claim is:
+Fixed-bound case:
 
-> Re-anchoring dilutes the relative influence of the unknown interval by adding new known interval.
-
-Deadline case:
-
-If a fixed deadline `T` exists and the event has not occurred, then:
+If a fixed upper time bound `T` exists and the bound has not been reached, then:
 
 ```text
 K + U + R < T
@@ -269,6 +280,6 @@ V(a) = I(a) + B(a) - C(a)
 
 The main correction made during review was the timer-specific unit error for `QΔt`.
 
-The main conceptual refinement is that timer re-anchoring often produces relative uncertainty dilution rather than absolute uncertainty reduction.
+The main conceptual refinement is that timer re-anchoring can produce decreasing relative influence even when absolute uncertainty remains or increases.
 
 The main unresolved theoretical decision is whether `P_t` remains variance/covariance or becomes a more general uncertainty functional.
