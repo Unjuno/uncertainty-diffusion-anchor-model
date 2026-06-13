@@ -14,7 +14,7 @@ When uncertainty diffuses over time, low-cost informative actions can be rationa
 
 The model begins with a timer example.
 
-A person is counting toward a fixed deadline. They count accurately for a while, lose track during an interruption, and then start counting again.
+A person is counting toward a fixed upper time bound. They count accurately for a while, lose track during an interruption, and then start counting again.
 
 The lost interval remains uncertain. However, the newly counted interval is not meaningless. It becomes a new anchor.
 
@@ -36,6 +36,12 @@ where:
 The central point is:
 
 > Losing the anchor does not invalidate all future measurements. It only creates uncertainty in the lost interval.
+
+Timer re-anchoring should be read in three layers:
+
+1. absolute uncertainty in `U` may remain;
+2. relative uncertainty can be diluted as `R` grows;
+3. a fixed upper time bound can constrain the possible range of `U`.
 
 ## General model
 
@@ -88,20 +94,22 @@ This does **not** justify arbitrary action. It supports actions that return info
 
 1. [`docs/00_overview.md`](docs/00_overview.md)
 2. [`docs/01_timer_model.md`](docs/01_timer_model.md)
-3. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
-4. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
-5. [`docs/04_action_value.md`](docs/04_action_value.md)
-6. [`docs/05_propositions.md`](docs/05_propositions.md)
-7. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
-8. [`docs/07_applications.md`](docs/07_applications.md)
-9. [`docs/08_related_work.md`](docs/08_related_work.md)
-10. [`docs/09_open_questions.md`](docs/09_open_questions.md)
-11. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
+3. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
+4. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
+5. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
+6. [`docs/04_action_value.md`](docs/04_action_value.md)
+7. [`docs/05_propositions.md`](docs/05_propositions.md)
+8. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
+9. [`docs/07_applications.md`](docs/07_applications.md)
+10. [`docs/08_related_work.md`](docs/08_related_work.md)
+11. [`docs/09_open_questions.md`](docs/09_open_questions.md)
+12. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
 
 ## Development notes
 
 - [`notes/chat_content_synthesis.md`](notes/chat_content_synthesis.md): organized synthesis of the original discussion.
 - [`theory/consistency_review.md`](theory/consistency_review.md): known corrections, open issues, and consistency checks.
+- [`theory/timer_three_layer_model.md`](theory/timer_three_layer_model.md): formal timer-specific refinement.
 
 ## Applications
 
