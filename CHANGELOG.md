@@ -1,5 +1,43 @@
 # Changelog
 
+## 0.7.17 - Shaping and successive approximations literature verification
+
+Completed the current Stage 2 first-pass literature verification sequence with shaping and successive approximations.
+
+Added:
+
+- `docs/31_literature_verification_shaping_successive_approximations.md`
+
+Changed:
+
+- `notes/literature_verification.md` now marks shaping / successive approximations as verified first-pass partial support for gradual progression after successful intermediate steps.
+- `docs/17_literature_support_map.md` now records shaping as partial support for gradual progression, analogy-only support from reinforcement-learning reward shaping, and no support for treating reinforcement as state-informativeness or boundary-risk permission.
+- ROADMAP now records Stage 2 first-pass verification as complete enough to move to Stage 3 visual explanation, and adds a v0.16 visual explanation layer.
+
+Core result:
+
+```text
+shaping / successive approximations -> partial support for gradual progression after successful intermediate steps
+reward shaping -> analogy only unless a formal reinforcement-learning model is specified
+shaping -> not support for valid re-anchor conditions, automatic expansion, or boundary-risk permission
+```
+
+Required wording corrections:
+
+```text
+reinforcement != state-informativeness
+successive approximation != boundary-risk permission
+local success != global validation
+reward shaping != UDAM expansion
+shaping supports one component, not the whole timer-derived UDAM synthesis
+```
+
+Status:
+
+- Stage 2 first-pass literature verification is complete enough to proceed.
+- The next project stage should be Stage 3 visual explanation.
+- Japanese expansion remains deferred until English structure stabilizes.
+
 ## 0.7.16 - Behavioral activation literature verification
 
 Continued Stage 2 literature verification with behavioral activation.
