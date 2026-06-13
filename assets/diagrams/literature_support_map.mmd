@@ -1,0 +1,56 @@
+flowchart TD
+    A[UDAM synthesis] --> B[Direct support]
+    A --> C[Partial support]
+    A --> D[Analogy only]
+    A --> E[Not supported / avoid]
+    A --> F[UDAM-specific synthesis]
+
+    B --> B1[Value of information: OV > 0]
+    B --> B2[Bayesian experimental design: utility-guided observation]
+    B --> B3[Sequential analysis: continue-or-stop checks]
+    B --> B4[Implementation intentions: if-result-then-action mapping]
+
+    C --> C1[Blackwell informativeness: informative signals and decisions]
+    C --> C2[Bandits: action with feedback]
+    C --> C3[Active inference: epistemic action]
+    C --> C4[Behavioral activation: structured small action]
+    C --> C5[Shaping: gradual progression]
+    C --> C6[Online algorithms: robust rule framing]
+    C --> C7[Exponential search: geometric scale discovery]
+
+    D --> D1[Ski-rental tradeoff outside formal model]
+    D --> D2[Reward shaping without formal MDP]
+    D --> D3[Boundary-risk-constrained expansion analogies]
+
+    E --> E1[UDAM is proven by one literature]
+    E --> E2[Any small action is useful]
+    E --> E3[State-informative means favorable]
+    E --> E4[Doubling is always optimal]
+    E --> E5[I(a) equals expected free energy]
+    E --> E6[UDAM is therapy]
+
+    F --> F1[tau = K + U + R timer seed]
+    F --> F2[Anchor loss does not invalidate future anchors]
+    F --> F3[Valid local re-anchor after model collapse]
+    F --> F4[Practical synthesis of observation, action, cadence, and expansion]
+    F --> F5[Boundary-risk inequality as UDAM notation]
+
+    F --> G[Safe positioning]
+    B --> G
+    C --> G
+    D --> G
+    E --> G
+
+    G[Component support does not prove full synthesis]
+
+    classDef direct fill:#d1e7dd,stroke:#0f5132,color:#222;
+    classDef partial fill:#cff4fc,stroke:#055160,color:#222;
+    classDef analogy fill:#fff3cd,stroke:#b58100,color:#222;
+    classDef avoid fill:#f8d7da,stroke:#842029,color:#222;
+    classDef specific fill:#e2e3e5,stroke:#41464b,color:#222;
+
+    class B,B1,B2,B3,B4 direct;
+    class C,C1,C2,C3,C4,C5,C6,C7 partial;
+    class D,D1,D2,D3 analogy;
+    class E,E1,E2,E3,E4,E5,E6 avoid;
+    class F,F1,F2,F3,F4,F5,G specific;
