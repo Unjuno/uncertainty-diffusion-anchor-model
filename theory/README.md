@@ -18,6 +18,8 @@ This directory contains the formal components of the Uncertainty-Diffusion Ancho
 | `timer_three_layer_model.md` | formal timer-specific refinement |
 | `deterministic_event_scope.md` | fixed-target scope of the timer seed model |
 | `controllability_boundary.md` | boundary between actionable uncertainty and uncontrollable external uncertainty |
+| `valid_reanchor_condition.md` | condition that a re-anchor must be state-informative |
+| `conditional_action_switch.md` | information-action structure where observation changes the next action |
 | `diffusion_rate_conditions.md` | conditions under which positive uncertainty diffusion is appropriate |
 | `uncertainty_representation.md` | decision to keep `P_t` as variance/covariance in core and reserve `𝓤_t` for extension |
 | `observability_value.md` | formal value of observation, upside/downside uncertainty, and fixed-target disbelief |
@@ -51,6 +53,24 @@ Future uncertainty-functional extension:
 
 ```text
 𝓤_t = 𝓤(p(S_t | D_t))
+```
+
+Valid re-anchor condition:
+
+```text
+P(y | S) != P(y)
+```
+
+Posterior-change condition:
+
+```text
+P(S | y) != P(S)
+```
+
+Conditional action switch:
+
+```text
+a(y) != a_0
 ```
 
 Uncertainty diffusion:
@@ -104,6 +124,26 @@ A compact version:
 ```text
 absolute uncertainty may increase
 relative influence may decrease
+```
+
+## Valid re-anchor caution
+
+UDAM should not say:
+
+```text
+any small action is useful
+```
+
+It should say:
+
+```text
+small state-informative observation can be useful
+```
+
+The timer `R` is valid because it is part of the elapsed-position decomposition:
+
+```text
+τ = K + U + R
 ```
 
 ## Diffusion-rate caution
