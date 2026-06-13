@@ -1,5 +1,38 @@
 # Changelog
 
+## 0.7.6 - Failure decision tree
+
+Added a compact diagnostic tree for determining whether UDAM applies, weakens, or fails in a given situation.
+
+Added:
+
+- `docs/21_failure_decision_tree.md`
+- `assets/diagrams/failure_decision_tree.mmd`
+
+Changed:
+
+- `docs/06_failure_cases.md` now links to the failure decision tree.
+- `assets/diagrams/README.md` now lists the failure decision tree diagram.
+- ROADMAP now marks the Stage 1 failure diagnostic tree as complete.
+
+Core diagnostic sequence:
+
+```text
+name the state
+check target scope
+check actionability
+check state-informativeness
+check conditional action change
+check value versus cost
+check repeated-observation marginal value
+check expansion value and boundary risk
+avoid local-to-global overreach
+```
+
+Status:
+
+- Stage 1 now has a practical decision tree, not only a list of failure cases.
+
 ## 0.7.5 - Five-stage refinement roadmap
 
 Added a strategic roadmap for continuing the project after the core theory stabilized.
