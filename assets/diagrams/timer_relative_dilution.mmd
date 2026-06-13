@@ -1,23 +1,31 @@
 flowchart LR
     U[Unknown interval U] --> ABS[Absolute uncertainty Var(U)]
-    ABS --> SAME[Var(U) may remain unchanged]
+    ABS --> INCABS[Var(U) may remain or increase]
 
     K[Known interval K] --> TOTAL[Expected elapsed time E[tau]]
     U --> TOTAL
     R[Re-anchored known interval R] --> TOTAL
 
-    TOTAL --> RATIO["rho(R) = sqrt(Var(U)) / E[tau]"]
-    SAME --> RATIO
-    R --> INC[As R increases, E[tau] increases]
-    INC --> DILUTE[Relative uncertainty rho decreases]
+    INCABS --> SCALE[Uncertainty scale sqrt(Var(U))]
+    TOTAL --> REF[Reference scale E[tau]]
 
-    DILUTE --> CLAIM[Re-anchoring dilutes relative influence of U]
+    SCALE --> RATIO["rho(R) = sqrt(Var(U)) / E[tau]"]
+    REF --> RATIO
+
+    R --> INCREF[As R increases, E[tau] increases]
+    INCREF --> COND[If reference scale grows faster than uncertainty scale]
+    SCALE --> COND
+    COND --> DILUTE[Relative uncertainty rho decreases]
+
+    DILUTE --> CLAIM[Absolute uncertainty may grow while relative influence decreases]
 
     U:::unknown
     R:::known
     K:::known
+    INCABS:::warn
     DILUTE:::good
 
     classDef unknown fill:#fff3e0,stroke:#ef6c00,stroke-width:1px;
     classDef known fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px;
+    classDef warn fill:#fff8e1,stroke:#f9a825,stroke-width:1px;
     classDef good fill:#e3f2fd,stroke:#1565c0,stroke-width:1px;
