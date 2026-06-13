@@ -1,0 +1,26 @@
+flowchart LR
+    A[Existing ideas] --> B[Bayesian updating]
+    A --> C[Value of information]
+    A --> D[Feedback loops]
+    A --> E[Exploration-exploitation]
+    A --> F[Exponential search]
+    A --> G[Online decision rules]
+
+    B --> H[UDAM practical synthesis]
+    C --> H
+    D --> H
+    E --> H
+    F --> H
+    G --> H
+
+    I[Timer seed model] --> J[tau = K + U + R]
+    J --> H
+
+    H --> K[Core claim]
+    K --> L[Partial uncertainty does not imply total invalidation]
+    K --> M[Anchor loss does not imply future anchor invalidation]
+
+    H --> N[Practical protocol]
+    N --> O[Small valid observation]
+    N --> P[Conditional action]
+    N --> Q[Boundary-risk-constrained expansion]
