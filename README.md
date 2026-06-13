@@ -273,6 +273,7 @@ English-first practical reading order:
 22. [`docs/17_literature_support_map.md`](docs/17_literature_support_map.md)
 23. [`docs/09_open_questions.md`](docs/09_open_questions.md)
 24. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
+25. [`docs/33_project_note_consolidation.md`](docs/33_project_note_consolidation.md)
 
 Japanese documentation, to be synchronized after English stabilization:
 
@@ -290,8 +291,13 @@ Japanese documentation, to be synchronized after English stabilization:
 | `assets/` | diagrams and figures |
 | `drafts/` | optional paper, blog, manifesto, and project-note drafts |
 
+For source-of-truth assignments and consolidation rules, see:
+
+- [`docs/33_project_note_consolidation.md`](docs/33_project_note_consolidation.md)
+
 ## Development notes
 
+- [`docs/33_project_note_consolidation.md`](docs/33_project_note_consolidation.md): source-of-truth map for repository consolidation.
 - [`notes/literature_verification.md`](notes/literature_verification.md): checklist for verifying related-work claims before treating them as citations.
 - [`notes/evidence_hierarchy.md`](notes/evidence_hierarchy.md): support levels for UDAM claims.
 - [`theory/logical_synthesis_review.md`](theory/logical_synthesis_review.md): logical coherence review across model layers.
@@ -309,8 +315,8 @@ core theory: stable enough to refine
 failure boundaries: strong
 literature verification: first-pass complete
 visual explanation: first-pass Mermaid source set complete; Stage 3 SVG figures available
+project-note consolidation: started
 Japanese layer: minimal, deferred for later sync
-project-note consolidation: pending
 ```
 
 ## License
