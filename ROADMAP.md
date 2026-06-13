@@ -83,9 +83,9 @@ Goal: keep examples useful while preventing misreadings.
 - [x] require neutral wording for high-stakes examples
 - [x] distinguish theory failure cases from missed-application miscalculations
 - [x] add a concise public-facing FAQ
-- [ ] render diagrams for easier reading
+- [x] render Stage 3 diagrams for easier reading
 
-Status: public-facing clarification is mostly complete. Remaining work is rendered figures.
+Status: public-facing clarification is mostly complete. Stage 3 rendered SVG figures now exist; older diagram rendering can still be expanded later.
 
 ## v0.7: Observability value model
 
@@ -104,7 +104,7 @@ Goal: formalize the value of observation as conditional-action value.
 - [x] add observability consistency checks
 - [x] add an observability diagram
 
-Status: complete as a formal integrated layer. Remaining future work is rendering diagrams and possibly expanding examples.
+Status: complete as a formal integrated layer. Remaining future work is rendering additional non-Stage-3 diagrams and possibly expanding examples.
 
 ## v0.8: Valid re-anchor and conditional switching
 
@@ -240,9 +240,9 @@ Goal: improve reader comprehension using diagrams and compact visual summaries.
 - [x] add expansion-with-boundary-risk diagram source
 - [x] add literature-support map figure source
 - [x] link Stage 3 visual set from README and overview
-- [ ] render existing Mermaid diagrams into figures
+- [x] render Stage 3 Mermaid diagrams into SVG figures
 
-Status: Stage 3 source diagrams are now complete as a first pass, and the main reader-facing entry points link to the visual set. The five Stage 3 visual sources are available under `assets/diagrams/one_page_udam_flow.mmd`, `assets/diagrams/anchor_reanchor_timeline.mmd`, `assets/diagrams/observation_value_decision.mmd`, `assets/diagrams/expansion_boundary_risk.mmd`, and `assets/diagrams/literature_support_map.mmd`.
+Status: Stage 3 is first-pass complete as a visual explanation layer. The five Stage 3 Mermaid sources are available under `assets/diagrams/`, and their rendered SVG counterparts are available under `assets/figures/`.
 
 ## v1.0: Stable theory note
 
@@ -251,8 +251,7 @@ Goal: Publish a coherent theory note with definitions, propositions, proofs, exa
 Remaining work:
 
 - refine definitions;
-- add rendered figures;
-- continue Stage 3 visual explanation;
+- optionally render older non-Stage-3 diagrams;
 - expand Japanese examples only after English stabilization;
 - audit notation consistency across timer, action-value, observability, and expansion layers;
 - decide whether contraction needs a separate rule from expansion;
