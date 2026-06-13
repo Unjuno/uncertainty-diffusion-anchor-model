@@ -17,6 +17,8 @@ docs/44_contraction_rule_decision.md
 docs/45_publication_readiness_audit.md
 docs/46_readme_overview_compression_decision.md
 docs/47_remaining_work_register.md
+docs/49_extended_simulation_sanity_checks.md
+simulations/udam_extended_sanity_checks.py
 ```
 
 Updated:
@@ -24,12 +26,14 @@ Updated:
 ```text
 README.md linked to AGENTS.md
 README.md linked stabilization-pass documents from Development notes
-ROADMAP.md recorded v0.20 through v0.23 stabilization milestones
-AGENTS.md updated after stabilization audits and draft cleanup
+ROADMAP.md recorded v0.20 through v0.25 stabilization milestones
+AGENTS.md updated after stabilization audits, draft cleanup, Japanese guardrail sync, and simulation extension
 docs/42_changelog_catchup_entry.md extended with a 0.9.0 compact entry
 drafts/paper_outline.md added direct source-of-truth disclaimer and safer conditional wording
 drafts/blog_post_jp.md added direct source-of-truth disclaimer
 drafts/short_manifesto.md added direct source-of-truth disclaimer
+docs/ja/README.md clarified English source-of-truth status
+simulations/README.md linked extended toy checks
 ```
 
 ## Interpretation
@@ -48,6 +52,8 @@ expansion/contraction wording discipline
 publication-readiness judgment
 remaining-work prioritization
 draft-source-of-truth safety
+Japanese source-of-truth guardrails
+simulation-layer coverage as toy demonstration only
 ```
 
 ## Decisions recorded
@@ -112,12 +118,41 @@ drafts/blog_post_jp.md
 drafts/short_manifesto.md
 ```
 
-### 7. Remaining work
+### 7. Japanese guardrail sync
 
 Decision:
 
 ```text
-Remaining work is mostly release hygiene, optional rendering, Japanese sync, optional simulation extension, and empirical validation only if a concrete study design exists.
+Japanese docs may clarify source-of-truth status now, but full Japanese expansion remains deferred.
+```
+
+Completed minimal guardrail sync:
+
+```text
+docs/ja/README.md
+```
+
+### 8. Extended toy simulations
+
+Decision:
+
+```text
+Simulation extensions may add toy sanity checks, but must not claim empirical validation.
+```
+
+Completed extended toy pass:
+
+```text
+repeated-checking MOV_i
+boundary-risk sensitivity
+```
+
+### 9. Remaining work
+
+Decision:
+
+```text
+Remaining work is mostly release hygiene, optional rendering, full Japanese sync after English wording stabilizes, optional simulation plots or further toy sensitivity checks, and empirical validation only if a concrete study design exists.
 ```
 
 ## Current completion estimate
@@ -125,8 +160,8 @@ Remaining work is mostly release hygiene, optional rendering, Japanese sync, opt
 Internal maintenance estimate:
 
 ```text
-public repository readiness: 89-91%
-paperization readiness: 60-64%
+public repository readiness: 90-92%
+paperization readiness: 62-66%
 empirical validation readiness: 10-15%
 ```
 
