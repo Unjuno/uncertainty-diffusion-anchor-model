@@ -70,3 +70,41 @@ If uncertainty diffuses over time, repeated low-cost informative actions can pre
 This is the precise version of the practical rule:
 
 > When uncertain, do not freeze. Take a small action that returns information.
+
+## Proposition 6: Timer re-anchoring dilutes relative uncertainty
+
+In the timer model, re-anchoring does not necessarily erase or reduce the absolute uncertainty of the lost interval.
+
+If:
+
+```text
+τ = K + U + R
+```
+
+and `U` remains uncertain while `R` grows as a known interval, then the relative influence of `U` can decrease.
+
+One simple ratio is:
+
+```text
+ρ = sqrt(Var(U)) / E[τ]
+```
+
+As `R` increases, `E[τ]` increases while `sqrt(Var(U))` remains fixed. Therefore `ρ` decreases.
+
+This is **relative uncertainty dilution**.
+
+## Proposition 7: Fixed-deadline non-occurrence tightens the unknown interval
+
+If there is a fixed deadline `T` and the deadline is still unreached, then:
+
+```text
+K + U + R < T
+```
+
+so:
+
+```text
+U < T - K - R
+```
+
+Thus, in fixed-deadline cases, increasing `R` can also shrink the admissible range of `U`.
