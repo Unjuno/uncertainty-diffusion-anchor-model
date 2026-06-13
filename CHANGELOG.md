@@ -1,5 +1,33 @@
 # Changelog
 
+## 0.7.2 - Failure examples
+
+Added concrete examples for common UDAM misuse and failure patterns.
+
+Added:
+
+- `examples/failure_state_uninformative_observation.md`
+- `examples/failure_checking_loop.md`
+- `examples/failure_over_expansion.md`
+- `examples/failure_local_to_global_judgment.md`
+
+Changed:
+
+- `examples/README.md` now lists the new failure examples and distinguishes failure examples from missed-application examples.
+
+Core failure examples:
+
+```text
+state-uninformative observation
+checking loop
+over-expansion
+local observation used as global judgment
+```
+
+Status:
+
+- Failure conditions now have concrete readable examples, not only abstract definitions.
+
 ## 0.7.1 - Failure case and counterexample strengthening
 
 Strengthened the English failure-case and counterexample layer after the core theory reached a stable form.
