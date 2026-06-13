@@ -11,6 +11,7 @@ The diagrams are written in Mermaid where possible so they can be edited as text
 - `uncertainty_diffusion_cycle.mmd`: anchor loss, uncertainty diffusion, re-anchoring, and belief update.
 - `action_value_flow.mmd`: decision rule for whether an action is a useful re-anchor.
 - `failure_taxonomy.mmd`: cases where the model weakens or fails.
+- `observability_value_flow.mmd`: observation value, hidden upside/downside, and fixed-target discounting.
 
 ## Rendering
 
