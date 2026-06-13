@@ -8,16 +8,33 @@ A learner stops studying for a period of time. After the interruption, they no l
 
 The lost anchor is the learner's calibrated sense of ability.
 
-## Uncertainty diffusion
+## State variable
 
-Without practice or testing, uncertainty may grow about:
+The latent state is current skill level:
 
-- retained knowledge;
-- forgotten material;
-- current problem-solving speed;
-- readiness for the next step.
+```text
+S_t = current skill state
+```
 
-This is represented as:
+## Belief uncertainty
+
+The learner is uncertain about what they still remember and what they can currently solve.
+
+```text
+P_{skill,t} = Var(S_t | D_t)
+```
+
+## Possible state dynamics
+
+The actual skill state may change through forgetting, consolidation, or background learning.
+
+```text
+S_{t+Δt} may differ from S_t
+```
+
+## Belief dynamics
+
+Even if the skill state has not changed much, the learner's uncertainty about it may increase without practice or testing.
 
 ```text
 P_{skill,t+Δt} = P_{skill,t} + Q_skill Δt
