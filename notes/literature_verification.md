@@ -22,8 +22,8 @@ For each item, check:
 
 | UDAM claim | Nearby area | Status | Notes |
 |---|---|---|---|
-| Observation has value when it can improve action choice | value of information | to verify | likely direct support |
-| More informative observations can improve decisions | Blackwell informativeness | to verify | likely direct but needs precise wording |
+| Observation has value when it can improve action choice | value of information | verified: direct support | See `docs/22_literature_verification_value_blackwell.md`; keep cost and expected-decision-value wording |
+| More informative observations can improve decisions | Blackwell informativeness | verified: partial support | See `docs/22_literature_verification_value_blackwell.md`; compatible but not identical to `P(y | S) != P(y)` |
 | Choose observations by expected usefulness | Bayesian experimental design | to verify | likely direct support |
 | Continue observing only while marginal value is positive | sequential analysis / stopping rules | to verify | likely partial support |
 | Small probes can balance learning and action | multi-armed bandits / exploration-exploitation | to verify | partial; avoid overclaiming |
@@ -34,6 +34,19 @@ For each item, check:
 | Robust rules matter when the offline optimum is unavailable | online algorithms | to verify | partial; needs careful framing |
 | Repeated small cost versus one large decision | ski-rental-type tradeoffs | to verify | analogy only unless formalized |
 | Small action after collapse can matter | behavioral activation | to verify | partial; avoid clinical overclaiming |
+
+## Verified notes
+
+Current verified note:
+
+- `docs/22_literature_verification_value_blackwell.md`
+
+Key result:
+
+```text
+value of information -> direct support for OV > 0 style observation value
+Blackwell informativeness -> partial support for state-informative observation and conditional action, but not identical to UDAM's local condition
+```
 
 ## Current caution
 
@@ -54,8 +67,8 @@ UDAM is consistent with several existing decision-theoretic and cognitive framew
 First priority:
 
 ```text
-value of information
-Blackwell informativeness
+value of information: verified first pass
+Blackwell informativeness: verified first pass
 exponential search
 online algorithms
 ```
