@@ -337,6 +337,12 @@ For toy simulation sanity checks, see:
 ## Development notes
 
 - [`AGENTS.md`](AGENTS.md): repository editing guidance for future agents and automated assistants.
+- [`docs/43_notation_consistency_audit.md`](docs/43_notation_consistency_audit.md): first-pass notation consistency audit.
+- [`docs/44_contraction_rule_decision.md`](docs/44_contraction_rule_decision.md): decision note on contraction versus expansion rules.
+- [`docs/45_publication_readiness_audit.md`](docs/45_publication_readiness_audit.md): first-pass publication-readiness audit.
+- [`docs/46_readme_overview_compression_decision.md`](docs/46_readme_overview_compression_decision.md): decision note on README and overview compression.
+- [`docs/47_remaining_work_register.md`](docs/47_remaining_work_register.md): remaining-work register after the stabilization pass.
+- [`docs/48_stabilization_pass_summary.md`](docs/48_stabilization_pass_summary.md): summary of the latest stabilization pass.
 - [`docs/33_project_note_consolidation.md`](docs/33_project_note_consolidation.md): source-of-truth map for repository consolidation.
 - [`docs/34_readme_consolidation_audit.md`](docs/34_readme_consolidation_audit.md): first-pass audit of README duplication and routing risk.
 - [`docs/35_overview_consolidation_audit.md`](docs/35_overview_consolidation_audit.md): first-pass audit of overview duplication and conceptual-boundary role.
