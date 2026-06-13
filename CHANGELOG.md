@@ -1,5 +1,45 @@
 # Changelog
 
+## 0.7.19 - Anchor reanchor timeline visual
+
+Continued Stage 3 visual explanation with a timer-seed timeline diagram.
+
+Added:
+
+- `assets/diagrams/anchor_reanchor_timeline.mmd`
+
+Changed:
+
+- `docs/32_visual_explanation_layer.md` now documents the second Stage 3 visual artifact.
+- `assets/diagrams/README.md` now lists the anchor reanchor timeline diagram.
+- ROADMAP now marks the anchor-loss-to-reanchor timeline figure source as added.
+
+Core result:
+
+```text
+The timeline diagram visualizes tau = K + U + R.
+K is the known interval before anchor loss.
+U is the unknown interval after anchor loss.
+R is the future re-anchored interval.
+Unknown U does not automatically invalidate valid R.
+```
+
+Design constraints preserved:
+
+```text
+do not erase K
+do not pretend U is known
+do not invalidate R merely because U is unknown
+partial uncertainty does not imply total invalidation
+future anchor validity must be checked locally
+```
+
+Status:
+
+- Stage 3 now has two Mermaid visual sources.
+- The next visual artifact should cover observation value and conditional action.
+- Japanese expansion remains deferred until English visual structure stabilizes.
+
 ## 0.7.18 - Stage 3 visual explanation start
 
 Started Stage 3 visual explanation.
