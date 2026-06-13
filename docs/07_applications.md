@@ -20,6 +20,8 @@ Each application should be written in the same structure:
 8. Informational value
 9. Intervention value
 10. Failure case
+11. Observation cadence
+12. Expansion factor and boundary risk
 
 ## Application domains
 
@@ -53,6 +55,32 @@ This layer explains three application patterns:
 1. missed re-anchor miscalculation;
 2. happy miscalculation;
 3. false comfort miscalculation, including fixed-target disbelief.
+
+## Adaptive expansion application layer
+
+After a small valid observation, the agent may expand the next action or observation scope.
+
+```text
+s_{i+1} = r_i s_i
+```
+
+A common pattern is:
+
+```text
+1 -> 2 -> 4 -> 8
+```
+
+But application examples must not treat doubling as automatically correct.
+
+Expansion is favorable only when:
+
+```text
+B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
+```
+
+Readable meaning:
+
+> Expand when favorable observations support expansion, but reduce the expansion factor when the next observation may come too late relative to a relevant adverse boundary.
 
 ## Missed application cases
 
@@ -198,6 +226,14 @@ For observability-specific cases, it should also increase the ability to choose 
 observe y → choose a(y)
 ```
 
+After favorable results, the next scope may expand:
+
+```text
+small probe -> favorable response -> larger probe
+```
+
+but only when boundary-risk-constrained expansion value is positive.
+
 ## Bad application pattern
 
 Do not use UDAM to justify:
@@ -208,7 +244,8 @@ Do not use UDAM to justify:
 - high-risk action under uncertainty;
 - ignoring safety or professional support;
 - assuming the world always worsens during inaction;
-- treating observation as useful when it does not change any decision.
+- treating observation as useful when it does not change any decision;
+- expanding scope just because the previous small probe succeeded.
 
 ## Good application pattern
 
@@ -221,7 +258,8 @@ Use UDAM to select actions that:
 - preserve future option value;
 - reveal hidden upside when the current state is better than expected;
 - reveal hidden downside early when the current state is worse than expected;
-- make action conditional on observation.
+- make action conditional on observation;
+- expand scope only when the response and boundary-risk terms justify it.
 
 ## Key distinction
 
@@ -248,5 +286,13 @@ OV > 0
 ```
 
 because it enables better conditional action.
+
+A scope expansion may be justified by:
+
+```text
+B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
+```
+
+because the expansion benefit and information value exceed observation, correction, and boundary-risk costs.
 
 These should not be conflated or double-counted.
