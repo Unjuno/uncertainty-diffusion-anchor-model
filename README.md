@@ -20,6 +20,40 @@ The lost interval remains uncertain. However, the newly counted interval is not 
 
 This simple structure generalizes to learning, work recovery, health tracking, relationship uncertainty, and life strategy after failure.
 
+## If you want to use it now
+
+For direct use, start with:
+
+- [`docs/14_practical_reanchor_protocol.md`](docs/14_practical_reanchor_protocol.md)
+- [`examples/concrete_learning_reanchor.md`](examples/concrete_learning_reanchor.md)
+- [`examples/concrete_work_reanchor.md`](examples/concrete_work_reanchor.md)
+- [`examples/concrete_relationship_reanchor.md`](examples/concrete_relationship_reanchor.md)
+- [`examples/concrete_budget_reanchor.md`](examples/concrete_budget_reanchor.md)
+
+The practical pattern is:
+
+```text
+unclear state -> small observation -> conditional next action
+```
+
+Ask:
+
+```text
+What small observation would reveal the current state?
+```
+
+Then act only if:
+
+```text
+V(a) > 0
+```
+
+or:
+
+```text
+OV > 0
+```
+
 ## Minimal timer model
 
 ```text
@@ -205,21 +239,22 @@ This does **not** justify arbitrary action. It supports actions that return info
 
 ## Reading order
 
-1. [`docs/00_overview.md`](docs/00_overview.md)
-2. [`FAQ.md`](FAQ.md)
-3. [`docs/01_timer_model.md`](docs/01_timer_model.md)
-4. [`docs/13_deterministic_event_scope.md`](docs/13_deterministic_event_scope.md)
-5. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
-6. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
-7. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
-8. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
-9. [`docs/04_action_value.md`](docs/04_action_value.md)
-10. [`docs/05_propositions.md`](docs/05_propositions.md)
-11. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
-12. [`docs/07_applications.md`](docs/07_applications.md)
-13. [`docs/08_related_work.md`](docs/08_related_work.md)
-14. [`docs/09_open_questions.md`](docs/09_open_questions.md)
-15. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
+1. [`docs/14_practical_reanchor_protocol.md`](docs/14_practical_reanchor_protocol.md)
+2. [`docs/00_overview.md`](docs/00_overview.md)
+3. [`FAQ.md`](FAQ.md)
+4. [`docs/01_timer_model.md`](docs/01_timer_model.md)
+5. [`docs/13_deterministic_event_scope.md`](docs/13_deterministic_event_scope.md)
+6. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
+7. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
+8. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
+9. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
+10. [`docs/04_action_value.md`](docs/04_action_value.md)
+11. [`docs/05_propositions.md`](docs/05_propositions.md)
+12. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
+13. [`docs/07_applications.md`](docs/07_applications.md)
+14. [`docs/08_related_work.md`](docs/08_related_work.md)
+15. [`docs/09_open_questions.md`](docs/09_open_questions.md)
+16. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
 
 ## Development notes
 
@@ -247,6 +282,7 @@ This does **not** justify arbitrary action. It supports actions that return info
 - happy miscalculation
 - false comfort miscalculation
 - fixed-target disbelief
+- practical re-anchor protocol
 
 ## Failure cases
 
@@ -275,6 +311,7 @@ This repository is currently a theory repository. The first goal is not simulati
 8. consistency review
 9. formal refinement
 10. observability value
+11. practical re-anchor protocol
 
 ## License
 
