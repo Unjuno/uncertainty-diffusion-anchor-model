@@ -74,6 +74,20 @@ The core theory includes uncertainty that action can affect through at least one
 
 Uncontrollable event-occurrence uncertainty is excluded from the core model, or treated as an external parameter, separate extension, or exception condition.
 
+## High-stakes example policy
+
+High-stakes examples can be useful because they make the fixed-target and lost-anchor structure clear.
+
+However, the repository treats them as abstract illustrations only. Public wording should remain non-operational and neutral, using terms such as:
+
+- fixed target condition;
+- upper time bound;
+- high-stakes deadline;
+- safety-critical setting;
+- constrained decision context.
+
+The useful structure is preserved without vivid or harmful detail.
+
 ## General model
 
 Uncertainty diffusion without an anchor:
@@ -154,6 +168,7 @@ This does **not** justify arbitrary action. It supports actions that return info
 ## Development notes
 
 - [`notes/chat_content_synthesis.md`](notes/chat_content_synthesis.md): organized synthesis of the original discussion.
+- [`notes/high_stakes_example_policy.md`](notes/high_stakes_example_policy.md): policy for preserving high-stakes examples as safe abstract structures.
 - [`theory/consistency_review.md`](theory/consistency_review.md): known corrections, open issues, and consistency checks.
 - [`theory/timer_three_layer_model.md`](theory/timer_three_layer_model.md): formal timer-specific refinement.
 - [`theory/deterministic_event_scope.md`](theory/deterministic_event_scope.md): fixed-target scope of the timer seed model.
