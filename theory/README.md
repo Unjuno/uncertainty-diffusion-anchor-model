@@ -17,6 +17,9 @@ This directory contains the formal components of the Uncertainty-Diffusion Ancho
 | `timer_three_layer_model.md` | formal timer-specific refinement |
 | `deterministic_event_scope.md` | fixed-target scope of the timer seed model |
 | `controllability_boundary.md` | boundary between actionable uncertainty and uncontrollable external uncertainty |
+| `observability_value.md` | formal value of observation, upside/downside uncertainty, and fixed-target disbelief |
+| `upside_uncertainty.md` | favorable-state discovery through re-anchoring |
+| `downside_uncertainty.md` | hidden downside and false comfort miscalculation |
 | `state_belief_separation.md` | distinction between state dynamics and belief uncertainty dynamics |
 | `consistency_review.md` | known corrections and open consistency issues |
 
@@ -38,6 +41,12 @@ Action value:
 
 ```text
 V(a) = I(a) + B(a) - C(a)
+```
+
+Observability value:
+
+```text
+OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
 ```
 
 ## Timer-specific caution
@@ -73,6 +82,19 @@ uncertain target, uncertain position
 
 The reason is not only mathematical simplicity. Event-occurrence uncertainty is often uncontrollable by the agent, so it should be treated as external, exceptional, or deferred to an extension.
 
+## Observability caution
+
+Observation has value when it enables better conditional action.
+
+It can reveal:
+
+```text
+hidden upside
+hidden downside
+```
+
+But observation is not automatically valuable. It must exceed cost and be actionable.
+
 ## State-belief caution
 
 UDAM is primarily about belief uncertainty.
@@ -89,7 +111,7 @@ not necessarily direct deterioration of `S_t`.
 
 ## Current formal status
 
-The theory is currently formulated in variance/covariance terms.
+The theory is currently formulated in variance/covariance and expected-value terms.
 
 A future extension may use a general uncertainty functional:
 
