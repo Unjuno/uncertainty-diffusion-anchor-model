@@ -195,16 +195,36 @@ This is the formal region for fixed-target disbelief.
 Repeated checking should be modeled with declining marginal information:
 
 ```text
-I(a_1) >= I(a_2) >= ... >= I(a_n)
+I_1 >= I_2 >= ... >= I_n >= 0
 ```
 
-If:
+Each repeated action is favorable only if:
 
 ```text
-I(a_n) + B(a_n) < C(a_n)
+I_i + B_i - C_i > 0
 ```
 
-then repeated checking becomes unfavorable.
+The stopping condition is:
+
+```text
+I_i + B_i <= C_i
+```
+
+For observation-specific actions, define marginal observability value:
+
+```text
+MOV_i = E_y[max_a E[V(a,S) | y, D_i]] - max_a E[V(a,S) | D_i] - C(obs_i)
+```
+
+Repeated observation `i` is favorable only when:
+
+```text
+MOV_i > 0
+```
+
+Thus, UDAM favors repeated observation only while each additional observation changes belief, decision, or state enough to exceed cost.
+
+This prevents the model from justifying checking loops.
 
 ## 10. State change versus belief change
 
@@ -241,4 +261,5 @@ UDAM does not need this form initially, but it connects the model to existing fi
 7. Keep uncontrollable external uncertainty outside the core action-value argument.
 8. Treat observability value as conditional-action value, not automatic benefit.
 9. Keep fixed-target disbelief as a subjective discounting error, not a change in the core target condition.
-10. Distinguish empty activity from informative action.
+10. Treat repeated checking as favorable only while marginal information value remains positive.
+11. Distinguish empty activity from informative action.
