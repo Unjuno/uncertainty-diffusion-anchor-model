@@ -214,8 +214,10 @@ Goal: move from theory construction to evidence, clarity, and verification.
 - [x] define the five stages: failure boundaries, Japanese explanation, literature verification, visual explanation, project-note consolidation
 - [x] add evidence hierarchy for UDAM claims
 - [x] distinguish timer intuition, internal coherence, examples, counterexamples, literature support, and empirical testing
+- [x] add failure decision tree for Stage 1
+- [x] add failure decision tree diagram
 
-Status: complete as a strategic refinement layer. The next work should follow this five-stage plan rather than adding unrelated new concepts.
+Status: active strategic refinement layer. Stage 1 now has a compact failure diagnostic tree; next work can proceed to Japanese diagram explanations or literature verification.
 
 ## v1.0: Stable theory note
 
