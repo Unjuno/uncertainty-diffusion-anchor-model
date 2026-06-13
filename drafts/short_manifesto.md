@@ -1,5 +1,7 @@
 # Short Manifesto
 
+> Draft status: this is a downstream presentation of UDAM, not a source-of-truth document. Formal claims route to `theory/`; literature claims route to `docs/17_literature_support_map.md` and `notes/literature_verification.md`; simulation claims route to `docs/39_simulation_sanity_checks.md` and `simulations/`.
+
 Uncertainty does not wait.
 
 When an anchor is lost, the unknown part can spread across the agent's belief about the current state.
