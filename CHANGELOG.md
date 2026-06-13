@@ -1,5 +1,43 @@
 # Changelog
 
+## 0.7.16 - Behavioral activation literature verification
+
+Continued Stage 2 literature verification with behavioral activation.
+
+Added:
+
+- `docs/30_literature_verification_behavioral_activation.md`
+
+Changed:
+
+- `notes/literature_verification.md` now marks behavioral activation as verified first-pass partial support for structured small action after collapse-like avoidance.
+- `docs/17_literature_support_map.md` now records behavioral activation as partial support for small action after collapse, direct support in BA context for targeting avoidance and withdrawal loops, and no support for UDAM as therapy or arbitrary small action.
+- ROADMAP now records behavioral activation as part of the active Stage 2 verification sequence.
+
+Core result:
+
+```text
+behavioral activation -> partial support for structured small action after collapse-like avoidance
+behavioral activation -> direct support in clinical BA context for targeting avoidance and withdrawal loops
+behavioral activation -> not support for arbitrary small action or UDAM as therapy
+```
+
+Required wording corrections:
+
+```text
+UDAM is not behavioral activation therapy
+small action != arbitrary action
+avoidance != all inaction
+behavioral activation != decision-theoretic probe
+clinical support does not prove the whole timer-derived UDAM synthesis
+```
+
+Status:
+
+- Stage 2 has verified one more literature area.
+- The next literature check should cover shaping / successive approximations.
+- Japanese expansion remains deferred until English structure stabilizes.
+
 ## 0.7.15 - Active inference literature verification
 
 Continued Stage 2 literature verification with active inference and epistemic value.
