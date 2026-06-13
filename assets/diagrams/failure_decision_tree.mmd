@@ -1,0 +1,39 @@
+flowchart TD
+    A[Unclear situation] --> B{Can you name the hidden state?}
+    B -- no --> B1[Define the relevant state first]
+    B -- yes --> C{Is the target fixed or locally fixed?}
+
+    C -- no --> C1[Separate target-occurrence uncertainty from position/state uncertainty]
+    C -- yes --> D{Can action affect observation, belief, decision, or state?}
+
+    D -- no --> D1[External uncertainty or outside actionable core]
+    D -- yes --> E{Is the observation state-informative?}
+
+    E -- no --> E1[Not a valid re-anchor]
+    E -- yes --> F{Can observation change the next action?}
+
+    F -- no --> F1[Weak decision value]
+    F -- yes --> G{Does value exceed cost?}
+
+    G -- no --> G1[Valid but unfavorable]
+    G -- yes --> H[Favorable action or observation]
+
+    H --> I{Is this repeated observation?}
+    I -- yes --> J{MOV_i > 0?}
+    J -- no --> J1[Checking loop]
+    J -- yes --> K[Continue or choose next observation]
+    I -- no --> K
+
+    K --> L{Are you expanding scope?}
+    L -- no --> L1[Act within current scope]
+    L -- yes --> M{Expansion value exceeds costs and boundary risk?}
+
+    M -- no --> M1[Reduce expansion or observe sooner]
+    M -- yes --> N[Expand scope]
+
+    N --> O{Is conclusion kept local?}
+    M1 --> O
+    L1 --> O
+
+    O -- no --> O1[Local-to-global overreach]
+    O -- yes --> O2[Acceptable scoped conclusion]
