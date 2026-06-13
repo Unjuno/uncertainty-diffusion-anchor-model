@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.7.1 - Failure case and counterexample strengthening
+
+Strengthened the English failure-case and counterexample layer after the core theory reached a stable form.
+
+Changed:
+
+- `docs/06_failure_cases.md` now distinguishes state-uninformative observation, no conditional action change, repeated checking loops, excessive expansion, boundary-risk underestimation, irreversible action expansion, and local-to-global overreach.
+- `theory/counterexamples.md` now maps those cases to formal counterexample conditions.
+
+Core failure conditions added:
+
+```text
+P(y | S) = P(y)
+a(y) = a_0
+MOV_i <= 0
+B_expand(r_i) + I_expand(r_i) <= C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
+```
+
+Status:
+
+- Failure conditions are now more explicit and aligned with the Japanese explanation layer.
+
 ## 0.7.0 - Japanese documentation and visual support
 
 Added a Japanese documentation layer inside the same repository, plus additional diagrams and a literature verification checklist.
