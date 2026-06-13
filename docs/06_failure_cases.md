@@ -2,7 +2,11 @@
 
 UDAM is useful only if its boundary conditions are explicit.
 
-This document summarizes the main failure cases. For stricter details, see:
+This document summarizes the main failure cases. For a step-by-step diagnostic, see:
+
+- `docs/21_failure_decision_tree.md`
+
+For stricter details, see:
 
 - `theory/counterexamples.md`
 
