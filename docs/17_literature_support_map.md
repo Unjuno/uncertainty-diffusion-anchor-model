@@ -21,6 +21,7 @@ For detailed verification notes, see:
 - `docs/28_literature_verification_implementation_intentions.md`
 - `docs/29_literature_verification_active_inference.md`
 - `docs/30_literature_verification_behavioral_activation.md`
+- `docs/31_literature_verification_shaping_successive_approximations.md`
 - `notes/literature_verification.md`
 
 ## 1. Value of information
@@ -528,8 +529,10 @@ Nearby literature:
 
 - shaping;
 - successive approximations;
+- operant conditioning;
+- differential reinforcement;
 - graded action;
-- stepwise skill building.
+- reward shaping in reinforcement learning.
 
 UDAM expression:
 
@@ -540,8 +543,44 @@ small valid observation -> favorable result -> expand scope
 Verification status:
 
 ```text
-to verify
+verified: partial support for gradual progression through successful intermediate approximations
+verified: analogy-only support from reinforcement-learning reward shaping
+verified: not support for treating reinforcement as state-informativeness or boundary-risk permission
 ```
+
+Correction:
+
+```text
+reinforcement != state-informativeness
+```
+
+Additional correction:
+
+```text
+successive approximation != boundary-risk permission
+```
+
+Recommended wording:
+
+```text
+Shaping and successive approximations partially support UDAM's gradual-expansion intuition: progress can sometimes be built through successful intermediate steps rather than a single global leap.
+```
+
+Avoid:
+
+```text
+A small success always justifies expansion.
+```
+
+Avoid:
+
+```text
+UDAM is shaping.
+```
+
+See:
+
+- `docs/31_literature_verification_shaping_successive_approximations.md`
 
 ## 10. Exponential search and doubling strategies
 
@@ -728,7 +767,8 @@ epistemic action and information-seeking policy selection: verified direct suppo
 I(a) as active-inference expected free energy: not supported without formal mapping
 small concrete action after collapse-like avoidance: verified partial support
 avoidance-loop interruption: verified direct in behavioral-activation context, partial for UDAM
-small steps can support gradual expansion: to verify
+gradual progression by successive approximations: verified partial support
+reinforcement as valid re-anchor: not supported
 ```
 
 ## 13. What remains UDAM-specific
@@ -749,7 +789,7 @@ when you feel unable to conclude because the anchor is lost, do not globally inv
 
 ## 14. Current research task
 
-For future refinement, the next step is to continue formal literature verification one topic at a time.
+The planned Stage 2 first-pass literature verification sequence is now complete enough to move to Stage 3.
 
 Verified first pass:
 
@@ -764,11 +804,13 @@ online algorithms / robust decision rules
 implementation intentions / if-then planning
 active inference / epistemic value
 behavioral activation
+shaping / successive approximations
 ```
 
-Priority remaining sources:
+Next stage:
 
 ```text
-successive approximations
-ski-rental-type tradeoffs: verified as direct/analogy under online algorithms
+Stage 3: visual explanation
 ```
+
+Future literature checks can still be added if a specific unsupported claim appears.
