@@ -55,7 +55,23 @@ h(t)
 
 This would make the theory broader but weaker as a minimal timer-derived model.
 
-UDAM intentionally avoids this expansion at the core level.
+The reason is that event-occurrence uncertainty can dilute urgency.
+
+If the target may not occur, then the agent can discount the value of positional re-anchoring by the occurrence probability:
+
+```text
+V_reanchor ≈ P(event occurs) · V_position_update - C(a)
+```
+
+When `P(event occurs)` is low or ambiguous, the advantage of re-anchoring becomes less determinate.
+
+This can lead to a weak conclusion:
+
+```text
+maybe nothing needs to be done because maybe the target never occurs
+```
+
+UDAM intentionally avoids this weakening at the core level.
 
 ## Scope boundary
 
@@ -79,6 +95,31 @@ UDAM does not need to claim that all events in the universe are deterministic.
 It only requires that, within the local model, the target condition is treated as fixed for analysis.
 
 This is a modeling constraint, not a metaphysical claim.
+
+## Why the non-deterministic extension is deferred
+
+A non-deterministic extension is possible.
+
+However, it would no longer be the minimal timer argument. It would need to model at least two quantities:
+
+```text
+P(event occurs)
+P(position | event occurs)
+```
+
+The resulting action value would depend on both:
+
+```text
+V(a) = P(event occurs) · I_position(a) + B(a) - C(a)
+```
+
+This is a valid extension, but it changes the core claim.
+
+The core claim remains stronger when event occurrence is fixed:
+
+```text
+V(a) = I_position(a) + B(a) - C(a)
+```
 
 ## Correct reading
 
