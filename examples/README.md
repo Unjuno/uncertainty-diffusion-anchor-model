@@ -14,6 +14,7 @@ Each example should distinguish **state change** from **belief uncertainty**.
 | `health_tracking.md` | application | limited health-state tracking |
 | `life_strategy.md` | application | re-anchoring after model collapse |
 | `missed_reanchor_miscalculation.md` | miscalculation | cases where UDAM applies but the agent fails to use it |
+| `happy_miscalculation.md` | upside example | cases where observation reveals the state is better than expected |
 
 ## Template
 
@@ -93,6 +94,31 @@ UDAM's correction is:
 
 ```text
 partial uncertainty → re-anchor if the next action has positive value
+```
+
+## Happy miscalculation examples
+
+Some examples describe upside hidden inside uncertainty.
+
+The common pattern is:
+
+```text
+uncertainty feels negative → observation reveals a better state than expected
+```
+
+This is not blind optimism.
+
+It is an observability effect:
+
+```text
+uncertainty may hide upside
+observation can reveal it
+```
+
+The action is still justified only when:
+
+```text
+V(a) > 0
 ```
 
 ## High-stakes examples
