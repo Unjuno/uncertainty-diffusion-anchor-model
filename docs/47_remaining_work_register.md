@@ -1,6 +1,6 @@
 # 47 Remaining Work Register
 
-This document records the remaining work after the first-pass agent guidance, notation audit, contraction-rule decision, publication-readiness audit, README/overview compression decision, roadmap update, changelog catch-up preparation, draft cleanup pass, and minimal Japanese sync guardrail.
+This document records the remaining work after the first-pass agent guidance, notation audit, contraction-rule decision, publication-readiness audit, README/overview compression decision, roadmap update, changelog catch-up preparation, draft cleanup pass, minimal Japanese sync guardrail, and extended toy simulation pass.
 
 The purpose is to keep the project in stabilization mode.
 
@@ -25,6 +25,12 @@ drafts/paper_outline.md source-of-truth disclaimer added and abstract wording so
 drafts/blog_post_jp.md source-of-truth disclaimer added
 drafts/short_manifesto.md source-of-truth disclaimer added
 docs/ja/README.md source-of-truth status clarified
+simulations/udam_extended_sanity_checks.py added
+simulations/results/repeated_checking_mov_summary.csv added
+simulations/results/boundary_risk_sensitivity_summary.csv added
+simulations/results/extended_sanity_check_report.md added
+docs/49_extended_simulation_sanity_checks.md added
+simulations/README.md updated
 ```
 
 ## Remaining work by priority
@@ -141,15 +147,23 @@ expand Japanese docs beyond the stable English claim strength
 Status:
 
 ```text
-optional / future
+first extended toy pass complete
 ```
 
-Possible work:
+Completed:
 
 ```text
 repeated-checking MOV_i simulation
+boundary-risk sensitivity simulation
+extended toy simulation report
+simulation README routing update
+```
+
+Remaining optional work:
+
+```text
 stochastic diffusion-and-reanchor time series
-boundary-risk parameter sensitivity analysis
+sensitivity analysis over observation-value parameters
 public-facing plots if useful
 ```
 
@@ -194,6 +208,7 @@ changelog catch-up preparation
 remaining-work register
 draft source-of-truth disclaimer insertion
 minimal Japanese source-of-truth guardrail
+extended toy simulation pass
 ```
 
 ## Current release posture
