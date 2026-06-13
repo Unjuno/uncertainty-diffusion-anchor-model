@@ -37,6 +37,18 @@ Spend ten minutes identifying only the next concrete blocker.
 
 Do not try to finish the project during this step.
 
+## If you are in this situation, do this now
+
+```text
+1. Open the task list or working document.
+2. Spend 10 minutes only.
+3. Write the next blocker or the next clear action.
+```
+
+Do not try to finish the project in this pass.
+
+The goal is to reveal the current project state.
+
 ## Observation result
 
 The result separates possible states:
@@ -49,6 +61,15 @@ someone needs a reply
 ```
 
 Each result suggests a different next action.
+
+## Next action map
+
+```text
+next step is clear -> do the first small task
+one item is blocked -> name the blocker
+document is outdated -> update the first outdated section
+someone needs a reply -> send one specific reply
+```
 
 ## UDAM interpretation
 
