@@ -71,7 +71,7 @@ This is the precise version of the practical rule:
 
 > When uncertain, do not freeze. Take a small action that returns information.
 
-## Proposition 6: Timer re-anchoring dilutes relative uncertainty
+## Proposition 6: Timer re-anchoring can dilute relative uncertainty
 
 In the timer model, re-anchoring does not necessarily erase or reduce the absolute uncertainty of the lost interval.
 
@@ -89,13 +89,15 @@ One simple ratio is:
 ρ = sqrt(Var(U)) / E[τ]
 ```
 
-As `R` increases, `E[τ]` increases while `sqrt(Var(U))` remains fixed. Therefore `ρ` decreases.
+If `sqrt(Var(U))` is fixed, then `ρ` decreases as `R` increases.
+
+More generally, even if `Var(U)` increases, `ρ` can still decrease when the uncertainty scale grows more slowly than the total reference scale.
 
 This is **relative uncertainty dilution**.
 
-## Proposition 7: Fixed-deadline non-occurrence tightens the unknown interval
+## Proposition 7: Fixed upper-bound non-arrival tightens the unknown interval
 
-If there is a fixed deadline `T` and the deadline is still unreached, then:
+If there is a fixed upper time bound `T` and the bound is still unreached, then:
 
 ```text
 K + U + R < T
@@ -107,4 +109,4 @@ so:
 U < T - K - R
 ```
 
-Thus, in fixed-deadline cases, increasing `R` can also shrink the admissible range of `U`.
+Thus, in fixed-bound cases, increasing `R` can also shrink the admissible range of `U`.
