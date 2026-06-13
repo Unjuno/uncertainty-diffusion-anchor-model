@@ -40,13 +40,13 @@ The previous note that `[QΔt] = s` was wrong and has been corrected.
 
 ## Issue 2: Does re-anchoring always reduce uncertainty?
 
-Status: Watch.
+Status: Refined.
 
 Potential problem:
 
 Some wording says re-anchoring reduces uncertainty.
 
-More precise statement:
+More precise general statement:
 
 > Re-anchoring constrains or updates the belief state relative to continued non-observation. It may reduce uncertainty absolutely, but the safer claim is that it reduces uncertainty relative to the no-anchor trajectory.
 
@@ -63,6 +63,60 @@ P_{after action} < P_{before action}
 ```
 
 The latter may hold for strong observations, but it should not be assumed universally.
+
+## Issue 2a: Timer-specific dilution rather than absolute reduction
+
+Status: Fixed as refinement.
+
+In the timer model:
+
+```text
+τ = K + U + R
+```
+
+If `K` and `R` are known and `U` remains unchanged, then:
+
+```text
+Var(τ | K, R) = Var(U)
+```
+
+Therefore, restarting the count does not necessarily reduce absolute variance.
+
+However, the uncertainty is localized in `U`, while known time accumulates in `R`.
+
+A relative uncertainty ratio can be defined as:
+
+```text
+ρ = sqrt(Var(U)) / E[τ]
+```
+
+Since:
+
+```text
+E[τ] = K + E[U] + R
+```
+
+increasing `R` reduces `ρ` when `Var(U)` and `E[U]` are fixed.
+
+Thus the timer-specific claim is:
+
+> Re-anchoring dilutes the relative influence of the unknown interval by adding new known interval.
+
+Deadline case:
+
+If a fixed deadline `T` exists and the event has not occurred, then:
+
+```text
+K + U + R < T
+```
+
+so:
+
+```text
+U < T - K - R
+```
+
+In that case, increasing `R` also tightens the upper bound on `U`.
 
 ## Issue 3: Is `R` perfectly known?
 
@@ -214,5 +268,7 @@ V(a) = I(a) + B(a) - C(a)
 ```
 
 The main correction made during review was the timer-specific unit error for `QΔt`.
+
+The main conceptual refinement is that timer re-anchoring often produces relative uncertainty dilution rather than absolute uncertainty reduction.
 
 The main unresolved theoretical decision is whether `P_t` remains variance/covariance or becomes a more general uncertainty functional.
