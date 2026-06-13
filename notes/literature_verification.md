@@ -30,11 +30,12 @@ For each item, check:
 | Repeated observation requires a stopping rule | sequential analysis / stopping rules | verified: direct support | Later checks are continue-or-stop decisions, not automatic extensions of the first observation |
 | Small probes can balance learning and action | multi-armed bandits / exploration-exploitation | verified: direct / partial support | See `docs/25_literature_verification_multi_armed_bandits.md`; direct for action-with-feedback, partial for UDAM's practical post-anchor-loss probe framing |
 | Exploration is useful but costly | multi-armed bandits / exploration-exploitation | verified: direct support | Regret formalizes that exploratory action can have opportunity cost |
+| Geometric expansion can reduce search cost when scale is unknown | exponential search / doubling search | verified: direct / partial support | See `docs/26_literature_verification_exponential_search.md`; direct for ordered or spatial search, partial for UDAM practical expansion |
+| Doubling is always optimal | exponential search / doubling search | not supported | Doubling is a useful default example in some search settings, not a universal rule |
 | Action can be chosen partly to gain information | active inference / epistemic value | to verify | partial; UDAM is narrower |
 | If-result-then-action mapping improves usability | implementation intentions | to verify | likely practical support |
 | Small successful steps can justify gradual expansion | shaping / successive approximations | to verify | partial; be careful outside behavioral context |
-| Geometric expansion can reduce search cost when scale is unknown | exponential search / doubling search | to verify | direct for ordered search, partial for UDAM applications; next priority |
-| Robust rules matter when the offline optimum is unavailable | online algorithms | to verify | partial; needs careful framing |
+| Robust rules matter when the offline optimum is unavailable | online algorithms | to verify | partial; next priority |
 | Repeated small cost versus one large decision | ski-rental-type tradeoffs | to verify | analogy only unless formalized |
 | Small action after collapse can matter | behavioral activation | to verify | partial; avoid clinical overclaiming |
 
@@ -46,6 +47,7 @@ Current verified notes:
 - `docs/23_literature_verification_bayesian_experimental_design.md`
 - `docs/24_literature_verification_sequential_analysis.md`
 - `docs/25_literature_verification_multi_armed_bandits.md`
+- `docs/26_literature_verification_exponential_search.md`
 
 Key result:
 
@@ -55,6 +57,7 @@ Blackwell informativeness -> partial support for state-informative observation a
 Bayesian experimental design -> direct support for utility-guided observation choice and prior-posterior updating, but not proof of UDAM's timer-derived synthesis
 sequential analysis / stopping rules -> direct support for treating repeated observation as a continue-or-stop problem; partial support for UDAM's MOV_i notation
 multi-armed bandits -> direct support for action-with-feedback and exploration-exploitation tradeoff; partial support for UDAM's practical small-probe framing
+exponential search -> direct support for geometric expansion under unknown scale in structured search domains; partial support for UDAM expansion; no support for universal doubling
 ```
 
 ## Current caution
@@ -78,6 +81,8 @@ MOV_i <= 0 means the current observation mode should stop or change. It does not
 small != useful
 feedback-producing != favorable
 local probe success != global expansion permission
+unknown scale != unknown state
+doubling is not always optimal
 ```
 
 ## Priority
@@ -90,12 +95,12 @@ Blackwell informativeness: verified first pass
 Bayesian experimental design: verified first pass
 sequential analysis / stopping rules: verified first pass
 multi-armed bandits / exploration-exploitation: verified first pass
+exponential search / doubling strategies: verified first pass
 ```
 
 Second priority:
 
 ```text
-exponential search
 online algorithms
 implementation intentions
 ```
