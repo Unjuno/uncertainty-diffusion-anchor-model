@@ -18,6 +18,7 @@ For detailed verification notes, see:
 - `docs/25_literature_verification_multi_armed_bandits.md`
 - `docs/26_literature_verification_exponential_search.md`
 - `docs/27_literature_verification_online_algorithms.md`
+- `docs/28_literature_verification_implementation_intentions.md`
 - `notes/literature_verification.md`
 
 ## 1. Value of information
@@ -351,7 +352,8 @@ Nearby literature:
 - implementation intentions;
 - if-then planning;
 - action planning;
-- goal pursuit.
+- goal pursuit;
+- planning prompts.
 
 UDAM expression:
 
@@ -368,8 +370,44 @@ observation result -> mapped next action
 Verification status:
 
 ```text
-to verify
+verified: direct support for if-result-then-action execution mapping
+verified: direct support for concrete cue and feasible response requirements
+verified: not support for observation validity or positive action value
 ```
+
+Correction:
+
+```text
+execution support != value support
+```
+
+Additional correction:
+
+```text
+if-then planning does not make an observation valid
+```
+
+Recommended wording:
+
+```text
+Implementation-intention research directly supports UDAM's if-result-then-action mapping as a practical execution device: a recognized cue should be linked to a concrete feasible response.
+```
+
+Avoid:
+
+```text
+If-then planning makes the action correct.
+```
+
+Avoid:
+
+```text
+UDAM is implementation intentions.
+```
+
+See:
+
+- `docs/28_literature_verification_implementation_intentions.md`
 
 ## 8. Shaping and successive approximations
 
@@ -577,8 +615,9 @@ geometric expansion under unknown scale: verified direct support in structured s
 boundary-risk-constrained expansion: analogy only / UDAM-specific
 robust-rule framing under unavailable future information: verified direct support
 repeated small cost versus one larger commitment: verified direct support in ski-rental-type problems, analogy for UDAM
+if-result-then-action execution mapping: verified direct support
+concrete cue and feasible response requirements: verified direct support
 actions can be chosen for epistemic value: to verify
-if-then mappings improve action execution: to verify
 small steps can support gradual expansion: to verify
 ```
 
@@ -612,12 +651,12 @@ sequential analysis / stopping rules
 multi-armed bandits / exploration-exploitation
 exponential search / doubling strategies
 online algorithms / robust decision rules
+implementation intentions / if-then planning
 ```
 
 Priority remaining sources:
 
 ```text
-implementation intentions
 active inference
 successive approximations
 behavioral activation
