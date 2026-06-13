@@ -16,6 +16,7 @@ For detailed verification notes, see:
 - `docs/23_literature_verification_bayesian_experimental_design.md`
 - `docs/24_literature_verification_sequential_analysis.md`
 - `docs/25_literature_verification_multi_armed_bandits.md`
+- `docs/26_literature_verification_exponential_search.md`
 - `notes/literature_verification.md`
 
 ## 1. Value of information
@@ -409,7 +410,10 @@ Nearby literature:
 - exponential search;
 - doubling search;
 - geometric search;
-- unbounded search over ordered domains.
+- unbounded search over ordered domains;
+- linear search problem;
+- cow-path problem;
+- online search with turn cost.
 
 UDAM expression:
 
@@ -438,14 +442,44 @@ P_boundary(i) * C_boundary
 Verification status:
 
 ```text
-to verify
+verified: direct support for geometric expansion under unknown scale in ordered or spatial search settings
+verified: partial support for UDAM's practical expansion-factor layer
+verified: analogy only / not direct support for boundary-risk-constrained expansion
 ```
 
-Next check:
+Correction:
 
 ```text
-exponential search should verify whether geometric expansion is supported under unknown scale, and where automatic doubling overclaims
+Doubling is a default example of geometric expansion, not a universal optimum.
 ```
+
+Additional correction:
+
+```text
+unknown scale != unknown state
+```
+
+Recommended wording:
+
+```text
+Exponential search supports UDAM's use of geometric expansion as a scale-discovery heuristic when the useful scale is unknown and the domain has suitable search structure.
+```
+
+Avoid:
+
+```text
+Doubling is always optimal.
+```
+
+Avoid:
+
+```text
+A favorable local probe justifies global expansion.
+```
+
+See:
+
+- `docs/26_literature_verification_exponential_search.md`
 
 ## 10. Online algorithms and robust decision rules
 
@@ -501,10 +535,11 @@ stopping-rule discipline for checking loops: verified direct support
 MOV_i as a specific formula: verified partial support only; UDAM-specific notation
 action-with-feedback small probes: verified direct / partial support
 exploration-exploitation as value tradeoff: verified direct support
+geometric expansion under unknown scale: verified direct support in structured search settings
+boundary-risk-constrained expansion: analogy only / UDAM-specific
 actions can be chosen for epistemic value: to verify
 if-then mappings improve action execution: to verify
 small steps can support gradual expansion: to verify
-geometric expansion can reduce search cost when scale is unknown: to verify
 online rules can be useful when offline optimum is unavailable: to verify
 ```
 
@@ -536,12 +571,12 @@ Blackwell informativeness
 Bayesian experimental design
 sequential analysis / stopping rules
 multi-armed bandits / exploration-exploitation
+exponential search / doubling strategies
 ```
 
 Priority remaining sources:
 
 ```text
-exponential search
 online algorithms
 implementation intentions
 active inference
