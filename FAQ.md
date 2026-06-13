@@ -186,7 +186,39 @@ The action is still justified only when:
 V(a) > 0
 ```
 
-## 11. Are high-stakes examples allowed?
+## 11. What is a false comfort miscalculation?
+
+A false comfort miscalculation occurs when the agent assumes the state is safe, manageable, or favorable, but observation would reveal hidden downside.
+
+The common pattern is:
+
+```text
+uncertainty feels manageable → no observation → hidden downside appears later
+```
+
+This is the negative counterpart to happy miscalculation.
+
+It is not a reason for compulsive checking. The action is still justified only when:
+
+```text
+V(a) > 0
+```
+
+## 12. What is fixed-target disbelief?
+
+Fixed-target disbelief is a false-comfort pattern where the agent dismisses a fixed target condition and therefore fails to re-anchor position relative to it.
+
+The pattern is:
+
+```text
+fixed target is dismissed → no re-anchor → hidden downside remains unmanaged
+```
+
+In high-stakes examples, this is why disbelief can reverse the intended effect of UDAM.
+
+The model should describe this abstractly and non-operationally.
+
+## 13. Are high-stakes examples allowed?
 
 Only as abstract, non-operational examples.
 
@@ -208,7 +240,7 @@ Preferred wording includes:
 - constrained decision context;
 - upper time bound.
 
-## 12. Is UDAM original?
+## 14. Is UDAM original?
 
 UDAM should not claim full mathematical originality.
 
@@ -223,7 +255,7 @@ It is close to existing ideas such as:
 
 Its contribution is the timer-derived formulation connecting uncertainty diffusion, re-anchoring, and small informative action into a practical model of recovery after anchor loss.
 
-## 13. Does UDAM require simulations?
+## 15. Does UDAM require simulations?
 
 Not at the current stage.
 
