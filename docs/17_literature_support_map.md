@@ -10,6 +10,11 @@ The safer claim is:
 UDAM combines existing decision-theoretic and cognitive ideas into a timer-derived practical model of re-anchoring after anchor loss.
 ```
 
+For detailed verification notes, see:
+
+- `docs/22_literature_verification_value_blackwell.md`
+- `notes/literature_verification.md`
+
 ## 1. Value of information
 
 UDAM claim:
@@ -35,6 +40,18 @@ Interpretation:
 
 ```text
 information is valuable because it enables better conditional action
+```
+
+Verification status:
+
+```text
+verified: direct support
+```
+
+Correction:
+
+```text
+state-informative observation is not automatically favorable; observation is favorable when expected decision value exceeds cost
 ```
 
 ## 2. Blackwell informativeness
@@ -69,6 +86,24 @@ Interpretation:
 useful observation changes either posterior belief or feasible action choice
 ```
 
+Verification status:
+
+```text
+verified: partial support
+```
+
+Correction:
+
+```text
+UDAM's P(y | S) != P(y) is a local belief-update condition, not the full Blackwell order
+```
+
+Recommended wording:
+
+```text
+UDAM is compatible with Blackwell-style informativeness but should not present its local state-informative condition as Blackwell's theorem.
+```
+
 ## 3. Bayesian experimental design
 
 UDAM claim:
@@ -88,6 +123,12 @@ UDAM expression:
 
 ```text
 observe y -> update p(S | y) -> choose a(y)
+```
+
+Verification status:
+
+```text
+to verify
 ```
 
 ## 4. Sequential analysis
@@ -117,6 +158,12 @@ Interpretation:
 continue observing only while the next observation has positive marginal value
 ```
 
+Verification status:
+
+```text
+to verify
+```
+
 ## 5. Multi-armed bandits and exploration-exploitation
 
 UDAM claim:
@@ -144,6 +191,12 @@ This supports the practical idea:
 probe small -> observe response -> expand when favorable
 ```
 
+Verification status:
+
+```text
+to verify
+```
+
 ## 6. Active inference and epistemic value
 
 UDAM claim:
@@ -165,6 +218,12 @@ It focuses on:
 
 ```text
 anchor loss -> small state-informative observation -> conditional action
+```
+
+Verification status:
+
+```text
+to verify
 ```
 
 ## 7. Implementation intentions
@@ -194,6 +253,12 @@ This supports the playbook structure:
 observation result -> mapped next action
 ```
 
+Verification status:
+
+```text
+to verify
+```
+
 ## 8. Shaping and successive approximations
 
 UDAM claim:
@@ -213,6 +278,12 @@ UDAM expression:
 
 ```text
 small valid observation -> favorable result -> expand scope
+```
+
+Verification status:
+
+```text
+to verify
 ```
 
 ## 9. Exponential search and doubling strategies
@@ -254,6 +325,12 @@ UDAM differs by adding adverse boundary risk:
 P_boundary(i) * C_boundary
 ```
 
+Verification status:
+
+```text
+to verify
+```
+
 ## 10. Online algorithms and robust decision rules
 
 UDAM claim:
@@ -287,21 +364,27 @@ but often:
 what expansion factor is not too bad under uncertainty?
 ```
 
-## 11. What the literature supports
-
-The literature supports these parts:
+Verification status:
 
 ```text
-information can have decision value
-more informative signals can improve action choice
-sampling can be adaptive
-sequential observation needs stopping rules
-exploration and exploitation must be balanced
-actions can be chosen for epistemic value
-if-then mappings improve action execution
-small steps can support gradual expansion
-geometric expansion can reduce search cost when scale is unknown
-online rules can be useful when offline optimum is unavailable
+to verify
+```
+
+## 11. What the literature supports
+
+The literature currently supports these parts at different levels:
+
+```text
+information can have decision value: verified direct support
+more informative signals can improve action choice: verified partial/direct alignment
+sampling can be adaptive: to verify
+sequential observation needs stopping rules: to verify
+exploration and exploitation must be balanced: to verify
+actions can be chosen for epistemic value: to verify
+if-then mappings improve action execution: to verify
+small steps can support gradual expansion: to verify
+geometric expansion can reduce search cost when scale is unknown: to verify
+online rules can be useful when offline optimum is unavailable: to verify
 ```
 
 ## 12. What remains UDAM-specific
@@ -322,13 +405,18 @@ when you feel unable to conclude because the anchor is lost, do not globally inv
 
 ## 13. Current research task
 
-For a future paper, the next step is to turn this map into a formal related-work section with verified citations.
+For future refinement, the next step is to continue formal literature verification one topic at a time.
 
-Priority sources:
+Verified first pass:
 
 ```text
 value of information
 Blackwell informativeness
+```
+
+Priority remaining sources:
+
+```text
 Bayesian experimental design
 sequential analysis
 multi-armed bandits
