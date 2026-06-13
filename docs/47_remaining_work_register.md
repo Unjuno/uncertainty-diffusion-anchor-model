@@ -1,6 +1,6 @@
 # 47 Remaining Work Register
 
-This document records the remaining work after the first-pass agent guidance, notation audit, contraction-rule decision, publication-readiness audit, README/overview compression decision, roadmap update, and changelog catch-up preparation.
+This document records the remaining work after the first-pass agent guidance, notation audit, contraction-rule decision, publication-readiness audit, README/overview compression decision, roadmap update, changelog catch-up preparation, and draft cleanup pass.
 
 The purpose is to keep the project in stabilization mode.
 
@@ -21,6 +21,9 @@ docs/44_contraction_rule_decision.md added
 docs/45_publication_readiness_audit.md added
 docs/46_readme_overview_compression_decision.md added
 docs/48_stabilization_pass_summary.md added
+drafts/paper_outline.md source-of-truth disclaimer added and abstract wording softened
+drafts/blog_post_jp.md source-of-truth disclaimer added
+drafts/short_manifesto.md source-of-truth disclaimer added
 ```
 
 ## Remaining work by priority
@@ -58,14 +61,24 @@ turn CHANGELOG into ROADMAP or Git history
 Status:
 
 ```text
-not complete
+first-pass complete
 ```
 
-Action:
+Completed:
 
 ```text
-Use AGENTS.md and docs/43_notation_consistency_audit.md as constraints.
-Make drafts present the model without defining it.
+drafts/paper_outline.md now states draft/source-of-truth status directly.
+drafts/paper_outline.md now uses safer conditional title and abstract wording.
+drafts/blog_post_jp.md now states draft/source-of-truth status directly.
+drafts/short_manifesto.md now states draft/source-of-truth status directly.
+```
+
+Remaining optional work:
+
+```text
+full prose-level paper rewrite
+citation insertion after literature sources are finalized
+journal-style formatting
 ```
 
 Do not:
@@ -170,6 +183,7 @@ publication-readiness audit
 roadmap stabilization recording
 changelog catch-up preparation
 remaining-work register
+draft source-of-truth disclaimer insertion
 ```
 
 ## Current release posture
