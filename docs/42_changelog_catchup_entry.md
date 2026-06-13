@@ -124,6 +124,59 @@ Details:
 - Stabilization summary: `docs/48_stabilization_pass_summary.md`
 ```
 
+## Proposed changelog entry: 0.10.0
+
+```markdown
+## 0.10.0 - Draft, Japanese guardrail, and extended simulation catch-up
+
+Summary:
+
+- Added direct source-of-truth disclaimers to downstream drafts.
+- Added a minimal Japanese source-of-truth guardrail without expanding Japanese theory.
+- Added two extended toy simulation sanity checks.
+- Updated ROADMAP, AGENTS, simulations, and remaining-work routing.
+
+Added:
+
+- `docs/49_extended_simulation_sanity_checks.md`
+- `simulations/udam_extended_sanity_checks.py`
+- `simulations/results/repeated_checking_mov_summary.csv`
+- `simulations/results/boundary_risk_sensitivity_summary.csv`
+- `simulations/results/extended_sanity_check_report.md`
+
+Changed:
+
+- `drafts/paper_outline.md` now states its downstream draft status directly and uses safer conditional wording.
+- `drafts/blog_post_jp.md` now states its downstream draft status directly.
+- `drafts/short_manifesto.md` now states its downstream draft status directly.
+- `docs/ja/README.md` now states that English Markdown is the source of truth and lists avoided overclaims.
+- `simulations/README.md` now documents the extended toy checks.
+- `ROADMAP.md`, `AGENTS.md`, and `docs/47_remaining_work_register.md` now record the draft cleanup, Japanese guardrail, and extended simulation pass.
+
+Interpretation:
+
+- This is still a stabilization and demonstration milestone, not empirical validation.
+- The Japanese update is a guardrail sync, not a full Japanese expansion.
+- The extended simulation layer checks repeated-observation and boundary-risk qualitative behavior only under chosen toy assumptions.
+
+Guardrails preserved:
+
+```text
+toy simulations are not empirical validation
+drafts present the model; drafts do not define the model
+English Markdown remains the source of truth
+state-informative != favorable
+local success != global expansion permission
+```
+
+Details:
+
+- Draft routing: `drafts/README.md`, `docs/40_draft_source_of_truth_disclaimer_audit.md`
+- Japanese guardrail: `docs/ja/README.md`
+- Extended simulations: `docs/49_extended_simulation_sanity_checks.md`, `simulations/`
+- Remaining work: `docs/47_remaining_work_register.md`
+```
+
 ## Current decision
 
 Do not expand these into many missed micro-entries.
