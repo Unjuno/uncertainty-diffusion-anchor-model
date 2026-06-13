@@ -235,13 +235,13 @@ Goal: improve reader comprehension using diagrams and compact visual summaries.
 
 - [x] add Stage 3 visual explanation layer note
 - [x] add a one-page UDAM flow figure source
+- [x] add an anchor-loss-to-reanchor timeline figure source
 - [ ] render existing Mermaid diagrams into figures
-- [ ] add an anchor-loss-to-reanchor timeline figure
 - [ ] add observation-value decision diagram
 - [ ] add expansion-with-boundary-risk diagram
 - [ ] add literature-support map figure
 
-Status: Stage 3 has started. The first one-page flow source is available under `assets/diagrams/one_page_udam_flow.mmd`.
+Status: Stage 3 has started. The first two visual sources are available under `assets/diagrams/one_page_udam_flow.mmd` and `assets/diagrams/anchor_reanchor_timeline.mmd`.
 
 ## v1.0: Stable theory note
 
