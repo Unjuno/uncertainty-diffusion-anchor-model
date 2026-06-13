@@ -39,6 +39,26 @@ In plain language:
 
 > The agent thinks there is enough margin, but the unobserved state is worse than expected.
 
+## Fixed-target disbelief pattern
+
+A safety-critical variant occurs when the target condition is fixed in the model, but the agent does not believe it.
+
+The error is:
+
+```text
+fixed target is not believed → no re-anchor → position uncertainty remains unmanaged
+```
+
+This reverses the intended effect of UDAM.
+
+If the agent accepted the fixed-target premise, they would treat position uncertainty as actionable and re-anchor.
+
+If the agent rejects the fixed-target premise without evidence, they may treat the situation as irrelevant and avoid observation.
+
+This is not a failure of the timer model.
+
+It is a false comfort error caused by discounting the target condition.
+
 ## Relation to observability
 
 Observation has value because it separates favorable and unfavorable states.
@@ -55,7 +75,13 @@ False comfort miscalculation:
 uncertainty feels safe → observation would have revealed downside
 ```
 
-Both are explained by observability.
+Fixed-target disbelief:
+
+```text
+fixed target is dismissed → observation is skipped → downside is not discovered in time
+```
+
+All three are explained by observability.
 
 ## Decision-theoretic form
 
@@ -121,6 +147,7 @@ This explains both:
 ```text
 happy miscalculation
 false comfort miscalculation
+fixed-target disbelief
 ```
 
 The common mechanism is observability.
