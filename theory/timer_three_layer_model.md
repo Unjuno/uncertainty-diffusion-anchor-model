@@ -40,6 +40,31 @@ Var(τ | K, R) = Var(U)
 
 Therefore, re-anchoring does not necessarily reduce the absolute variance of the unknown interval.
 
+## Layer 1b: Absolute uncertainty can increase
+
+A stricter model can allow uncertainty in `U` to grow over time.
+
+For example:
+
+```text
+Var(U_{t+Δt}) = Var(U_t) + Q_U Δt
+```
+
+If:
+
+```text
+Q_U > 0
+Δt > 0
+```
+
+then:
+
+```text
+Var(U_{t+Δt}) > Var(U_t)
+```
+
+This means that absolute uncertainty can increase even while the relative influence of that uncertainty decreases.
+
 ## Layer 2: Relative uncertainty dilution
 
 Define relative uncertainty ratio:
@@ -60,7 +85,7 @@ we have:
 ρ(R) = sqrt(Var(U)) / (K + E[U] + R)
 ```
 
-Let:
+If `Var(U)` is fixed, let:
 
 ```text
 A = sqrt(Var(U))
@@ -86,6 +111,18 @@ dρ/dR < 0
 ```
 
 Therefore, as `R` increases, the relative uncertainty ratio decreases.
+
+If `Var(U)` is not fixed, relative dilution still occurs when the denominator grows faster than the numerator:
+
+```text
+d/dR sqrt(Var(U)) < d/dR E[τ]
+```
+
+informally stated as:
+
+```text
+uncertainty scale grows more slowly than total reference scale
+```
 
 ## Layer 3: Upper-bound tightening
 
@@ -119,9 +156,9 @@ As `R` increases, the upper bound on `U` decreases.
 
 Timer re-anchoring has three different effects depending on what is being measured:
 
-1. It may leave absolute uncertainty unchanged.
-2. It can reduce relative uncertainty.
-3. Under an upper-bound condition, it can reduce the possible range of the unknown interval.
+1. Absolute uncertainty may remain or increase.
+2. Relative uncertainty can decrease.
+3. Under an upper-bound condition, the possible range of the unknown interval can decrease.
 
 These should not be conflated.
 
@@ -138,5 +175,5 @@ re-anchoring always lowers Var(U)
 but:
 
 ```text
-re-anchoring adds observed interval R, which can dilute the relative effect of U and may constrain U under additional bounds
+re-anchoring adds observed interval R; absolute uncertainty in U may remain or increase, while U's relative influence can decrease and may be bounded under additional constraints
 ```
