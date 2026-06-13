@@ -44,12 +44,14 @@ The core timer decomposition remains:
 
 The next work should proceed through five stages.
 
+Japanese documentation already exists, but it should now be treated as a later synchronization layer. The English theory should stabilize first, because terminology and structure may still change.
+
 ```text
 1. failure boundaries
-2. Japanese explanation layer
-3. literature verification
-4. visual explanation
-5. project-note consolidation
+2. literature verification
+3. visual explanation
+4. project-note consolidation
+5. Japanese explanation sync
 ```
 
 ## Stage 1: Failure boundaries
@@ -69,11 +71,16 @@ mostly complete, still expandable
 Existing files:
 
 - `docs/06_failure_cases.md`
+- `docs/21_failure_decision_tree.md`
 - `theory/counterexamples.md`
 - `examples/failure_state_uninformative_observation.md`
 - `examples/failure_checking_loop.md`
 - `examples/failure_over_expansion.md`
 - `examples/failure_local_to_global_judgment.md`
+- `assets/diagrams/failure_decision_tree.mmd`
+
+Japanese mirrors already exist but should not drive new changes yet:
+
 - `docs/ja/03_failure_cases.md`
 - `docs/ja/05_failure_examples.md`
 
@@ -89,55 +96,12 @@ one local result -> total judgment
 
 Next work:
 
-- add more domain examples;
+- add more domain examples in English first;
 - distinguish failure of UDAM from missed application of UDAM;
-- add a compact failure decision tree;
-- connect each failure case to a proposition.
+- connect each failure case to a proposition;
+- only later sync stable changes into Japanese.
 
-## Stage 2: Japanese explanation layer
-
-Purpose:
-
-```text
-make the model readable in the language where the original intuition emerged
-```
-
-Current status:
-
-```text
-minimum viable layer complete
-```
-
-Existing files:
-
-- `docs/ja/README.md`
-- `docs/ja/00_plain_explanation.md`
-- `docs/ja/01_timer_model.md`
-- `docs/ja/02_practical_protocol.md`
-- `docs/ja/03_failure_cases.md`
-- `docs/ja/04_positioning.md`
-- `docs/ja/05_failure_examples.md`
-
-Core Japanese expression:
-
-```text
-途中でわからなくなった部分があることと、これから確かめることが意味ないことは別。
-```
-
-Formal Japanese expression:
-
-```text
-過去のアンカー喪失は、未来の有効観測を無効化しない。
-```
-
-Next work:
-
-- add Japanese examples for learning, work, relationship, and planning;
-- add a Japanese glossary;
-- add Japanese diagram descriptions;
-- keep Japanese text as explanation, not literal translation.
-
-## Stage 3: Literature verification
+## Stage 2: Literature verification
 
 Purpose:
 
@@ -156,6 +120,7 @@ Existing files:
 - `notes/literature_verification.md`
 - `docs/08_related_work.md`
 - `docs/17_literature_support_map.md`
+- `notes/evidence_hierarchy.md`
 
 The goal is not to maximize the number of references.
 
@@ -197,7 +162,7 @@ Next work:
 - add corrections when a literature link is weaker than expected;
 - avoid claiming that UDAM is proven by the literature.
 
-## Stage 4: Visual explanation
+## Stage 3: Visual explanation
 
 Purpose:
 
@@ -218,6 +183,7 @@ Existing files:
 - `assets/diagrams/uncertainty_diffusion_cycle.mmd`
 - `assets/diagrams/action_value_flow.mmd`
 - `assets/diagrams/failure_taxonomy.mmd`
+- `assets/diagrams/failure_decision_tree.mmd`
 - `assets/diagrams/observability_value_flow.mmd`
 - `assets/diagrams/adaptive_expansion_factor.mmd`
 - `assets/diagrams/full_udam_flow.mmd`
@@ -225,12 +191,12 @@ Existing files:
 
 Next work:
 
-- add short Markdown pages explaining each diagram;
+- add short English Markdown pages explaining each diagram;
+- make `full_udam_flow.mmd` the main orientation diagram;
 - render diagrams into image files later if useful;
-- add Japanese captions for the most important diagrams;
-- make `full_udam_flow.mmd` the main orientation diagram.
+- add Japanese captions only after English diagram explanations stabilize.
 
-## Stage 5: Project-note consolidation
+## Stage 4: Project-note consolidation
 
 Purpose:
 
@@ -266,10 +232,54 @@ academic paper
 
 Next work:
 
-- optionally rename or supplement `paper_outline.md` with `project_note_outline.md`;
+- optionally add `project_note_outline.md`;
 - write a short concept note version;
 - keep the paper outline as optional, not central;
 - prioritize readability and coherence over academic form.
+
+## Stage 5: Japanese explanation sync
+
+Purpose:
+
+```text
+synchronize Japanese explanations only after the English structure stabilizes
+```
+
+Current status:
+
+```text
+minimum viable Japanese layer exists, but further expansion should wait
+```
+
+Existing files:
+
+- `docs/ja/README.md`
+- `docs/ja/00_plain_explanation.md`
+- `docs/ja/01_timer_model.md`
+- `docs/ja/02_practical_protocol.md`
+- `docs/ja/03_failure_cases.md`
+- `docs/ja/04_positioning.md`
+- `docs/ja/05_failure_examples.md`
+
+Core Japanese expression:
+
+```text
+途中でわからなくなった部分があることと、これから確かめることが意味ないことは別。
+```
+
+Formal Japanese expression:
+
+```text
+過去のアンカー喪失は、未来の有効観測を無効化しない。
+```
+
+Next work later:
+
+- sync stable English changes into Japanese;
+- add Japanese examples for learning, work, relationship, and planning;
+- add a Japanese glossary;
+- add Japanese diagram descriptions;
+- keep Japanese text as explanation, not literal translation.
 
 ## Evidence-strength ladder
 
@@ -295,11 +305,11 @@ Level 6 is intentionally deferred.
 The immediate next sequence should be:
 
 ```text
-1. add evidence hierarchy
-2. link roadmap from README
-3. verify one literature area at a time
-4. add diagram explanation pages
-5. expand Japanese examples
+1. continue Stage 1 only if new English failure boundaries are needed
+2. begin Stage 2 literature verification one topic at a time
+3. add Stage 3 diagram explanation pages
+4. consolidate Stage 4 project-note materials
+5. sync Japanese only after English changes stabilize
 ```
 
 ## Do not do now
@@ -312,6 +322,7 @@ formal proof expansion
 complex code
 premature academic framing
 claiming full originality
+large Japanese expansion before English stabilization
 ```
 
 These can wait or remain optional.
