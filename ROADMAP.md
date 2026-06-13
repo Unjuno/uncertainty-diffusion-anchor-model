@@ -237,11 +237,11 @@ Goal: improve reader comprehension using diagrams and compact visual summaries.
 - [x] add a one-page UDAM flow figure source
 - [x] add an anchor-loss-to-reanchor timeline figure source
 - [x] add observation-value decision diagram source
+- [x] add expansion-with-boundary-risk diagram source
 - [ ] render existing Mermaid diagrams into figures
-- [ ] add expansion-with-boundary-risk diagram
 - [ ] add literature-support map figure
 
-Status: Stage 3 has started. The first three visual sources are available under `assets/diagrams/one_page_udam_flow.mmd`, `assets/diagrams/anchor_reanchor_timeline.mmd`, and `assets/diagrams/observation_value_decision.mmd`.
+Status: Stage 3 has started. The first four visual sources are available under `assets/diagrams/one_page_udam_flow.mmd`, `assets/diagrams/anchor_reanchor_timeline.mmd`, `assets/diagrams/observation_value_decision.mmd`, and `assets/diagrams/expansion_boundary_risk.mmd`.
 
 ## v1.0: Stable theory note
 
