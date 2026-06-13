@@ -70,6 +70,11 @@ Use the following routing unless the maintainer changes it:
 | Visual explanation | `docs/32_visual_explanation_layer.md` | `assets/diagrams/`, `assets/figures/` |
 | Simulation sanity checks | `docs/39_simulation_sanity_checks.md` | `simulations/` |
 | Changelog policy | `docs/41_changelog_maintenance_policy.md` | `docs/42_changelog_catchup_entry.md` |
+| Notation audit | `docs/43_notation_consistency_audit.md` | `theory/variables.md`, `theory/propositions.md`, `theory/proofs.md` |
+| Contraction-rule decision | `docs/44_contraction_rule_decision.md` | `docs/18_adaptive_expansion_factor.md`, `docs/21_failure_decision_tree.md` |
+| Publication readiness | `docs/45_publication_readiness_audit.md` | `docs/47_remaining_work_register.md` |
+| README / overview compression | `docs/46_readme_overview_compression_decision.md` | `README.md`, `docs/00_overview.md` |
+| Remaining work register | `docs/47_remaining_work_register.md` | `ROADMAP.md` |
 | Japanese explanation | `docs/ja/README.md` | `docs/ja/*` |
 | Presentations and drafts | `drafts/` | `README.md`, `docs/00_overview.md` |
 
@@ -209,6 +214,12 @@ become a paper draft
 
 Keep `docs/00_overview.md` compact. Move detailed derivations, literature checks, simulations, and policy notes to their dedicated files.
 
+For the current compression decision, see:
+
+```text
+docs/46_readme_overview_compression_decision.md
+```
+
 ## 11. Changelog rules
 
 Keep `CHANGELOG.md`.
@@ -288,13 +299,23 @@ Do not perform broad repository rewrites while making a routing or policy edit.
 Good next tasks:
 
 ```text
-1. Optional README / overview compression.
-2. Notation consistency audit.
-3. Decide whether contraction rules should be separated from expansion rules.
+1. Safe CHANGELOG catch-up insertion.
+2. Paper draft cleanup under AGENTS.md and docs/43 notation constraints.
+3. Optional older diagram rendering.
 4. English-stable Japanese sync.
-5. Paper draft cleanup.
-6. Optional older diagram rendering.
-7. Safe CHANGELOG catch-up insertion.
+5. Optional simulation extensions, still labeled toy demonstrations / sanity checks.
+6. Empirical validation only with a concrete domain, operationalized variables, data plan, and falsifiable criterion.
+```
+
+Tasks no longer immediate blockers after the latest stabilization pass:
+
+```text
+agent editing guidance
+notation consistency audit
+contraction rule decision
+README / overview compression decision
+publication-readiness audit
+remaining-work register
 ```
 
 Bad next tasks:
