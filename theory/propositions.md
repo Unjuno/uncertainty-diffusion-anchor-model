@@ -190,3 +190,45 @@ The agent fails to re-anchor despite positive core value when:
 ### Meaning
 
 This captures fixed-target disbelief: the target is fixed in the model, but the agent discounts it, so a positive re-anchor becomes subjectively unattractive.
+
+## Proposition 11: A valid re-anchor must be state-informative
+
+Let `S` be the relevant hidden state and `y` the observation produced by action `a`.
+
+A re-anchor is valid only if the observation is connected to the state:
+
+```text
+P(y | S) != P(y)
+```
+
+Equivalently, the observation can change the posterior:
+
+```text
+P(S | y) != P(S)
+```
+
+### Meaning
+
+A small action is not enough. A valid re-anchor must return information about the state being estimated. The timer `R` is valid because it is part of the elapsed-position decomposition.
+
+## Proposition 12: A useful observation can justify a conditional action switch
+
+Let `a_0` be the action chosen before observation and `a(y)` the action chosen after observing `y`.
+
+A useful observation can support a conditional switch when:
+
+```text
+a(y) != a_0
+```
+
+for at least one possible observation result.
+
+The decision-theoretic value is captured by:
+
+```text
+OV > 0
+```
+
+### Meaning
+
+This is the Monty-Hall-type structure inside UDAM: observation is valuable when it is state-informative and can rationally change the next action.
