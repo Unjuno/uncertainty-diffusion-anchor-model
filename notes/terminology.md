@@ -80,6 +80,18 @@ uncertain target, uncertain position
 
 Japanese: 不確実ターゲット / 発生不確実な対象条件
 
+## Fixed-target disbelief
+
+A false-comfort pattern where the agent dismisses a fixed target condition and therefore fails to re-anchor position relative to it.
+
+Common pattern:
+
+```text
+fixed target is dismissed → no re-anchor → hidden downside remains unmanaged
+```
+
+Japanese: 固定ターゲット不信 / 固定対象条件の過小評価
+
 ## Agent position
 
 The agent's current position relative to a fixed target condition.
@@ -129,6 +141,21 @@ observation can reveal it
 
 Japanese: 上振れ不確実性 / 良い方向を含む不確実性
 
+## Downside uncertainty
+
+Uncertainty that may contain unfavorable latent states.
+
+It does not mean uncertainty is always bad.
+
+It means:
+
+```text
+uncertainty may hide downside
+observation can reveal it early
+```
+
+Japanese: 下振れ不確実性 / 悪い方向を含む不確実性
+
 ## Happy miscalculation
 
 A case where the agent expects or fears a poor state, but observation reveals that the true state is better than expected.
@@ -136,6 +163,14 @@ A case where the agent expects or fears a poor state, but observation reveals th
 This is an observability effect, not blind optimism.
 
 Japanese: 嬉しい誤算
+
+## False comfort miscalculation
+
+A case where the agent assumes the state is safe, manageable, or favorable, but observation would reveal hidden downside.
+
+This is an observability failure, not a reason for compulsive checking.
+
+Japanese: 余裕誤認 / 安心誤算 / 偽の安心
 
 ## Observability value
 
