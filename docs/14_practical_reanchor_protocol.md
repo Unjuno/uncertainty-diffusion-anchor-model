@@ -10,6 +10,29 @@ UDAM should not remain only an abstract model.
 
 It should become a usable protocol for unclear states.
 
+## Simple version
+
+Use this first.
+
+```text
+1. Name what is unclear.
+2. Take one small observation connected to that state.
+3. Classify the result.
+4. Do the next action that matches the result.
+```
+
+The whole protocol can be summarized as:
+
+```text
+unclear state -> observe one useful signal -> map result to next action
+```
+
+Do not make the first step large.
+
+The first step is not the whole solution.
+
+It is a state check.
+
 ## The 7-step protocol
 
 Use this when a situation feels unclear and you are tempted to freeze, avoid, or guess globally.
