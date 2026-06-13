@@ -216,8 +216,9 @@ Goal: move from theory construction to evidence, clarity, and verification.
 - [x] distinguish timer intuition, internal coherence, examples, counterexamples, literature support, and empirical testing
 - [x] add failure decision tree for Stage 1
 - [x] add failure decision tree diagram
+- [x] begin Stage 2 literature verification with value of information and Blackwell informativeness
 
-Status: active strategic refinement layer. Stage 1 has a compact failure diagnostic tree. Japanese expansion is now explicitly deferred until the English version stabilizes.
+Status: active strategic refinement layer. Stage 1 has a compact failure diagnostic tree. Stage 2 has started with VOI and Blackwell verification. Japanese expansion is deferred until the English version stabilizes.
 
 ## v1.0: Stable theory note
 
@@ -227,7 +228,7 @@ Remaining work:
 
 - refine definitions;
 - add rendered figures;
-- expand related work with verified citations;
+- continue related-work verification with Bayesian experimental design and sequential analysis;
 - expand Japanese examples only after English stabilization;
 - audit notation consistency across timer, action-value, observability, and expansion layers;
 - decide whether contraction needs a separate rule from expansion;
