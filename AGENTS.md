@@ -68,7 +68,7 @@ Use the following routing unless the maintainer changes it:
 | Failure boundaries | `docs/21_failure_decision_tree.md` | `docs/06_failure_cases.md`, `theory/counterexamples.md` |
 | Literature support | `docs/17_literature_support_map.md` | `notes/literature_verification.md`, `docs/22` through `docs/31` |
 | Visual explanation | `docs/32_visual_explanation_layer.md` | `assets/diagrams/`, `assets/figures/` |
-| Simulation sanity checks | `docs/39_simulation_sanity_checks.md` | `simulations/` |
+| Simulation sanity checks | `docs/39_simulation_sanity_checks.md`, `docs/49_extended_simulation_sanity_checks.md` | `simulations/` |
 | Changelog policy | `docs/41_changelog_maintenance_policy.md` | `docs/42_changelog_catchup_entry.md` |
 | Notation audit | `docs/43_notation_consistency_audit.md` | `theory/variables.md`, `theory/propositions.md`, `theory/proofs.md` |
 | Contraction-rule decision | `docs/44_contraction_rule_decision.md` | `docs/18_adaptive_expansion_factor.md`, `docs/21_failure_decision_tree.md` |
@@ -172,12 +172,14 @@ proved
 empirical support
 ```
 
-The current simulation layer demonstrates three limited patterns:
+The current simulation layer demonstrates five limited patterns:
 
 ```text
 Timer re-anchor: R can reduce the relative influence of U.
 Observation value: state-informative observations can still be unfavorable when cost is high.
 Expansion boundary risk: large r_i can become unfavorable under boundary risk or correction cost.
+Repeated checking: MOV_i can become non-positive after repeated observation under toy assumptions.
+Boundary-risk sensitivity: harsher risk/correction settings can shrink or eliminate favorable expansion factors.
 ```
 
 These results do not establish external validity.
@@ -301,8 +303,8 @@ Good next tasks:
 ```text
 1. Safe CHANGELOG catch-up insertion only if a patch-safe path is available.
 2. Optional older diagram rendering.
-3. English-stable Japanese sync.
-4. Optional simulation extensions, still labeled toy demonstrations / sanity checks.
+3. Full Japanese synchronization only after English wording stabilizes.
+4. Optional simulation plots or further toy sensitivity checks, still labeled toy demonstrations / sanity checks.
 5. Empirical validation only with a concrete domain, operationalized variables, data plan, and falsifiable criterion.
 ```
 
@@ -316,6 +318,8 @@ README / overview compression decision
 publication-readiness audit
 remaining-work register
 paper draft cleanup first pass
+minimal Japanese source-of-truth guardrail
+extended toy simulation pass
 ```
 
 Bad next tasks:
