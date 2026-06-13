@@ -42,6 +42,7 @@ Goal: Map the model to existing fields without overclaiming novelty.
 - [x] value of information
 - [x] behavioral activation
 - [x] cognitive anchoring
+- [x] conditional switching and Monty Hall information structure
 
 Status: initial related-work map added. Needs expansion and citations if developed into a paper.
 
@@ -104,6 +105,21 @@ Goal: formalize the value of observation as conditional-action value.
 - [x] add an observability diagram
 
 Status: complete as a formal integrated layer. Remaining future work is rendering diagrams and possibly expanding examples.
+
+## v0.8: Valid re-anchor and conditional switching
+
+Goal: prevent the model from being misread as arbitrary small action.
+
+- [x] add valid re-anchor condition
+- [x] add conditional action switch structure
+- [x] connect the structure to the Monty Hall problem in related work
+- [x] sync to `theory/propositions.md`
+- [x] sync to `docs/05_propositions.md`
+- [x] sync to `theory/consistency_review.md`
+- [x] add proof sketches for Propositions 11 and 12
+- [ ] update README entry point with state-informative wording
+
+Status: theory layer complete. Remaining work is a minimal README wording update.
 
 ## v1.0: Stable theory note
 
