@@ -88,6 +88,26 @@ The core timer model avoids this by assuming:
 fixed target, uncertain position
 ```
 
+## Controllability boundary
+
+There is a second reason to exclude event-occurrence uncertainty from the core model: controllability.
+
+UDAM evaluates actions. Therefore, its core variables should be variables that action can affect through:
+
+- observation;
+- belief update;
+- decision improvement;
+- state intervention.
+
+If the target condition's occurrence is external and uncontrollable, then including it inside the core action-value equation weakens the model.
+
+The correct treatment is to classify it as:
+
+- outside the core model;
+- an external parameter;
+- a separate extension;
+- or an exception condition.
+
 ## Local determinism, not metaphysical determinism
 
 The model does not need to claim that all reality is deterministic.
@@ -123,7 +143,7 @@ and the action value would become something like:
 V(a) = P(event occurs) · I_position(a) + B(a) - C(a)
 ```
 
-This is outside the core model because it changes the source of the advantage.
+This is outside the core model because it changes the source of the advantage and may introduce uncontrollable external uncertainty into an action-oriented model.
 
 ## Correct scope
 
