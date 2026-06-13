@@ -1,0 +1,29 @@
+flowchart TD
+    A[Anchor loss or unclear state] --> B[Latent state S is not directly observed]
+    B --> C{Observe now?}
+
+    C -->|No| D[Choose action under prior]
+    D --> E[V_no_obs = max_a E[V(a,S)]]
+
+    C -->|Yes| F[Observation y]
+    F --> G[Update belief p(S | y)]
+    G --> H[Choose action conditional on y]
+    H --> I[V_obs = E_y max_a E[V(a,S) | y] - C(obs)]
+
+    I --> J{OV > 0?}
+    E --> J
+
+    J -->|Yes| K[Observation is favorable]
+    J -->|No| L[Observation is not favored]
+
+    G --> M[Hidden upside may be revealed]
+    G --> N[Hidden downside may be revealed early]
+
+    O[Fixed target discounted by agent] --> P[pi_hat * I_position(a) + B(a) <= C(a)]
+    P --> Q[Re-anchor skipped]
+    Q --> R[Hidden downside remains unmanaged]
+
+    S[Core fixed-target value positive] --> T[C(a) < I_position(a) + B(a)]
+    T --> U[Re-anchor would be favorable in core model]
+
+    P -. error region .- T
