@@ -26,8 +26,9 @@ For each item, check:
 | More informative observations can improve decisions | Blackwell informativeness | verified: partial support | See `docs/22_literature_verification_value_blackwell.md`; compatible but not identical to `P(y | S) != P(y)` |
 | Choose observations by expected usefulness | Bayesian experimental design | verified: direct support | See `docs/23_literature_verification_bayesian_experimental_design.md`; supports utility-guided observation choice |
 | Prior -> observation -> posterior -> action | Bayesian experimental design | verified: partial to direct support | Direct for prior-posterior updating; action mapping is supported when utility is decision-relevant but remains UDAM-specific in concrete form |
-| Continue observing only while marginal value is positive | sequential analysis / stopping rules | to verify | likely partial support; next priority |
-| Small probes can balance learning and action | multi-armed bandits / exploration-exploitation | to verify | partial; avoid overclaiming |
+| Continue observing only while marginal value is positive | sequential analysis / stopping rules | verified: partial support | See `docs/24_literature_verification_sequential_analysis.md`; stopping-rule discipline is directly supported, but `MOV_i` is UDAM-specific notation |
+| Repeated observation requires a stopping rule | sequential analysis / stopping rules | verified: direct support | Later checks are continue-or-stop decisions, not automatic extensions of the first observation |
+| Small probes can balance learning and action | multi-armed bandits / exploration-exploitation | to verify | partial; next priority after sequential analysis |
 | Action can be chosen partly to gain information | active inference / epistemic value | to verify | partial; UDAM is narrower |
 | If-result-then-action mapping improves usability | implementation intentions | to verify | likely practical support |
 | Small successful steps can justify gradual expansion | shaping / successive approximations | to verify | partial; be careful outside behavioral context |
@@ -42,6 +43,7 @@ Current verified notes:
 
 - `docs/22_literature_verification_value_blackwell.md`
 - `docs/23_literature_verification_bayesian_experimental_design.md`
+- `docs/24_literature_verification_sequential_analysis.md`
 
 Key result:
 
@@ -49,6 +51,7 @@ Key result:
 value of information -> direct support for OV > 0 style observation value
 Blackwell informativeness -> partial support for state-informative observation and conditional action, but not identical to UDAM's local condition
 Bayesian experimental design -> direct support for utility-guided observation choice and prior-posterior updating, but not proof of UDAM's timer-derived synthesis
+sequential analysis / stopping rules -> direct support for treating repeated observation as a continue-or-stop problem; partial support for UDAM's MOV_i notation
 ```
 
 ## Current caution
@@ -65,6 +68,12 @@ Prefer:
 UDAM is consistent with several existing decision-theoretic and cognitive frameworks, but each connection should be verified separately.
 ```
 
+Additional caution:
+
+```text
+MOV_i <= 0 means the current observation mode should stop or change. It does not imply that all possible future observations are worthless.
+```
+
 ## Priority
 
 First priority:
@@ -73,7 +82,7 @@ First priority:
 value of information: verified first pass
 Blackwell informativeness: verified first pass
 Bayesian experimental design: verified first pass
-sequential analysis / stopping rules
+sequential analysis / stopping rules: verified first pass
 ```
 
 Second priority:
