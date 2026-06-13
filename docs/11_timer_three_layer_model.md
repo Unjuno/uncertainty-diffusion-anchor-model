@@ -1,6 +1,6 @@
 # 11 Timer Three-Layer Model
 
-This document refines the timer model into three distinct layers.
+This document refines the timer model into distinct layers.
 
 The goal is to avoid the incorrect claim that re-anchoring always reduces absolute uncertainty.
 
@@ -29,9 +29,34 @@ This means that re-anchoring does not necessarily reduce the absolute uncertaint
 
 The unknown interval remains unknown.
 
+## Layer 1b: Absolute uncertainty may still increase
+
+In a more realistic timer model, the unknown interval may continue to accumulate uncertainty until it is bounded or inferred.
+
+For example, if the unknown component has its own diffusion process:
+
+```text
+Var(U_{t+Δt}) = Var(U_t) + Q_U Δt
+```
+
+then absolute uncertainty increases when:
+
+```text
+Q_U > 0
+Δt > 0
+```
+
+So the refined claim is not:
+
+> absolute uncertainty must stay fixed.
+
+It is:
+
+> absolute uncertainty may stay fixed or even increase, while its relative influence can still decrease if the known interval grows faster or the total reference scale expands.
+
 ## Layer 2: Relative uncertainty dilution
 
-Even if `Var(U)` does not decrease, the relative influence of `U` can decrease as `R` grows.
+Even if `Var(U)` does not decrease, and even if it increases slowly, the relative influence of `U` can decrease as `R` grows.
 
 Define:
 
@@ -51,9 +76,7 @@ we have:
 ρ(R) = sqrt(Var(U)) / (K + E[U] + R)
 ```
 
-As `R` increases, the denominator increases while the numerator remains fixed.
-
-Therefore:
+If the numerator grows more slowly than the denominator, then:
 
 ```text
 ρ(R) decreases as R increases
@@ -83,8 +106,8 @@ This is stronger than relative dilution because it constrains the possible range
 
 | Layer | Claim | Formula | Strength |
 |---|---|---|---|
-| Absolute uncertainty | `U` remains uncertain | `Var(τ | K, R) = Var(U)` | weakest |
-| Relative dilution | `U` matters less relative to total elapsed time | `ρ(R) = sqrt(Var(U)) / E[τ]` | medium |
+| Absolute uncertainty | `U` may remain uncertain or even grow | `Var(U_{t+Δt}) = Var(U_t) + Q_U Δt` | base |
+| Relative dilution | `U` can matter less relative to total elapsed time | `ρ(R) = sqrt(Var(U)) / E[τ]` | comparative |
 | Upper-bound tightening | possible range of `U` shrinks under an upper bound | `U < T - K - R` | strongest |
 
 ## Corrected timer claim
@@ -95,7 +118,7 @@ The timer model should not claim:
 
 It should claim:
 
-> Re-anchoring preserves a new known interval. This can dilute the relative influence of the unknown interval, and under an upper-bound condition can also tighten the admissible range of the unknown interval.
+> Re-anchoring preserves a new known interval. Absolute uncertainty in the unknown interval may remain or even increase, but the unknown interval's relative influence can decrease as the known interval grows. Under an upper-bound condition, the admissible range of the unknown interval can also tighten.
 
 ## General implication
 
