@@ -20,6 +20,7 @@ Each example should distinguish **state change** from **belief uncertainty**.
 | `concrete_work_reanchor.md` | concrete daily case | task list inspection as project re-anchor |
 | `concrete_relationship_reanchor.md` | concrete daily case | low-pressure message as social re-anchor |
 | `concrete_budget_reanchor.md` | concrete daily case | minimum budget numbers as planning re-anchor |
+| `application_playbook_template.md` | template | required structure for future concrete applications |
 
 ## Concrete daily cases
 
@@ -28,7 +29,7 @@ The concrete daily cases are meant to make UDAM usable, not merely abstract.
 They follow the pattern:
 
 ```text
-unclear state -> small observation -> updated action
+unclear state -> state-informative observation -> mapped next action
 ```
 
 The action is justified only when:
@@ -47,66 +48,47 @@ The concrete cases should show:
 
 - the exact unclear state;
 - the common mistaken inference;
-- the small re-anchor action;
+- the small state-informative observation;
+- the immediate action steps;
 - the possible observation results;
-- how the next action changes.
+- the next action map.
 
-## Template
+## Required practical sections
 
-```markdown
-# Example: <Name>
-
-## Situation
-
-What is happening?
-
-## Lost anchor
-
-What reference point was lost?
-
-## State variable
-
-What is the latent state `S_t`?
-
-## Belief uncertainty
-
-What is the agent uncertain about?
+Every concrete application should include these sections:
 
 ```text
-P_{domain,t} = Var(S_t | D_t)
+If you are in this situation, do this now
+Observation result
+Next action map
+Boundary
 ```
 
-## Possible state dynamics
-
-How might the state itself change?
-
-## Belief dynamics
-
-How might uncertainty about the state change?
-
-## Re-anchoring action
-
-What small action returns information?
-
-## Informational value
-
-What does the action reveal?
+The most important section is:
 
 ```text
-I(a) > 0
+Next action map
 ```
 
-## Intervention value
-
-Does the action also improve the state?
+because UDAM becomes practical only when observation changes action.
 
 ```text
-B(a) >= 0
+a(y) != a_0
 ```
 
-## Failure case
+## Application playbook template
 
-When does this stop being a good re-anchor?
+For new applications, use:
+
+- `application_playbook_template.md`
+
+Minimal shape:
+
+```text
+unclear state
+-> state-informative observation
+-> classify result
+-> choose mapped next action
 ```
 
 ## Miscalculation examples
