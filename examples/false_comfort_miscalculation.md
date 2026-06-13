@@ -98,6 +98,26 @@ A simple record shows:
 
 The re-anchor enables earlier response.
 
+### Safety-critical fixed-target case
+
+The agent thinks:
+
+> The fixed target condition is probably not real or not relevant.
+
+Because of that, they do not re-anchor their position relative to it.
+
+But if the target condition is in fact fixed within the local model, then disbelief prevents useful observation.
+
+The error is:
+
+```text
+fixed target is dismissed → no re-anchor → hidden downside remains unmanaged
+```
+
+The re-anchor does not change the target condition.
+
+It changes the agent's orientation relative to it.
+
 ## Formal structure
 
 Let:
