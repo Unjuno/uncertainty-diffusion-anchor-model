@@ -45,7 +45,41 @@ The uncertainty caused by `U` does not invalidate `R`.
 
 If an agent loses track during `U`, restarting measurement at `R` is still informative.
 
-The lost interval is not recovered, but future uncertainty growth is constrained.
+The lost interval is not recovered, but future uncertainty is no longer merged into the same unknown interval.
+
+## Dilution, not necessarily absolute reduction
+
+In the timer model, re-anchoring does not necessarily reduce the absolute uncertainty of the lost interval `U`.
+
+If `K` and `R` are treated as known and `U` remains unchanged, then:
+
+```text
+Var(τ | K, R) = Var(U)
+```
+
+So the absolute variance can remain the same.
+
+However, as `R` grows, the known part of elapsed time grows while the unknown part remains localized in `U`.
+
+This creates **relative uncertainty dilution**.
+
+A simple relative uncertainty ratio is:
+
+```text
+ρ = sqrt(Var(U)) / E[τ]
+```
+
+Since:
+
+```text
+E[τ] = K + E[U] + R
+```
+
+increasing `R` reduces `ρ`, assuming `Var(U)` and `E[U]` are fixed.
+
+Therefore, the timer-specific claim is more precise as:
+
+> Re-anchoring does not erase the unknown interval. It dilutes the relative influence of the unknown interval by adding new known interval.
 
 ## All-or-nothing error
 
@@ -66,6 +100,22 @@ Correct inference:
 ```
 
 All terms have unit seconds. The decomposition is dimensionally valid.
+
+For the relative uncertainty ratio:
+
+```text
+ρ = sqrt(Var(U)) / E[τ]
+```
+
+we have:
+
+```text
+[sqrt(Var(U))] = s
+[E[τ]] = s
+[ρ] = 1
+```
+
+So `ρ` is dimensionless.
 
 ## Example
 
@@ -93,6 +143,24 @@ U < 30 s
 ```
 
 The fact that the event has not occurred is itself information.
+
+## Deadline survival effect
+
+If there is a known deadline `T` and the event has not occurred, then the agent also obtains a survival observation:
+
+```text
+K + U + R < T
+```
+
+which implies:
+
+```text
+U < T - K - R
+```
+
+As `R` increases, the upper bound on `U` decreases.
+
+In this special deadline case, re-anchoring plus non-occurrence can reduce the possible range of `U`, not merely dilute its relative influence.
 
 ## Generalization
 
