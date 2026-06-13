@@ -35,7 +35,46 @@ Possible choices:
 - expected decision error;
 - probability of being in a critical region.
 
-## 3. Observation update after re-anchoring
+## 3. Diffusion-rate conditions
+
+UDAM should not assume positive diffusion merely because time passes.
+
+The minimal diffusion equation is:
+
+```text
+P_{t+Δt} = P_t + QΔt
+```
+
+A positive diffusion rate is appropriate when unobserved time can make the agent's belief about the relevant state less reliable.
+
+A practical decomposition is:
+
+```text
+Q_total = Q_state + Q_memory + Q_dependency + Q_context
+```
+
+where:
+
+- `Q_state` comes from latent state change;
+- `Q_memory` comes from memory or calibration decay;
+- `Q_dependency` comes from unobserved dependency changes;
+- `Q_context` comes from task or decision context loss.
+
+Positive diffusion is assumed when:
+
+```text
+Q_total > 0
+```
+
+If:
+
+```text
+Q_total = 0
+```
+
+then the diffusion-prevention argument weakens. Re-anchoring may still be justified by direct information value, observability value, or intervention value.
+
+## 4. Observation update after re-anchoring
 
 A stricter Bayesian update can be written as:
 
@@ -63,7 +102,7 @@ A weak re-anchor may only satisfy:
 P_t^+ < P_{no-action}
 ```
 
-## 4. Timer-specific refinement: relative dilution
+## 5. Timer-specific refinement: relative dilution
 
 If:
 
@@ -92,7 +131,7 @@ K + U + R < T
 U < T - K - R
 ```
 
-## 5. Fixed-target scope
+## 6. Fixed-target scope
 
 The timer seed model assumes:
 
@@ -121,7 +160,7 @@ V(a) = P(target occurs) · I_position(a) + B(a) - C(a)
 
 This extension is deferred because it mixes occurrence uncertainty with position uncertainty.
 
-## 6. Controllability boundary
+## 7. Controllability boundary
 
 UDAM is an action-oriented model.
 
@@ -134,7 +173,7 @@ The core theory should include only uncertainty that action can affect through a
 
 Uncontrollable external uncertainty should be treated as outside the core model, an external parameter, a separate extension, or an exception condition.
 
-## 7. Observability value
+## 8. Observability value
 
 Observation can be valuable even when it does not directly improve the state.
 
@@ -168,7 +207,7 @@ This formalizes why re-anchoring can reveal both hidden upside and hidden downsi
 
 The value is not that observation makes the world better. The value is that it separates states and enables action conditional on the observed state.
 
-## 8. Fixed-target disbelief
+## 9. Fixed-target disbelief
 
 In the fixed-target core model, positional information has value:
 
@@ -190,7 +229,7 @@ pi_hat * I_position(a) + B(a) <= C(a) < I_position(a) + B(a)
 
 This is the formal region for fixed-target disbelief.
 
-## 9. Diminishing information value
+## 10. Diminishing information value
 
 Repeated checking should be modeled with declining marginal information:
 
@@ -226,7 +265,7 @@ Thus, UDAM favors repeated observation only while each additional observation ch
 
 This prevents the model from justifying checking loops.
 
-## 10. State change versus belief change
+## 11. State change versus belief change
 
 UDAM currently focuses on belief uncertainty.
 
@@ -237,7 +276,7 @@ state dynamics: S_t changes
 belief dynamics: uncertainty about S_t changes
 ```
 
-## 11. Stronger state-space version
+## 12. Stronger state-space version
 
 A more standard state-space form would be:
 
@@ -250,16 +289,17 @@ v_t ~ noise(R_obs)
 
 UDAM does not need this form initially, but it connects the model to existing filtering theory.
 
-## 12. Formal priority list
+## 13. Formal priority list
 
 1. Keep timer model clean.
 2. Preserve `P_t` as variance/covariance in the minimal theory.
 3. Add optional `𝓤_t` generalization later.
-4. Make all claims about re-anchoring comparative unless strong observation is assumed.
-5. Distinguish absolute uncertainty from relative uncertainty dilution.
-6. Keep fixed-target scope in the core timer model.
-7. Keep uncontrollable external uncertainty outside the core action-value argument.
-8. Treat observability value as conditional-action value, not automatic benefit.
-9. Keep fixed-target disbelief as a subjective discounting error, not a change in the core target condition.
-10. Treat repeated checking as favorable only while marginal information value remains positive.
-11. Distinguish empty activity from informative action.
+4. Assume `Q > 0` only when unobserved time can reduce belief reliability.
+5. Make all claims about re-anchoring comparative unless strong observation is assumed.
+6. Distinguish absolute uncertainty from relative uncertainty dilution.
+7. Keep fixed-target scope in the core timer model.
+8. Keep uncontrollable external uncertainty outside the core action-value argument.
+9. Treat observability value as conditional-action value, not automatic benefit.
+10. Keep fixed-target disbelief as a subjective discounting error, not a change in the core target condition.
+11. Treat repeated checking as favorable only while marginal information value remains positive.
+12. Distinguish empty activity from informative action.
