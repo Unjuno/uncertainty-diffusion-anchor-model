@@ -1,5 +1,31 @@
 # Changelog
 
+## 0.7.3 - Japanese failure examples
+
+Added a Japanese readable failure-example layer and linked it from the Japanese documentation index.
+
+Added:
+
+- `docs/ja/05_failure_examples.md`
+
+Changed:
+
+- `docs/ja/README.md` now links to the Japanese failure examples.
+- `docs/ja/README.md` now links to the full UDAM flow diagram and positioning map.
+
+Core Japanese failure examples:
+
+```text
+状態と関係ない観測
+確認ループ
+広げすぎ
+局所観測から全体断定
+```
+
+Status:
+
+- Japanese documentation now covers not only the core model and practical protocol, but also concrete misuse patterns.
+
 ## 0.7.2 - Failure examples
 
 Added concrete examples for common UDAM misuse and failure patterns.
