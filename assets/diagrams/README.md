@@ -18,6 +18,7 @@ The diagrams are written in Mermaid where possible so they can be edited as text
 - `one_page_udam_flow.mmd`: compact Stage 3 entry-point flow from anchor loss to observation, action, repeated checking, and boundary-risk-constrained expansion.
 - `anchor_reanchor_timeline.mmd`: Stage 3 timeline showing `K + U + R` and why unknown `U` does not automatically invalidate a valid future re-anchor `R`.
 - `observation_value_decision.mmd`: Stage 3 decision diagram showing that state-informative observation is not automatically favorable; action change and `OV > 0` are still required.
+- `expansion_boundary_risk.mmd`: Stage 3 decision diagram showing that local success does not automatically permit expansion; the selected expansion factor must satisfy benefit, information, cost, correction, and boundary-risk constraints.
 - `positioning_map.mmd`: positioning map showing UDAM as a timer-derived practical synthesis of existing ideas.
 
 ## Rendering
