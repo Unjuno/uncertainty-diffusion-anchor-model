@@ -36,6 +36,18 @@ Spend five minutes on it.
 
 Do not try to solve the whole subject at once.
 
+## If you are in this situation, do this now
+
+```text
+1. Open one representative problem from the actual topic.
+2. Spend 5 minutes only.
+3. Classify the result: cannot start / stuck / with notes / without notes.
+```
+
+Do not decide whether you are good or bad at the subject before this check.
+
+The check exists to reveal the current state.
+
 ## Observation result
 
 The result separates possible states:
@@ -48,6 +60,15 @@ can solve without notes
 ```
 
 Each result gives a different next action.
+
+## Next action map
+
+```text
+cannot start -> review the first concept
+stuck -> identify the stuck step
+with notes -> repeat once without notes
+without notes -> move to the next topic
+```
 
 ## UDAM interpretation
 
