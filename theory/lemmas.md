@@ -77,7 +77,7 @@ then action `a` is favorable relative to inaction under the model.
 
 This lemma supports the practical rule that informative low-cost actions can be rational.
 
-## Lemma 5: Re-anchored known intervals dilute relative uncertainty in the timer model
+## Lemma 5: Re-anchored known intervals can dilute relative uncertainty in the timer model
 
 Assume:
 
@@ -85,7 +85,7 @@ Assume:
 τ = K + U + R
 ```
 
-where `K` and `R` are observed, and `U` has fixed expectation and variance.
+where `K` and `R` are observed, and `U` has uncertainty.
 
 Define relative uncertainty ratio:
 
@@ -105,10 +105,16 @@ we have:
 ρ(R) = sqrt(Var(U)) / (K + E[U] + R)
 ```
 
-For `K + E[U] + R > 0`, increasing `R` decreases `ρ(R)`.
+If `Var(U)` is fixed and `K + E[U] + R > 0`, increasing `R` decreases `ρ(R)`.
 
-Therefore, even if absolute uncertainty `Var(U)` does not decrease, the relative influence of the unknown interval is diluted as the re-anchored known interval grows.
+More generally, even if `Var(U)` increases, relative dilution can still occur when:
+
+```text
+d/dR sqrt(Var(U)) < d/dR E[τ]
+```
+
+That is, the uncertainty scale grows more slowly than the total reference scale.
 
 ### Use
 
-This lemma refines the timer model: re-anchoring may produce relative dilution rather than absolute variance reduction.
+This lemma refines the timer model: re-anchoring may produce relative dilution even when absolute uncertainty remains or increases.
