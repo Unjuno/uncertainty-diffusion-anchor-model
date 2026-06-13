@@ -1,5 +1,41 @@
 # Changelog
 
+## 0.7.22 - Literature support map visual
+
+Continued Stage 3 visual explanation with a literature-support map diagram.
+
+Added:
+
+- `assets/diagrams/literature_support_map.mmd`
+
+Changed:
+
+- `docs/32_visual_explanation_layer.md` now documents the fifth Stage 3 visual artifact.
+- `assets/diagrams/README.md` now lists the literature support map diagram.
+- ROADMAP now marks the literature-support map figure source as added and Stage 3 source diagrams as first-pass complete.
+
+Core result:
+
+```text
+The literature-support map separates direct support, partial support, analogy-only support, not-supported claims to avoid, and UDAM-specific synthesis.
+```
+
+Design constraints preserved:
+
+```text
+component support does not prove full synthesis
+nearby literature supports different UDAM components at different strengths
+UDAM is not proven by any single nearby literature
+UDAM-specific anchor-loss synthesis remains distinct from component support
+```
+
+Status:
+
+- Stage 3 now has five Mermaid visual sources.
+- The planned Stage 3 source diagrams are complete as a first pass.
+- Remaining visual work is rendering diagrams into figures and improving reader-facing links.
+- Japanese expansion remains deferred until English visual structure stabilizes.
+
 ## 0.7.21 - Expansion boundary risk visual
 
 Continued Stage 3 visual explanation with an expansion-boundary-risk decision diagram.
