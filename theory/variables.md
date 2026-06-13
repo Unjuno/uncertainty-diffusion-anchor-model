@@ -42,18 +42,18 @@ P_{t+Δt} = P_t + QΔt
 
 So if `P_t` is measured in `state unit^2`, then `Q` is measured in `state unit^2 / s`.
 
-In the timer case, if the state is elapsed time, then:
+In the timer case, if the state is elapsed time, then the state unit is seconds:
 
 ```text
 [P_t] = s^2
-[Q] = s^2 / s = s
-[QΔt] = s
+[Q] = s^2 / s
+[QΔt] = s^2
 ```
 
-This looks unusual because the state itself is time. More explicitly:
+Because `s^2 / s` dimensionally simplifies to `s`, `Q` can look misleading in the timer case. Semantically, however, it should be read as:
 
 ```text
-[QΔt] = elapsed-time variance
+elapsed-time variance added per second
 ```
 
 The model should be read as:
