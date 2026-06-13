@@ -280,7 +280,8 @@ English-first practical reading order:
 29. [`docs/37_formal_claims_routing_audit.md`](docs/37_formal_claims_routing_audit.md)
 30. [`docs/38_visual_claims_routing_audit.md`](docs/38_visual_claims_routing_audit.md)
 31. [`docs/39_simulation_sanity_checks.md`](docs/39_simulation_sanity_checks.md)
-32. [`simulations/README.md`](simulations/README.md)
+32. [`docs/40_draft_source_of_truth_disclaimer_audit.md`](docs/40_draft_source_of_truth_disclaimer_audit.md)
+33. [`simulations/README.md`](simulations/README.md)
 
 Japanese documentation, to be synchronized after English stabilization:
 
@@ -297,7 +298,7 @@ Japanese documentation, to be synchronized after English stabilization:
 | `notes/` | origin notes, terminology, research notes, evidence hierarchy, verification notes |
 | `assets/` | diagrams and figures |
 | `simulations/` | toy sanity-check scripts and result files; not empirical validation |
-| `drafts/` | optional paper, blog, manifesto, and project-note drafts |
+| `drafts/` | downstream paper, blog, manifesto, and project-note drafts; not source of truth |
 
 For source-of-truth assignments and consolidation rules, see:
 
@@ -323,6 +324,11 @@ For visual-claims routing rules, see:
 
 - [`docs/38_visual_claims_routing_audit.md`](docs/38_visual_claims_routing_audit.md)
 
+For draft source-of-truth disclaimer rules, see:
+
+- [`docs/40_draft_source_of_truth_disclaimer_audit.md`](docs/40_draft_source_of_truth_disclaimer_audit.md)
+- [`drafts/README.md`](drafts/README.md)
+
 For toy simulation sanity checks, see:
 
 - [`docs/39_simulation_sanity_checks.md`](docs/39_simulation_sanity_checks.md)
@@ -337,7 +343,9 @@ For toy simulation sanity checks, see:
 - [`docs/37_formal_claims_routing_audit.md`](docs/37_formal_claims_routing_audit.md): routing rules for variables, propositions, proofs, counterexamples, and formal refinement.
 - [`docs/38_visual_claims_routing_audit.md`](docs/38_visual_claims_routing_audit.md): routing rules for diagrams, rendered figures, and visual summaries.
 - [`docs/39_simulation_sanity_checks.md`](docs/39_simulation_sanity_checks.md): first-pass toy simulation sanity-check summary.
+- [`docs/40_draft_source_of_truth_disclaimer_audit.md`](docs/40_draft_source_of_truth_disclaimer_audit.md): routing rules and disclaimer policy for downstream drafts.
 - [`simulations/README.md`](simulations/README.md): reproducible toy simulation scripts and result files.
+- [`drafts/README.md`](drafts/README.md): downstream draft index and source-of-truth disclaimer.
 - [`notes/literature_verification.md`](notes/literature_verification.md): checklist for verifying related-work claims before treating them as citations.
 - [`notes/evidence_hierarchy.md`](notes/evidence_hierarchy.md): support levels for UDAM claims.
 - [`theory/logical_synthesis_review.md`](theory/logical_synthesis_review.md): logical coherence review across model layers.
@@ -356,7 +364,7 @@ failure boundaries: strong
 literature verification: first-pass complete
 visual explanation: first-pass Mermaid source set complete; Stage 3 SVG figures available
 simulation sanity checks: first toy set recorded; not empirical validation
-project-note consolidation: visual-claims routing audit complete as first pass
+project-note consolidation: first-pass complete
 Japanese layer: minimal, deferred for later sync
 ```
 
