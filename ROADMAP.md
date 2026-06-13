@@ -78,8 +78,10 @@ Goal: keep examples useful while preventing misreadings.
 - [x] add high-stakes example policy
 - [x] require neutral wording for high-stakes examples
 - [x] distinguish theory failure cases from missed-application miscalculations
-- [ ] add a concise public-facing FAQ
+- [x] add a concise public-facing FAQ
 - [ ] render diagrams for easier reading
+
+Status: public-facing clarification is mostly complete. Remaining work is visual rendering.
 
 ## v1.0: Stable theory note
 
