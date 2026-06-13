@@ -108,6 +108,64 @@ Open problem:
 
 > Which experiment best isolates uncertainty diffusion and re-anchoring?
 
+## Q9. What determines the adaptive expansion factor?
+
+After a valid observation, UDAM may expand the next scope:
+
+```text
+s_{i+1} = r_i s_i
+```
+
+A common default is:
+
+```text
+1 -> 2 -> 4 -> 8
+```
+
+Open problem:
+
+> Under what loss functions is doubling close to optimal, and when should the expansion factor be smaller or larger?
+
+Relevant variables:
+
+```text
+C_obs(r_i)
+P_boundary(i)
+C_boundary
+C_correct(r_i)
+```
+
+## Q10. How should adverse boundary risk be estimated?
+
+The expansion condition includes:
+
+```text
+P_boundary(i) * C_boundary
+```
+
+Open problem:
+
+> How can an agent estimate the probability and cost of crossing a relevant adverse boundary before the next observation?
+
+This is domain-dependent. In some domains, the boundary risk can be measured. In others, it is only a rough judgment.
+
+## Q11. When is geometric expansion better than fixed cadence?
+
+Adaptive observation cadence asks when to observe again.
+
+Adaptive expansion factor asks how far to expand the next scope.
+
+Open problem:
+
+> When should the agent use a fixed cadence, and when should the agent use geometric expansion?
+
+Possible answer:
+
+```text
+fixed cadence -> useful when state changes at a known rhythm
+geometric expansion -> useful when useful scale is unknown and prior observations remain favorable
+```
+
 ## Deferred extension: event-occurrence uncertainty
 
 A broader model could add:
