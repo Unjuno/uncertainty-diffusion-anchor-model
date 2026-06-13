@@ -16,14 +16,39 @@ The lost anchor is self-state:
 - next viable action;
 - remaining options.
 
-## Uncertainty diffusion
+## State variable
 
-If the agent does nothing, uncertainty may grow about:
+The latent state is the agent's actual post-failure condition:
 
-- whether skills remain usable;
-- whether opportunities remain;
-- whether relationships are repairable;
-- whether action is still possible.
+```text
+S_t = current self-state
+```
+
+This includes real abilities, resources, relationships, constraints, and available actions.
+
+## Belief uncertainty
+
+The agent is uncertain about what remains possible.
+
+```text
+P_{self,t} = Var(S_t | D_t)
+```
+
+## Possible state dynamics
+
+The actual state may change after failure:
+
+- resources may decrease;
+- opportunities may close or open;
+- relationships may repair or degrade;
+- skills may remain usable;
+- new options may appear.
+
+UDAM does not assume that the agent's life has objectively ended.
+
+## Belief dynamics
+
+Even if the actual state is less catastrophic than it feels, the agent's uncertainty may grow when they avoid contact with reality.
 
 ```text
 P_{self,t+Δt} = P_{self,t} + Q_self Δt
