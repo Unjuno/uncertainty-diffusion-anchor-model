@@ -258,7 +258,7 @@ UDAM should not claim full mathematical originality.
 
 Safe claim:
 
-> UDAM is a timer-derived cognitive and decision-theoretic formulation that integrates uncertainty diffusion, re-anchoring, state-informative observation, and small informative action into a practical theory of recovery after anchor loss.
+> UDAM is a timer-derived cognitive and decision-theoretic formulation that integrates uncertainty diffusion, re-anchoring, state-informative observation, adaptive expansion, and boundary-risk-constrained small informative actions into a practical theory of recovery after anchor loss.
 
 Unsafe claim:
 
@@ -438,6 +438,51 @@ See:
 - `theory/conditional_action_switch.md`
 - `docs/08_related_work.md`
 
+## Issue 16: Adaptive expansion factor can be misread as always-expand
+
+Status: Fixed as refinement.
+
+Potential problem:
+
+The expansion pattern:
+
+```text
+1 -> 2 -> 4 -> 8
+```
+
+can be misread as a universal rule.
+
+Correction:
+
+Expansion is favorable only when expansion value exceeds observation, correction, and boundary-risk costs:
+
+```text
+B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
+```
+
+The boundary term is essential:
+
+```text
+P_boundary(i) * C_boundary
+```
+
+Practical reading:
+
+```text
+doubling is a possible default, not a universal optimum
+```
+
+and:
+
+```text
+expand only as far as adverse-boundary risk allows
+```
+
+See:
+
+- `docs/18_adaptive_expansion_factor.md`
+- `theory/propositions.md` Proposition 13
+
 ## Current conclusion
 
 The main structure remains coherent:
@@ -452,17 +497,20 @@ MOV_i > 0
 P(y | S) != P(y)
 P(S | y) != P(S)
 a(y) != a_0
+s_{i+1} = r_i s_i
+B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
 ```
 
 The main correction made during review was the timer-specific unit error for `QΔt`.
 
-The main conceptual refinement is now five-layered:
+The main conceptual refinement is now six-layered:
 
 1. timer re-anchoring can produce decreasing relative influence even when absolute uncertainty remains or increases;
 2. observation can produce value by enabling better conditional action;
 3. repeated observation is useful only while marginal value remains positive;
 4. a valid re-anchor must be state-informative;
-5. useful observation can justify conditional action switching.
+5. useful observation can justify conditional action switching;
+6. geometric expansion is useful only when boundary-risk-constrained expansion value is positive.
 
 The core representation decision is closed:
 
