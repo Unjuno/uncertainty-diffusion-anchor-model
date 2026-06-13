@@ -62,8 +62,21 @@ R = そこから再開して新しくわかった部分
    実際の使い方。
 4. [`03_failure_cases.md`](03_failure_cases.md)  
    使えない場合・誤用しやすい場合。
-5. [`04_positioning.md`](04_positioning.md)  
+5. [`05_failure_examples.md`](05_failure_examples.md)  
+   具体的な失敗例。
+6. [`04_positioning.md`](04_positioning.md)  
    UDAM が何で、何ではないか。
+
+## 図
+
+図は英語名のまま `assets/diagrams/` に置いています。
+
+まず見るなら、この2つです。
+
+- [`../../assets/diagrams/full_udam_flow.mmd`](../../assets/diagrams/full_udam_flow.mmd)  
+  アンカー喪失から、観測、条件付き行動、拡張、境界リスク確認までの全体図。
+- [`../../assets/diagrams/positioning_map.mmd`](../../assets/diagrams/positioning_map.mmd)  
+  UDAM が既存理論とどう関係し、どこに独自の整理があるかを示す図。
 
 ## 英語版との対応
 
@@ -73,6 +86,7 @@ R = そこから再開して新しくわかった部分
 | `01_timer_model.md` | `docs/01_timer_model.md` |
 | `02_practical_protocol.md` | `docs/14_practical_reanchor_protocol.md` |
 | `03_failure_cases.md` | `docs/06_failure_cases.md` |
+| `05_failure_examples.md` | `examples/failure_*.md` |
 | `04_positioning.md` | `docs/19_positioning_and_novelty.md` |
 
 ## 注意
