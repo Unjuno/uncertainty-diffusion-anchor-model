@@ -95,7 +95,11 @@ and `K` and `R` are observed while `U` is uncertain, then adding `R` does not ne
 Var(U)
 ```
 
-Instead, it can reduce the relative uncertainty ratio:
+Absolute uncertainty may remain or increase.
+
+Relative influence may still decrease if the reference scale grows faster than the uncertainty scale.
+
+A representative ratio is:
 
 ```text
 ρ(R) = sqrt(Var(U)) / E[τ]
@@ -109,7 +113,7 @@ E[τ] = K + E[U] + R
 
 Thus timer re-anchoring should be described as **relative uncertainty dilution** unless there is an additional observation that tightens `U`.
 
-A fixed deadline provides such an additional constraint:
+A fixed upper time bound provides such an additional constraint:
 
 ```text
 K + U + R < T
@@ -121,7 +125,56 @@ which implies:
 U < T - K - R
 ```
 
-## 6. Diminishing information value
+## 6. Fixed-target scope
+
+The timer seed model assumes:
+
+```text
+fixed target, uncertain position
+```
+
+It does not model:
+
+```text
+uncertain target, uncertain position
+```
+
+A stochastic target-occurrence extension would require at least:
+
+```text
+P(target occurs)
+P(position | target occurs)
+```
+
+and would change the action-value structure:
+
+```text
+V(a) = P(target occurs) · I_position(a) + B(a) - C(a)
+```
+
+This extension is intentionally deferred because it weakens the minimal timer argument by mixing occurrence uncertainty with position uncertainty.
+
+## 7. Controllability boundary
+
+UDAM is an action-oriented model.
+
+The core theory should include only uncertainty that action can affect through at least one of:
+
+- observation;
+- belief update;
+- decision improvement;
+- state intervention.
+
+Uncontrollable external uncertainty should be treated as:
+
+- outside the core model;
+- an external parameter;
+- a separate extension;
+- or an exception condition.
+
+This boundary prevents uncontrollable occurrence uncertainty from weakening the core re-anchoring argument.
+
+## 8. Diminishing information value
 
 Repeated checking should be modeled with declining marginal information:
 
@@ -137,7 +190,7 @@ I(a_n) + B(a_n) < C(a_n)
 
 then repeated checking becomes unfavorable.
 
-## 7. State change versus belief change
+## 9. State change versus belief change
 
 UDAM currently focuses on belief uncertainty.
 
@@ -150,7 +203,7 @@ belief dynamics: uncertainty about S_t changes
 
 A later formal version should separate these.
 
-## 8. Stronger state-space version
+## 10. Stronger state-space version
 
 A more standard state-space form would be:
 
@@ -163,11 +216,13 @@ v_t ~ noise(R_obs)
 
 UDAM does not need this form initially, but it connects the model to existing filtering theory.
 
-## 9. Formal priority list
+## 11. Formal priority list
 
 1. Keep timer model clean.
 2. Preserve `P_t` as variance/covariance in the minimal theory.
 3. Add optional `𝓤_t` generalization later.
 4. Make all claims about re-anchoring comparative unless strong observation is assumed.
 5. In the timer model, distinguish absolute uncertainty from relative uncertainty dilution.
-6. Distinguish empty activity from informative action.
+6. Keep fixed-target scope in the core timer model.
+7. Keep uncontrollable external uncertainty outside the core action-value argument.
+8. Distinguish empty activity from informative action.
