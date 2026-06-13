@@ -202,7 +202,7 @@ Current support status:
 ```text
 Levels 1-4: strong enough for a hobby theory project
 Level 5: first-pass literature verification complete enough to support component-level claims
-Level 6: empirical testing or simulation deferred
+Level 6: toy sanity-check simulations recorded; empirical validation deferred
 ```
 
 ## Logical synthesis status
@@ -278,6 +278,8 @@ English-first practical reading order:
 27. [`docs/35_overview_consolidation_audit.md`](docs/35_overview_consolidation_audit.md)
 28. [`docs/36_literature_claims_routing_audit.md`](docs/36_literature_claims_routing_audit.md)
 29. [`docs/37_formal_claims_routing_audit.md`](docs/37_formal_claims_routing_audit.md)
+30. [`docs/39_simulation_sanity_checks.md`](docs/39_simulation_sanity_checks.md)
+31. [`simulations/README.md`](simulations/README.md)
 
 Japanese documentation, to be synchronized after English stabilization:
 
@@ -293,6 +295,7 @@ Japanese documentation, to be synchronized after English stabilization:
 | `examples/` | structured applications and failure examples |
 | `notes/` | origin notes, terminology, research notes, evidence hierarchy, verification notes |
 | `assets/` | diagrams and figures |
+| `simulations/` | toy sanity-check scripts and result files; not empirical validation |
 | `drafts/` | optional paper, blog, manifesto, and project-note drafts |
 
 For source-of-truth assignments and consolidation rules, see:
@@ -315,6 +318,11 @@ For formal-claims routing rules, see:
 
 - [`docs/37_formal_claims_routing_audit.md`](docs/37_formal_claims_routing_audit.md)
 
+For toy simulation sanity checks, see:
+
+- [`docs/39_simulation_sanity_checks.md`](docs/39_simulation_sanity_checks.md)
+- [`simulations/README.md`](simulations/README.md)
+
 ## Development notes
 
 - [`docs/33_project_note_consolidation.md`](docs/33_project_note_consolidation.md): source-of-truth map for repository consolidation.
@@ -322,6 +330,8 @@ For formal-claims routing rules, see:
 - [`docs/35_overview_consolidation_audit.md`](docs/35_overview_consolidation_audit.md): first-pass audit of overview duplication and conceptual-boundary role.
 - [`docs/36_literature_claims_routing_audit.md`](docs/36_literature_claims_routing_audit.md): routing rules for literature claims and verification status.
 - [`docs/37_formal_claims_routing_audit.md`](docs/37_formal_claims_routing_audit.md): routing rules for variables, propositions, proofs, counterexamples, and formal refinement.
+- [`docs/39_simulation_sanity_checks.md`](docs/39_simulation_sanity_checks.md): first-pass toy simulation sanity-check summary.
+- [`simulations/README.md`](simulations/README.md): reproducible toy simulation scripts and result files.
 - [`notes/literature_verification.md`](notes/literature_verification.md): checklist for verifying related-work claims before treating them as citations.
 - [`notes/evidence_hierarchy.md`](notes/evidence_hierarchy.md): support levels for UDAM claims.
 - [`theory/logical_synthesis_review.md`](theory/logical_synthesis_review.md): logical coherence review across model layers.
@@ -330,7 +340,7 @@ For formal-claims routing rules, see:
 
 ## Repository status
 
-This repository is currently a theory repository. The first goal is not simulation or implementation, but precise formulation and readable refinement.
+This repository is currently a theory repository. The first goal is not implementation or empirical validation, but precise formulation and readable refinement.
 
 Current status:
 
@@ -339,6 +349,7 @@ core theory: stable enough to refine
 failure boundaries: strong
 literature verification: first-pass complete
 visual explanation: first-pass Mermaid source set complete; Stage 3 SVG figures available
+simulation sanity checks: first toy set recorded; not empirical validation
 project-note consolidation: formal-claims routing audit complete as first pass
 Japanese layer: minimal, deferred for later sync
 ```
