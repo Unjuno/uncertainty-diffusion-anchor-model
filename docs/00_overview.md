@@ -37,11 +37,16 @@ UDAM says instead:
 For a compact visual overview, start with:
 
 - [`docs/32_visual_explanation_layer.md`](32_visual_explanation_layer.md)
-- [`assets/diagrams/one_page_udam_flow.mmd`](../assets/diagrams/one_page_udam_flow.mmd)
-- [`assets/diagrams/anchor_reanchor_timeline.mmd`](../assets/diagrams/anchor_reanchor_timeline.mmd)
-- [`assets/diagrams/observation_value_decision.mmd`](../assets/diagrams/observation_value_decision.mmd)
-- [`assets/diagrams/expansion_boundary_risk.mmd`](../assets/diagrams/expansion_boundary_risk.mmd)
-- [`assets/diagrams/literature_support_map.mmd`](../assets/diagrams/literature_support_map.mmd)
+- [`assets/figures/README.md`](../assets/figures/README.md)
+- [`assets/figures/one_page_udam_flow.svg`](../assets/figures/one_page_udam_flow.svg)
+- [`assets/figures/anchor_reanchor_timeline.svg`](../assets/figures/anchor_reanchor_timeline.svg)
+- [`assets/figures/observation_value_decision.svg`](../assets/figures/observation_value_decision.svg)
+- [`assets/figures/expansion_boundary_risk.svg`](../assets/figures/expansion_boundary_risk.svg)
+- [`assets/figures/literature_support_map.svg`](../assets/figures/literature_support_map.svg)
+
+Editable Mermaid sources remain in:
+
+- [`assets/diagrams/`](../assets/diagrams/)
 
 The visual layer is a reader aid. It does not add new theory.
 
@@ -132,6 +137,6 @@ Current refinement status:
 core theory: stable enough to refine
 failure boundaries: strong
 literature verification: first-pass complete
-visual explanation: first-pass Mermaid source set complete; rendered figures pending
+visual explanation: first-pass Mermaid source set complete; Stage 3 SVG figures available
 Japanese layer: minimal, deferred for later sync
 ```
