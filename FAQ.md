@@ -161,7 +161,32 @@ UDAM's correction is:
 partial uncertainty → re-anchor if the next action has positive value
 ```
 
-## 10. Are high-stakes examples allowed?
+## 10. What is a happy miscalculation?
+
+A happy miscalculation occurs when the agent expects or fears a poor state, but observation reveals that the current state is better than expected.
+
+The common pattern is:
+
+```text
+uncertainty feels negative → observation reveals a better state than expected
+```
+
+This is not blind optimism.
+
+It is an observability effect:
+
+```text
+uncertainty may hide upside
+observation can reveal it
+```
+
+The action is still justified only when:
+
+```text
+V(a) > 0
+```
+
+## 11. Are high-stakes examples allowed?
 
 Only as abstract, non-operational examples.
 
@@ -183,7 +208,7 @@ Preferred wording includes:
 - constrained decision context;
 - upper time bound.
 
-## 11. Is UDAM original?
+## 12. Is UDAM original?
 
 UDAM should not claim full mathematical originality.
 
@@ -198,7 +223,7 @@ It is close to existing ideas such as:
 
 Its contribution is the timer-derived formulation connecting uncertainty diffusion, re-anchoring, and small informative action into a practical model of recovery after anchor loss.
 
-## 12. Does UDAM require simulations?
+## 13. Does UDAM require simulations?
 
 Not at the current stage.
 
