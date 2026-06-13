@@ -62,7 +62,21 @@ Open problem:
 
 > Under what conditions is inaction or waiting optimal?
 
-## Q7. How should the model be tested?
+## Q7. How should state dynamics and belief dynamics be separated?
+
+UDAM currently focuses on belief uncertainty:
+
+```text
+P_t = Var(S_t | D_t)
+```
+
+But an unanchored interval may involve both state change and belief change.
+
+Open problem:
+
+> When does uncertainty increase because the world changed, and when does it increase because the agent lost epistemic contact with a stable state?
+
+## Q8. How should the model be tested?
 
 Possible tests:
 
