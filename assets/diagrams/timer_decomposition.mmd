@@ -1,0 +1,15 @@
+flowchart LR
+    A[Start] --> K[Known counted interval K]
+    K --> L[Anchor loss]
+    L --> U[Unknown interval U]
+    U --> R[Re-anchored counted interval R]
+    R --> T[Current elapsed time tau]
+
+    T --> EQ["tau = K + U + R"]
+
+    K:::known
+    R:::known
+    U:::unknown
+
+    classDef known fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px;
+    classDef unknown fill:#fff3e0,stroke:#ef6c00,stroke-width:1px;
