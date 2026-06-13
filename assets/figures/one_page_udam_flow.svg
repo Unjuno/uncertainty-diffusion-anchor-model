@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">One-page UDAM flow</title>
+  <desc id="desc">Compact flow from anchor loss to valid observation, action change, observation value, repeated checking, and boundary-risk-constrained expansion.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#444"/></marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; font-size: 18px; fill: #222; }
+      .title { font-size: 28px; font-weight: 700; }
+      .box { fill: #e7f1ff; stroke: #084298; stroke-width: 2; rx: 10; }
+      .check { fill: #fff3cd; stroke: #b58100; stroke-width: 2; rx: 10; }
+      .ok { fill: #d1e7dd; stroke: #0f5132; stroke-width: 2; rx: 10; }
+      .stop { fill: #f8d7da; stroke: #842029; stroke-width: 2; rx: 10; }
+      .warn { fill: #f4f4f4; stroke: #555; stroke-width: 2; rx: 10; }
+      .edge { stroke: #444; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .small { font-size: 14px; }
+    </style>
+  </defs>
+  <rect width="1200" height="900" fill="#fff"/>
+  <text x="60" y="52" class="title">UDAM one-page flow</text>
+
+  <rect x="70" y="90" width="220" height="54" class="box"/><text x="100" y="124">Anchor lost</text>
+  <rect x="360" y="90" width="260" height="54" class="box"/><text x="386" y="124">Do not globally invalidate</text>
+  <rect x="690" y="90" width="250" height="54" class="box"/><text x="730" y="124">Name target state S</text>
+
+  <path d="M290 117 H360" class="edge"/><path d="M620 117 H690" class="edge"/>
+
+  <rect x="70" y="210" width="245" height="60" class="check"/><text x="100" y="246">Action possible?</text>
+  <rect x="370" y="210" width="280" height="60" class="check"/><text x="400" y="246">State-informative?</text>
+  <rect x="705" y="210" width="300" height="60" class="check"/><text x="735" y="246">Does action change?</text>
+  <path d="M815 144 V190 H193 V210" class="edge"/>
+  <path d="M315 240 H370" class="edge"/><path d="M650 240 H705" class="edge"/>
+
+  <rect x="70" y="340" width="260" height="62" class="check"/><text x="100" y="377">Value &gt; cost?</text>
+  <rect x="390" y="340" width="300" height="62" class="check"/><text x="420" y="366">First observation or</text><text x="420" y="389">repeated check?</text>
+  <rect x="750" y="340" width="330" height="62" class="check"/><text x="780" y="377">MOV_i &gt; 0 if repeated?</text>
+  <path d="M855 270 V312 H200 V340" class="edge"/>
+  <path d="M330 371 H390" class="edge"/><path d="M690 371 H750" class="edge"/>
+
+  <rect x="70" y="480" width="300" height="62" class="ok"/><text x="105" y="518">Update belief and act locally</text>
+  <rect x="430" y="480" width="260" height="62" class="check"/><text x="460" y="518">Expand scope?</text>
+  <rect x="750" y="480" width="340" height="62" class="check"/><text x="780" y="518">Boundary risk acceptable?</text>
+  <path d="M915 402 V445 H220 V480" class="edge"/>
+  <path d="M370 511 H430" class="edge"/><path d="M690 511 H750" class="edge"/>
+
+  <rect x="70" y="625" width="270" height="60" class="ok"/><text x="105" y="662">Expand by selected r_i</text>
+  <rect x="420" y="625" width="270" height="60" class="ok"/><text x="455" y="662">Observe new result</text>
+  <rect x="770" y="625" width="310" height="60" class="ok"/><text x="800" y="651">Re-evaluate value, cost,</text><text x="800" y="674">and boundary risk</text>
+  <path d="M920 542 V590 H205 V625" class="edge"/>
+  <path d="M340 655 H420" class="edge"/><path d="M690 655 H770" class="edge"/>
+  <path d="M925 625 V585 H560 V542" class="edge"/>
+
+  <rect x="70" y="760" width="430" height="60" class="warn"/><text x="100" y="785">Local failure does not imply global invalidation</text><text x="100" y="808" class="small">Change observation mode, stop, or seek external support.</text>
+  <rect x="590" y="760" width="430" height="60" class="warn"/><text x="620" y="785">Local success does not imply global safety</text><text x="620" y="808" class="small">Expansion remains provisional and re-checked.</text>
+</svg>
