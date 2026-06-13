@@ -12,7 +12,27 @@ In the minimal variance formulation:
 P_t = Var(S_t | D_t)
 ```
 
-## Axiom 2: Anchor Loss
+## Axiom 2: Fixed Target Condition
+
+In the timer seed model, the target condition is treated as fixed.
+
+The model does not assign probability to whether the target condition itself occurs.
+
+It asks only where the agent is relative to the fixed target condition.
+
+Compact form:
+
+```text
+fixed target, uncertain position
+```
+
+not:
+
+```text
+uncertain target, uncertain position
+```
+
+## Axiom 3: Anchor Loss
 
 When an agent loses an anchor, part of the state becomes uncertain.
 
@@ -24,7 +44,7 @@ Timer form:
 
 `U` is the uncertain part created by anchor loss.
 
-## Axiom 3: Belief Uncertainty Diffusion
+## Axiom 4: Belief Uncertainty Diffusion
 
 Without anchoring observations, belief uncertainty increases or remains unchanged over time.
 
@@ -43,7 +63,7 @@ If `Q > 0` and `Δt > 0`, then uncertainty strictly increases.
 
 This is an axiom about belief uncertainty, not necessarily about direct deterioration of the external state.
 
-## Axiom 4: Timer Relative Influence
+## Axiom 5: Timer Relative Influence
 
 In the timer model, re-anchoring does not necessarily reduce absolute uncertainty in the unknown interval.
 
@@ -57,7 +77,7 @@ A representative ratio is:
 ρ = sqrt(Var(U)) / E[τ]
 ```
 
-## Axiom 5: Re-Anchoring
+## Axiom 6: Re-Anchoring
 
 An action that returns information about the current state can re-anchor the agent's belief state.
 
@@ -67,7 +87,7 @@ A minimal condition is:
 I(a) > 0
 ```
 
-## Axiom 6: Action Value
+## Axiom 7: Action Value
 
 An action has total value:
 
@@ -81,7 +101,7 @@ An action is favorable under the model if:
 V(a) > 0
 ```
 
-## Axiom 7: No Arbitrary Activity
+## Axiom 8: No Arbitrary Activity
 
 Activity without information value or intervention value is not re-anchoring.
 
