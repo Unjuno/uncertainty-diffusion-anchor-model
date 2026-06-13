@@ -23,7 +23,13 @@ Updated:
 
 ```text
 README.md linked to AGENTS.md
-AGENTS.md updated after stabilization audits
+README.md linked stabilization-pass documents from Development notes
+ROADMAP.md recorded v0.20 through v0.23 stabilization milestones
+AGENTS.md updated after stabilization audits and draft cleanup
+docs/42_changelog_catchup_entry.md extended with a 0.9.0 compact entry
+drafts/paper_outline.md added direct source-of-truth disclaimer and safer conditional wording
+drafts/blog_post_jp.md added direct source-of-truth disclaimer
+drafts/short_manifesto.md added direct source-of-truth disclaimer
 ```
 
 ## Interpretation
@@ -41,6 +47,7 @@ notation consistency tracking
 expansion/contraction wording discipline
 publication-readiness judgment
 remaining-work prioritization
+draft-source-of-truth safety
 ```
 
 ## Decisions recorded
@@ -89,12 +96,28 @@ No immediate broad compression is required.
 Future compression should be targeted and routing-preserving.
 ```
 
-### 6. Remaining work
+### 6. Draft cleanup
 
 Decision:
 
 ```text
-Remaining work is mostly release hygiene, paper draft cleanup, optional rendering, Japanese sync, and empirical validation if a concrete study design exists.
+Draft files should state their downstream status directly, not only through drafts/README.md.
+```
+
+Completed first pass:
+
+```text
+drafts/paper_outline.md
+drafts/blog_post_jp.md
+drafts/short_manifesto.md
+```
+
+### 7. Remaining work
+
+Decision:
+
+```text
+Remaining work is mostly release hygiene, optional rendering, Japanese sync, optional simulation extension, and empirical validation only if a concrete study design exists.
 ```
 
 ## Current completion estimate
@@ -102,8 +125,8 @@ Remaining work is mostly release hygiene, paper draft cleanup, optional renderin
 Internal maintenance estimate:
 
 ```text
-public repository readiness: 88-90%
-paperization readiness: 58-62%
+public repository readiness: 89-91%
+paperization readiness: 60-64%
 empirical validation readiness: 10-15%
 ```
 
