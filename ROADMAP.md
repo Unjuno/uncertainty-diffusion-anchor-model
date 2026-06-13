@@ -273,6 +273,17 @@ Goal: add a small reproducible demonstration layer without overclaiming empirica
 
 Status: first-pass toy sanity checks are recorded. The results are demonstrations only, not empirical validation. They show that the expected qualitative UDAM behavior appears in three minimal toy models under the chosen assumptions.
 
+## v0.19: Changelog maintenance
+
+Goal: prevent `CHANGELOG.md` from becoming a duplicate of ROADMAP, Git history, audit notes, and detailed development logs.
+
+- [x] add changelog maintenance policy
+- [x] add compact catch-up entry draft for Stage 3, Stage 4, and simulation sanity checks
+- [x] decide not to backfill every missed micro-entry
+- [x] keep `CHANGELOG.md` as milestone-level history rather than commit-level history
+
+Status: changelog maintenance policy is defined in `docs/41_changelog_maintenance_policy.md`. A compact catch-up entry is stored in `docs/42_changelog_catchup_entry.md`. `CHANGELOG.md` itself has not been rewritten in this pass to avoid unsafe full-file replacement.
+
 ## v1.0: Stable theory note
 
 Goal: Publish a coherent theory note with definitions, propositions, proofs, examples, and limitations.
