@@ -25,6 +25,7 @@ Goal: Add structured application examples.
 - [x] health tracking
 - [x] relationship uncertainty
 - [x] life strategy after failure
+- [x] missed re-anchor miscalculation examples
 
 Status: initial examples added. Further examples can be added later.
 
@@ -48,6 +49,7 @@ Goal: Add conceptual diagrams.
 
 - [x] uncertainty diffusion without anchors
 - [x] lost interval and re-anchored interval
+- [x] timer relative dilution
 - [x] action value flow
 - [x] failure case taxonomy
 
@@ -57,11 +59,27 @@ Status: Mermaid source diagrams added under `assets/diagrams/`. Rendered figures
 
 Goal: sharpen the mathematical status of the model.
 
+- [x] separate cognitive uncertainty from physical state change
+- [x] distinguish absolute uncertainty from relative uncertainty dilution in the timer model
+- [x] formalize the possibility that absolute uncertainty increases while relative influence decreases
+- [x] add fixed-target scope for the timer seed model
+- [x] add controllability boundary for actionable versus uncontrollable uncertainty
+- [x] add notation for observation update after re-anchoring
 - [ ] decide whether `P_t` is variance, covariance, entropy, or a general uncertainty functional
 - [ ] define conditions under which `Q > 0`
 - [ ] formalize diminishing information value for repeated checking
-- [ ] add notation for observation update after re-anchoring
-- [ ] separate cognitive uncertainty from physical state change
+
+Status: major scope and boundary refinements are now explicit. Remaining work concerns mathematical generalization and parameter conditions.
+
+## v0.6: Public-facing safety and clarity
+
+Goal: keep examples useful while preventing misreadings.
+
+- [x] add high-stakes example policy
+- [x] require neutral wording for high-stakes examples
+- [x] distinguish theory failure cases from missed-application miscalculations
+- [ ] add a concise public-facing FAQ
+- [ ] render diagrams for easier reading
 
 ## v1.0: Stable theory note
 
