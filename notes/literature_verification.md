@@ -40,7 +40,8 @@ For each item, check:
 | Epistemic value makes action automatically favorable | active inference / epistemic value | not supported | Information-seeking still needs UDAM's value, cost, and boundary-risk checks |
 | Small action after collapse can matter | behavioral activation | verified: partial support | See `docs/30_literature_verification_behavioral_activation.md`; partial support for structured small action after avoidance-like collapse; not a clinical claim |
 | Avoidance can maintain collapse-like states | behavioral activation | verified: direct / partial support | Direct in BA context; partial for UDAM because not all inaction is avoidance |
-| Small successful steps can justify gradual expansion | shaping / successive approximations | to verify | next priority; be careful outside behavioral context |
+| Small successful steps can justify gradual expansion | shaping / successive approximations | verified: partial support | See `docs/31_literature_verification_shaping_successive_approximations.md`; supports gradual progression, not boundary-risk permission |
+| Reinforced response equals valid re-anchor | shaping / successive approximations | not supported | Reinforcement and state-informativeness are different criteria |
 
 ## Verified notes
 
@@ -55,6 +56,7 @@ Current verified notes:
 - `docs/28_literature_verification_implementation_intentions.md`
 - `docs/29_literature_verification_active_inference.md`
 - `docs/30_literature_verification_behavioral_activation.md`
+- `docs/31_literature_verification_shaping_successive_approximations.md`
 
 Key result:
 
@@ -69,6 +71,7 @@ online algorithms -> direct support for unavailable offline optimum and robust-r
 implementation intentions -> direct support for if-result-then-action execution mapping; not support for observation validity or positive action value
 active inference -> direct support for epistemic action and information-seeking policy selection; partial support for UDAM's practical I(a) term
 behavioral activation -> partial support for structured small action after collapse-like avoidance; not support for UDAM as therapy or arbitrary small action
+shaping / successive approximations -> partial support for gradual progression after successful intermediate steps; not support for automatic expansion or valid re-anchor conditions
 ```
 
 ## Current caution
@@ -102,6 +105,8 @@ I(a) != expected free energy unless formally mapped
 epistemic value != automatic favorability
 UDAM is not behavioral activation therapy
 avoidance != all inaction
+reinforcement != state-informativeness
+successive approximation != boundary-risk permission
 ```
 
 ## Priority
@@ -119,23 +124,27 @@ online algorithms / robust decision rules: verified first pass
 implementation intentions / if-then planning: verified first pass
 active inference / epistemic value: verified first pass
 behavioral activation: verified first pass
+shaping / successive approximations: verified first pass
 ```
 
 Second priority:
 
 ```text
-shaping / successive approximations
+Stage 3 visual explanation
 ```
 
 Third priority:
 
 ```text
 ski-rental-type tradeoffs: verified as direct/analogy under online algorithms
+additional literature checks can be added later only if a concrete claim needs support
 ```
 
 ## Status
 
 This file is a checklist, not a bibliography.
+
+The current Stage 2 first-pass verification sequence is complete enough to move to visual explanation.
 
 Verified citations should later be moved into:
 
