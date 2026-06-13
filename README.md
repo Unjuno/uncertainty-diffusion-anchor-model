@@ -41,6 +41,15 @@ Current Japanese entry point:
 For a quick visual reading path, start with:
 
 - [`docs/32_visual_explanation_layer.md`](docs/32_visual_explanation_layer.md)
+- [`assets/figures/README.md`](assets/figures/README.md)
+- [`assets/figures/one_page_udam_flow.svg`](assets/figures/one_page_udam_flow.svg)
+- [`assets/figures/anchor_reanchor_timeline.svg`](assets/figures/anchor_reanchor_timeline.svg)
+- [`assets/figures/observation_value_decision.svg`](assets/figures/observation_value_decision.svg)
+- [`assets/figures/expansion_boundary_risk.svg`](assets/figures/expansion_boundary_risk.svg)
+- [`assets/figures/literature_support_map.svg`](assets/figures/literature_support_map.svg)
+
+Editable Mermaid sources are kept under:
+
 - [`assets/diagrams/one_page_udam_flow.mmd`](assets/diagrams/one_page_udam_flow.mmd)
 - [`assets/diagrams/anchor_reanchor_timeline.mmd`](assets/diagrams/anchor_reanchor_timeline.mmd)
 - [`assets/diagrams/observation_value_decision.mmd`](assets/diagrams/observation_value_decision.mmd)
@@ -231,11 +240,12 @@ For details, see:
 Visual-first reading order:
 
 1. [`docs/32_visual_explanation_layer.md`](docs/32_visual_explanation_layer.md)
-2. [`assets/diagrams/one_page_udam_flow.mmd`](assets/diagrams/one_page_udam_flow.mmd)
-3. [`assets/diagrams/anchor_reanchor_timeline.mmd`](assets/diagrams/anchor_reanchor_timeline.mmd)
-4. [`assets/diagrams/observation_value_decision.mmd`](assets/diagrams/observation_value_decision.mmd)
-5. [`assets/diagrams/expansion_boundary_risk.mmd`](assets/diagrams/expansion_boundary_risk.mmd)
-6. [`assets/diagrams/literature_support_map.mmd`](assets/diagrams/literature_support_map.mmd)
+2. [`assets/figures/README.md`](assets/figures/README.md)
+3. [`assets/figures/one_page_udam_flow.svg`](assets/figures/one_page_udam_flow.svg)
+4. [`assets/figures/anchor_reanchor_timeline.svg`](assets/figures/anchor_reanchor_timeline.svg)
+5. [`assets/figures/observation_value_decision.svg`](assets/figures/observation_value_decision.svg)
+6. [`assets/figures/expansion_boundary_risk.svg`](assets/figures/expansion_boundary_risk.svg)
+7. [`assets/figures/literature_support_map.svg`](assets/figures/literature_support_map.svg)
 
 English-first practical reading order:
 
@@ -298,7 +308,7 @@ Current status:
 core theory: stable enough to refine
 failure boundaries: strong
 literature verification: first-pass complete
-visual explanation: first-pass Mermaid source set complete; rendered figures pending
+visual explanation: first-pass Mermaid source set complete; Stage 3 SVG figures available
 Japanese layer: minimal, deferred for later sync
 project-note consolidation: pending
 ```
