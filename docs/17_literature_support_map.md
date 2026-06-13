@@ -14,6 +14,7 @@ For detailed verification notes, see:
 
 - `docs/22_literature_verification_value_blackwell.md`
 - `docs/23_literature_verification_bayesian_experimental_design.md`
+- `docs/24_literature_verification_sequential_analysis.md`
 - `notes/literature_verification.md`
 
 ## 1. Value of information
@@ -175,8 +176,10 @@ Nearby literature:
 
 - sequential analysis;
 - sequential probability ratio testing;
+- optimal stopping;
 - stopping rules;
-- observation cost.
+- observation cost;
+- group sequential methods.
 
 UDAM expression:
 
@@ -193,14 +196,44 @@ continue observing only while the next observation has positive marginal value
 Verification status:
 
 ```text
-to verify
+verified: direct support for repeated observation as a continue-or-stop problem
+verified: direct support for the need for stopping rules
+verified: partial support for MOV_i as UDAM-specific marginal-value notation
 ```
 
-Next check:
+Correction:
 
 ```text
-sequential analysis should be used to verify repeated observation, stopping, and MOV_i wording
+MOV_i is aligned with optimal-stopping reasoning, but it is not a standard sequential-analysis formula.
 ```
+
+Additional correction:
+
+```text
+MOV_i <= 0 should mean stop or change the current observation mode, not that every possible future observation is worthless.
+```
+
+Recommended wording:
+
+```text
+Sequential analysis supports UDAM's treatment of repeated observation as a stopping-rule problem: later checks must be justified by expected continuation value, not by the fact that the first observation was useful.
+```
+
+Avoid:
+
+```text
+MOV_i is Wald's stopping rule.
+```
+
+Avoid:
+
+```text
+More checking is always safer.
+```
+
+See:
+
+- `docs/24_literature_verification_sequential_analysis.md`
 
 ## 5. Multi-armed bandits and exploration-exploitation
 
@@ -418,7 +451,9 @@ more informative signals can improve action choice: verified partial/direct alig
 utility-guided observation choice: verified direct support
 prior-observation-posterior updating: verified direct support
 conditional action after observation: verified partial to direct support when utility is decision-relevant
-sequential observation needs stopping rules: to verify
+repeated observation as a continue-or-stop problem: verified direct support
+stopping-rule discipline for checking loops: verified direct support
+MOV_i as a specific formula: verified partial support only; UDAM-specific notation
 exploration and exploitation must be balanced: to verify
 actions can be chosen for epistemic value: to verify
 if-then mappings improve action execution: to verify
@@ -453,12 +488,12 @@ Verified first pass:
 value of information
 Blackwell informativeness
 Bayesian experimental design
+sequential analysis / stopping rules
 ```
 
 Priority remaining sources:
 
 ```text
-sequential analysis
 multi-armed bandits
 exponential search
 online algorithms
