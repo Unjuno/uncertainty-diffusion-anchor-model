@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Literature support map</title>
+  <desc id="desc">Support map separating direct support, partial support, analogy-only support, not-supported claims to avoid, and UDAM-specific synthesis.</desc>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; fill: #222; font-size: 16px; }
+    .title { font-size: 28px; font-weight: 700; }
+    .head { font-size: 20px; font-weight: 700; }
+    .direct { fill: #d1e7dd; stroke: #0f5132; stroke-width: 2; rx: 10; }
+    .partial { fill: #cff4fc; stroke: #055160; stroke-width: 2; rx: 10; }
+    .analogy { fill: #fff3cd; stroke: #b58100; stroke-width: 2; rx: 10; }
+    .avoid { fill: #f8d7da; stroke: #842029; stroke-width: 2; rx: 10; }
+    .specific { fill: #e2e3e5; stroke: #41464b; stroke-width: 2; rx: 10; }
+    .small { font-size: 14px; }
+  </style>
+  <rect width="1200" height="820" fill="#fff"/>
+  <text x="60" y="52" class="title">UDAM literature support map</text>
+
+  <rect x="60" y="90" width="210" height="255" class="direct"/>
+  <text x="85" y="125" class="head">Direct support</text>
+  <text x="85" y="160">Value of information</text>
+  <text x="85" y="190">Bayesian experimental design</text>
+  <text x="85" y="220">Sequential analysis</text>
+  <text x="85" y="250">Implementation intentions</text>
+  <text x="85" y="300" class="small">Supports specific components.</text>
+
+  <rect x="300" y="90" width="260" height="255" class="partial"/>
+  <text x="325" y="125" class="head">Partial support</text>
+  <text x="325" y="160">Blackwell informativeness</text>
+  <text x="325" y="190">Bandits / feedback action</text>
+  <text x="325" y="220">Active inference</text>
+  <text x="325" y="250">Behavioral activation</text>
+  <text x="325" y="280">Shaping / online algorithms</text>
+  <text x="325" y="310">Exponential search</text>
+
+  <rect x="590" y="90" width="250" height="255" class="analogy"/>
+  <text x="615" y="125" class="head">Analogy only</text>
+  <text x="615" y="160">Ski-rental tradeoff</text>
+  <text x="615" y="190">Reward shaping without MDP</text>
+  <text x="615" y="220">Boundary-risk analogies</text>
+  <text x="615" y="300" class="small">Useful only with caveats.</text>
+
+  <rect x="870" y="90" width="270" height="255" class="avoid"/>
+  <text x="895" y="125" class="head">Not supported / avoid</text>
+  <text x="895" y="160">UDAM is proven by one field</text>
+  <text x="895" y="190">Any small action is useful</text>
+  <text x="895" y="220">Informative means favorable</text>
+  <text x="895" y="250">Doubling is always optimal</text>
+  <text x="895" y="280">UDAM is therapy</text>
+
+  <rect x="170" y="420" width="860" height="180" class="specific"/>
+  <text x="210" y="458" class="head">UDAM-specific synthesis</text>
+  <text x="210" y="492">tau = K + U + R timer seed</text>
+  <text x="210" y="522">Anchor loss does not invalidate future anchors</text>
+  <text x="210" y="552">Valid local re-anchor after model collapse</text>
+  <text x="600" y="492">Observation + action + cadence + expansion</text>
+  <text x="600" y="522">Boundary-risk inequality as UDAM notation</text>
+
+  <rect x="250" y="670" width="700" height="72" class="specific"/>
+  <text x="328" y="713" class="head">Component support does not prove full synthesis.</text>
+</svg>
