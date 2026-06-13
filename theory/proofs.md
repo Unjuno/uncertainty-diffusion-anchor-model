@@ -2,6 +2,10 @@
 
 This file contains initial proof sketches. These are intentionally minimal but dimensionally explicit.
 
+For observability value proof sketches, also see:
+
+- `theory/observability_proofs.md`
+
 ## Proof of Proposition 1
 
 Given:
@@ -299,6 +303,90 @@ Therefore, as `R` increases, the upper bound on admissible `U` decreases.
 
 This gives an upper-bound tightening effect.
 
+## Proof sketches of Propositions 8-10
+
+See:
+
+- `theory/observability_proofs.md`
+
+That file contains proof sketches for:
+
+- non-negative decision value of ideal observation;
+- positive observability value as a net-value condition;
+- fixed-target discounting error region.
+
+## Proof sketch of Proposition 11
+
+Let `S` be the hidden state and `y` the observation returned by action `a`.
+
+If:
+
+```text
+P(y | S) = P(y)
+```
+
+then `y` is independent of `S`.
+
+In that case, observing `y` does not update the belief about `S`:
+
+```text
+P(S | y) = P(S)
+```
+
+So `y` is not state-informative.
+
+For a valid re-anchor, the observation must be connected to the state:
+
+```text
+P(y | S) != P(y)
+```
+
+Then observing `y` can change the posterior:
+
+```text
+P(S | y) != P(S)
+```
+
+Therefore, a valid re-anchor must be state-informative.
+
+In the timer case:
+
+```text
+τ = K + U + R
+```
+
+`R` is state-informative because it is part of the elapsed-position decomposition.
+
+## Proof sketch of Proposition 12
+
+Let `a_0` be the action chosen before observation.
+
+Let `a(y)` be the action chosen after observation.
+
+If there exists at least one observation result `y` such that:
+
+```text
+a(y) != a_0
+```
+
+then the observation supports a conditional policy rather than a fixed pre-observation action.
+
+The observation has decision value when the expected value of choosing conditionally after observing exceeds the no-observation baseline after cost:
+
+```text
+OV > 0
+```
+
+where:
+
+```text
+OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
+```
+
+Thus a state-informative observation can justify switching the next action when the net observability value is positive.
+
+This is the Monty-Hall-type structure inside UDAM.
+
 ## Unit checks
 
 For uncertainty diffusion:
@@ -339,10 +427,23 @@ For action value:
 [V(a)] = [I(a)] = [B(a)] = [C(a)] = utility unit
 ```
 
+For observability value:
+
+```text
+[OV] = utility unit
+```
+
 All core equations are dimensionally consistent under the stated definitions.
 
 ## Current proof status
 
 These are proof sketches, not final formal proofs.
 
-The next formal step is to specify whether `P_t` is always variance, covariance, entropy, or a more general uncertainty functional.
+The core uncertainty representation decision is closed:
+
+```text
+core: P_t = Var(S_t | D_t) or Cov(S_t | D_t)
+extension: 𝓤_t = 𝓤(p(S_t | D_t))
+```
+
+The next proof-level work is to strengthen Propositions 8-12 and unify `observability_proofs.md` with this file if needed.
