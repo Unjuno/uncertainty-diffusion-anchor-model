@@ -73,6 +73,19 @@ A small action is favorable when:
 V(a) > 0
 ```
 
+## State versus belief
+
+UDAM is primarily about belief uncertainty.
+
+It does not claim that the world always worsens during inaction. It claims that, without anchors, the agent's uncertainty about the current state may increase.
+
+A later formal version can separate:
+
+```text
+state dynamics: S_t changes
+belief dynamics: P_t changes
+```
+
 ## Main claim
 
 If uncertainty diffuses in the absence of anchors, then low-cost informative actions can be advantageous because they reduce or constrain uncertainty growth.
@@ -96,20 +109,22 @@ This does **not** justify arbitrary action. It supports actions that return info
 2. [`docs/01_timer_model.md`](docs/01_timer_model.md)
 3. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
 4. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
-5. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
-6. [`docs/04_action_value.md`](docs/04_action_value.md)
-7. [`docs/05_propositions.md`](docs/05_propositions.md)
-8. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
-9. [`docs/07_applications.md`](docs/07_applications.md)
-10. [`docs/08_related_work.md`](docs/08_related_work.md)
-11. [`docs/09_open_questions.md`](docs/09_open_questions.md)
-12. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
+5. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
+6. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
+7. [`docs/04_action_value.md`](docs/04_action_value.md)
+8. [`docs/05_propositions.md`](docs/05_propositions.md)
+9. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
+10. [`docs/07_applications.md`](docs/07_applications.md)
+11. [`docs/08_related_work.md`](docs/08_related_work.md)
+12. [`docs/09_open_questions.md`](docs/09_open_questions.md)
+13. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
 
 ## Development notes
 
 - [`notes/chat_content_synthesis.md`](notes/chat_content_synthesis.md): organized synthesis of the original discussion.
 - [`theory/consistency_review.md`](theory/consistency_review.md): known corrections, open issues, and consistency checks.
 - [`theory/timer_three_layer_model.md`](theory/timer_three_layer_model.md): formal timer-specific refinement.
+- [`theory/state_belief_separation.md`](theory/state_belief_separation.md): formal distinction between state dynamics and belief dynamics.
 
 ## Applications
 
