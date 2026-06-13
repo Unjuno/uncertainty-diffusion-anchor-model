@@ -2,13 +2,14 @@
 
 ## Working title
 
-Uncertainty-Diffusion Anchor Model: Re-Anchoring Action Under Fixed Targets and Belief Uncertainty
+Uncertainty-Diffusion Anchor Model: Re-Anchoring Action Under Fixed Targets, Belief Uncertainty, and Observability Value
 
 ## Alternative titles
 
 - Uncertainty-Diffusion Anchor Model: Why Small Informative Actions Are Rational After Anchor Loss
 - Fixed Target, Uncertain Position: A Timer-Derived Model of Re-Anchoring
 - Partial Uncertainty Does Not Imply Total Invalidation
+- Observability After Anchor Loss: A Decision-Theoretic Reading of Re-Anchoring
 
 ## Abstract draft
 
@@ -16,7 +17,9 @@ This paper introduces the Uncertainty-Diffusion Anchor Model (UDAM), a cognitive
 
 UDAM distinguishes absolute uncertainty from relative influence. Absolute uncertainty in `U` may remain or increase, while the relative influence of `U` can decrease if the reference scale grows faster than the uncertainty scale. The model also distinguishes belief uncertainty from physical state change, and limits its core scope to actionable uncertainty: uncertainty that can be affected by observation, belief update, decision improvement, or state intervention. Event-occurrence uncertainty is excluded from the core timer model and treated as an external parameter, separate extension, or exception condition.
 
-The paper argues that low-cost informative actions can be rational when `V(a)=I(a)+B(a)-C(a)>0`. It distinguishes re-anchoring from arbitrary activity, identifies missed re-anchor miscalculations, and lists boundary conditions such as misleading feedback, compulsive checking, high-cost action, non-actionable external uncertainty, and safety-critical delay.
+The paper further formalizes observability value: the value of an observation comes from enabling better conditional action after the state is observed. This explains both happy miscalculation, where observation reveals hidden upside, and false comfort miscalculation, where skipped observation leaves hidden downside unmanaged. Fixed-target disbelief is modeled as subjective discounting of positional information value.
+
+The paper argues that low-cost informative actions can be rational when `V(a)=I(a)+B(a)-C(a)>0` or when observation-specific value `OV>0`. It distinguishes re-anchoring from arbitrary activity and identifies boundary conditions such as misleading feedback, compulsive checking, high-cost action, non-actionable external uncertainty, and safety-critical delay.
 
 ## Core thesis
 
@@ -27,6 +30,10 @@ UDAM's core claim is:
 In practical form:
 
 > When uncertainty diffuses and a low-cost action can return information, the action can be rational even before confidence is restored.
+
+Observability refinement:
+
+> Observation is valuable when it separates latent states and enables better conditional action.
 
 ## Scope statement
 
@@ -67,14 +74,16 @@ Uncontrollable event-occurrence uncertainty is outside the core model.
 6. Uncertainty diffusion
 7. Re-anchoring actions
 8. Action value
-9. Propositions and proof sketches
-10. Missed re-anchor miscalculations
-11. Failure cases and boundary conditions
-12. High-stakes examples as abstract fixed-target cases
-13. Applications
-14. Related work
-15. Limitations and deferred extensions
-16. Conclusion
+9. Observability value
+10. Propositions and proof sketches
+11. Missed re-anchor miscalculations
+12. Happy miscalculation and false comfort
+13. Failure cases and boundary conditions
+14. High-stakes examples as abstract fixed-target cases
+15. Applications
+16. Related work
+17. Limitations and deferred extensions
+18. Conclusion
 
 ## Section notes
 
@@ -210,7 +219,35 @@ An action is favorable when:
 V(a) > 0
 ```
 
-### 9. Propositions and proof sketches
+### 9. Observability value
+
+Without observation:
+
+```text
+V_no_obs = max_a E[V(a, S)]
+```
+
+With observation:
+
+```text
+V_obs = E_y[max_a E[V(a, S) | y]] - C(obs)
+```
+
+Define:
+
+```text
+OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
+```
+
+Observation is favorable when:
+
+```text
+OV > 0
+```
+
+This chapter explains why observation can reveal hidden upside or hidden downside.
+
+### 10. Propositions and proof sketches
 
 Include propositions on:
 
@@ -220,9 +257,12 @@ Include propositions on:
 4. frequent small re-anchoring can constrain uncertainty growth;
 5. empty activity is unfavorable;
 6. timer re-anchoring can dilute relative influence;
-7. fixed upper-bound conditions can constrain the unknown interval.
+7. fixed upper-bound conditions can constrain the unknown interval;
+8. observation can have non-negative decision value under ideal conditions;
+9. observation is favorable when `OV > 0`;
+10. fixed-target disbelief can suppress a favorable re-anchor.
 
-### 10. Missed re-anchor miscalculations
+### 11. Missed re-anchor miscalculations
 
 Define the agent-side error:
 
@@ -243,7 +283,29 @@ Examples:
 - avoiding a project because the project state is unclear;
 - waiting for full confidence before diagnostic action.
 
-### 11. Failure cases and boundary conditions
+### 12. Happy miscalculation and false comfort
+
+Happy miscalculation:
+
+```text
+uncertainty feels negative → observation reveals upside
+```
+
+False comfort:
+
+```text
+uncertainty feels manageable → no observation → hidden downside appears later
+```
+
+Fixed-target disbelief:
+
+```text
+pi_hat * I_position(a) + B(a) <= C(a) < I_position(a) + B(a)
+```
+
+All three are explained by observability and conditional action.
+
+### 13. Failure cases and boundary conditions
 
 Include:
 
@@ -255,9 +317,11 @@ Include:
 - missing upper-bound condition;
 - uncontrollable occurrence uncertainty;
 - state-belief conflation;
-- safety-critical delay.
+- safety-critical delay;
+- observation with no actionable consequence;
+- excessive observation cost.
 
-### 12. High-stakes examples as abstract fixed-target cases
+### 14. High-stakes examples as abstract fixed-target cases
 
 High-stakes examples can clarify the structure:
 
@@ -270,7 +334,7 @@ re-anchoring action
 
 But public wording should remain neutral, non-operational, and abstract.
 
-### 13. Applications
+### 15. Applications
 
 Applications:
 
@@ -279,9 +343,11 @@ Applications:
 - work interruption recovery;
 - relationship uncertainty;
 - health tracking;
-- life strategy after failure.
+- life strategy after failure;
+- happy miscalculation;
+- false comfort miscalculation.
 
-### 14. Related work
+### 16. Related work
 
 Discuss overlap with:
 
@@ -293,7 +359,7 @@ Discuss overlap with:
 - behavioral activation;
 - cognitive anchoring.
 
-### 15. Limitations and deferred extensions
+### 17. Limitations and deferred extensions
 
 Deferred extensions:
 
@@ -303,11 +369,15 @@ Deferred extensions:
 - empirical testing;
 - rendered simulations or diagrams.
 
-### 16. Conclusion
+### 18. Conclusion
 
 Conclude:
 
 > Re-anchoring is not optimism or arbitrary activity. It is the creation of a new valid reference point after partial uncertainty.
+
+Add:
+
+> Observation is valuable when it makes action conditional on the actual state.
 
 ## Core equations
 
@@ -316,6 +386,7 @@ Conclude:
 P_{t+Δt} = P_t + QΔt
 ρ = sqrt(Var(U)) / E[τ]
 V(a) = I(a) + B(a) - C(a)
+OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
 ```
 
 ## Main contribution
@@ -328,8 +399,9 @@ Its distinctive contribution is the timer-derived structure:
 partial uncertainty does not imply total invalidation
 ```
 
-combined with an action-value rule:
+combined with action-value and observability rules:
 
 ```text
 act only when I(a) + B(a) > C(a)
+observe only when OV > 0
 ```
