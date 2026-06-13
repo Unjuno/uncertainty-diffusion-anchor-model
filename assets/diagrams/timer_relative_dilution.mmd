@@ -1,0 +1,23 @@
+flowchart LR
+    U[Unknown interval U] --> ABS[Absolute uncertainty Var(U)]
+    ABS --> SAME[Var(U) may remain unchanged]
+
+    K[Known interval K] --> TOTAL[Expected elapsed time E[tau]]
+    U --> TOTAL
+    R[Re-anchored known interval R] --> TOTAL
+
+    TOTAL --> RATIO["rho(R) = sqrt(Var(U)) / E[tau]"]
+    SAME --> RATIO
+    R --> INC[As R increases, E[tau] increases]
+    INC --> DILUTE[Relative uncertainty rho decreases]
+
+    DILUTE --> CLAIM[Re-anchoring dilutes relative influence of U]
+
+    U:::unknown
+    R:::known
+    K:::known
+    DILUTE:::good
+
+    classDef unknown fill:#fff3e0,stroke:#ef6c00,stroke-width:1px;
+    classDef known fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px;
+    classDef good fill:#e3f2fd,stroke:#1565c0,stroke-width:1px;
