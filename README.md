@@ -33,7 +33,7 @@ For direct use, start with:
 The practical pattern is:
 
 ```text
-unclear state -> small observation -> conditional next action
+unclear state -> state-informative observation -> conditional next action
 ```
 
 Ask:
