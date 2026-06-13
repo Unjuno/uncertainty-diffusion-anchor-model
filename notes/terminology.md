@@ -222,6 +222,76 @@ partial uncertainty → re-anchor if the next action has positive value
 
 Japanese: 再アンカー見落とし / 部分的不確実性の全体無効化
 
+## Adaptive expansion factor
+
+A multiplier controlling how much the next action or observation scope expands after a favorable probe.
+
+Representative form:
+
+```text
+s_{i+1} = r_i s_i
+```
+
+It is constrained by adverse boundary risk, observation cost, and correction cost.
+
+Japanese: 適応的拡張倍率
+
+## Adverse boundary risk
+
+The risk that a relevant unfavorable boundary is crossed before the next observation.
+
+Representative term:
+
+```text
+P_boundary(i) * C_boundary
+```
+
+Japanese: 不利境界リスク / 次観測前の境界到達リスク
+
+## Practical synthesis
+
+A model that integrates existing ideas into a usable explanatory and decision framework.
+
+UDAM should be described as a practical synthesis, not as a replacement for existing decision theory or a wholly new mathematical foundation.
+
+Preferred phrasing:
+
+```text
+timer-derived practical synthesis
+```
+
+Japanese: 実践的統合モデル / タイマー由来の実践的統合
+
+## Timer-derived formulation
+
+The distinctive framing of UDAM begins from the timer decomposition:
+
+```text
+τ = K + U + R
+```
+
+This formulation emphasizes that a lost interval does not invalidate future anchors.
+
+Japanese: タイマー由来の定式化
+
+## Overclaim
+
+A claim that makes UDAM sound more mathematically original or universally applicable than it is.
+
+Avoid:
+
+```text
+UDAM is an entirely new theory of uncertainty.
+```
+
+Prefer:
+
+```text
+UDAM is a timer-derived practical synthesis of re-anchoring after anchor loss.
+```
+
+Japanese: 過剰主張
+
 ## High-stakes fixed-target example
 
 A neutral, non-operational example type used to show the timer structure clearly.
