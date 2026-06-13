@@ -44,6 +44,33 @@ UDAM's `I(a)` term is related to the value of information.
 
 Actions can be useful not only because they directly improve the state, but because they improve future decisions by reducing uncertainty.
 
+## Conditional switching and the Monty Hall problem
+
+UDAM's valid re-anchor condition is also related to the information structure behind the Monty Hall problem.
+
+The relevant similarity is not the surface story.
+
+The shared decision-theoretic form is:
+
+```text
+hidden state -> state-informative observation -> conditional action switch
+```
+
+In UDAM notation:
+
+```text
+P(y | S) != P(y)
+P(S | y) != P(S)
+a(y) != a_0
+```
+
+This supports the claim that observation is useful when it can change the posterior or the next action.
+
+See:
+
+- `theory/conditional_action_switch.md`
+- `theory/valid_reanchor_condition.md`
+
 ## Active inference
 
 Active inference also frames action as a way to reduce uncertainty and prediction error.
@@ -68,4 +95,4 @@ UDAM should not claim full mathematical originality.
 
 A safer claim is:
 
-> UDAM is a timer-derived cognitive and decision-theoretic formulation that integrates uncertainty diffusion, re-anchoring, and small informative actions into a practical theory of recovery after anchor loss.
+> UDAM is a timer-derived cognitive and decision-theoretic formulation that integrates uncertainty diffusion, re-anchoring, state-informative observation, and small informative actions into a practical theory of recovery after anchor loss.
