@@ -1,27 +1,29 @@
 # Paper Outline
 
+> Draft status: this is a downstream paper-facing presentation of UDAM, not a source-of-truth document. Formal claims route to `theory/`; literature claims route to `docs/17_literature_support_map.md` and `notes/literature_verification.md`; simulation claims route to `docs/39_simulation_sanity_checks.md` and `simulations/`. This outline should not introduce claims stronger than those sources support.
+
 ## Working title
 
 Uncertainty-Diffusion Anchor Model: Re-Anchoring Action Under Fixed Targets, Belief Uncertainty, and Observability Value
 
 ## Alternative titles
 
-- Uncertainty-Diffusion Anchor Model: Why Small Informative Actions Are Rational After Anchor Loss
+- Uncertainty-Diffusion Anchor Model: Why Small Informative Actions Can Be Rational After Anchor Loss
 - Fixed Target, Uncertain Position: A Timer-Derived Model of Re-Anchoring
 - Partial Uncertainty Does Not Imply Total Invalidation
 - Observability After Anchor Loss: A Decision-Theoretic Reading of Re-Anchoring
 
 ## Abstract draft
 
-This paper introduces the Uncertainty-Diffusion Anchor Model (UDAM), a cognitive and decision-theoretic model of how agents recover after losing a reference point for their current state. The model begins from a timer seed case: after losing track of elapsed position relative to a fixed target condition, restarting the count does not recover the lost interval but does create a new anchor. The core decomposition is `τ = K + U + R`, where `K` is a known interval before anchor loss, `U` is the uncertain interval, and `R` is a re-anchored known interval.
+This paper outlines the Uncertainty-Diffusion Anchor Model (UDAM), a cognitive and decision-theoretic practical synthesis for describing how agents may recover local decision structure after losing a reference point for their current state. The model begins from a timer seed case: after losing track of elapsed position relative to a fixed target condition, restarting the count does not recover the lost interval but can create a new anchor. The core decomposition is `τ = K + U + R`, where `K` is a known interval before anchor loss, `U` is the uncertain interval, and `R` is a re-anchored known interval.
 
 UDAM distinguishes absolute uncertainty from relative influence. Absolute uncertainty in `U` may remain or increase, while the relative influence of `U` can decrease if the reference scale grows faster than the uncertainty scale. The model also distinguishes belief uncertainty from physical state change, and limits its core scope to actionable uncertainty: uncertainty that can be affected by observation, belief update, decision improvement, or state intervention. Event-occurrence uncertainty is excluded from the core timer model and treated as an external parameter, separate extension, or exception condition.
 
-The paper further formalizes observability value: the value of an observation comes from enabling better conditional action after the state is observed. This explains both happy miscalculation, where observation reveals hidden upside, and false comfort miscalculation, where skipped observation leaves hidden downside unmanaged. Fixed-target disbelief is modeled as subjective discounting of positional information value.
+The outline further formalizes observability value: the value of an observation comes from enabling better conditional action after the state is observed. This explains both happy miscalculation, where observation reveals hidden upside, and false comfort miscalculation, where skipped observation leaves hidden downside unmanaged. Fixed-target disbelief is modeled as subjective discounting of positional information value.
 
-The paper also introduces adaptive observation cadence and adaptive expansion factor. After an initial valid observation, an agent may expand action or observation scope geometrically, but the expansion factor is constrained by adverse-boundary risk: the probability and cost of crossing a relevant boundary before the next observation.
+The outline also presents adaptive observation cadence and adaptive expansion factor. After an initial valid observation, an agent may expand action or observation scope geometrically, but the expansion factor is constrained by adverse-boundary risk: the probability and cost of crossing a relevant boundary before the next observation.
 
-The paper argues that low-cost informative actions can be rational when `V(a)=I(a)+B(a)-C(a)>0`, when observation-specific value `OV>0`, or when expansion value exceeds observation, correction, and boundary-risk costs. It distinguishes re-anchoring from arbitrary activity and identifies boundary conditions such as misleading feedback, compulsive checking, high-cost action, non-actionable external uncertainty, and safety-critical delay.
+The safe paper claim is conditional: low-cost informative actions can be rational when `V(a)=I(a)+B(a)-C(a)>0`, when observation-specific value `OV>0`, or when expansion value exceeds observation, correction, and boundary-risk costs. The outline distinguishes re-anchoring from arbitrary activity and identifies boundary conditions such as misleading feedback, compulsive checking, high-cost action, non-actionable external uncertainty, and safety-critical delay.
 
 ## Core thesis
 
@@ -31,7 +33,7 @@ UDAM's core claim is:
 
 In practical form:
 
-> When uncertainty diffuses and a low-cost action can return information, the action can be rational even before confidence is restored.
+> When uncertainty diffuses and a low-cost action can return information, the action can be rational before full confidence is restored.
 
 Observability refinement:
 
@@ -292,8 +294,8 @@ Include propositions on:
 
 1. lost intervals do not invalidate future anchors;
 2. uncertainty may diffuse without anchors;
-3. informative low-cost actions can dominate inaction;
-4. frequent small re-anchoring can constrain uncertainty growth;
+3. informative low-cost actions can dominate inaction under positive value conditions;
+4. frequent small re-anchoring can constrain uncertainty growth under stated assumptions;
 5. empty activity is unfavorable;
 6. timer re-anchoring can dilute relative influence;
 7. fixed upper-bound conditions can constrain the unknown interval;
@@ -405,6 +407,8 @@ Discuss overlap with:
 - cognitive anchoring;
 - exponential search and doubling strategies;
 - online algorithms and robust sequential decision rules.
+
+Literature claims should be phrased as component-level support unless `docs/17_literature_support_map.md` and `notes/literature_verification.md` support stronger wording.
 
 ### 18. Limitations and deferred extensions
 
