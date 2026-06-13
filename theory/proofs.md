@@ -176,7 +176,7 @@ Given:
 τ = K + U + R
 ```
 
-with `K` and `R` observed, and `U` having fixed expectation and variance.
+with `K` and `R` observed, and `U` uncertain.
 
 Define:
 
@@ -196,7 +196,9 @@ we get:
 ρ(R) = sqrt(Var(U)) / (K + E[U] + R)
 ```
 
-Let:
+### Special case: fixed absolute uncertainty
+
+If `Var(U)` is fixed, let:
 
 ```text
 A = sqrt(Var(U))
@@ -221,11 +223,59 @@ If `A > 0`, then:
 dρ/dR < 0
 ```
 
-Therefore increasing `R` decreases relative uncertainty, even when absolute variance `Var(U)` remains unchanged.
+Therefore increasing `R` decreases relative uncertainty in the fixed-variance case.
+
+### General case: increasing absolute uncertainty
+
+Let the uncertainty scale be:
+
+```text
+A(R) = sqrt(Var(U_R))
+```
+
+and the total reference scale be:
+
+```text
+B(R) = E[τ] = K + E[U_R] + R
+```
+
+Then:
+
+```text
+ρ(R) = A(R) / B(R)
+```
+
+Relative dilution occurs when:
+
+```text
+dρ/dR < 0
+```
+
+Using the quotient rule:
+
+```text
+dρ/dR = (A'(R)B(R) - A(R)B'(R)) / B(R)^2
+```
+
+Since `B(R)^2 > 0`, relative dilution occurs when:
+
+```text
+A'(R)B(R) < A(R)B'(R)
+```
+
+Equivalently:
+
+```text
+A'(R)/A(R) < B'(R)/B(R)
+```
+
+when `A(R) > 0` and `B(R) > 0`.
+
+Thus absolute uncertainty may increase, but relative influence decreases if the uncertainty scale grows more slowly, in proportional terms, than the total reference scale.
 
 ## Proof of Proposition 7
 
-Assume a fixed deadline `T` and that the deadline is not yet reached.
+Assume a fixed upper time bound `T` and that the bound is not yet reached.
 
 Then:
 
@@ -247,7 +297,7 @@ U < T - K - R
 
 Therefore, as `R` increases, the upper bound on admissible `U` decreases.
 
-This gives a deadline-specific tightening effect.
+This gives an upper-bound tightening effect.
 
 ## Unit checks
 
