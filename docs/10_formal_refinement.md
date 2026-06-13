@@ -270,7 +270,45 @@ Thus, UDAM favors repeated observation only while each additional observation ch
 
 This prevents the model from justifying checking loops.
 
-## 11. State change versus belief change
+## 11. Adaptive expansion factor
+
+After a favorable small observation, the agent may expand the next action or observation scope.
+
+Let:
+
+```text
+s_i = current scope
+r_i = expansion factor
+s_{i+1} = r_i s_i
+```
+
+A geometric pattern is:
+
+```text
+1 -> 2 -> 4 -> 8
+```
+
+This can reduce search energy when the useful scale is unknown.
+
+However, expansion is not justified by energy savings alone.
+
+A larger expansion is favorable only when:
+
+```text
+B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
+```
+
+The term:
+
+```text
+P_boundary(i) * C_boundary
+```
+
+represents the expected cost of crossing a relevant adverse boundary before the next observation.
+
+Thus, a larger expansion factor becomes less favorable as boundary probability or boundary cost rises.
+
+## 12. State change versus belief change
 
 UDAM currently focuses on belief uncertainty.
 
@@ -281,7 +319,7 @@ state dynamics: S_t changes
 belief dynamics: uncertainty about S_t changes
 ```
 
-## 12. Stronger state-space version
+## 13. Stronger state-space version
 
 A more standard state-space form would be:
 
@@ -294,7 +332,7 @@ v_t ~ noise(R_obs)
 
 UDAM does not need this form initially, but it connects the model to existing filtering theory.
 
-## 13. Formal priority list
+## 14. Formal priority list
 
 1. Keep timer model clean.
 2. Use `P_t = Var(S_t | D_t)` or `Cov(S_t | D_t)` in the core model.
@@ -308,3 +346,4 @@ UDAM does not need this form initially, but it connects the model to existing fi
 10. Keep fixed-target disbelief as a subjective discounting error, not a change in the core target condition.
 11. Treat repeated checking as favorable only while marginal information value remains positive.
 12. Distinguish empty activity from informative action.
+13. Treat expansion factor as domain-dependent and constrained by adverse-boundary risk.
