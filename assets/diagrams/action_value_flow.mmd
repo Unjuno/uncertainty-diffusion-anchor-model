@@ -1,0 +1,23 @@
+flowchart TD
+    A[Candidate action a] --> B{Does it return information?}
+    B -- Yes --> I[Informational value I(a) > 0]
+    B -- No --> C{Does it improve the state?}
+
+    C -- Yes --> G[Intervention value B(a) > 0]
+    C -- No --> E[No value source]
+
+    I --> V[Compute V(a) = I(a) + B(a) - C(a)]
+    G --> V
+    E --> N[Likely empty activity]
+    N --> NEG[If C(a) > 0, then V(a) < 0]
+
+    V --> D{Is V(a) > 0?}
+    D -- Yes --> DO[Action can be favorable]
+    D -- No --> STOP[Do not treat as re-anchor]
+
+    DO:::good
+    STOP:::bad
+    NEG:::bad
+
+    classDef good fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px;
+    classDef bad fill:#ffebee,stroke:#c62828,stroke-width:1px;
