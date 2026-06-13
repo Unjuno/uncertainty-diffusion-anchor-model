@@ -1,5 +1,42 @@
 # Changelog
 
+## 0.7.21 - Expansion boundary risk visual
+
+Continued Stage 3 visual explanation with an expansion-boundary-risk decision diagram.
+
+Added:
+
+- `assets/diagrams/expansion_boundary_risk.mmd`
+
+Changed:
+
+- `docs/32_visual_explanation_layer.md` now documents the fourth Stage 3 visual artifact.
+- `assets/diagrams/README.md` now lists the expansion boundary risk diagram.
+- ROADMAP now marks the expansion-with-boundary-risk diagram source as added.
+
+Core result:
+
+```text
+The expansion-boundary-risk diagram separates favorable local result from permission to expand.
+A selected expansion factor r_i must pass benefit, information, observation-cost, correction-cost, and boundary-risk checks.
+```
+
+Design constraints preserved:
+
+```text
+local success != global expansion permission
+r_i is selected, not automatically 2
+doubling is not automatic
+boundary risk can block expansion despite local success
+expansion is provisional and must be re-evaluated
+```
+
+Status:
+
+- Stage 3 now has four Mermaid visual sources.
+- The next visual artifact should cover the literature-support map.
+- Japanese expansion remains deferred until English visual structure stabilizes.
+
 ## 0.7.20 - Observation value decision visual
 
 Continued Stage 3 visual explanation with an observation-value decision diagram.
