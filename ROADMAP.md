@@ -327,7 +327,7 @@ Goal: keep future work focused after the stabilization pass.
 - [x] update `AGENTS.md` preferred next tasks
 - [x] update README development notes with stabilization-pass documents
 
-Status: first-pass complete. Remaining work is now mainly safe changelog insertion, optional older diagram rendering, English-stable Japanese sync, optional simulation extensions, and empirical validation only if a concrete study design exists.
+Status: first-pass complete. Remaining work is now mainly safe changelog insertion, optional older diagram rendering, full Japanese sync after English stabilization, optional simulation plots or sensitivity extensions, and empirical validation only if a concrete study design exists.
 
 ## v0.24: Draft cleanup first pass
 
@@ -342,6 +342,22 @@ Goal: prevent downstream drafts from being mistaken for source-of-truth document
 
 Status: first-pass complete. Drafts now more clearly present the model without defining the model. Full prose-level paper rewrite and citation insertion remain optional future work.
 
+## v0.25: Japanese guardrail and extended toy simulations
+
+Goal: add minimal Japanese source-of-truth guardrails and extend toy simulation coverage without claiming empirical validation.
+
+- [x] clarify `docs/ja/README.md` source-of-truth status
+- [x] add avoided overclaims to `docs/ja/README.md`
+- [x] add `simulations/udam_extended_sanity_checks.py`
+- [x] add repeated-checking MOV_i toy results
+- [x] add boundary-risk sensitivity toy results
+- [x] add `docs/49_extended_simulation_sanity_checks.md`
+- [x] update `simulations/README.md`
+- [x] update `docs/47_remaining_work_register.md`
+- [x] update `AGENTS.md` simulation and next-task guidance
+
+Status: first-pass complete. Japanese guardrails now explicitly defer source-of-truth authority to English Markdown. The simulation layer now has five toy checks, still not empirical validation.
+
 ## v1.0: Stable theory note
 
 Goal: Publish a coherent theory note with definitions, propositions, proofs, examples, and limitations.
@@ -350,7 +366,8 @@ Remaining work:
 
 - safely insert the compact CHANGELOG catch-up entry if the file can be patched without risky full-file replacement;
 - optionally render older non-Stage-3 diagrams;
-- expand Japanese examples only after English stabilization;
+- perform full Japanese synchronization only after English wording stabilizes;
 - optionally tighten notation for paper format, especially local index roles;
 - optionally perform a full prose-level paper rewrite and citation insertion after source wording is finalized;
-- continue simulation work only as toy demonstration / sanity check unless an empirical study design is defined.
+- add optional simulation plots or further toy sensitivity checks only as toy demonstrations / sanity checks;
+- begin empirical validation only with a concrete domain, operationalized variables, data plan, and falsifiable evaluation criterion.
