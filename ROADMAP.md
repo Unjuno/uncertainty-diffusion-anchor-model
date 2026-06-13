@@ -225,8 +225,22 @@ Goal: move from theory construction to evidence, clarity, and verification.
 - [x] continue Stage 2 literature verification with implementation intentions and if-then planning
 - [x] continue Stage 2 literature verification with active inference and epistemic value
 - [x] continue Stage 2 literature verification with behavioral activation
+- [x] complete Stage 2 first-pass verification with shaping and successive approximations
 
-Status: active strategic refinement layer. Stage 1 has a compact failure diagnostic tree. Stage 2 now has first-pass verification for value of information, Blackwell informativeness, Bayesian experimental design, sequential analysis / stopping rules, multi-armed bandits / exploration-exploitation, exponential search / doubling strategies, online algorithms / robust decision rules, implementation intentions / if-then planning, active inference / epistemic value, and behavioral activation. Japanese expansion is deferred until the English version stabilizes.
+Status: active strategic refinement layer. Stage 1 has a compact failure diagnostic tree. Stage 2 first-pass verification now covers value of information, Blackwell informativeness, Bayesian experimental design, sequential analysis / stopping rules, multi-armed bandits / exploration-exploitation, exponential search / doubling strategies, online algorithms / robust decision rules, implementation intentions / if-then planning, active inference / epistemic value, behavioral activation, and shaping / successive approximations. The project is ready to move toward Stage 3 visual explanation. Japanese expansion is deferred until the English version stabilizes.
+
+## v0.16: Visual explanation layer
+
+Goal: improve reader comprehension using diagrams and compact visual summaries.
+
+- [ ] render existing Mermaid diagrams into figures
+- [ ] add a one-page UDAM flow figure
+- [ ] add an anchor-loss-to-reanchor timeline figure
+- [ ] add observation-value decision diagram
+- [ ] add expansion-with-boundary-risk diagram
+- [ ] add literature-support map figure
+
+Status: next planned stage.
 
 ## v1.0: Stable theory note
 
@@ -236,7 +250,7 @@ Remaining work:
 
 - refine definitions;
 - add rendered figures;
-- continue related-work verification with successive approximations;
+- continue Stage 3 visual explanation;
 - expand Japanese examples only after English stabilization;
 - audit notation consistency across timer, action-value, observability, and expansion layers;
 - decide whether contraction needs a separate rule from expansion;
