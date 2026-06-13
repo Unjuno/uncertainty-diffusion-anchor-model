@@ -70,9 +70,9 @@ Goal: sharpen the mathematical status of the model.
 - [x] add notation for observation update after re-anchoring
 - [x] formalize diminishing information value for repeated checking
 - [x] define conditions under which `Q > 0`
-- [ ] decide whether `P_t` is variance, covariance, entropy, or a general uncertainty functional
+- [x] decide whether `P_t` is variance, covariance, entropy, or a general uncertainty functional
 
-Status: major scope, boundary, diffusion-rate, and marginal-value refinements are explicit. Remaining work concerns uncertainty representation.
+Status: complete as formal refinement layer. Core uses variance/covariance-like `P_t`; general uncertainty functional `𝓤_t` is reserved for future extension.
 
 ## v0.6: Public-facing safety and clarity
 
