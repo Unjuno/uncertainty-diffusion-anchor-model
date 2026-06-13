@@ -1,5 +1,48 @@
 # Changelog
 
+## 0.7.0 - Japanese documentation and visual support
+
+Added a Japanese documentation layer inside the same repository, plus additional diagrams and a literature verification checklist.
+
+Added:
+
+- `docs/ja/README.md`
+- `docs/ja/00_plain_explanation.md`
+- `docs/ja/01_timer_model.md`
+- `docs/ja/02_practical_protocol.md`
+- `docs/ja/03_failure_cases.md`
+- `docs/ja/04_positioning.md`
+- `assets/diagrams/full_udam_flow.mmd`
+- `assets/diagrams/positioning_map.mmd`
+- `notes/literature_verification.md`
+
+Removed:
+
+- `docs/ja/00_chugaku_explanation.md`
+
+Changed:
+
+- README now links to Japanese documentation.
+- `assets/diagrams/README.md` now lists the full flow and positioning map diagrams.
+- ROADMAP now includes v0.13: Japanese documentation and visual support.
+
+Core Japanese expression:
+
+```text
+過去のアンカー喪失は、未来の有効観測を無効化しない。
+```
+
+Plain version:
+
+```text
+途中でわからなくなった部分があることと、これから確かめることが意味ないことは別。
+```
+
+Status:
+
+- Japanese documentation is maintained inside the same repository rather than as a separate repository.
+- Literature references are tracked as verification candidates, not treated as confirmed citations yet.
+
 ## 0.6.0 - Positioning and novelty layer
 
 Added a positioning layer to prevent overclaiming and clarify that UDAM is a practical synthesis rather than a replacement for existing decision theory.
