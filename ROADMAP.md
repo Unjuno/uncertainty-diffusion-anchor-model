@@ -129,6 +129,8 @@ Goal: turn the theory into clear, usable examples without overcomplicating the p
 - [x] add concrete action sections to work example
 - [x] add concrete action sections to relationship example
 - [x] add concrete action sections to budget example
+- [x] convert life strategy after model collapse into a playbook
+- [x] add application caution document for timing and domain limits
 - [x] add application writing template
 - [x] sync examples index
 - [x] add simple practical protocol version
