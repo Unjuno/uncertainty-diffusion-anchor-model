@@ -8,15 +8,36 @@ A project is interrupted. After time passes, the agent no longer knows exactly w
 
 The lost anchor is project state.
 
-## Uncertainty diffusion
+## State variable
 
-Without inspection, uncertainty grows about:
+The latent state is the actual project condition:
 
-- completed tasks;
-- blocked tasks;
-- external dependencies;
-- outdated assumptions;
-- next action.
+```text
+S_t = current project state
+```
+
+This may include files, tasks, dependencies, blockers, and external requirements.
+
+## Belief uncertainty
+
+The agent is uncertain about the current project state.
+
+```text
+P_{project,t} = Var(S_t | D_t)
+```
+
+## Possible state dynamics
+
+The project itself may change during the interruption:
+
+- dependencies update;
+- requirements shift;
+- collaborators make changes;
+- previous assumptions become stale.
+
+## Belief dynamics
+
+Even if the project has not changed, the agent's uncertainty can increase because memory and context decay.
 
 ```text
 P_{project,t+Δt} = P_{project,t} + Q_project Δt
