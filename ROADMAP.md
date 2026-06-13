@@ -206,6 +206,17 @@ Goal: check whether the current model layers are logically coherent and whether 
 
 Status: complete as a coherence-check layer. No major internal contradiction found; watch items are documented.
 
+## v0.15: Five-stage refinement roadmap
+
+Goal: move from theory construction to evidence, clarity, and verification.
+
+- [x] add five-stage development roadmap
+- [x] define the five stages: failure boundaries, Japanese explanation, literature verification, visual explanation, project-note consolidation
+- [x] add evidence hierarchy for UDAM claims
+- [x] distinguish timer intuition, internal coherence, examples, counterexamples, literature support, and empirical testing
+
+Status: complete as a strategic refinement layer. The next work should follow this five-stage plan rather than adding unrelated new concepts.
+
 ## v1.0: Stable theory note
 
 Goal: Publish a coherent theory note with definitions, propositions, proofs, examples, and limitations.
@@ -217,4 +228,5 @@ Remaining work:
 - expand related work with verified citations;
 - expand Japanese examples;
 - audit notation consistency across timer, action-value, observability, and expansion layers;
-- decide whether contraction needs a separate rule from expansion.
+- decide whether contraction needs a separate rule from expansion;
+- continue the five-stage refinement process.
