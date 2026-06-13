@@ -122,6 +122,49 @@ and the practical re-anchor rule:
 future anchor validity must be checked locally, not globally rejected because of past anchor loss
 ```
 
+## Third visual artifact
+
+The third Stage 3 diagram is:
+
+```text
+assets/diagrams/observation_value_decision.mmd
+```
+
+It is intended to show why a valid observation is not automatically a favorable observation.
+
+It separates four checks:
+
+```text
+1. Is result y observable?
+2. Is y state-informative?
+3. Does y change feasible action?
+4. Is OV > 0 after observation cost?
+```
+
+The diagram centers the distinction:
+
+```text
+state-informative != favorable
+```
+
+and the conditional-action requirement:
+
+```text
+a(y) != a_0
+```
+
+The diagram also shows the observation-value expression:
+
+```text
+OV = E_y[max_a E[V(a,S) | y]] - max_a E[V(a,S)] - C(obs)
+```
+
+Its main visual claim is:
+
+```text
+an observation is useful only when it can improve action enough to justify its cost
+```
+
 ## Diagram inventory for Stage 3
 
 Planned Stage 3 visual set:
@@ -130,7 +173,7 @@ Planned Stage 3 visual set:
 |---|---|---:|
 | `one_page_udam_flow.mmd` | compact full flow from anchor loss to risk-constrained expansion | added |
 | `anchor_reanchor_timeline.mmd` | show `K + U + R` and why unknown `U` does not erase valid `R` | added |
-| observation-value decision diagram | show `OV > 0` and action change | planned |
+| `observation_value_decision.mmd` | show `state-informative != favorable`, `a(y) != a_0`, and `OV > 0` | added |
 | expansion-with-boundary-risk diagram | show why expansion is not automatic doubling | planned |
 | literature-support map figure | show which components are directly supported, partial, analogy-only, unsupported | planned |
 
@@ -142,6 +185,7 @@ Recommended reader order after Stage 3 begins:
 README
 -> one-page UDAM flow diagram
 -> anchor-reanchor timeline
+-> observation-value decision diagram
 -> failure decision tree
 -> logical synthesis review
 -> literature support map
@@ -201,6 +245,32 @@ R fixes all uncertainty
 Past anchor loss proves future observations are useless
 ```
 
+## Observation-value diagram text
+
+The observation-value diagram should keep the decision sequence explicit.
+
+Preferred node labels:
+
+```text
+Candidate observation y
+Observable result?
+State-informative?
+Does feasible action change?
+a(y) != a_0?
+OV > 0?
+Favorable observation
+State-informative but not favorable
+```
+
+Avoid node labels such as:
+
+```text
+Informative means useful
+Any observation helps
+Curiosity is enough
+Observation guarantees action improvement
+```
+
 ## Status
 
 Stage 3 has started.
@@ -210,6 +280,7 @@ The current visual work adds:
 ```text
 assets/diagrams/one_page_udam_flow.mmd
 assets/diagrams/anchor_reanchor_timeline.mmd
+assets/diagrams/observation_value_decision.mmd
 ```
 
 Rendered figures can be added later under:
