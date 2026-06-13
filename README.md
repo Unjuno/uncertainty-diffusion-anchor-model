@@ -276,6 +276,7 @@ English-first practical reading order:
 25. [`docs/33_project_note_consolidation.md`](docs/33_project_note_consolidation.md)
 26. [`docs/34_readme_consolidation_audit.md`](docs/34_readme_consolidation_audit.md)
 27. [`docs/35_overview_consolidation_audit.md`](docs/35_overview_consolidation_audit.md)
+28. [`docs/36_literature_claims_routing_audit.md`](docs/36_literature_claims_routing_audit.md)
 
 Japanese documentation, to be synchronized after English stabilization:
 
@@ -305,11 +306,16 @@ For the overview-specific consolidation audit, see:
 
 - [`docs/35_overview_consolidation_audit.md`](docs/35_overview_consolidation_audit.md)
 
+For literature-claims routing rules, see:
+
+- [`docs/36_literature_claims_routing_audit.md`](docs/36_literature_claims_routing_audit.md)
+
 ## Development notes
 
 - [`docs/33_project_note_consolidation.md`](docs/33_project_note_consolidation.md): source-of-truth map for repository consolidation.
 - [`docs/34_readme_consolidation_audit.md`](docs/34_readme_consolidation_audit.md): first-pass audit of README duplication and routing risk.
 - [`docs/35_overview_consolidation_audit.md`](docs/35_overview_consolidation_audit.md): first-pass audit of overview duplication and conceptual-boundary role.
+- [`docs/36_literature_claims_routing_audit.md`](docs/36_literature_claims_routing_audit.md): routing rules for literature claims and verification status.
 - [`notes/literature_verification.md`](notes/literature_verification.md): checklist for verifying related-work claims before treating them as citations.
 - [`notes/evidence_hierarchy.md`](notes/evidence_hierarchy.md): support levels for UDAM claims.
 - [`theory/logical_synthesis_review.md`](theory/logical_synthesis_review.md): logical coherence review across model layers.
@@ -327,7 +333,7 @@ core theory: stable enough to refine
 failure boundaries: strong
 literature verification: first-pass complete
 visual explanation: first-pass Mermaid source set complete; Stage 3 SVG figures available
-project-note consolidation: README and overview audits complete as first pass
+project-note consolidation: literature-claims routing audit complete as first pass
 Japanese layer: minimal, deferred for later sync
 ```
 
