@@ -2,6 +2,24 @@
 
 This file lists unresolved questions for the Uncertainty-Diffusion Anchor Model.
 
+## Scope note
+
+Stochastic event occurrence is intentionally out of scope for the core timer model.
+
+The timer seed model assumes:
+
+```text
+fixed target, uncertain position
+```
+
+not:
+
+```text
+uncertain target, uncertain position
+```
+
+A future extension could add event-occurrence uncertainty, but that is not part of the core theory.
+
 ## Q1. How should the diffusion rate be estimated?
 
 The model uses:
@@ -89,3 +107,21 @@ Possible tests:
 Open problem:
 
 > Which experiment best isolates uncertainty diffusion and re-anchoring?
+
+## Deferred extension: event-occurrence uncertainty
+
+A broader model could add:
+
+```text
+P(target occurs)
+```
+
+or:
+
+```text
+h(t)
+```
+
+But this would mix target uncertainty with position uncertainty.
+
+UDAM keeps this extension deferred to preserve the strength of the core timer argument.
