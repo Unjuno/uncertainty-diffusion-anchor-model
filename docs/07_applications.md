@@ -70,6 +70,37 @@ See:
 
 - `examples/missed_reanchor_miscalculation.md`
 
+## Happy miscalculation cases
+
+Some examples should describe cases where uncertainty hides upside.
+
+These are not claims that uncertainty is good.
+
+They are cases where increased observability reveals that the current state is better than expected.
+
+The general pattern is:
+
+```text
+uncertainty feels negative → observation reveals a better state than expected
+```
+
+Examples:
+
+- a learner expects total forgetting, but one problem reveals retained skill;
+- a project feels chaotic, but opening the task list reveals a small next step;
+- a social state feels negative, but a low-pressure message reveals neutrality or receptiveness;
+- a tracked variable is feared to be worsening, but one record shows stability.
+
+The UDAM correction is:
+
+```text
+uncertainty may hide upside → observe if the observation is low-cost and actionable
+```
+
+See:
+
+- `examples/happy_miscalculation.md`
+
 ## Practical principle
 
 The first action after anchor loss should usually be small, concrete, and diagnostic.
@@ -109,7 +140,8 @@ Use UDAM to select actions that:
 - reveal the next action;
 - create feedback;
 - improve the state slightly;
-- preserve future option value.
+- preserve future option value;
+- reveal hidden upside when the current state is better than expected.
 
 ## Key distinction
 
