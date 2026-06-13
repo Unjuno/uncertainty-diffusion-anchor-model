@@ -32,6 +32,28 @@ UDAM says instead:
 
 > Only the lost interval becomes uncertain. Future anchors still matter.
 
+## Visual entry point
+
+For a compact visual overview, start with:
+
+- [`docs/32_visual_explanation_layer.md`](32_visual_explanation_layer.md)
+- [`assets/diagrams/one_page_udam_flow.mmd`](../assets/diagrams/one_page_udam_flow.mmd)
+- [`assets/diagrams/anchor_reanchor_timeline.mmd`](../assets/diagrams/anchor_reanchor_timeline.mmd)
+- [`assets/diagrams/observation_value_decision.mmd`](../assets/diagrams/observation_value_decision.mmd)
+- [`assets/diagrams/expansion_boundary_risk.mmd`](../assets/diagrams/expansion_boundary_risk.mmd)
+- [`assets/diagrams/literature_support_map.mmd`](../assets/diagrams/literature_support_map.mmd)
+
+The visual layer is a reader aid. It does not add new theory.
+
+It is designed to preserve these distinctions:
+
+```text
+state-informative != favorable
+small != useful
+local success != global expansion permission
+component support != full synthesis proof
+```
+
 ## Timer seed scope
 
 The timer seed model assumes:
@@ -102,4 +124,14 @@ However, public examples should remain neutral and non-operational. The reposito
 
 ## Current status
 
-This repository is a theory repository. Simulations are not required for the initial formulation. The priority is definitional precision.
+This repository is a theory repository. Simulations are not required for the initial formulation. The priority is definitional precision and readable explanation.
+
+Current refinement status:
+
+```text
+core theory: stable enough to refine
+failure boundaries: strong
+literature verification: first-pass complete
+visual explanation: first-pass Mermaid source set complete; rendered figures pending
+Japanese layer: minimal, deferred for later sync
+```
