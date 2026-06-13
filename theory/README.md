@@ -15,6 +15,7 @@ This directory contains the formal components of the Uncertainty-Diffusion Ancho
 | `proofs.md` | proof sketches |
 | `counterexamples.md` | failure cases and boundary conditions |
 | `timer_three_layer_model.md` | formal timer-specific refinement |
+| `state_belief_separation.md` | distinction between state dynamics and belief uncertainty dynamics |
 | `consistency_review.md` | known corrections and open consistency issues |
 
 ## Core equations
@@ -46,6 +47,20 @@ The safer interpretation is three-layered:
 1. `Var(U)` may remain unchanged.
 2. relative uncertainty can be diluted as `R` grows.
 3. an upper bound can constrain the admissible range of `U`.
+
+## State-belief caution
+
+UDAM is primarily about belief uncertainty.
+
+It should not be read as claiming that the external world always worsens during inaction.
+
+The minimal model concerns:
+
+```text
+P_t = Var(S_t | D_t)
+```
+
+not necessarily direct deterioration of `S_t`.
 
 ## Current formal status
 
