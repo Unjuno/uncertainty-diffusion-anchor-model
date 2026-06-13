@@ -1,5 +1,43 @@
 # Changelog
 
+## 0.7.14 - Implementation intentions literature verification
+
+Continued Stage 2 literature verification with implementation intentions and if-then planning.
+
+Added:
+
+- `docs/28_literature_verification_implementation_intentions.md`
+
+Changed:
+
+- `notes/literature_verification.md` now marks implementation intentions / if-then planning as verified first-pass support for if-result-then-action execution mapping.
+- `docs/17_literature_support_map.md` now records implementation intentions as direct support for concrete cue-response mapping and feasible action specification, while rejecting any claim that if-then planning validates the observation or action value.
+- ROADMAP now records implementation intentions / if-then planning as part of the active Stage 2 verification sequence.
+
+Core result:
+
+```text
+implementation intentions -> direct support for if-result-then-action execution mapping
+implementation intentions -> direct support for concrete cue and feasible response requirements
+implementation intentions -> not support for observation validity or positive action value
+```
+
+Required wording corrections:
+
+```text
+execution support != value support
+cue-response mapping != state-informativeness
+if-then planning does not make an observation valid
+if-then planning does not make an action correct
+implementation intentions support one component, not the whole timer-derived UDAM synthesis
+```
+
+Status:
+
+- Stage 2 has verified one more literature area.
+- The next literature check should cover active inference / epistemic value.
+- Japanese expansion remains deferred until English structure stabilizes.
+
 ## 0.7.13 - Online algorithms literature verification
 
 Continued Stage 2 literature verification with online algorithms and robust decision rules.
