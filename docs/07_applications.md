@@ -32,6 +32,44 @@ Each application should be written in the same structure:
 | health | health state | body-state trajectory | record one variable |
 | life strategy | self-state after failure | model of remaining options | take one small reality-contacting action |
 
+## Missed application cases
+
+Some examples should describe cases where the model applies but the agent fails to use it.
+
+These are not failure cases of UDAM.
+
+They are miscalculations by the agent.
+
+The general pattern is:
+
+```text
+partial uncertainty → total invalidation
+```
+
+Examples:
+
+- stopping measurement because one interval was missed;
+- avoiding study because current skill is unclear;
+- avoiding a project because the project state is unclear;
+- avoiding low-pressure contact because the social state is unclear;
+- waiting for certainty before taking any diagnostic action.
+
+The UDAM correction is:
+
+```text
+partial uncertainty → choose a low-cost informative action if V(a) > 0
+```
+
+where:
+
+```text
+V(a) = I(a) + B(a) - C(a)
+```
+
+See:
+
+- `examples/missed_reanchor_miscalculation.md`
+
 ## Practical principle
 
 The first action after anchor loss should usually be small, concrete, and diagnostic.
