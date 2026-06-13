@@ -47,12 +47,32 @@ learning -> frequent short tests may be useful
 work -> checks should match project rhythm
 relationships -> repeated checking can become counterproductive
 budget -> checking is useful when it changes a plan
-health or crisis-like contexts -> external support and safety judgment may dominate
+high-impact contexts -> external standards may dominate
 ```
 
 Therefore, UDAM gives a structure, not a universal schedule.
 
-## 3. Observation can become empty checking
+For a detailed cadence rule, see:
+
+- `docs/16_adaptive_observation_cadence.md`
+
+## 3. First observation and later observations are different
+
+If observation has been zero for a while, the first valid observation often has high value.
+
+```text
+observation rate = 0 -> stale belief state
+```
+
+After the first observation, the question changes:
+
+```text
+Would another observation change the next action?
+```
+
+So the first observation may be strongly justified, while later observations require a marginal-value test.
+
+## 4. Observation can become empty checking
 
 Repeated observation is useful only while:
 
@@ -68,17 +88,9 @@ another check is useful only if it can change the next action
 
 If the next action is already clear, further checking may be wasteful.
 
-## 4. Some domains need external standards
+## 5. Some domains need external standards
 
 Some domains cannot be handled by self-observation alone.
-
-Examples:
-
-- serious health uncertainty;
-- legal uncertainty;
-- financial risk beyond simple planning;
-- safety-critical situations;
-- complex technical systems.
 
 In these cases, the re-anchor may be:
 
@@ -91,7 +103,7 @@ follow an established procedure
 
 UDAM does not replace domain expertise.
 
-## 5. Action value still matters
+## 6. Action value still matters
 
 Even a state-informative observation may not be worth doing if cost is too high.
 
@@ -107,7 +119,7 @@ and, for observation-specific actions:
 OV > 0
 ```
 
-## 6. Do not confuse local state with global conclusion
+## 7. Do not confuse local state with global conclusion
 
 A failed local observation does not prove global failure.
 
@@ -121,8 +133,8 @@ one local observation -> one mapped next action
 
 It does not justify total conclusions from a single signal.
 
-## 7. Practical caution statement
+## 8. Practical caution statement
 
 The safe practical version is:
 
-> Use small observations when they are connected to the relevant state and can change the next action. Do not keep observing when the next action is already clear. Do not use UDAM as a substitute for domain expertise or urgent support.
+> Use small observations when they are connected to the relevant state and can change the next action. If observation has been zero, the first valid observation often has high value. After that, observe again only when the next observation can change belief or action enough to justify its cost. UDAM gives a decision structure, not a universal schedule.
