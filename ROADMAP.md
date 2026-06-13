@@ -284,16 +284,60 @@ Goal: prevent `CHANGELOG.md` from becoming a duplicate of ROADMAP, Git history, 
 
 Status: changelog maintenance policy is defined in `docs/41_changelog_maintenance_policy.md`. A compact catch-up entry is stored in `docs/42_changelog_catchup_entry.md`. `CHANGELOG.md` itself has not been rewritten in this pass to avoid unsafe full-file replacement.
 
+## v0.20: Agent and stabilization guidance
+
+Goal: make future repository edits safer without adding new UDAM theory.
+
+- [x] add `AGENTS.md`
+- [x] link `AGENTS.md` from README
+- [x] define agent-facing source-of-truth routing
+- [x] define safe wording and banned wording for future automated edits
+
+Status: complete as a repository editing guidance layer. This does not add new theory.
+
+## v0.21: Notation and contraction stabilization
+
+Goal: reduce paperization risk by recording notation and expansion/contraction decisions without introducing unnecessary new theory.
+
+- [x] add `docs/43_notation_consistency_audit.md`
+- [x] record timer, uncertainty, re-anchor, action-value, observation-value, marginal-observation, and expansion notation decisions
+- [x] identify `i` index role ambiguity as the main notation risk
+- [x] add `docs/44_contraction_rule_decision.md`
+- [x] decide not to add a separate contraction equation during stabilization
+
+Status: first-pass complete. No notation conflict currently breaks the model. Paper-level notation tightening remains optional future work.
+
+## v0.22: Publication-readiness and compression decision
+
+Goal: decide what is safe for public repository publication and avoid unnecessary README / overview churn.
+
+- [x] add `docs/45_publication_readiness_audit.md`
+- [x] add `docs/46_readme_overview_compression_decision.md`
+- [x] record that broad README / overview compression is not an immediate blocker
+- [x] preserve the distinction between public repository readiness, paperization, and empirical validation
+
+Status: first-pass complete. The repository is close to publishable as a scoped theory repository, but not as a validated empirical theory or high-stakes decision protocol.
+
+## v0.23: Remaining work register
+
+Goal: keep future work focused after the stabilization pass.
+
+- [x] add `docs/47_remaining_work_register.md`
+- [x] add `docs/48_stabilization_pass_summary.md`
+- [x] update `AGENTS.md` preferred next tasks
+- [x] update README development notes with stabilization-pass documents
+
+Status: first-pass complete. Remaining work is now mainly safe changelog insertion, paper draft cleanup, optional older diagram rendering, English-stable Japanese sync, optional simulation extensions, and empirical validation only if a concrete study design exists.
+
 ## v1.0: Stable theory note
 
 Goal: Publish a coherent theory note with definitions, propositions, proofs, examples, and limitations.
 
 Remaining work:
 
-- refine definitions;
+- safely insert the compact CHANGELOG catch-up entry if the file can be patched without risky full-file replacement;
+- clean paper drafts using `AGENTS.md` and `docs/43_notation_consistency_audit.md` as constraints;
 - optionally render older non-Stage-3 diagrams;
-- optional post-Stage-4 compression of README or overview if needed;
 - expand Japanese examples only after English stabilization;
-- audit notation consistency across timer, action-value, observability, and expansion layers;
-- decide whether contraction needs a separate rule from expansion;
-- continue the five-stage refinement process.
+- optionally tighten notation for paper format, especially local index roles;
+- continue simulation work only as toy demonstration / sanity check unless an empirical study design is defined.
