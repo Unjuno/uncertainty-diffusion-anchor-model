@@ -38,6 +38,18 @@ next planned expense
 remaining days
 ```
 
+## If you are in this situation, do this now
+
+```text
+1. Write the current amount.
+2. Write the next planned expense.
+3. Write the remaining days in the planning period.
+```
+
+Do not try to solve the whole month at once.
+
+The goal is to reveal the budget state needed for the next decision.
+
 ## Observation result
 
 The result separates possible states:
@@ -49,6 +61,14 @@ needs a small plan
 ```
 
 Each state suggests a different next action.
+
+## Next action map
+
+```text
+comfortable -> continue the current plan
+tight but adjustable -> reduce one flexible expense
+needs a small plan -> write a simple spending rule for the remaining days
+```
 
 ## UDAM interpretation
 
