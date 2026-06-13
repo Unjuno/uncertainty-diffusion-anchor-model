@@ -46,10 +46,22 @@ Status: initial related-work map added. Needs expansion and citations if develop
 
 Goal: Add conceptual diagrams.
 
-- [ ] uncertainty diffusion without anchors
-- [ ] lost interval and re-anchored interval
-- [ ] action value flow
-- [ ] failure case taxonomy
+- [x] uncertainty diffusion without anchors
+- [x] lost interval and re-anchored interval
+- [x] action value flow
+- [x] failure case taxonomy
+
+Status: Mermaid source diagrams added under `assets/diagrams/`. Rendered figures can be added later under `assets/figures/`.
+
+## v0.5: Formal refinement
+
+Goal: sharpen the mathematical status of the model.
+
+- [ ] decide whether `P_t` is variance, covariance, entropy, or a general uncertainty functional
+- [ ] define conditions under which `Q > 0`
+- [ ] formalize diminishing information value for repeated checking
+- [ ] add notation for observation update after re-anchoring
+- [ ] separate cognitive uncertainty from physical state change
 
 ## v1.0: Stable theory note
 
@@ -59,7 +71,7 @@ Remaining work:
 
 - refine definitions;
 - strengthen proofs;
-- add diagrams;
+- add rendered figures;
 - add a formal novelty statement;
 - expand related work;
 - add Japanese and English paper-style drafts.
