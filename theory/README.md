@@ -19,6 +19,7 @@ This directory contains the formal components of the Uncertainty-Diffusion Ancho
 | `deterministic_event_scope.md` | fixed-target scope of the timer seed model |
 | `controllability_boundary.md` | boundary between actionable uncertainty and uncontrollable external uncertainty |
 | `diffusion_rate_conditions.md` | conditions under which positive uncertainty diffusion is appropriate |
+| `uncertainty_representation.md` | decision to keep `P_t` as variance/covariance in core and reserve `𝓤_t` for extension |
 | `observability_value.md` | formal value of observation, upside/downside uncertainty, and fixed-target disbelief |
 | `diminishing_information_value.md` | declining marginal value of repeated observation and checking boundaries |
 | `upside_uncertainty.md` | favorable-state discovery through re-anchoring |
@@ -32,6 +33,24 @@ Timer model:
 
 ```text
 τ = K + U + R
+```
+
+Core uncertainty representation:
+
+```text
+P_t = Var(S_t | D_t)
+```
+
+or, for vector states:
+
+```text
+P_t = Cov(S_t | D_t)
+```
+
+Future uncertainty-functional extension:
+
+```text
+𝓤_t = 𝓤(p(S_t | D_t))
 ```
 
 Uncertainty diffusion:
@@ -95,6 +114,28 @@ A positive diffusion rate is appropriate when unobserved time can make the agent
 
 If these do not hold, `Q` may be zero.
 
+## Uncertainty-representation caution
+
+Core UDAM uses variance/covariance-like belief uncertainty:
+
+```text
+P_t = Var(S_t | D_t)
+```
+
+or:
+
+```text
+P_t = Cov(S_t | D_t)
+```
+
+A general uncertainty functional is permitted as a later extension:
+
+```text
+𝓤_t = 𝓤(p(S_t | D_t))
+```
+
+but it is not required for the minimal theory.
+
 ## Fixed-target and controllability caution
 
 The timer seed model assumes:
@@ -150,8 +191,9 @@ not necessarily direct deterioration of `S_t`.
 
 The theory is currently formulated in variance/covariance and expected-value terms.
 
-A future extension may use a general uncertainty functional:
+The v0.5 representation decision is:
 
 ```text
-𝓤_t = 𝓤(p(S_t | D_t))
+core: P_t = Var(S_t | D_t) or Cov(S_t | D_t)
+extension: 𝓤_t = 𝓤(p(S_t | D_t))
 ```
