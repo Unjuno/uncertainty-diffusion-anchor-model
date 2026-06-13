@@ -115,6 +115,20 @@ Q_total = 0
 | `C_i` | marginal action cost | utility unit | cost of repeated action `i` | `C_i >= 0` | scalar |
 | `pi_hat` | subjective target relevance weight | dimensionless | agent's subjective discount on fixed-target relevance | `0 <= pi_hat <= 1` | scalar |
 
+## Adaptive expansion variables
+
+| Symbol | Meaning | SI unit | Definition | Domain / assumptions | Type |
+|---|---|---:|---|---|---|
+| `s_i` | current scope | domain unit | current observation or action scope at step `i` | `s_i > 0` | scalar |
+| `r_i` | expansion factor | dimensionless | multiplier from current scope to next scope | `r_i >= 1` | scalar |
+| `s_{i+1}` | next scope | domain unit | `s_{i+1} = r_i s_i` | `s_{i+1} >= s_i` if `r_i >= 1` | scalar |
+| `B_expand(r_i)` | expansion benefit | utility unit | benefit of increasing the next scope by factor `r_i` | real number | scalar |
+| `I_expand(r_i)` | expansion information value | utility unit | information gained from the larger probe | `I_expand(r_i) >= 0` | scalar |
+| `C_obs(r_i)` | expansion observation cost | utility unit | cost of observing or acting at scope `r_i s_i` | `C_obs(r_i) >= 0` | scalar |
+| `P_boundary(i)` | boundary crossing probability | dimensionless | probability that a relevant adverse boundary is crossed before the next observation | `0 <= P_boundary(i) <= 1` | scalar |
+| `C_boundary` | boundary crossing cost | utility unit | cost if the adverse boundary is crossed before the next observation | `C_boundary >= 0` | scalar |
+| `C_correct(r_i)` | correction cost | utility unit | cost of correcting after expanding too far | `C_correct(r_i) >= 0` | scalar |
+
 ## Observability equations
 
 No-observation value:
@@ -181,6 +195,26 @@ Error region:
 
 ```text
 pi_hat * I_position(a) + B(a) <= C(a) < I_position(a) + B(a)
+```
+
+## Adaptive expansion equation
+
+Scope update:
+
+```text
+s_{i+1} = r_i s_i
+```
+
+Rough expansion condition:
+
+```text
+B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
+```
+
+A larger expansion factor becomes less favorable when the expected boundary term increases:
+
+```text
+P_boundary(i) * C_boundary
 ```
 
 ## Naming decision
