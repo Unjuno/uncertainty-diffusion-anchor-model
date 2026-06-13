@@ -61,6 +61,19 @@ What is the probability that the target event itself occurs?
 
 This is a local modeling constraint. UDAM does not need to claim that all reality is deterministic; it only keeps event-occurrence uncertainty out of the core timer model.
 
+## Controllability boundary
+
+UDAM is an action-oriented model.
+
+The core theory includes uncertainty that action can affect through at least one of:
+
+- observation;
+- belief update;
+- decision improvement;
+- state intervention.
+
+Uncontrollable event-occurrence uncertainty is excluded from the core model, or treated as an external parameter, separate extension, or exception condition.
+
 ## General model
 
 Uncertainty diffusion without an anchor:
@@ -144,6 +157,7 @@ This does **not** justify arbitrary action. It supports actions that return info
 - [`theory/consistency_review.md`](theory/consistency_review.md): known corrections, open issues, and consistency checks.
 - [`theory/timer_three_layer_model.md`](theory/timer_three_layer_model.md): formal timer-specific refinement.
 - [`theory/deterministic_event_scope.md`](theory/deterministic_event_scope.md): fixed-target scope of the timer seed model.
+- [`theory/controllability_boundary.md`](theory/controllability_boundary.md): boundary between actionable uncertainty and uncontrollable external uncertainty.
 - [`theory/state_belief_separation.md`](theory/state_belief_separation.md): formal distinction between state dynamics and belief dynamics.
 
 ## Applications
@@ -166,6 +180,7 @@ UDAM does not apply cleanly when:
 - repeated checking becomes compulsive and uninformative;
 - the state does not diffuse without an anchor;
 - event-occurrence uncertainty is mixed into the timer seed model without adding a separate layer;
+- uncontrollable external uncertainty is treated as if it were actionable;
 - safety-critical action is delayed by unnecessary measurement.
 
 ## Repository status
