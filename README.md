@@ -88,6 +88,18 @@ However, the repository treats them as abstract illustrations only. Public wordi
 
 The useful structure is preserved without vivid or harmful detail.
 
+## FAQ
+
+For common misunderstandings, see [`FAQ.md`](FAQ.md).
+
+The FAQ covers:
+
+- whether UDAM says action is always better than inaction;
+- why the timer seed model uses a fixed target;
+- why uncontrollable event-occurrence uncertainty is excluded;
+- how high-stakes examples should be interpreted;
+- why re-anchoring does not always reduce absolute uncertainty.
+
 ## General model
 
 Uncertainty diffusion without an anchor:
@@ -151,19 +163,20 @@ This does **not** justify arbitrary action. It supports actions that return info
 ## Reading order
 
 1. [`docs/00_overview.md`](docs/00_overview.md)
-2. [`docs/01_timer_model.md`](docs/01_timer_model.md)
-3. [`docs/13_deterministic_event_scope.md`](docs/13_deterministic_event_scope.md)
-4. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
-5. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
-6. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
-7. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
-8. [`docs/04_action_value.md`](docs/04_action_value.md)
-9. [`docs/05_propositions.md`](docs/05_propositions.md)
-10. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
-11. [`docs/07_applications.md`](docs/07_applications.md)
-12. [`docs/08_related_work.md`](docs/08_related_work.md)
-13. [`docs/09_open_questions.md`](docs/09_open_questions.md)
-14. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
+2. [`FAQ.md`](FAQ.md)
+3. [`docs/01_timer_model.md`](docs/01_timer_model.md)
+4. [`docs/13_deterministic_event_scope.md`](docs/13_deterministic_event_scope.md)
+5. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
+6. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
+7. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
+8. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
+9. [`docs/04_action_value.md`](docs/04_action_value.md)
+10. [`docs/05_propositions.md`](docs/05_propositions.md)
+11. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
+12. [`docs/07_applications.md`](docs/07_applications.md)
+13. [`docs/08_related_work.md`](docs/08_related_work.md)
+14. [`docs/09_open_questions.md`](docs/09_open_questions.md)
+15. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
 
 ## Development notes
 
