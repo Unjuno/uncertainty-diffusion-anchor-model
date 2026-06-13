@@ -1,0 +1,49 @@
+flowchart TD
+    A[Favorable local result] --> B[Candidate expansion factor r_i]
+    B --> C[Next scope s_i_plus_1 = r_i s_i]
+
+    C --> D[Estimate expansion benefit B_expand r_i]
+    C --> E[Estimate information value I_expand r_i]
+    C --> F[Estimate observation cost C_obs r_i]
+    C --> G[Estimate boundary probability P_boundary i]
+    C --> H[Estimate boundary cost C_boundary]
+    C --> I[Estimate correction cost C_correct r_i]
+
+    D --> J[Left side: B_expand + I_expand]
+    E --> J
+
+    F --> K[Right side: C_obs + P_boundary C_boundary + C_correct]
+    G --> K
+    H --> K
+    I --> K
+
+    J --> L{Expansion inequality holds?}
+    K --> L
+
+    L -- No --> M[Do not expand]
+    M --> M1[Hold scope, reduce scope, or collect different observation]
+
+    L -- Yes --> N{Boundary risk acceptable?}
+    N -- No --> O[Do not expand despite local success]
+    N -- Yes --> P[Expand by selected r_i]
+
+    P --> Q[Observe new result]
+    Q --> R[Re-evaluate value, cost, and boundary risk]
+    R --> S{Continue expansion?}
+
+    S -- No --> T[Stop or act within current scope]
+    S -- Yes --> B
+
+    A --> U[Local success is evidence, not permission]
+    B --> V[r_i is selected, not automatically 2]
+    P --> W[Expansion is provisional]
+
+    classDef ok fill:#d1e7dd,stroke:#0f5132,color:#222;
+    classDef warn fill:#fff3cd,stroke:#b58100,color:#222;
+    classDef stop fill:#f8d7da,stroke:#842029,color:#222;
+    classDef formula fill:#e2e3e5,stroke:#41464b,color:#222;
+
+    class P,Q,R ok;
+    class U,V,W warn;
+    class M,M1,O,T stop;
+    class J,K,L formula;
