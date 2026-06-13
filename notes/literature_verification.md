@@ -28,11 +28,12 @@ For each item, check:
 | Prior -> observation -> posterior -> action | Bayesian experimental design | verified: partial to direct support | Direct for prior-posterior updating; action mapping is supported when utility is decision-relevant but remains UDAM-specific in concrete form |
 | Continue observing only while marginal value is positive | sequential analysis / stopping rules | verified: partial support | See `docs/24_literature_verification_sequential_analysis.md`; stopping-rule discipline is directly supported, but `MOV_i` is UDAM-specific notation |
 | Repeated observation requires a stopping rule | sequential analysis / stopping rules | verified: direct support | Later checks are continue-or-stop decisions, not automatic extensions of the first observation |
-| Small probes can balance learning and action | multi-armed bandits / exploration-exploitation | to verify | partial; next priority after sequential analysis |
+| Small probes can balance learning and action | multi-armed bandits / exploration-exploitation | verified: direct / partial support | See `docs/25_literature_verification_multi_armed_bandits.md`; direct for action-with-feedback, partial for UDAM's practical post-anchor-loss probe framing |
+| Exploration is useful but costly | multi-armed bandits / exploration-exploitation | verified: direct support | Regret formalizes that exploratory action can have opportunity cost |
 | Action can be chosen partly to gain information | active inference / epistemic value | to verify | partial; UDAM is narrower |
 | If-result-then-action mapping improves usability | implementation intentions | to verify | likely practical support |
 | Small successful steps can justify gradual expansion | shaping / successive approximations | to verify | partial; be careful outside behavioral context |
-| Geometric expansion can reduce search cost when scale is unknown | exponential search / doubling search | to verify | direct for ordered search, partial for UDAM applications |
+| Geometric expansion can reduce search cost when scale is unknown | exponential search / doubling search | to verify | direct for ordered search, partial for UDAM applications; next priority |
 | Robust rules matter when the offline optimum is unavailable | online algorithms | to verify | partial; needs careful framing |
 | Repeated small cost versus one large decision | ski-rental-type tradeoffs | to verify | analogy only unless formalized |
 | Small action after collapse can matter | behavioral activation | to verify | partial; avoid clinical overclaiming |
@@ -44,6 +45,7 @@ Current verified notes:
 - `docs/22_literature_verification_value_blackwell.md`
 - `docs/23_literature_verification_bayesian_experimental_design.md`
 - `docs/24_literature_verification_sequential_analysis.md`
+- `docs/25_literature_verification_multi_armed_bandits.md`
 
 Key result:
 
@@ -52,6 +54,7 @@ value of information -> direct support for OV > 0 style observation value
 Blackwell informativeness -> partial support for state-informative observation and conditional action, but not identical to UDAM's local condition
 Bayesian experimental design -> direct support for utility-guided observation choice and prior-posterior updating, but not proof of UDAM's timer-derived synthesis
 sequential analysis / stopping rules -> direct support for treating repeated observation as a continue-or-stop problem; partial support for UDAM's MOV_i notation
+multi-armed bandits -> direct support for action-with-feedback and exploration-exploitation tradeoff; partial support for UDAM's practical small-probe framing
 ```
 
 ## Current caution
@@ -68,10 +71,13 @@ Prefer:
 UDAM is consistent with several existing decision-theoretic and cognitive frameworks, but each connection should be verified separately.
 ```
 
-Additional caution:
+Additional cautions:
 
 ```text
 MOV_i <= 0 means the current observation mode should stop or change. It does not imply that all possible future observations are worthless.
+small != useful
+feedback-producing != favorable
+local probe success != global expansion permission
 ```
 
 ## Priority
@@ -83,12 +89,12 @@ value of information: verified first pass
 Blackwell informativeness: verified first pass
 Bayesian experimental design: verified first pass
 sequential analysis / stopping rules: verified first pass
+multi-armed bandits / exploration-exploitation: verified first pass
 ```
 
 Second priority:
 
 ```text
-multi-armed bandits
 exponential search
 online algorithms
 implementation intentions
