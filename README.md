@@ -73,6 +73,30 @@ If uncertainty diffuses in the absence of anchors, then low-cost informative act
 
 This does **not** justify arbitrary action. It supports actions that return information, improve the state, or both, at sufficiently low cost.
 
+## Repository map
+
+| Path | Role |
+|---|---|
+| `docs/` | readable theory explanation |
+| `theory/` | definitions, assumptions, axioms, propositions, proofs, counterexamples |
+| `examples/` | structured applications |
+| `notes/` | origin notes, terminology, research notes |
+| `assets/` | diagrams and figures |
+| `drafts/` | paper, blog, and manifesto drafts |
+
+## Reading order
+
+1. [`docs/00_overview.md`](docs/00_overview.md)
+2. [`docs/01_timer_model.md`](docs/01_timer_model.md)
+3. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
+4. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
+5. [`docs/04_action_value.md`](docs/04_action_value.md)
+6. [`docs/05_propositions.md`](docs/05_propositions.md)
+7. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
+8. [`docs/07_applications.md`](docs/07_applications.md)
+9. [`docs/08_related_work.md`](docs/08_related_work.md)
+10. [`docs/09_open_questions.md`](docs/09_open_questions.md)
+
 ## Applications
 
 - time perception
