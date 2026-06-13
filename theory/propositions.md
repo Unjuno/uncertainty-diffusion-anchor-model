@@ -232,3 +232,35 @@ OV > 0
 ### Meaning
 
 This is the Monty-Hall-type structure inside UDAM: observation is valuable when it is state-informative and can rationally change the next action.
+
+## Proposition 13: Expansion factor is constrained by adverse boundary risk
+
+Let the current action or observation scope be:
+
+```text
+s_i
+```
+
+and the next scope be:
+
+```text
+s_{i+1} = r_i s_i
+```
+
+A larger expansion factor is favorable only if:
+
+```text
+B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
+```
+
+### Meaning
+
+Geometric expansion can reduce search energy, but the expansion factor is constrained by the probability and cost of crossing a relevant adverse boundary before the next observation.
+
+A default doubling pattern can be useful:
+
+```text
+1 -> 2 -> 4 -> 8
+```
+
+but it is not universally optimal. The factor depends on observation cost, correction cost, state volatility, reversibility, and adverse boundary risk.
