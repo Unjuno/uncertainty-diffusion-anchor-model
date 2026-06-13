@@ -16,6 +16,40 @@ Each example should distinguish **state change** from **belief uncertainty**.
 | `missed_reanchor_miscalculation.md` | miscalculation | cases where UDAM applies but the agent fails to use it |
 | `happy_miscalculation.md` | upside example | cases where observation reveals the state is better than expected |
 | `false_comfort_miscalculation.md` | downside example | cases where lack of observation hides a worse-than-expected state |
+| `concrete_learning_reanchor.md` | concrete daily case | one representative problem as learning re-anchor |
+| `concrete_work_reanchor.md` | concrete daily case | task list inspection as project re-anchor |
+| `concrete_relationship_reanchor.md` | concrete daily case | low-pressure message as social re-anchor |
+| `concrete_budget_reanchor.md` | concrete daily case | minimum budget numbers as planning re-anchor |
+
+## Concrete daily cases
+
+The concrete daily cases are meant to make UDAM usable, not merely abstract.
+
+They follow the pattern:
+
+```text
+unclear state -> small observation -> updated action
+```
+
+The action is justified only when:
+
+```text
+V(a) > 0
+```
+
+or:
+
+```text
+OV > 0
+```
+
+The concrete cases should show:
+
+- the exact unclear state;
+- the common mistaken inference;
+- the small re-anchor action;
+- the possible observation results;
+- how the next action changes.
 
 ## Template
 
@@ -156,12 +190,11 @@ However, examples in this repository should remain abstract, non-operational, an
 
 Use neutral wording such as:
 
-- high-stakes fixed-deadline example;
-- safety-critical fixed-target example;
+- safety-critical fixed-reference example;
 - constrained decision context;
 - upper time bound.
 
-The goal is to preserve the model structure, not vivid scenario detail.
+The goal is to preserve the model structure, not operational detail.
 
 ## Core distinction
 
