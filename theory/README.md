@@ -13,6 +13,7 @@ This directory contains the formal components of the Uncertainty-Diffusion Ancho
 | `lemmas.md` | supporting lemmas |
 | `propositions.md` | main propositions |
 | `proofs.md` | proof sketches |
+| `observability_proofs.md` | proof sketches for observability value and fixed-target discounting |
 | `counterexamples.md` | failure cases and boundary conditions |
 | `timer_three_layer_model.md` | formal timer-specific refinement |
 | `deterministic_event_scope.md` | fixed-target scope of the timer seed model |
@@ -47,6 +48,12 @@ Observability value:
 
 ```text
 OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
+```
+
+Fixed-target discounting error region:
+
+```text
+pi_hat * I_position(a) + B(a) <= C(a) < I_position(a) + B(a)
 ```
 
 ## Timer-specific caution
