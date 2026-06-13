@@ -13,6 +13,8 @@ The diagrams are written in Mermaid where possible so they can be edited as text
 - `failure_taxonomy.mmd`: cases where the model weakens or fails.
 - `observability_value_flow.mmd`: observation value, hidden upside/downside, and fixed-target discounting.
 - `adaptive_expansion_factor.mmd`: expansion factor selection constrained by adverse boundary risk.
+- `full_udam_flow.mmd`: full practical UDAM flow from anchor loss to risk-constrained expansion.
+- `positioning_map.mmd`: positioning map showing UDAM as a timer-derived practical synthesis of existing ideas.
 
 ## Rendering
 
