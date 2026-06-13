@@ -22,6 +22,11 @@ This file fixes notation for the Uncertainty-Diffusion Anchor Model.
 | `D_t` | observation history | context-dependent | observations up to time `t` | arbitrary | data |
 | `P_t` | uncertainty at time `t` | state unit squared | `P_t = Var(S_t | D_t)` in the variance formulation | `P_t >= 0` | variance / covariance |
 | `Q` | uncertainty diffusion rate | state unit squared / s | rate at which uncertainty grows per unit time without anchors | `Q >= 0` | scalar / matrix |
+| `Q_total` | composite uncertainty diffusion rate | state unit squared / s | total positive diffusion rate from multiple sources | `Q_total >= 0` | scalar / matrix |
+| `Q_state` | state-change diffusion component | state unit squared / s | uncertainty from latent state changes | `Q_state >= 0` | scalar / matrix |
+| `Q_memory` | memory-decay diffusion component | state unit squared / s | uncertainty from memory or calibration decay | `Q_memory >= 0` | scalar / matrix |
+| `Q_dependency` | dependency-change diffusion component | state unit squared / s | uncertainty from unobserved dependency changes | `Q_dependency >= 0` | scalar / matrix |
+| `Q_context` | context-loss diffusion component | state unit squared / s | uncertainty from loss of task or decision context | `Q_context >= 0` | scalar / matrix |
 | `Δt` | unanchored elapsed time | s | elapsed time without anchoring observation | `Δt >= 0` | scalar |
 
 ## Important distinction: `P_t` vs `Q`
@@ -59,6 +64,26 @@ elapsed-time variance added per second
 The model should be read as:
 
 > uncertainty increases by `QΔt`, not that `Q` itself is the uncertainty.
+
+## Diffusion-rate decomposition
+
+A composite diffusion rate can be written as:
+
+```text
+Q_total = Q_state + Q_memory + Q_dependency + Q_context
+```
+
+A positive diffusion assumption is appropriate when:
+
+```text
+Q_total > 0
+```
+
+If all components are zero, then the diffusion argument weakens:
+
+```text
+Q_total = 0
+```
 
 ## Action-value variables
 
