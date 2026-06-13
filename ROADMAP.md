@@ -117,9 +117,22 @@ Goal: prevent the model from being misread as arbitrary small action.
 - [x] sync to `docs/05_propositions.md`
 - [x] sync to `theory/consistency_review.md`
 - [x] add proof sketches for Propositions 11 and 12
-- [ ] update README entry point with state-informative wording
+- [x] update README entry point with state-informative wording
 
-Status: theory layer complete. Remaining work is a minimal README wording update.
+Status: complete as a formal clarification layer.
+
+## v0.9: Concrete application playbooks
+
+Goal: turn the theory into clear, usable examples without overcomplicating the protocol.
+
+- [ ] add concrete action sections to learning example
+- [ ] add concrete action sections to work example
+- [ ] add concrete action sections to relationship example
+- [ ] add concrete action sections to budget example
+- [ ] add application writing template
+- [ ] sync examples index
+
+Status: next active layer.
 
 ## v1.0: Stable theory note
 
