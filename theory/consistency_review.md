@@ -268,6 +268,94 @@ Boundary:
 
 UDAM can describe small information actions, but it does not replace professional care, crisis support, or safety behavior.
 
+## Issue 10: `I(a)` versus `OV`
+
+Status: Watch.
+
+`I(a)` was initially used as a general informational value term.
+
+The observability layer refines this by defining a more specific quantity:
+
+```text
+OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
+```
+
+Recommended reading:
+
+- `I(a)` is the broad informational value term in the action-value equation.
+- `OV` is a decision-theoretic refinement of informational value for observation-specific actions.
+
+Do not double-count them in the same equation unless the model explicitly decomposes `I(a)`.
+
+## Issue 11: Observability value versus compulsive checking
+
+Status: Watch.
+
+Observation is not automatically valuable.
+
+The condition is:
+
+```text
+OV > 0
+```
+
+This means the value of improved conditional action must exceed observation cost.
+
+If observation is repetitive, noisy, expensive, or non-actionable, then:
+
+```text
+OV <= 0
+```
+
+and UDAM does not favor it.
+
+## Issue 12: `G`, `B(a)`, and `B_state` notation collision
+
+Status: Fixed as naming caution.
+
+The model uses:
+
+```text
+B(a)
+```
+
+for intervention value.
+
+The observability layer may classify latent states as favorable or unfavorable. To avoid collision:
+
+- use `G` only as a local label for favorable state;
+- use `B_state` for unfavorable state;
+- avoid writing `B` alone for a state label.
+
+## Issue 13: `pi_hat` versus fixed-target assumption
+
+Status: Watch.
+
+The core timer model assumes:
+
+```text
+fixed target, uncertain position
+```
+
+In that core model, target relevance is effectively treated as fixed.
+
+`pi_hat` is not a change to the core target condition. It is the agent's subjective discounting of the target's relevance.
+
+Correct distinction:
+
+```text
+core model: fixed target
+agent belief: pi_hat may be too low
+```
+
+The error region is:
+
+```text
+pi_hat * I_position(a) + B(a) <= C(a) < I_position(a) + B(a)
+```
+
+This means the core model favors re-anchoring, but the agent's discounted model does not.
+
 ## Current conclusion
 
 The main structure remains coherent:
@@ -276,10 +364,14 @@ The main structure remains coherent:
 τ = K + U + R
 P_{t+Δt} = P_t + QΔt
 V(a) = I(a) + B(a) - C(a)
+OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
 ```
 
 The main correction made during review was the timer-specific unit error for `QΔt`.
 
-The main conceptual refinement is that timer re-anchoring can produce decreasing relative influence even when absolute uncertainty remains or increases.
+The main conceptual refinement is now two-layered:
+
+1. timer re-anchoring can produce decreasing relative influence even when absolute uncertainty remains or increases;
+2. observation can produce value by enabling better conditional action.
 
 The main unresolved theoretical decision is whether `P_t` remains variance/covariance or becomes a more general uncertainty functional.
