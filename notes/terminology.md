@@ -114,6 +114,43 @@ In UDAM, uncontrollable event-occurrence uncertainty is treated as external, exc
 
 Japanese: 外生的不確実性 / 非制御可能な不確実性
 
+## Upside uncertainty
+
+Uncertainty that may contain favorable latent states.
+
+It does not mean uncertainty is good by itself.
+
+It means:
+
+```text
+uncertainty may hide upside
+observation can reveal it
+```
+
+Japanese: 上振れ不確実性 / 良い方向を含む不確実性
+
+## Happy miscalculation
+
+A case where the agent expects or fears a poor state, but observation reveals that the true state is better than expected.
+
+This is an observability effect, not blind optimism.
+
+Japanese: 嬉しい誤算
+
+## Observability value
+
+The value produced when an action makes the current state more observable and enables better conditional action.
+
+Representative form:
+
+```text
+E[max_a V(a | y)] >= max_a E[V(a)]
+```
+
+assuming no observation cost and ideal use of information.
+
+Japanese: 観測可能性価値
+
 ## Informative action
 
 An action that returns information about the current state.
