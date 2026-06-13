@@ -217,8 +217,9 @@ Goal: move from theory construction to evidence, clarity, and verification.
 - [x] add failure decision tree for Stage 1
 - [x] add failure decision tree diagram
 - [x] begin Stage 2 literature verification with value of information and Blackwell informativeness
+- [x] continue Stage 2 literature verification with Bayesian experimental design
 
-Status: active strategic refinement layer. Stage 1 has a compact failure diagnostic tree. Stage 2 has started with VOI and Blackwell verification. Japanese expansion is deferred until the English version stabilizes.
+Status: active strategic refinement layer. Stage 1 has a compact failure diagnostic tree. Stage 2 now has first-pass verification for value of information, Blackwell informativeness, and Bayesian experimental design. Japanese expansion is deferred until the English version stabilizes.
 
 ## v1.0: Stable theory note
 
@@ -228,7 +229,7 @@ Remaining work:
 
 - refine definitions;
 - add rendered figures;
-- continue related-work verification with Bayesian experimental design and sequential analysis;
+- continue related-work verification with sequential analysis and stopping rules;
 - expand Japanese examples only after English stabilization;
 - audit notation consistency across timer, action-value, observability, and expansion layers;
 - decide whether contraction needs a separate rule from expansion;
