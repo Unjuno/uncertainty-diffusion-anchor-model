@@ -150,6 +150,19 @@ Goal: clarify how to handle the first observation and later observations.
 
 Status: complete as a practical caution layer. Future work may formalize cadence selection by domain.
 
+## v0.11: Adaptive expansion factor
+
+Goal: clarify how much to expand action or observation scope after favorable probes.
+
+- [x] add adaptive expansion factor document
+- [x] define expansion factor `r_i`
+- [x] connect geometric expansion to search energy
+- [x] add adverse-boundary-before-next-observation risk
+- [x] connect timer seed model to boundary crossing before observation
+- [x] add rough decision inequality for expansion
+
+Status: complete as a practical expansion layer. Future work may formalize optimal expansion factors under specific loss functions.
+
 ## v1.0: Stable theory note
 
 Goal: Publish a coherent theory note with definitions, propositions, proofs, examples, and limitations.
