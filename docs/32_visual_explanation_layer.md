@@ -207,6 +207,42 @@ and:
 r_i is selected, not automatically 2
 ```
 
+## Fifth visual artifact
+
+The fifth Stage 3 diagram is:
+
+```text
+assets/diagrams/literature_support_map.mmd
+```
+
+It is intended to show how much support each UDAM component currently receives from nearby literature.
+
+It separates five categories:
+
+```text
+direct support
+partial support
+analogy only
+not supported / avoid
+UDAM-specific synthesis
+```
+
+The diagram is not a bibliography.
+
+It is a visual guardrail against overclaiming.
+
+Its main visual claim is:
+
+```text
+component support does not prove full synthesis
+```
+
+The safest reading is:
+
+```text
+nearby literature supports several UDAM components at different strengths, while the timer-derived anchor-loss synthesis remains UDAM-specific
+```
+
 ## Diagram inventory for Stage 3
 
 Planned Stage 3 visual set:
@@ -217,7 +253,7 @@ Planned Stage 3 visual set:
 | `anchor_reanchor_timeline.mmd` | show `K + U + R` and why unknown `U` does not erase valid `R` | added |
 | `observation_value_decision.mmd` | show `state-informative != favorable`, `a(y) != a_0`, and `OV > 0` | added |
 | `expansion_boundary_risk.mmd` | show why expansion is not automatic doubling and must satisfy boundary-risk constraints | added |
-| literature-support map figure | show which components are directly supported, partial, analogy-only, unsupported | planned |
+| `literature_support_map.mmd` | show direct, partial, analogy-only, avoid, and UDAM-specific support categories | added |
 
 ## Intended reader path
 
@@ -229,9 +265,9 @@ README
 -> anchor-reanchor timeline
 -> observation-value decision diagram
 -> expansion-with-boundary-risk diagram
+-> literature-support map
 -> failure decision tree
 -> logical synthesis review
--> literature support map
 -> detailed formal notes
 ```
 
@@ -340,6 +376,31 @@ Boundary risk is negligible
 Expansion is always the next step
 ```
 
+## Literature-support diagram text
+
+The literature-support diagram should show support strength, not prestige.
+
+Preferred node labels:
+
+```text
+Direct support
+Partial support
+Analogy only
+Not supported / avoid
+UDAM-specific synthesis
+Component support does not prove full synthesis
+```
+
+Avoid node labels such as:
+
+```text
+UDAM is proven
+UDAM is active inference
+UDAM is behavioral activation
+All components are directly supported
+Literature proves the whole model
+```
+
 ## Status
 
 Stage 3 has started.
@@ -351,6 +412,7 @@ assets/diagrams/one_page_udam_flow.mmd
 assets/diagrams/anchor_reanchor_timeline.mmd
 assets/diagrams/observation_value_decision.mmd
 assets/diagrams/expansion_boundary_risk.mmd
+assets/diagrams/literature_support_map.mmd
 ```
 
 Rendered figures can be added later under:
