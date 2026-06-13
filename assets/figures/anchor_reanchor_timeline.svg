@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Anchor-loss to re-anchor timeline</title>
+  <desc id="desc">Timer-seed visual showing K, U, and R in tau equals K plus U plus R, with warnings against total invalidation.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#444"/></marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #222; font-size: 18px; }
+      .title { font-size: 28px; font-weight: 700; }
+      .label { font-size: 22px; font-weight: 700; }
+      .known { fill: #d1e7dd; stroke: #0f5132; stroke-width: 2; rx: 10; }
+      .unknown { fill: #fff3cd; stroke: #b58100; stroke-width: 2; rx: 10; }
+      .anchor { fill: #cfe2ff; stroke: #084298; stroke-width: 2; rx: 10; }
+      .warn { fill: #f8d7da; stroke: #842029; stroke-width: 2; rx: 10; }
+      .edge { stroke: #444; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .dash { stroke: #777; stroke-width: 2; fill: none; stroke-dasharray: 5 5; marker-end: url(#arrow); }
+      .small { font-size: 15px; }
+    </style>
+  </defs>
+  <rect width="1200" height="560" fill="#fff"/>
+  <text x="60" y="52" class="title">Anchor-loss to re-anchor timeline</text>
+
+  <rect x="80" y="120" width="220" height="80" class="known"/><text x="122" y="154" class="label">K</text><text x="112" y="181">Known interval</text>
+  <rect x="360" y="120" width="220" height="80" class="unknown"/><text x="402" y="154" class="label">U</text><text x="398" y="181">Unknown interval</text>
+  <rect x="640" y="120" width="220" height="80" class="known"/><text x="682" y="154" class="label">R</text><text x="668" y="181">Re-anchored interval</text>
+  <rect x="920" y="120" width="210" height="80" class="anchor"/><text x="978" y="154" class="label">tau</text><text x="970" y="181">Current position</text>
+
+  <path d="M300 160 H360" class="edge"/><path d="M580 160 H640" class="edge"/><path d="M860 160 H920" class="edge"/>
+  <text x="310" y="112" class="small">anchor lost</text>
+  <text x="585" y="112" class="small">valid future anchor may appear</text>
+
+  <rect x="330" y="260" width="540" height="72" class="anchor"/><text x="455" y="305" class="label">tau = K + U + R</text>
+  <path d="M190 200 C190 245 430 245 430 260" class="dash"/>
+  <path d="M470 200 C470 240 535 240 535 260" class="dash"/>
+  <path d="M750 200 C750 245 690 245 690 260" class="dash"/>
+
+  <rect x="80" y="390" width="300" height="74" class="anchor"/><text x="108" y="421">Do not erase K</text><text x="108" y="445" class="small">Past known interval remains known.</text>
+  <rect x="450" y="390" width="300" height="74" class="unknown"/><text x="478" y="421">Do not pretend U is known</text><text x="478" y="445" class="small">Unknown interval stays uncertain.</text>
+  <rect x="820" y="390" width="300" height="74" class="anchor"/><text x="848" y="421">Do not invalidate R</text><text x="848" y="445" class="small">Future validity is checked locally.</text>
+
+  <text x="330" y="520" class="label">Partial uncertainty does not imply total invalidation.</text>
+</svg>
