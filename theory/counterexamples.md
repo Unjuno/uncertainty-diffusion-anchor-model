@@ -77,7 +77,7 @@ C(a_n) > 0
 
 then repeated checking becomes unfavorable.
 
-## C5. Non-diffusing state
+## C5. Non-diffusing belief uncertainty
 
 If:
 
@@ -85,21 +85,65 @@ If:
 Q = 0
 ```
 
-then uncertainty does not increase without anchors.
+then belief uncertainty does not increase without anchors.
 
 In this case, urgent re-anchoring may be unnecessary.
 
-## C6. Safety-critical delay
+This is a belief-state condition, not necessarily a claim that the external state is fixed.
+
+## C6. Relative influence does not decrease
+
+In the timer model, absolute uncertainty may increase while relative influence decreases only under a growth-rate condition.
+
+Let:
+
+```text
+ρ(R) = A(R) / B(R)
+```
+
+where:
+
+```text
+A(R) = sqrt(Var(U_R))
+B(R) = E[τ]
+```
+
+Relative dilution requires:
+
+```text
+A'(R)/A(R) < B'(R)/B(R)
+```
+
+when `A(R) > 0` and `B(R) > 0`.
+
+If the uncertainty scale grows as fast as or faster than the reference scale, then relative dilution may fail.
+
+## C7. No upper-bound condition
+
+The upper-bound tightening result requires an additional condition:
+
+```text
+K + U + R < T
+```
+
+Without such an upper bound, one cannot infer:
+
+```text
+U < T - K - R
+```
+
+Therefore, upper-bound tightening is not part of the basic timer decomposition.
+
+## C8. Safety-critical delay
 
 If measurement delays necessary safety behavior, then action cost may dominate.
 
 Example:
 
-- counting risk while evacuation is possible;
 - over-analyzing during immediate danger;
 - seeking information when action is already clearly required.
 
-## C7. Noise-producing activity
+## C9. Noise-producing activity
 
 Some actions create additional ambiguity rather than resolving it.
 
@@ -113,7 +157,7 @@ Examples:
 
 These actions may increase subjective activity while failing to reduce `P_t`.
 
-## C8. Wrong anchor
+## C10. Wrong anchor
 
 An action may anchor the wrong variable.
 
@@ -122,6 +166,29 @@ Example:
 - organizing notes when the true uncertainty is whether one can solve problems;
 - tracking mood when the relevant variable is sleep;
 - rewriting plans when the project blocker is external approval.
+
+## C11. State-belief conflation
+
+UDAM weakens if state dynamics and belief dynamics are conflated.
+
+The model does not claim:
+
+```text
+inaction always worsens S_t
+```
+
+It claims:
+
+```text
+lack of anchors may increase uncertainty about S_t
+```
+
+A proper application should distinguish:
+
+```text
+state dynamics: S_t changes
+belief dynamics: P_t changes
+```
 
 ## Boundary statement
 
