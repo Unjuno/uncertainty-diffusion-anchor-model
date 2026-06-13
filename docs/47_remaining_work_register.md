@@ -1,6 +1,6 @@
 # 47 Remaining Work Register
 
-This document records the remaining work after the first-pass agent guidance, notation audit, contraction-rule decision, publication-readiness audit, README/overview compression decision, roadmap update, changelog catch-up preparation, and draft cleanup pass.
+This document records the remaining work after the first-pass agent guidance, notation audit, contraction-rule decision, publication-readiness audit, README/overview compression decision, roadmap update, changelog catch-up preparation, draft cleanup pass, and minimal Japanese sync guardrail.
 
 The purpose is to keep the project in stabilization mode.
 
@@ -14,7 +14,7 @@ Completed in the latest stabilization pass:
 AGENTS.md added
 README linked to AGENTS.md
 README linked stabilization-pass documents from Development notes
-ROADMAP.md recorded v0.20 through v0.23 stabilization milestones
+ROADMAP.md recorded v0.20 through v0.24 stabilization milestones
 docs/42_changelog_catchup_entry.md extended with a 0.9.0 compact entry
 docs/43_notation_consistency_audit.md added
 docs/44_contraction_rule_decision.md added
@@ -24,6 +24,7 @@ docs/48_stabilization_pass_summary.md added
 drafts/paper_outline.md source-of-truth disclaimer added and abstract wording softened
 drafts/blog_post_jp.md source-of-truth disclaimer added
 drafts/short_manifesto.md source-of-truth disclaimer added
+docs/ja/README.md source-of-truth status clarified
 ```
 
 ## Remaining work by priority
@@ -112,13 +113,21 @@ turn visual work into theory authorization
 Status:
 
 ```text
-deferred
+minimal guardrail sync complete; full sync deferred
 ```
 
-Action:
+Completed:
 
 ```text
-Translate stable English claims conservatively after English source routing and notation remain stable.
+docs/ja/README.md now states that English Markdown is the source of truth.
+docs/ja/README.md now lists avoided overclaims in Japanese.
+```
+
+Remaining optional work:
+
+```text
+full Japanese synchronization after English wording stabilizes
+Japanese examples only when they do not exceed English claim strength
 ```
 
 Do not:
@@ -184,6 +193,7 @@ roadmap stabilization recording
 changelog catch-up preparation
 remaining-work register
 draft source-of-truth disclaimer insertion
+minimal Japanese source-of-truth guardrail
 ```
 
 ## Current release posture
