@@ -273,6 +273,10 @@ partial uncertainty does not imply total invalidation
 τ = K + U + R
 ```
 
+For the detailed positioning note, see:
+
+- [`docs/19_positioning_and_novelty.md`](docs/19_positioning_and_novelty.md)
+
 ## Repository map
 
 | Path | Role |
@@ -290,22 +294,23 @@ partial uncertainty does not imply total invalidation
 2. [`docs/15_application_cautions.md`](docs/15_application_cautions.md)
 3. [`docs/16_adaptive_observation_cadence.md`](docs/16_adaptive_observation_cadence.md)
 4. [`docs/18_adaptive_expansion_factor.md`](docs/18_adaptive_expansion_factor.md)
-5. [`docs/00_overview.md`](docs/00_overview.md)
-6. [`FAQ.md`](FAQ.md)
-7. [`docs/01_timer_model.md`](docs/01_timer_model.md)
-8. [`docs/13_deterministic_event_scope.md`](docs/13_deterministic_event_scope.md)
-9. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
-10. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
-11. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
-12. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
-13. [`docs/04_action_value.md`](docs/04_action_value.md)
-14. [`docs/05_propositions.md`](docs/05_propositions.md)
-15. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
-16. [`docs/07_applications.md`](docs/07_applications.md)
-17. [`docs/08_related_work.md`](docs/08_related_work.md)
-18. [`docs/17_literature_support_map.md`](docs/17_literature_support_map.md)
-19. [`docs/09_open_questions.md`](docs/09_open_questions.md)
-20. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
+5. [`docs/19_positioning_and_novelty.md`](docs/19_positioning_and_novelty.md)
+6. [`docs/00_overview.md`](docs/00_overview.md)
+7. [`FAQ.md`](FAQ.md)
+8. [`docs/01_timer_model.md`](docs/01_timer_model.md)
+9. [`docs/13_deterministic_event_scope.md`](docs/13_deterministic_event_scope.md)
+10. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
+11. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
+12. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
+13. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
+14. [`docs/04_action_value.md`](docs/04_action_value.md)
+15. [`docs/05_propositions.md`](docs/05_propositions.md)
+16. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
+17. [`docs/07_applications.md`](docs/07_applications.md)
+18. [`docs/08_related_work.md`](docs/08_related_work.md)
+19. [`docs/17_literature_support_map.md`](docs/17_literature_support_map.md)
+20. [`docs/09_open_questions.md`](docs/09_open_questions.md)
+21. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
 
 ## Development notes
 
@@ -369,6 +374,7 @@ This repository is currently a theory repository. The first goal is not simulati
 12. adaptive observation cadence
 13. adaptive expansion factor
 14. literature support map
+15. positioning and novelty statement
 
 ## License
 
