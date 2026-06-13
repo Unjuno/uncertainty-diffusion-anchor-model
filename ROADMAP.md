@@ -125,14 +125,15 @@ Status: complete as a formal clarification layer.
 
 Goal: turn the theory into clear, usable examples without overcomplicating the protocol.
 
-- [ ] add concrete action sections to learning example
-- [ ] add concrete action sections to work example
-- [ ] add concrete action sections to relationship example
-- [ ] add concrete action sections to budget example
-- [ ] add application writing template
-- [ ] sync examples index
+- [x] add concrete action sections to learning example
+- [x] add concrete action sections to work example
+- [x] add concrete action sections to relationship example
+- [x] add concrete action sections to budget example
+- [x] add application writing template
+- [x] sync examples index
+- [x] add simple practical protocol version
 
-Status: next active layer.
+Status: complete as a practical application layer. Further examples can be added using the playbook template.
 
 ## v1.0: Stable theory note
 
