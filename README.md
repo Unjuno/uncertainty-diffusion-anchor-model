@@ -36,6 +36,30 @@ Current Japanese entry point:
 
 - [`docs/ja/README.md`](docs/ja/README.md)
 
+## Visual entry points
+
+For a quick visual reading path, start with:
+
+- [`docs/32_visual_explanation_layer.md`](docs/32_visual_explanation_layer.md)
+- [`assets/diagrams/one_page_udam_flow.mmd`](assets/diagrams/one_page_udam_flow.mmd)
+- [`assets/diagrams/anchor_reanchor_timeline.mmd`](assets/diagrams/anchor_reanchor_timeline.mmd)
+- [`assets/diagrams/observation_value_decision.mmd`](assets/diagrams/observation_value_decision.mmd)
+- [`assets/diagrams/expansion_boundary_risk.mmd`](assets/diagrams/expansion_boundary_risk.mmd)
+- [`assets/diagrams/literature_support_map.mmd`](assets/diagrams/literature_support_map.mmd)
+
+The visual sequence is:
+
+```text
+anchor loss
+-> K + U + R
+-> valid observation
+-> favorable observation
+-> boundary-risk-constrained expansion
+-> literature support strength
+```
+
+The visual layer is meant to improve comprehension, not to introduce new theory.
+
 ## Core model
 
 The model begins with a timer example.
@@ -168,7 +192,7 @@ Current support status:
 
 ```text
 Levels 1-4: strong enough for a hobby theory project
-Level 5: partially mapped, verification pending
+Level 5: first-pass literature verification complete enough to support component-level claims
 Level 6: empirical testing or simulation deferred
 ```
 
@@ -204,7 +228,16 @@ For details, see:
 
 ## Reading order
 
-English-first reading order:
+Visual-first reading order:
+
+1. [`docs/32_visual_explanation_layer.md`](docs/32_visual_explanation_layer.md)
+2. [`assets/diagrams/one_page_udam_flow.mmd`](assets/diagrams/one_page_udam_flow.mmd)
+3. [`assets/diagrams/anchor_reanchor_timeline.mmd`](assets/diagrams/anchor_reanchor_timeline.mmd)
+4. [`assets/diagrams/observation_value_decision.mmd`](assets/diagrams/observation_value_decision.mmd)
+5. [`assets/diagrams/expansion_boundary_risk.mmd`](assets/diagrams/expansion_boundary_risk.mmd)
+6. [`assets/diagrams/literature_support_map.mmd`](assets/diagrams/literature_support_map.mmd)
+
+English-first practical reading order:
 
 1. [`docs/14_practical_reanchor_protocol.md`](docs/14_practical_reanchor_protocol.md)
 2. [`docs/15_application_cautions.md`](docs/15_application_cautions.md)
@@ -212,23 +245,24 @@ English-first reading order:
 4. [`docs/18_adaptive_expansion_factor.md`](docs/18_adaptive_expansion_factor.md)
 5. [`docs/21_failure_decision_tree.md`](docs/21_failure_decision_tree.md)
 6. [`docs/20_five_stage_development_roadmap.md`](docs/20_five_stage_development_roadmap.md)
-7. [`docs/19_positioning_and_novelty.md`](docs/19_positioning_and_novelty.md)
-8. [`docs/00_overview.md`](docs/00_overview.md)
-9. [`FAQ.md`](FAQ.md)
-10. [`docs/01_timer_model.md`](docs/01_timer_model.md)
-11. [`docs/13_deterministic_event_scope.md`](docs/13_deterministic_event_scope.md)
-12. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
-13. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
-14. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
-15. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
-16. [`docs/04_action_value.md`](docs/04_action_value.md)
-17. [`docs/05_propositions.md`](docs/05_propositions.md)
-18. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
-19. [`docs/07_applications.md`](docs/07_applications.md)
-20. [`docs/08_related_work.md`](docs/08_related_work.md)
-21. [`docs/17_literature_support_map.md`](docs/17_literature_support_map.md)
-22. [`docs/09_open_questions.md`](docs/09_open_questions.md)
-23. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
+7. [`docs/32_visual_explanation_layer.md`](docs/32_visual_explanation_layer.md)
+8. [`docs/19_positioning_and_novelty.md`](docs/19_positioning_and_novelty.md)
+9. [`docs/00_overview.md`](docs/00_overview.md)
+10. [`FAQ.md`](FAQ.md)
+11. [`docs/01_timer_model.md`](docs/01_timer_model.md)
+12. [`docs/13_deterministic_event_scope.md`](docs/13_deterministic_event_scope.md)
+13. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
+14. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
+15. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
+16. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
+17. [`docs/04_action_value.md`](docs/04_action_value.md)
+18. [`docs/05_propositions.md`](docs/05_propositions.md)
+19. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
+20. [`docs/07_applications.md`](docs/07_applications.md)
+21. [`docs/08_related_work.md`](docs/08_related_work.md)
+22. [`docs/17_literature_support_map.md`](docs/17_literature_support_map.md)
+23. [`docs/09_open_questions.md`](docs/09_open_questions.md)
+24. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
 
 Japanese documentation, to be synchronized after English stabilization:
 
@@ -263,9 +297,9 @@ Current status:
 ```text
 core theory: stable enough to refine
 failure boundaries: strong
+literature verification: first-pass complete
+visual explanation: first-pass Mermaid source set complete; rendered figures pending
 Japanese layer: minimal, deferred for later sync
-literature verification: pending
-visual explanation: in progress
 project-note consolidation: pending
 ```
 
