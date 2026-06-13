@@ -54,6 +54,7 @@ Goal: Add conceptual diagrams.
 - [x] timer relative dilution
 - [x] action value flow
 - [x] failure case taxonomy
+- [x] observability value flow
 
 Status: Mermaid source diagrams added under `assets/diagrams/`. Rendered figures can be added later under `assets/figures/`.
 
@@ -83,7 +84,7 @@ Goal: keep examples useful while preventing misreadings.
 - [x] add a concise public-facing FAQ
 - [ ] render diagrams for easier reading
 
-Status: public-facing clarification is mostly complete. Remaining work is visual rendering.
+Status: public-facing clarification is mostly complete. Remaining work is rendered figures.
 
 ## v0.7: Observability value model
 
@@ -100,9 +101,9 @@ Goal: formalize the value of observation as conditional-action value.
 - [x] sync observability model into `docs/10_formal_refinement.md`
 - [x] sync observability model into `drafts/paper_outline.md`
 - [x] add observability consistency checks
-- [ ] add an observability diagram
+- [x] add an observability diagram
 
-Status: core observability model is formalized and integrated. Remaining work is an observability diagram and eventual rendered figures.
+Status: complete as a formal integrated layer. Remaining future work is rendering diagrams and possibly expanding examples.
 
 ## v1.0: Stable theory note
 
