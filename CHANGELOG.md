@@ -1,5 +1,97 @@
 # Changelog
 
+## 0.5.0 - Adaptive expansion factor and boundary-risk layer
+
+Added a practical expansion layer for deciding how much to widen action or observation scope after favorable observations.
+
+Added:
+
+- `docs/18_adaptive_expansion_factor.md`
+- `assets/diagrams/adaptive_expansion_factor.mmd`
+
+Changed:
+
+- README now links to the adaptive expansion factor document and includes `s_{i+1} = r_i s_i`.
+- `theory/variables.md` now defines expansion variables including `s_i`, `r_i`, `P_boundary(i)`, `C_boundary`, and `C_correct(r_i)`.
+- `theory/propositions.md` now includes Proposition 13: expansion factor is constrained by adverse boundary risk.
+- `docs/05_propositions.md` now includes a readable version of Proposition 13.
+- `theory/proofs.md` now includes a proof sketch and unit checks for the adaptive expansion condition.
+- `docs/10_formal_refinement.md` now includes adaptive expansion factor as a formal refinement section.
+- `docs/17_literature_support_map.md` now connects the model to exponential search, doubling search, online algorithms, and ski-rental-type tradeoffs.
+- `docs/08_related_work.md` now includes adaptive expansion, exponential search, and online-rule connections.
+- `docs/09_open_questions.md` now includes open questions about expansion factor, boundary-risk estimation, and fixed cadence versus geometric expansion.
+- `drafts/paper_outline.md` now includes adaptive observation cadence and expansion factor as a paper section.
+
+Core addition:
+
+```text
+s_{i+1} = r_i s_i
+```
+
+with boundary-risk constraint:
+
+```text
+B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
+```
+
+Status:
+
+- Adaptive expansion factor is now integrated across docs, theory, proof sketches, diagrams, related work, open questions, and paper outline.
+
+## 0.4.0 - Practical application playbooks and observation cadence
+
+Added the practical layer for using UDAM in daily cases and for distinguishing first observation from repeated observation.
+
+Added:
+
+- concrete action sections to learning, work, relationship, budget, and life-strategy examples
+- `examples/application_playbook_template.md`
+- `docs/15_application_cautions.md`
+- `docs/16_adaptive_observation_cadence.md`
+- `docs/17_literature_support_map.md`
+
+Changed:
+
+- examples index now requires practical sections such as immediate action, observation result, next action map, and boundary.
+- README now links to practical protocol, cautions, cadence, and literature support map.
+- ROADMAP now includes concrete application playbooks and adaptive observation cadence.
+
+Core addition:
+
+```text
+first valid observation -> often valuable
+later observation -> useful only if it can change the next action
+```
+
+## 0.3.0 - Observability value and valid re-anchor layer
+
+Added the observability and valid re-anchor layer.
+
+Added:
+
+- `theory/observability_value.md`
+- `theory/observability_proofs.md`
+- `theory/upside_uncertainty.md`
+- `theory/downside_uncertainty.md`
+- `theory/valid_reanchor_condition.md`
+- `theory/conditional_action_switch.md`
+- observability and conditional-switch diagrams
+
+Changed:
+
+- `theory/propositions.md` now includes observability value, fixed-target disbelief, valid re-anchor condition, and conditional action switch.
+- `docs/05_propositions.md` now includes readable versions of those propositions.
+- `docs/08_related_work.md` now connects conditional switching to the Monty Hall information structure.
+- README now uses state-informative observation wording.
+
+Core addition:
+
+```text
+P(y | S) != P(y)
+a(y) != a_0
+OV > 0
+```
+
 ## 0.2.0 - Consistency pass and formal refinement notes
 
 Organized the original chat content and added explicit consistency checks.
