@@ -1,40 +1,22 @@
 # 32 Visual Explanation Layer
 
-This document begins Stage 3 of the five-stage refinement roadmap.
+This document tracks Stage 3 of the five-stage refinement roadmap.
 
-Stage 3 is not intended to add new theory.
+Stage 3 does not add new theory.
 
 Its purpose is to make the existing theory readable at a glance.
 
 ## Stage 3 goal
 
-The current repository has enough theory and first-pass literature verification to support the core UDAM structure.
-
-The next bottleneck is reader comprehension.
-
-A reader should be able to see the basic UDAM logic before reading the full formal notes.
-
-The visual layer should therefore explain:
+The visual layer explains the core UDAM flow:
 
 ```text
 anchor loss -> uncertainty diffusion -> valid local observation -> conditional action -> repeated observation boundary -> risk-constrained expansion
 ```
 
-## Visual principles
+The visual layer should reduce cognitive load without hiding assumptions.
 
-Use diagrams to reduce cognitive load, not to hide assumptions.
-
-Each diagram should:
-
-```text
-show one decision layer only
-make failure points visible
-avoid implying automatic expansion
-avoid implying that any observation is useful
-avoid implying that small action is always valid
-```
-
-The visual layer should preserve the core corrections from the literature verification stage:
+It should preserve these corrections:
 
 ```text
 state-informative != favorable
@@ -45,179 +27,135 @@ robust != optimal
 execution support != value support
 epistemic value != automatic favorability
 successive approximation != boundary-risk permission
+component support != full synthesis proof
 ```
 
-## First visual artifact
+## Source and rendered figure policy
 
-The first Stage 3 diagram is:
+Editable source diagrams are stored in:
 
 ```text
-assets/diagrams/one_page_udam_flow.mmd
+assets/diagrams/
 ```
 
-It is intended as a compact entry-point diagram.
-
-It does not replace the detailed diagrams already present in `assets/diagrams/`.
-
-It summarizes the full flow as one page:
+Reader-facing static SVG figures are stored in:
 
 ```text
-1. Start from anchor loss.
-2. Avoid global invalidation.
-3. Name the target state.
-4. Take one valid local observation or small bounded action.
-5. Check whether the result is state-informative.
-6. Check whether it changes feasible action.
-7. Check value versus cost.
-8. Decide: stop, switch, observe again, or expand.
-9. If expanding, re-check boundary risk.
-10. Never infer global safety from local success alone.
+assets/figures/
 ```
 
-## Second visual artifact
+Do not treat SVG files as the primary source.
 
-The second Stage 3 diagram is:
+Preferred workflow:
 
 ```text
-assets/diagrams/anchor_reanchor_timeline.mmd
+edit Mermaid source -> regenerate or update SVG figure -> update figure index if needed
 ```
 
-It is intended to make the timer seed model visible:
+## Stage 3 visual set
+
+| Visual artifact | Mermaid source | Rendered SVG | Purpose | Status |
+|---|---|---|---|---:|
+| One-page UDAM flow | `assets/diagrams/one_page_udam_flow.mmd` | `assets/figures/one_page_udam_flow.svg` | compact flow from anchor loss to risk-constrained expansion | rendered |
+| Anchor-reanchor timeline | `assets/diagrams/anchor_reanchor_timeline.mmd` | `assets/figures/anchor_reanchor_timeline.svg` | show `tau = K + U + R` and why unknown `U` does not erase valid `R` | rendered |
+| Observation-value decision | `assets/diagrams/observation_value_decision.mmd` | `assets/figures/observation_value_decision.svg` | show `state-informative != favorable`, `a(y) != a_0`, and `OV > 0` | rendered |
+| Expansion boundary risk | `assets/diagrams/expansion_boundary_risk.mmd` | `assets/figures/expansion_boundary_risk.svg` | show why expansion is not automatic doubling and must pass boundary-risk checks | rendered |
+| Literature support map | `assets/diagrams/literature_support_map.mmd` | `assets/figures/literature_support_map.svg` | show direct, partial, analogy-only, avoid, and UDAM-specific support categories | rendered |
+
+## Intended reader path
+
+Recommended reader order:
 
 ```text
-tau = K + U + R
+README
+-> visual explanation layer
+-> rendered figure index
+-> one-page UDAM flow
+-> anchor-reanchor timeline
+-> observation-value decision
+-> expansion-with-boundary-risk diagram
+-> literature-support map
+-> failure decision tree
+-> logical synthesis review
+-> detailed formal notes
 ```
 
-The diagram separates:
+## Visual artifact summaries
+
+### 1. One-page UDAM flow
+
+Main purpose:
 
 ```text
-K: known interval before anchor loss
-U: unknown interval after anchor loss
-R: re-anchored interval after valid new observation
+show the whole practical UDAM sequence on one page
 ```
 
-Its main visual claim is:
+Key warning:
 
 ```text
-U being unknown does not automatically invalidate R.
+local success does not imply global safety
 ```
 
-The diagram should preserve three warnings:
+### 2. Anchor-reanchor timeline
+
+Main purpose:
 
 ```text
-do not erase K
-do not pretend U is known
-do not invalidate R merely because U is unknown
+show tau = K + U + R
 ```
 
-This diagram supports the core UDAM proposition:
+Key warning:
 
 ```text
-partial uncertainty does not imply total invalidation
+U being unknown does not automatically invalidate R
 ```
 
-and the practical re-anchor rule:
+### 3. Observation-value decision
+
+Main purpose:
 
 ```text
-future anchor validity must be checked locally, not globally rejected because of past anchor loss
+show why a valid observation is not automatically favorable
 ```
 
-## Third visual artifact
-
-The third Stage 3 diagram is:
+Key checks:
 
 ```text
-assets/diagrams/observation_value_decision.mmd
+observable result
+state-informative result
+action change
+OV > 0 after observation cost
 ```
 
-It is intended to show why a valid observation is not automatically a favorable observation.
+### 4. Expansion boundary risk
 
-It separates four checks:
+Main purpose:
 
 ```text
-1. Is result y observable?
-2. Is y state-informative?
-3. Does y change feasible action?
-4. Is OV > 0 after observation cost?
+show why a favorable local result does not automatically permit expansion
 ```
 
-The diagram centers the distinction:
-
-```text
-state-informative != favorable
-```
-
-and the conditional-action requirement:
-
-```text
-a(y) != a_0
-```
-
-The diagram also shows the observation-value expression:
-
-```text
-OV = E_y[max_a E[V(a,S) | y]] - max_a E[V(a,S)] - C(obs)
-```
-
-Its main visual claim is:
-
-```text
-an observation is useful only when it can improve action enough to justify its cost
-```
-
-## Fourth visual artifact
-
-The fourth Stage 3 diagram is:
-
-```text
-assets/diagrams/expansion_boundary_risk.mmd
-```
-
-It is intended to show why a favorable local result does not automatically permit expansion.
-
-It separates:
-
-```text
-local success
-candidate expansion factor r_i
-next scope s_{i+1} = r_i s_i
-expected expansion benefit
-expected information value
-observation cost
-boundary-crossing probability
-boundary cost
-correction cost
-```
-
-The diagram centers the expansion inequality:
+Key inequality:
 
 ```text
 B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) C_boundary + C_correct(r_i)
 ```
 
-Its main visual claim is:
-
-```text
-local success is evidence, not permission
-```
-
-and:
+Key warning:
 
 ```text
 r_i is selected, not automatically 2
 ```
 
-## Fifth visual artifact
+### 5. Literature support map
 
-The fifth Stage 3 diagram is:
+Main purpose:
 
 ```text
-assets/diagrams/literature_support_map.mmd
+show support strength, not prestige
 ```
 
-It is intended to show how much support each UDAM component currently receives from nearby literature.
-
-It separates five categories:
+Support categories:
 
 ```text
 direct support
@@ -227,198 +165,39 @@ not supported / avoid
 UDAM-specific synthesis
 ```
 
-The diagram is not a bibliography.
-
-It is a visual guardrail against overclaiming.
-
-Its main visual claim is:
+Key warning:
 
 ```text
 component support does not prove full synthesis
 ```
 
-The safest reading is:
+## Avoided visual claims
 
-```text
-nearby literature supports several UDAM components at different strengths, while the timer-derived anchor-loss synthesis remains UDAM-specific
-```
-
-## Diagram inventory for Stage 3
-
-Planned Stage 3 visual set:
-
-| Diagram | Purpose | Status |
-|---|---|---:|
-| `one_page_udam_flow.mmd` | compact full flow from anchor loss to risk-constrained expansion | added |
-| `anchor_reanchor_timeline.mmd` | show `K + U + R` and why unknown `U` does not erase valid `R` | added |
-| `observation_value_decision.mmd` | show `state-informative != favorable`, `a(y) != a_0`, and `OV > 0` | added |
-| `expansion_boundary_risk.mmd` | show why expansion is not automatic doubling and must satisfy boundary-risk constraints | added |
-| `literature_support_map.mmd` | show direct, partial, analogy-only, avoid, and UDAM-specific support categories | added |
-
-## Intended reader path
-
-Recommended reader order after Stage 3 begins:
-
-```text
-README
--> one-page UDAM flow diagram
--> anchor-reanchor timeline
--> observation-value decision diagram
--> expansion-with-boundary-risk diagram
--> literature-support map
--> failure decision tree
--> logical synthesis review
--> detailed formal notes
-```
-
-## One-page diagram text
-
-The one-page diagram should keep labels short.
-
-Preferred node labels:
-
-```text
-Anchor lost
-Do not globally invalidate
-Name target state S
-Valid local observation y?
-State-informative?
-Action changes?
-Value > cost?
-Stop / switch / observe again / expand
-Boundary risk acceptable?
-Expand scope
-No global conclusion from local success
-```
-
-Avoid node labels such as:
+Do not make diagrams imply:
 
 ```text
 Any small action works
-Double after success
 More information is always better
-UDAM proves optimal action
-```
-
-## Timeline diagram text
-
-The timeline diagram should keep the timer seed model visually simple.
-
-Preferred node labels:
-
-```text
-Known interval K
-Anchor lost
-Unknown interval U
-Re-anchored interval R
-Current position tau
-tau = K + U + R
-Do not invalidate R because U is unknown
-```
-
-Avoid node labels such as:
-
-```text
-U means everything is invalid
-R fixes all uncertainty
-Past anchor loss proves future observations are useless
-```
-
-## Observation-value diagram text
-
-The observation-value diagram should keep the decision sequence explicit.
-
-Preferred node labels:
-
-```text
-Candidate observation y
-Observable result?
-State-informative?
-Does feasible action change?
-a(y) != a_0?
-OV > 0?
-Favorable observation
-State-informative but not favorable
-```
-
-Avoid node labels such as:
-
-```text
-Informative means useful
-Any observation helps
-Curiosity is enough
-Observation guarantees action improvement
-```
-
-## Expansion-boundary diagram text
-
-The expansion-boundary diagram should keep expansion separate from local success.
-
-Preferred node labels:
-
-```text
-Favorable local result
-Candidate expansion factor r_i
-Next scope s_{i+1} = r_i s_i
-Expansion inequality holds?
-Boundary risk acceptable?
-Expand by selected r_i
-Local success is evidence, not permission
-r_i is selected, not automatically 2
-```
-
-Avoid node labels such as:
-
-```text
 Double after success
 Local success proves global safety
-Boundary risk is negligible
-Expansion is always the next step
-```
-
-## Literature-support diagram text
-
-The literature-support diagram should show support strength, not prestige.
-
-Preferred node labels:
-
-```text
-Direct support
-Partial support
-Analogy only
-Not supported / avoid
-UDAM-specific synthesis
-Component support does not prove full synthesis
-```
-
-Avoid node labels such as:
-
-```text
-UDAM is proven
+UDAM is proven by one literature
+UDAM is therapy
 UDAM is active inference
-UDAM is behavioral activation
-All components are directly supported
 Literature proves the whole model
 ```
 
 ## Status
 
-Stage 3 has started.
+Stage 3 is first-pass complete as a visual explanation layer.
 
-The current visual work adds:
+The five planned Mermaid sources and their first-pass SVG figures are now present.
 
-```text
-assets/diagrams/one_page_udam_flow.mmd
-assets/diagrams/anchor_reanchor_timeline.mmd
-assets/diagrams/observation_value_decision.mmd
-assets/diagrams/expansion_boundary_risk.mmd
-assets/diagrams/literature_support_map.mmd
-```
-
-Rendered figures can be added later under:
+Future visual work may include:
 
 ```text
-assets/figures/
+render older non-Stage-3 diagrams
+add PNG exports for platforms that do not display SVG well
+improve visual styling after content stabilizes
 ```
 
 The English theory remains the source of truth.
