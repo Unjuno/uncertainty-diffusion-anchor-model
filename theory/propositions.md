@@ -89,7 +89,7 @@ In the timer model:
 τ = K + U + R
 ```
 
-assume `K` and `R` are observed, while `U` has fixed expectation and variance.
+assume `K` and `R` are observed, while `U` has uncertainty.
 
 Define relative uncertainty ratio:
 
@@ -97,15 +97,15 @@ Define relative uncertainty ratio:
 ρ(R) = sqrt(Var(U)) / E[τ]
 ```
 
-Then increasing `R` decreases `ρ(R)`, as long as `K + E[U] + R > 0`.
+If the uncertainty scale `sqrt(Var(U))` grows more slowly than the expected elapsed time `E[τ]`, then increasing `R` decreases `ρ(R)`.
 
 ### Meaning
 
-Timer re-anchoring does not necessarily reduce the absolute variance of the unknown interval `U`. Instead, it can dilute the relative influence of `U` by increasing the known portion of elapsed time.
+Timer re-anchoring does not necessarily reduce the absolute variance of the unknown interval `U`. Absolute uncertainty may remain or even increase. The key claim is that the relative influence of `U` can decrease when the known interval `R` expands the total reference scale faster than the uncertainty scale grows.
 
-## Proposition 7: Deadline non-occurrence can tighten the unknown interval
+## Proposition 7: Fixed upper-bound non-arrival can tighten the unknown interval
 
-If a fixed deadline `T` exists and the deadline has not yet been reached, then:
+If a fixed upper time bound `T` exists and the bound has not yet been reached, then:
 
 ```text
 K + U + R < T
@@ -119,4 +119,4 @@ U < T - K - R
 
 ### Meaning
 
-In fixed-deadline cases, increasing `R` while the deadline is still unreached can shrink the admissible range of `U`. This is stronger than relative dilution.
+In fixed-bound cases, increasing `R` while the bound is still unreached can shrink the admissible range of `U`. This is stronger than relative dilution.
