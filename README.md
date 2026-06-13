@@ -27,6 +27,7 @@ For direct use, start with:
 - [`docs/14_practical_reanchor_protocol.md`](docs/14_practical_reanchor_protocol.md)
 - [`docs/15_application_cautions.md`](docs/15_application_cautions.md)
 - [`docs/16_adaptive_observation_cadence.md`](docs/16_adaptive_observation_cadence.md)
+- [`docs/18_adaptive_expansion_factor.md`](docs/18_adaptive_expansion_factor.md)
 - [`examples/concrete_learning_reanchor.md`](examples/concrete_learning_reanchor.md)
 - [`examples/concrete_work_reanchor.md`](examples/concrete_work_reanchor.md)
 - [`examples/concrete_relationship_reanchor.md`](examples/concrete_relationship_reanchor.md)
@@ -186,6 +187,12 @@ Observability value:
 OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
 ```
 
+Adaptive expansion factor:
+
+```text
+s_{i+1} = r_i s_i
+```
+
 where:
 
 - `P_t`: uncertainty at time `t`
@@ -195,6 +202,8 @@ where:
 - `B(a)`: intervention value
 - `C(a)`: action cost
 - `OV`: value of making the state observable enough to support better conditional action
+- `s_i`: current observation or action scope
+- `r_i`: expansion factor
 - `V(a)`: total action value
 
 A small action is favorable when:
@@ -208,6 +217,8 @@ or, for observation-specific actions:
 ```text
 OV > 0
 ```
+
+A larger expansion is favorable only when its gain exceeds observation, correction, and boundary-crossing costs.
 
 ## State versus belief
 
@@ -244,22 +255,23 @@ This does **not** justify arbitrary action. It supports actions that return info
 1. [`docs/14_practical_reanchor_protocol.md`](docs/14_practical_reanchor_protocol.md)
 2. [`docs/15_application_cautions.md`](docs/15_application_cautions.md)
 3. [`docs/16_adaptive_observation_cadence.md`](docs/16_adaptive_observation_cadence.md)
-4. [`docs/00_overview.md`](docs/00_overview.md)
-5. [`FAQ.md`](FAQ.md)
-6. [`docs/01_timer_model.md`](docs/01_timer_model.md)
-7. [`docs/13_deterministic_event_scope.md`](docs/13_deterministic_event_scope.md)
-8. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
-9. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
-10. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
-11. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
-12. [`docs/04_action_value.md`](docs/04_action_value.md)
-13. [`docs/05_propositions.md`](docs/05_propositions.md)
-14. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
-15. [`docs/07_applications.md`](docs/07_applications.md)
-16. [`docs/08_related_work.md`](docs/08_related_work.md)
-17. [`docs/17_literature_support_map.md`](docs/17_literature_support_map.md)
-18. [`docs/09_open_questions.md`](docs/09_open_questions.md)
-19. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
+4. [`docs/18_adaptive_expansion_factor.md`](docs/18_adaptive_expansion_factor.md)
+5. [`docs/00_overview.md`](docs/00_overview.md)
+6. [`FAQ.md`](FAQ.md)
+7. [`docs/01_timer_model.md`](docs/01_timer_model.md)
+8. [`docs/13_deterministic_event_scope.md`](docs/13_deterministic_event_scope.md)
+9. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
+10. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
+11. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
+12. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
+13. [`docs/04_action_value.md`](docs/04_action_value.md)
+14. [`docs/05_propositions.md`](docs/05_propositions.md)
+15. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
+16. [`docs/07_applications.md`](docs/07_applications.md)
+17. [`docs/08_related_work.md`](docs/08_related_work.md)
+18. [`docs/17_literature_support_map.md`](docs/17_literature_support_map.md)
+19. [`docs/09_open_questions.md`](docs/09_open_questions.md)
+20. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
 
 ## Development notes
 
@@ -289,6 +301,7 @@ This does **not** justify arbitrary action. It supports actions that return info
 - fixed-target disbelief
 - practical re-anchor protocol
 - adaptive observation cadence
+- adaptive expansion factor
 - literature support map
 
 ## Failure cases
@@ -320,7 +333,8 @@ This repository is currently a theory repository. The first goal is not simulati
 10. observability value
 11. practical re-anchor protocol
 12. adaptive observation cadence
-13. literature support map
+13. adaptive expansion factor
+14. literature support map
 
 ## License
 
