@@ -176,7 +176,7 @@ Status: complete as a positioning layer. Future paper drafts should use the safe
 
 ## v0.13: Japanese documentation and visual support
 
-Goal: make the model easier to read without creating a separate Japanese repository.
+Goal: create a minimal Japanese explanation layer inside the same repository.
 
 - [x] add `docs/ja/` Japanese documentation index
 - [x] add plain Japanese explanation
@@ -189,7 +189,7 @@ Goal: make the model easier to read without creating a separate Japanese reposit
 - [x] add positioning map diagram
 - [x] add literature verification checklist
 
-Status: complete as a readability and maintenance layer. Future work may expand Japanese examples and verify literature references.
+Status: minimal Japanese layer exists. Further Japanese expansion should wait until the English structure stabilizes.
 
 ## v0.14: Logical synthesis review
 
@@ -211,13 +211,13 @@ Status: complete as a coherence-check layer. No major internal contradiction fou
 Goal: move from theory construction to evidence, clarity, and verification.
 
 - [x] add five-stage development roadmap
-- [x] define the five stages: failure boundaries, Japanese explanation, literature verification, visual explanation, project-note consolidation
+- [x] define the five stages: failure boundaries, literature verification, visual explanation, project-note consolidation, Japanese explanation sync
 - [x] add evidence hierarchy for UDAM claims
 - [x] distinguish timer intuition, internal coherence, examples, counterexamples, literature support, and empirical testing
 - [x] add failure decision tree for Stage 1
 - [x] add failure decision tree diagram
 
-Status: active strategic refinement layer. Stage 1 now has a compact failure diagnostic tree; next work can proceed to Japanese diagram explanations or literature verification.
+Status: active strategic refinement layer. Stage 1 has a compact failure diagnostic tree. Japanese expansion is now explicitly deferred until the English version stabilizes.
 
 ## v1.0: Stable theory note
 
@@ -228,7 +228,7 @@ Remaining work:
 - refine definitions;
 - add rendered figures;
 - expand related work with verified citations;
-- expand Japanese examples;
+- expand Japanese examples only after English stabilization;
 - audit notation consistency across timer, action-value, observability, and expansion layers;
 - decide whether contraction needs a separate rule from expansion;
 - continue the five-stage refinement process.
