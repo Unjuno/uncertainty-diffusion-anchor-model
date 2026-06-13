@@ -95,6 +95,28 @@ UDAM's correction is:
 partial uncertainty → re-anchor if the next action has positive value
 ```
 
+## High-stakes examples
+
+High-stakes examples can be useful when they clarify:
+
+```text
+fixed target
+uncertain position
+lost anchor
+re-anchoring action
+```
+
+However, examples in this repository should remain abstract, non-operational, and neutral.
+
+Use neutral wording such as:
+
+- high-stakes fixed-deadline example;
+- safety-critical fixed-target example;
+- constrained decision context;
+- upper time bound.
+
+The goal is to preserve the model structure, not vivid scenario detail.
+
 ## Core distinction
 
 UDAM does not require the external state to worsen during inaction.
