@@ -20,6 +20,7 @@ For detailed verification notes, see:
 - `docs/27_literature_verification_online_algorithms.md`
 - `docs/28_literature_verification_implementation_intentions.md`
 - `docs/29_literature_verification_active_inference.md`
+- `docs/30_literature_verification_behavioral_activation.md`
 - `notes/literature_verification.md`
 
 ## 1. Value of information
@@ -451,7 +452,71 @@ See:
 
 - `docs/28_literature_verification_implementation_intentions.md`
 
-## 8. Shaping and successive approximations
+## 8. Behavioral activation
+
+UDAM claim:
+
+```text
+small action after collapse can matter
+```
+
+Nearby literature:
+
+- behavioral activation;
+- activity scheduling;
+- avoidance-loop interruption;
+- reinforcement-oriented behavioral accounts of depression;
+- action before motivation.
+
+UDAM interpretation:
+
+```text
+after anchor loss -> choose a bounded concrete action -> observe response -> update and continue, switch, or stop
+```
+
+Verification status:
+
+```text
+verified: partial support for structured small action after avoidance-like collapse
+verified: direct support in behavioral-activation context for targeting avoidance and withdrawal loops
+verified: not support for UDAM as therapy or arbitrary small action
+```
+
+Correction:
+
+```text
+UDAM is not behavioral activation therapy
+```
+
+Additional correction:
+
+```text
+avoidance != all inaction
+```
+
+Recommended wording:
+
+```text
+Behavioral activation partially supports UDAM's practical small-action-after-collapse layer: structured concrete activity can interrupt avoidance-like loops and restore contact with feedback or reinforcement.
+```
+
+Avoid:
+
+```text
+UDAM treats depression.
+```
+
+Avoid:
+
+```text
+Any small action is therapeutic.
+```
+
+See:
+
+- `docs/30_literature_verification_behavioral_activation.md`
+
+## 9. Shaping and successive approximations
 
 UDAM claim:
 
@@ -478,7 +543,7 @@ Verification status:
 to verify
 ```
 
-## 9. Exponential search and doubling strategies
+## 10. Exponential search and doubling strategies
 
 UDAM claim:
 
@@ -562,7 +627,7 @@ See:
 
 - `docs/26_literature_verification_exponential_search.md`
 
-## 10. Online algorithms and robust decision rules
+## 11. Online algorithms and robust decision rules
 
 UDAM claim:
 
@@ -638,7 +703,7 @@ See:
 
 - `docs/27_literature_verification_online_algorithms.md`
 
-## 11. What the literature supports
+## 12. What the literature supports
 
 The literature currently supports these parts at different levels:
 
@@ -661,10 +726,12 @@ if-result-then-action execution mapping: verified direct support
 concrete cue and feasible response requirements: verified direct support
 epistemic action and information-seeking policy selection: verified direct support
 I(a) as active-inference expected free energy: not supported without formal mapping
+small concrete action after collapse-like avoidance: verified partial support
+avoidance-loop interruption: verified direct in behavioral-activation context, partial for UDAM
 small steps can support gradual expansion: to verify
 ```
 
-## 12. What remains UDAM-specific
+## 13. What remains UDAM-specific
 
 UDAM-specific synthesis:
 
@@ -680,7 +747,7 @@ The distinctive contribution is the practical unification:
 when you feel unable to conclude because the anchor is lost, do not globally invalidate the future; take one valid local observation, map the result, and expand only when the response supports expansion and boundary risk allows it
 ```
 
-## 13. Current research task
+## 14. Current research task
 
 For future refinement, the next step is to continue formal literature verification one topic at a time.
 
@@ -696,12 +763,12 @@ exponential search / doubling strategies
 online algorithms / robust decision rules
 implementation intentions / if-then planning
 active inference / epistemic value
+behavioral activation
 ```
 
 Priority remaining sources:
 
 ```text
-behavioral activation
 successive approximations
 ski-rental-type tradeoffs: verified as direct/analogy under online algorithms
 ```
