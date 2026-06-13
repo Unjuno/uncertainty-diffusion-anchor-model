@@ -10,6 +10,18 @@ Japanese: **再アンカー行動**
 
 Re-anchoring does not fully recover the lost interval. It creates a new point of reference from the present onward.
 
+More precisely, re-anchoring constrains the belief state relative to continued non-observation. It may reduce uncertainty absolutely, but the safer claim is comparative:
+
+```text
+P_after_action < P_no_action_trajectory
+```
+
+not always:
+
+```text
+P_after_action < P_before_action
+```
+
 ## In the timer model
 
 ```text
@@ -28,11 +40,12 @@ known state + unknown state + re-anchored observation
 
 A re-anchor is useful when it satisfies at least one of the following:
 
-1. It reduces uncertainty about the state.
-2. It reveals the next viable action.
-3. It constrains the range of possible states.
-4. It creates feedback from the environment.
-5. It records the present state for later use.
+1. It reduces uncertainty about the state absolutely.
+2. It constrains uncertainty relative to the no-action trajectory.
+3. It reveals the next viable action.
+4. It constrains the range of possible states.
+5. It creates feedback from the environment.
+6. It records the present state for later use.
 
 ## What re-anchoring is not
 
