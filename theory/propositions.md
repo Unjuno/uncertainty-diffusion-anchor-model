@@ -80,3 +80,43 @@ V(a) < 0
 ### Meaning
 
 The model does not justify action without informational or intervention value.
+
+## Proposition 6: Timer re-anchoring can dilute relative uncertainty
+
+In the timer model:
+
+```text
+τ = K + U + R
+```
+
+assume `K` and `R` are observed, while `U` has fixed expectation and variance.
+
+Define relative uncertainty ratio:
+
+```text
+ρ(R) = sqrt(Var(U)) / E[τ]
+```
+
+Then increasing `R` decreases `ρ(R)`, as long as `K + E[U] + R > 0`.
+
+### Meaning
+
+Timer re-anchoring does not necessarily reduce the absolute variance of the unknown interval `U`. Instead, it can dilute the relative influence of `U` by increasing the known portion of elapsed time.
+
+## Proposition 7: Deadline non-occurrence can tighten the unknown interval
+
+If a fixed deadline `T` exists and the deadline has not yet been reached, then:
+
+```text
+K + U + R < T
+```
+
+which implies:
+
+```text
+U < T - K - R
+```
+
+### Meaning
+
+In fixed-deadline cases, increasing `R` while the deadline is still unreached can shrink the admissible range of `U`. This is stronger than relative dilution.
