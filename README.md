@@ -16,6 +16,15 @@ When uncertainty diffuses over time, low-cost informative actions can be rationa
 
 不確実性は放置すると拡散する。だから、情報を返す小さな行動を細かく打ち、現在地を再アンカーし続ける戦略は合理的になりうる。
 
+## Japanese documentation
+
+Japanese explanations are maintained in the same repository, not in a separate repository.
+
+Start here:
+
+- [`docs/ja/README.md`](docs/ja/README.md)
+- [`docs/ja/00_plain_explanation.md`](docs/ja/00_plain_explanation.md)
+
 ## Core intuition
 
 The model begins with a timer example.
@@ -282,6 +291,7 @@ For the detailed positioning note, see:
 | Path | Role |
 |---|---|
 | `docs/` | readable theory explanation |
+| `docs/ja/` | Japanese explanations |
 | `theory/` | definitions, assumptions, axioms, propositions, proofs, counterexamples, consistency review |
 | `examples/` | structured applications |
 | `notes/` | origin notes, terminology, research notes, chat synthesis |
@@ -290,32 +300,34 @@ For the detailed positioning note, see:
 
 ## Reading order
 
-1. [`docs/14_practical_reanchor_protocol.md`](docs/14_practical_reanchor_protocol.md)
-2. [`docs/15_application_cautions.md`](docs/15_application_cautions.md)
-3. [`docs/16_adaptive_observation_cadence.md`](docs/16_adaptive_observation_cadence.md)
-4. [`docs/18_adaptive_expansion_factor.md`](docs/18_adaptive_expansion_factor.md)
-5. [`docs/19_positioning_and_novelty.md`](docs/19_positioning_and_novelty.md)
-6. [`docs/00_overview.md`](docs/00_overview.md)
-7. [`FAQ.md`](FAQ.md)
-8. [`docs/01_timer_model.md`](docs/01_timer_model.md)
-9. [`docs/13_deterministic_event_scope.md`](docs/13_deterministic_event_scope.md)
-10. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
-11. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
-12. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
-13. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
-14. [`docs/04_action_value.md`](docs/04_action_value.md)
-15. [`docs/05_propositions.md`](docs/05_propositions.md)
-16. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
-17. [`docs/07_applications.md`](docs/07_applications.md)
-18. [`docs/08_related_work.md`](docs/08_related_work.md)
-19. [`docs/17_literature_support_map.md`](docs/17_literature_support_map.md)
-20. [`docs/09_open_questions.md`](docs/09_open_questions.md)
-21. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
+1. [`docs/ja/README.md`](docs/ja/README.md)
+2. [`docs/14_practical_reanchor_protocol.md`](docs/14_practical_reanchor_protocol.md)
+3. [`docs/15_application_cautions.md`](docs/15_application_cautions.md)
+4. [`docs/16_adaptive_observation_cadence.md`](docs/16_adaptive_observation_cadence.md)
+5. [`docs/18_adaptive_expansion_factor.md`](docs/18_adaptive_expansion_factor.md)
+6. [`docs/19_positioning_and_novelty.md`](docs/19_positioning_and_novelty.md)
+7. [`docs/00_overview.md`](docs/00_overview.md)
+8. [`FAQ.md`](FAQ.md)
+9. [`docs/01_timer_model.md`](docs/01_timer_model.md)
+10. [`docs/13_deterministic_event_scope.md`](docs/13_deterministic_event_scope.md)
+11. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
+12. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
+13. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
+14. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
+15. [`docs/04_action_value.md`](docs/04_action_value.md)
+16. [`docs/05_propositions.md`](docs/05_propositions.md)
+17. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
+18. [`docs/07_applications.md`](docs/07_applications.md)
+19. [`docs/08_related_work.md`](docs/08_related_work.md)
+20. [`docs/17_literature_support_map.md`](docs/17_literature_support_map.md)
+21. [`docs/09_open_questions.md`](docs/09_open_questions.md)
+22. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
 
 ## Development notes
 
 - [`notes/chat_content_synthesis.md`](notes/chat_content_synthesis.md): organized synthesis of the original discussion.
 - [`notes/high_stakes_example_policy.md`](notes/high_stakes_example_policy.md): policy for preserving high-stakes examples as safe abstract structures.
+- [`notes/literature_verification.md`](notes/literature_verification.md): checklist for verifying related-work claims before treating them as citations.
 - [`theory/consistency_review.md`](theory/consistency_review.md): known corrections, open issues, and consistency checks.
 - [`theory/timer_three_layer_model.md`](theory/timer_three_layer_model.md): formal timer-specific refinement.
 - [`theory/deterministic_event_scope.md`](theory/deterministic_event_scope.md): fixed-target scope of the timer seed model.
@@ -341,6 +353,7 @@ For the detailed positioning note, see:
 - practical re-anchor protocol
 - adaptive observation cadence
 - adaptive expansion factor
+- Japanese explanation layer
 - literature support map
 
 ## Failure cases
@@ -375,6 +388,9 @@ This repository is currently a theory repository. The first goal is not simulati
 13. adaptive expansion factor
 14. literature support map
 15. positioning and novelty statement
+16. Japanese explanation layer
+17. literature verification checklist
+18. additional diagrams
 
 ## License
 
