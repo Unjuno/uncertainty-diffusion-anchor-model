@@ -88,12 +88,26 @@ The goal is not perfect classification.
 
 The goal is to stop treating uncertainty as one global mass.
 
-## Step 4: Choose one small observation
+## Step 4: Choose one small state-informative observation
 
 Ask:
 
 ```text
 What is the smallest action that would tell me which state I am closer to?
+```
+
+A useful observation must be connected to the state.
+
+Formal test:
+
+```text
+P(y | S) != P(y)
+```
+
+Practical test:
+
+```text
+What result would change my next action?
 ```
 
 Good observations are:
@@ -153,6 +167,14 @@ Observation is valuable because it enables conditional action.
 observe y -> choose a(y)
 ```
 
+A strong re-anchor usually satisfies:
+
+```text
+a(y) != a_0
+```
+
+for at least one possible observation result.
+
 ## Step 7: Stop or continue by marginal value
 
 After one observation, ask:
@@ -185,7 +207,7 @@ Use this short card in daily life.
 1. What domain is unclear?
 2. What hidden state am I uncertain about?
 3. What are 3 possible states?
-4. What is one small observation?
+4. What small observation is connected to that state?
 5. What is the time box?
 6. What result would change my next action?
 7. After observing, do I act or observe once more?
@@ -240,7 +262,7 @@ UDAM supports informative action, not motion for its own sake.
 ## Core practical rule
 
 ```text
-unclear state -> small observation -> conditional next action
+unclear state -> state-informative observation -> conditional next action
 ```
 
 If the observation cannot change belief, decision, or state, it is probably not a re-anchor.
