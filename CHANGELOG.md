@@ -1,5 +1,44 @@
 # Changelog
 
+## 0.7.13 - Online algorithms literature verification
+
+Continued Stage 2 literature verification with online algorithms and robust decision rules.
+
+Added:
+
+- `docs/27_literature_verification_online_algorithms.md`
+
+Changed:
+
+- `notes/literature_verification.md` now marks online algorithms / robust decision rules as verified first-pass support for unavailable offline optimum and robust-rule framing.
+- `docs/17_literature_support_map.md` now records online algorithms as direct support for robust-rule framing, direct support for repeated small cost versus one larger commitment in ski-rental-type problems, and partial support for UDAM-specific expansion rules unless a formal cost model is defined.
+- ROADMAP now records online algorithms / robust decision rules as part of the active Stage 2 verification sequence.
+
+Core result:
+
+```text
+online algorithms -> direct support for decisions without future input
+competitive analysis -> direct support for comparing online rules with unavailable offline optimum
+ski-rental-type tradeoffs -> direct support for repeated small cost versus one larger commitment under unknown horizon
+risk-sensitive online algorithms -> partial support for considering adverse-tail behavior
+```
+
+Required wording corrections:
+
+```text
+robust != optimal
+competitive ratio != expected utility
+ski rental is an analogy unless formally modeled
+boundary-risk terms remain UDAM-specific
+online algorithms support one component, not the whole timer-derived UDAM synthesis
+```
+
+Status:
+
+- Stage 2 has verified one more literature area.
+- The next literature check should cover implementation intentions / if-then planning.
+- Japanese expansion remains deferred until English structure stabilizes.
+
 ## 0.7.12 - Exponential search literature verification
 
 Continued Stage 2 literature verification with exponential search and doubling strategies.
