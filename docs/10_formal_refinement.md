@@ -2,25 +2,27 @@
 
 This document records the next formal refinements required for UDAM.
 
-## 1. Minimal version
+## 1. Core uncertainty representation
 
-The current minimal version uses variance or covariance:
+The current core version uses variance or covariance-like belief uncertainty.
+
+Scalar form:
 
 ```text
 P_t = Var(S_t | D_t)
 ```
 
-and diffusion:
+Vector form:
 
 ```text
-P_{t+Δt} = P_t + QΔt
+P_t = Cov(S_t | D_t)
 ```
 
-This is sufficient for the timer-derived model.
+This is the representation used in the minimal theory.
 
 ## 2. Generalized uncertainty functional
 
-A later version may replace `P_t` with a more general uncertainty functional:
+A later version may replace or supplement `P_t` with a more general uncertainty functional:
 
 ```text
 𝓤_t = 𝓤(p(S_t | D_t))
@@ -33,7 +35,10 @@ Possible choices:
 - entropy;
 - credible interval width;
 - expected decision error;
-- probability of being in a critical region.
+- probability of being in a critical region;
+- expected value loss from uncertainty.
+
+This is a future extension, not the core representation.
 
 ## 3. Diffusion-rate conditions
 
@@ -292,8 +297,8 @@ UDAM does not need this form initially, but it connects the model to existing fi
 ## 13. Formal priority list
 
 1. Keep timer model clean.
-2. Preserve `P_t` as variance/covariance in the minimal theory.
-3. Add optional `𝓤_t` generalization later.
+2. Use `P_t = Var(S_t | D_t)` or `Cov(S_t | D_t)` in the core model.
+3. Reserve `𝓤_t = 𝓤(p(S_t | D_t))` for future extension.
 4. Assume `Q > 0` only when unobserved time can reduce belief reliability.
 5. Make all claims about re-anchoring comparative unless strong observation is assumed.
 6. Distinguish absolute uncertainty from relative uncertainty dilution.
