@@ -252,12 +252,12 @@ Goal: reduce navigation cost and prevent source-of-truth drift across README, do
 - [x] link consolidation map from README
 - [x] audit README for duplicated long explanations
 - [x] audit `docs/00_overview.md` for duplicated long explanations
-- [ ] route literature claims to `docs/17_literature_support_map.md` and `notes/literature_verification.md`
+- [x] route literature claims to `docs/17_literature_support_map.md` and `notes/literature_verification.md`
 - [ ] route formal claims to `theory/` and `docs/10_formal_refinement.md`
 - [ ] route visual claims to `docs/32_visual_explanation_layer.md` and `assets/figures/`
 - [ ] decide whether any draft files need source-of-truth disclaimers
 
-Status: Stage 4 has started. `docs/33_project_note_consolidation.md` defines first-pass document roles and source-of-truth assignments. `docs/34_readme_consolidation_audit.md` completes the first README duplication audit. `docs/35_overview_consolidation_audit.md` completes the first overview duplication audit. No documents are deprecated yet.
+Status: Stage 4 has started. `docs/33_project_note_consolidation.md` defines first-pass document roles and source-of-truth assignments. `docs/34_readme_consolidation_audit.md` completes the first README duplication audit. `docs/35_overview_consolidation_audit.md` completes the first overview duplication audit. `docs/36_literature_claims_routing_audit.md` completes the first literature-claims routing audit. No documents are deprecated yet.
 
 ## v1.0: Stable theory note
 
