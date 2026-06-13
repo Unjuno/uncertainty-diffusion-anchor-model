@@ -32,6 +32,28 @@ Each application should be written in the same structure:
 | health | health state | body-state trajectory | record one variable |
 | life strategy | self-state after failure | model of remaining options | take one small reality-contacting action |
 
+## Observability application layer
+
+The observability layer asks whether a small action makes the current state visible enough to support better conditional action.
+
+Core condition:
+
+```text
+OV > 0
+```
+
+where:
+
+```text
+OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
+```
+
+This layer explains three application patterns:
+
+1. missed re-anchor miscalculation;
+2. happy miscalculation;
+3. false comfort miscalculation, including fixed-target disbelief.
+
 ## Missed application cases
 
 Some examples should describe cases where the model applies but the agent fails to use it.
@@ -101,6 +123,55 @@ See:
 
 - `examples/happy_miscalculation.md`
 
+## False comfort miscalculation cases
+
+Some examples should describe cases where uncertainty hides downside while the agent feels safe or in control.
+
+These are not arguments for compulsive checking.
+
+They are cases where observation would reveal a worse-than-expected state early enough to respond.
+
+The general pattern is:
+
+```text
+uncertainty feels manageable → no observation → hidden downside appears later
+```
+
+Examples:
+
+- a learner assumes they understand, but a small test reveals a gap;
+- a project seems fine, but opening the task list reveals a blocker;
+- a social state seems fine, but a low-pressure check reveals unresolved tension;
+- a tracked variable seems stable, but one record reveals drift.
+
+The UDAM correction is:
+
+```text
+uncertainty may hide downside → observe if the observation is low-cost and actionable
+```
+
+See:
+
+- `examples/false_comfort_miscalculation.md`
+
+## Fixed-target disbelief
+
+Fixed-target disbelief is a special false-comfort pattern.
+
+The agent discounts a fixed target condition and therefore fails to re-anchor their position relative to it.
+
+Formal pattern:
+
+```text
+pi_hat * I_position(a) + B(a) <= C(a) < I_position(a) + B(a)
+```
+
+Readable meaning:
+
+> The core model favors re-anchoring, but the agent's discounted model does not.
+
+This case should be handled abstractly, especially in high-stakes examples.
+
 ## Practical principle
 
 The first action after anchor loss should usually be small, concrete, and diagnostic.
@@ -121,6 +192,12 @@ or reduce uncertainty in:
 P_t = Var(S_t | D_t)
 ```
 
+For observability-specific cases, it should also increase the ability to choose conditionally:
+
+```text
+observe y → choose a(y)
+```
+
 ## Bad application pattern
 
 Do not use UDAM to justify:
@@ -130,7 +207,8 @@ Do not use UDAM to justify:
 - vague productivity;
 - high-risk action under uncertainty;
 - ignoring safety or professional support;
-- assuming the world always worsens during inaction.
+- assuming the world always worsens during inaction;
+- treating observation as useful when it does not change any decision.
 
 ## Good application pattern
 
@@ -141,7 +219,9 @@ Use UDAM to select actions that:
 - create feedback;
 - improve the state slightly;
 - preserve future option value;
-- reveal hidden upside when the current state is better than expected.
+- reveal hidden upside when the current state is better than expected;
+- reveal hidden downside early when the current state is worse than expected;
+- make action conditional on observation.
 
 ## Key distinction
 
@@ -161,4 +241,12 @@ B(a) > 0
 
 because it improves the state.
 
-These are different and should not be conflated.
+An observation-specific action may also be justified by:
+
+```text
+OV > 0
+```
+
+because it enables better conditional action.
+
+These should not be conflated or double-counted.
