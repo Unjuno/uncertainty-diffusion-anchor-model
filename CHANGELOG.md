@@ -1,5 +1,44 @@
 # Changelog
 
+## 0.7.5 - Five-stage refinement roadmap
+
+Added a strategic roadmap for continuing the project after the core theory stabilized.
+
+Added:
+
+- `docs/20_five_stage_development_roadmap.md`
+- `notes/evidence_hierarchy.md`
+
+Changed:
+
+- ROADMAP now includes v0.15: Five-stage refinement roadmap.
+
+The five stages are:
+
+```text
+1. failure boundaries
+2. Japanese explanation layer
+3. literature verification
+4. visual explanation
+5. project-note consolidation
+```
+
+Evidence levels:
+
+```text
+Level 1: timer intuition
+Level 2: internal logical coherence
+Level 3: concrete examples
+Level 4: failure cases and counterexamples
+Level 5: nearby literature
+Level 6: empirical testing or simulation
+```
+
+Status:
+
+- The theory is stable enough to refine.
+- The next work should focus on support, clarity, verification, and reader confidence.
+
 ## 0.7.4 - Logical synthesis review
 
 Added a dedicated logical synthesis review after checking the current model layers for internal coherence.
