@@ -336,6 +336,7 @@ For toy simulation sanity checks, see:
 
 ## Development notes
 
+- [`AGENTS.md`](AGENTS.md): repository editing guidance for future agents and automated assistants.
 - [`docs/33_project_note_consolidation.md`](docs/33_project_note_consolidation.md): source-of-truth map for repository consolidation.
 - [`docs/34_readme_consolidation_audit.md`](docs/34_readme_consolidation_audit.md): first-pass audit of README duplication and routing risk.
 - [`docs/35_overview_consolidation_audit.md`](docs/35_overview_consolidation_audit.md): first-pass audit of overview duplication and conceptual-boundary role.
