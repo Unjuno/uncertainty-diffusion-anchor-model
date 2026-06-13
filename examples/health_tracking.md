@@ -8,15 +8,37 @@ An agent feels physically or mentally off, but does not know whether the state i
 
 The lost anchor is the body's current state and trajectory.
 
-## Uncertainty diffusion
+## State variable
 
-Without records, uncertainty may grow about:
+The latent state is the current health-related condition:
 
-- symptom duration;
-- sleep quality;
-- medication or caffeine effects;
-- mood trajectory;
-- recovery pattern.
+```text
+S_t = current health state
+```
+
+This may include sleep, symptoms, mood, recovery, medication effects, or fatigue.
+
+## Belief uncertainty
+
+The agent is uncertain about the current state and its trajectory.
+
+```text
+P_{health,t} = Var(S_t | D_t)
+```
+
+## Possible state dynamics
+
+The health state may change over time:
+
+- symptoms may improve;
+- symptoms may worsen;
+- fatigue may accumulate;
+- recovery may occur;
+- external factors may intervene.
+
+## Belief dynamics
+
+Even if the health state is stable, the agent's uncertainty can increase without records.
 
 ```text
 P_{health,t+Δt} = P_{health,t} + Q_health Δt
