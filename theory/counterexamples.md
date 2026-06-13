@@ -134,7 +134,27 @@ U < T - K - R
 
 Therefore, upper-bound tightening is not part of the basic timer decomposition.
 
-## C8. Safety-critical delay
+## C8. Stochastic occurrence dilution
+
+UDAM's timer seed model assumes a fixed target condition.
+
+If event occurrence itself is treated as uncertain, then the value of re-anchoring may be diluted by occurrence probability:
+
+```text
+V_reanchor ≈ P(event occurs) · V_position_update - C(a)
+```
+
+When `P(event occurs)` is low or undefined, the advantage of re-anchoring becomes ambiguous.
+
+This can weaken the model into:
+
+```text
+maybe no action is needed because maybe the target never occurs
+```
+
+Therefore, stochastic event occurrence is not a counterexample inside the core model. It is an out-of-scope extension that requires a separate event-occurrence layer.
+
+## C9. Safety-critical delay
 
 If measurement delays necessary safety behavior, then action cost may dominate.
 
@@ -143,7 +163,7 @@ Example:
 - over-analyzing during immediate danger;
 - seeking information when action is already clearly required.
 
-## C9. Noise-producing activity
+## C10. Noise-producing activity
 
 Some actions create additional ambiguity rather than resolving it.
 
@@ -157,7 +177,7 @@ Examples:
 
 These actions may increase subjective activity while failing to reduce `P_t`.
 
-## C10. Wrong anchor
+## C11. Wrong anchor
 
 An action may anchor the wrong variable.
 
@@ -167,7 +187,7 @@ Example:
 - tracking mood when the relevant variable is sleep;
 - rewriting plans when the project blocker is external approval.
 
-## C11. State-belief conflation
+## C12. State-belief conflation
 
 UDAM weakens if state dynamics and belief dynamics are conflated.
 
