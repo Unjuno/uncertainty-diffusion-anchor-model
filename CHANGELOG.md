@@ -1,5 +1,42 @@
 # Changelog
 
+## 0.7.10 - Sequential analysis literature verification
+
+Continued Stage 2 literature verification with sequential analysis and stopping rules.
+
+Added:
+
+- `docs/24_literature_verification_sequential_analysis.md`
+
+Changed:
+
+- `notes/literature_verification.md` now marks sequential analysis / stopping rules as verified first-pass support for repeated observation as a continue-or-stop problem.
+- `docs/17_literature_support_map.md` now records sequential analysis as direct support for stopping-rule discipline and partial support for UDAM's `MOV_i` notation.
+- ROADMAP now records sequential analysis / stopping rules as part of the active Stage 2 verification sequence.
+
+Core result:
+
+```text
+sequential analysis -> direct support for repeated observation as a continue-or-stop problem
+sequential analysis -> direct support for stopping-rule discipline
+optimal stopping -> partial support for MOV_i-style continuation-value reasoning
+```
+
+Required wording corrections:
+
+```text
+MOV_i is UDAM-specific notation, not a standard sequential-analysis formula
+MOV_i <= 0 means stop or change the current observation mode, not that all possible future observations are worthless
+more checking is not automatically safer
+sequential analysis supports one component, not the whole timer-derived UDAM synthesis
+```
+
+Status:
+
+- Stage 2 has verified one more literature area.
+- The next literature checks should cover multi-armed bandits / exploration-exploitation and exponential search / doubling strategies.
+- Japanese expansion remains deferred until English structure stabilizes.
+
 ## 0.7.9 - Bayesian experimental design literature verification
 
 Continued Stage 2 literature verification with Bayesian experimental design.
