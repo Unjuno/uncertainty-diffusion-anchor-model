@@ -32,7 +32,20 @@ not:
 uncertain target, uncertain position
 ```
 
-## Axiom 3: Anchor Loss
+## Axiom 3: Controllability Boundary
+
+UDAM's core action-value argument applies to uncertainty that can be affected by action.
+
+An uncertainty source belongs inside the core model only if action can affect at least one of:
+
+1. information about the state;
+2. belief uncertainty;
+3. decision quality;
+4. the state itself.
+
+Uncontrollable external occurrence uncertainty is excluded from the core timer model or treated as an exception layer.
+
+## Axiom 4: Anchor Loss
 
 When an agent loses an anchor, part of the state becomes uncertain.
 
@@ -44,7 +57,7 @@ Timer form:
 
 `U` is the uncertain part created by anchor loss.
 
-## Axiom 4: Belief Uncertainty Diffusion
+## Axiom 5: Belief Uncertainty Diffusion
 
 Without anchoring observations, belief uncertainty increases or remains unchanged over time.
 
@@ -63,7 +76,7 @@ If `Q > 0` and `Δt > 0`, then uncertainty strictly increases.
 
 This is an axiom about belief uncertainty, not necessarily about direct deterioration of the external state.
 
-## Axiom 5: Timer Relative Influence
+## Axiom 6: Timer Relative Influence
 
 In the timer model, re-anchoring does not necessarily reduce absolute uncertainty in the unknown interval.
 
@@ -77,7 +90,7 @@ A representative ratio is:
 ρ = sqrt(Var(U)) / E[τ]
 ```
 
-## Axiom 6: Re-Anchoring
+## Axiom 7: Re-Anchoring
 
 An action that returns information about the current state can re-anchor the agent's belief state.
 
@@ -87,7 +100,7 @@ A minimal condition is:
 I(a) > 0
 ```
 
-## Axiom 7: Action Value
+## Axiom 8: Action Value
 
 An action has total value:
 
@@ -101,7 +114,7 @@ An action is favorable under the model if:
 V(a) > 0
 ```
 
-## Axiom 8: No Arbitrary Activity
+## Axiom 9: No Arbitrary Activity
 
 Activity without information value or intervention value is not re-anchoring.
 
