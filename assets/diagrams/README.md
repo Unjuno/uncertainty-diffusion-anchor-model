@@ -15,6 +15,7 @@ The diagrams are written in Mermaid where possible so they can be edited as text
 - `observability_value_flow.mmd`: observation value, hidden upside/downside, and fixed-target discounting.
 - `adaptive_expansion_factor.mmd`: expansion factor selection constrained by adverse boundary risk.
 - `full_udam_flow.mmd`: full practical UDAM flow from anchor loss to risk-constrained expansion.
+- `one_page_udam_flow.mmd`: compact Stage 3 entry-point flow from anchor loss to observation, action, repeated checking, and boundary-risk-constrained expansion.
 - `positioning_map.mmd`: positioning map showing UDAM as a timer-derived practical synthesis of existing ideas.
 
 ## Rendering
