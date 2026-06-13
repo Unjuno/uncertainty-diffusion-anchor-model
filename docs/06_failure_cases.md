@@ -51,15 +51,73 @@ An action may anchor the wrong state variable.
 
 Example: organizing notes when the actual uncertainty is whether one can solve problems.
 
-## 6. Non-diffusing state
+## 6. Non-diffusing belief uncertainty
 
-If uncertainty does not grow without action, then urgent re-anchoring may not be necessary.
+If belief uncertainty does not grow without action, then urgent re-anchoring may not be necessary.
 
 ```text
 Q = 0
 ```
 
-## 7. Safety-critical delay
+This is not the same as saying that the external state cannot change.
+
+## 7. Relative dilution failure
+
+In the timer model, absolute uncertainty may increase while relative influence decreases only under a growth-rate condition.
+
+Let:
+
+```text
+ρ(R) = A(R) / B(R)
+```
+
+where:
+
+```text
+A(R) = sqrt(Var(U_R))
+B(R) = E[τ]
+```
+
+Relative dilution can fail if `A(R)` grows as fast as or faster than `B(R)`.
+
+In plain terms:
+
+> If the unknown part grows in influence faster than the known reference scale expands, re-anchoring may not dilute the uncertainty enough.
+
+## 8. Missing upper-bound condition
+
+The upper-bound tightening result requires an actual upper bound.
+
+Without:
+
+```text
+K + U + R < T
+```
+
+one cannot infer:
+
+```text
+U < T - K - R
+```
+
+## 9. State-belief conflation
+
+UDAM should not be read as saying:
+
+> inaction always worsens the world.
+
+The safer claim is:
+
+> lack of anchors may increase uncertainty about the current state.
+
+A correct application separates:
+
+```text
+state dynamics
+belief dynamics
+```
+
+## 10. Safety-critical delay
 
 In emergencies, measurement can be inferior to immediate action.
 
