@@ -1,0 +1,4 @@
+case,signal_accuracy,observation_cost,OV,interpretation
+uninformative signal,0.50,0,0.0,state-informative condition fails; no decision gain
+informative and cheap,0.80,2,4.0,state-informative and favorable
+informative but too costly,0.80,8,-2.0,state-informative but not favorable enough
