@@ -20,9 +20,45 @@ This file fixes notation for the Uncertainty-Diffusion Anchor Model.
 | `t` | time | s | external time | `t >= 0` | scalar |
 | `S_t` | true state | state unit | latent current state | directly unobserved | latent variable |
 | `D_t` | observation history | context-dependent | observations up to time `t` | arbitrary | data |
-| `P_t` | uncertainty | state unit squared | `P_t = Var(S_t | D_t)` | `P_t >= 0` | variance / covariance |
-| `Q` | uncertainty diffusion rate | state unit squared / s | uncertainty growth rate without anchors | `Q >= 0` | scalar / matrix |
+| `P_t` | uncertainty at time `t` | state unit squared | `P_t = Var(S_t | D_t)` in the variance formulation | `P_t >= 0` | variance / covariance |
+| `Q` | uncertainty diffusion rate | state unit squared / s | rate at which uncertainty grows per unit time without anchors | `Q >= 0` | scalar / matrix |
 | `Δt` | unanchored elapsed time | s | elapsed time without anchoring observation | `Δt >= 0` | scalar |
+
+## Important distinction: `P_t` vs `Q`
+
+`P_t` is the current amount of uncertainty.
+
+`Q` is not the uncertainty itself. It is the coefficient or rate that determines how much uncertainty is added per unit time.
+
+In the minimal diffusion equation:
+
+```text
+P_{t+Δt} = P_t + QΔt
+```
+
+- `P_t` is the current variance-like uncertainty.
+- `QΔt` is the increase in uncertainty during the unanchored interval.
+- `Q` has units of uncertainty per second.
+
+So if `P_t` is measured in `state unit^2`, then `Q` is measured in `state unit^2 / s`.
+
+In the timer case, if the state is elapsed time, then:
+
+```text
+[P_t] = s^2
+[Q] = s^2 / s = s
+[QΔt] = s
+```
+
+This looks unusual because the state itself is time. More explicitly:
+
+```text
+[QΔt] = elapsed-time variance
+```
+
+The model should be read as:
+
+> uncertainty increases by `QΔt`, not that `Q` itself is the uncertainty.
 
 ## Action-value variables
 
