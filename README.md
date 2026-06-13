@@ -257,8 +257,9 @@ This does **not** justify arbitrary action. It supports actions that return info
 14. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
 15. [`docs/07_applications.md`](docs/07_applications.md)
 16. [`docs/08_related_work.md`](docs/08_related_work.md)
-17. [`docs/09_open_questions.md`](docs/09_open_questions.md)
-18. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
+17. [`docs/17_literature_support_map.md`](docs/17_literature_support_map.md)
+18. [`docs/09_open_questions.md`](docs/09_open_questions.md)
+19. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
 
 ## Development notes
 
@@ -288,6 +289,7 @@ This does **not** justify arbitrary action. It supports actions that return info
 - fixed-target disbelief
 - practical re-anchor protocol
 - adaptive observation cadence
+- literature support map
 
 ## Failure cases
 
@@ -318,6 +320,7 @@ This repository is currently a theory repository. The first goal is not simulati
 10. observability value
 11. practical re-anchor protocol
 12. adaptive observation cadence
+13. literature support map
 
 ## License
 
