@@ -387,6 +387,44 @@ Thus a state-informative observation can justify switching the next action when 
 
 This is the Monty-Hall-type structure inside UDAM.
 
+## Proof sketch of Proposition 13
+
+Let the current scope be:
+
+```text
+s_i
+```
+
+and the next scope be:
+
+```text
+s_{i+1} = r_i s_i
+```
+
+A larger `r_i` can increase expansion benefit and information value:
+
+```text
+B_expand(r_i) + I_expand(r_i)
+```
+
+However, it can also increase observation cost, correction cost, and the expected cost of crossing a relevant adverse boundary before the next observation:
+
+```text
+C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
+```
+
+So a larger expansion factor is favorable only when:
+
+```text
+B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
+```
+
+If `P_boundary(i)` or `C_boundary` increases while other terms remain fixed, the right side increases.
+
+Therefore the set of favorable expansion factors shrinks.
+
+Thus expansion must be constrained by adverse boundary risk.
+
 ## Unit checks
 
 For uncertainty diffusion:
@@ -433,6 +471,25 @@ For observability value:
 [OV] = utility unit
 ```
 
+For expansion scope:
+
+```text
+[s_{i+1}] = [s_i]
+[r_i] = 1
+```
+
+For boundary probability:
+
+```text
+[P_boundary(i)] = 1
+```
+
+For boundary expected cost:
+
+```text
+[P_boundary(i) * C_boundary] = utility unit
+```
+
 All core equations are dimensionally consistent under the stated definitions.
 
 ## Current proof status
@@ -446,4 +503,4 @@ core: P_t = Var(S_t | D_t) or Cov(S_t | D_t)
 extension: 𝓤_t = 𝓤(p(S_t | D_t))
 ```
 
-The next proof-level work is to strengthen Propositions 8-12 and unify `observability_proofs.md` with this file if needed.
+The next proof-level work is to strengthen Propositions 8-13 and unify `observability_proofs.md` with this file if needed.
