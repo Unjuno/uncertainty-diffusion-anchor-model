@@ -79,7 +79,49 @@ A weak re-anchor may only satisfy:
 P_t^+ < P_{no-action}
 ```
 
-## 5. Diminishing information value
+## 5. Timer-specific refinement: relative dilution
+
+The timer model requires a special distinction.
+
+If:
+
+```text
+τ = K + U + R
+```
+
+and `K` and `R` are observed while `U` is uncertain, then adding `R` does not necessarily reduce:
+
+```text
+Var(U)
+```
+
+Instead, it can reduce the relative uncertainty ratio:
+
+```text
+ρ(R) = sqrt(Var(U)) / E[τ]
+```
+
+because:
+
+```text
+E[τ] = K + E[U] + R
+```
+
+Thus timer re-anchoring should be described as **relative uncertainty dilution** unless there is an additional observation that tightens `U`.
+
+A fixed deadline provides such an additional constraint:
+
+```text
+K + U + R < T
+```
+
+which implies:
+
+```text
+U < T - K - R
+```
+
+## 6. Diminishing information value
 
 Repeated checking should be modeled with declining marginal information:
 
@@ -95,7 +137,7 @@ I(a_n) + B(a_n) < C(a_n)
 
 then repeated checking becomes unfavorable.
 
-## 6. State change versus belief change
+## 7. State change versus belief change
 
 UDAM currently focuses on belief uncertainty.
 
@@ -108,7 +150,7 @@ belief dynamics: uncertainty about S_t changes
 
 A later formal version should separate these.
 
-## 7. Stronger state-space version
+## 8. Stronger state-space version
 
 A more standard state-space form would be:
 
@@ -121,10 +163,11 @@ v_t ~ noise(R_obs)
 
 UDAM does not need this form initially, but it connects the model to existing filtering theory.
 
-## 8. Formal priority list
+## 9. Formal priority list
 
 1. Keep timer model clean.
 2. Preserve `P_t` as variance/covariance in the minimal theory.
 3. Add optional `𝓤_t` generalization later.
 4. Make all claims about re-anchoring comparative unless strong observation is assumed.
-5. Distinguish empty activity from informative action.
+5. In the timer model, distinguish absolute uncertainty from relative uncertainty dilution.
+6. Distinguish empty activity from informative action.
