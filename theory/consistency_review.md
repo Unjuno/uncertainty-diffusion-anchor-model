@@ -156,31 +156,37 @@ The minimal model treats `K` and `R` as known or low-noise observations. This is
 
 ## Issue 4: Is `P_t` variance, covariance, entropy, or a general uncertainty functional?
 
-Status: Open.
+Status: Fixed as representation decision.
 
-Current formulation:
+Core formulation:
 
 ```text
 P_t = Var(S_t | D_t)
 ```
 
-This works for scalar or vector states under a variance/covariance interpretation.
+or, for vector states:
 
-However, if the model is generalized, uncertainty could also be represented by:
+```text
+P_t = Cov(S_t | D_t)
+```
 
-- entropy;
-- credible interval width;
-- expected decision error;
-- posterior dispersion;
-- general uncertainty functional.
+Future extension:
 
-Current recommendation:
+```text
+𝓤_t = 𝓤(p(S_t | D_t))
+```
 
-Keep the minimal version as variance/covariance. Add a later generalization using `U_t` or `𝓤_t` as an uncertainty functional if needed.
+Decision:
+
+Core UDAM uses variance/covariance-like belief uncertainty. A general uncertainty functional is allowed as a future extension, but it is not part of the minimal model.
+
+See:
+
+- `theory/uncertainty_representation.md`
 
 ## Issue 5: Constant `Q` is a simplification
 
-Status: Watch.
+Status: Refined.
 
 The equation:
 
@@ -199,17 +205,17 @@ In real domains, `Q` may depend on:
 - external dependencies;
 - prior uncertainty.
 
-Possible future generalization:
+Current decomposition:
 
 ```text
-P_{t+Δt} = P_t + ∫ Q(s) ds
+Q_total = Q_state + Q_memory + Q_dependency + Q_context
 ```
 
-or:
+`Q > 0` should be assumed only when unobserved time can reduce the reliability of belief about the relevant state.
 
-```text
-P_{t+Δt} = f(P_t, Q, Δt)
-```
+See:
+
+- `theory/diffusion_rate_conditions.md`
 
 ## Issue 6: Action value uses utility units
 
@@ -227,7 +233,7 @@ This is acceptable as a decision-theoretic abstraction, but not a direct physica
 
 ## Issue 7: Cognitive uncertainty versus physical state change
 
-Status: Open.
+Status: Refined.
 
 Uncertainty diffusion may mean either:
 
@@ -235,14 +241,14 @@ Uncertainty diffusion may mean either:
 2. the agent's knowledge became less reliable; or
 3. both.
 
-The model should eventually distinguish:
+The model distinguishes:
 
 ```text
 state dynamics
 belief uncertainty dynamics
 ```
 
-Current formulation intentionally focuses on belief uncertainty.
+Current formulation intentionally focuses on belief uncertainty while allowing state-dynamics components through `Q_state`.
 
 ## Issue 8: Novelty claim
 
@@ -289,7 +295,7 @@ Do not double-count them in the same equation unless the model explicitly decomp
 
 ## Issue 11: Observability value versus compulsive checking
 
-Status: Watch.
+Status: Refined.
 
 Observation is not automatically valuable.
 
@@ -299,15 +305,17 @@ The condition is:
 OV > 0
 ```
 
-This means the value of improved conditional action must exceed observation cost.
-
-If observation is repetitive, noisy, expensive, or non-actionable, then:
+For repeated observation, the marginal condition is:
 
 ```text
-OV <= 0
+MOV_i > 0
 ```
 
-and UDAM does not favor it.
+If observation is repetitive, noisy, expensive, or non-actionable, then UDAM does not favor it.
+
+See:
+
+- `theory/diminishing_information_value.md`
 
 ## Issue 12: `G`, `B(a)`, and `B_state` notation collision
 
@@ -362,16 +370,24 @@ The main structure remains coherent:
 
 ```text
 τ = K + U + R
+P_t = Var(S_t | D_t)
 P_{t+Δt} = P_t + QΔt
 V(a) = I(a) + B(a) - C(a)
 OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
+MOV_i > 0
 ```
 
 The main correction made during review was the timer-specific unit error for `QΔt`.
 
-The main conceptual refinement is now two-layered:
+The main conceptual refinement is now three-layered:
 
 1. timer re-anchoring can produce decreasing relative influence even when absolute uncertainty remains or increases;
-2. observation can produce value by enabling better conditional action.
+2. observation can produce value by enabling better conditional action;
+3. repeated observation is useful only while marginal value remains positive.
 
-The main unresolved theoretical decision is whether `P_t` remains variance/covariance or becomes a more general uncertainty functional.
+The core representation decision is closed:
+
+```text
+core: P_t = Var(S_t | D_t) or Cov(S_t | D_t)
+extension: 𝓤_t = 𝓤(p(S_t | D_t))
+```
