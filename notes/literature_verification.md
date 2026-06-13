@@ -38,8 +38,9 @@ For each item, check:
 | Concrete cue and feasible response improve execution | implementation intentions | verified: direct support | Supports observable if-part and actionable then-part; does not prove observation validity or action value |
 | Action can be chosen partly to gain information | active inference / epistemic value | verified: direct / partial support | See `docs/29_literature_verification_active_inference.md`; direct support for epistemic action, partial support for UDAM's `I(a)` term |
 | Epistemic value makes action automatically favorable | active inference / epistemic value | not supported | Information-seeking still needs UDAM's value, cost, and boundary-risk checks |
-| Small successful steps can justify gradual expansion | shaping / successive approximations | to verify | partial; be careful outside behavioral context |
-| Small action after collapse can matter | behavioral activation | to verify | partial; next priority; avoid clinical overclaiming |
+| Small action after collapse can matter | behavioral activation | verified: partial support | See `docs/30_literature_verification_behavioral_activation.md`; partial support for structured small action after avoidance-like collapse; not a clinical claim |
+| Avoidance can maintain collapse-like states | behavioral activation | verified: direct / partial support | Direct in BA context; partial for UDAM because not all inaction is avoidance |
+| Small successful steps can justify gradual expansion | shaping / successive approximations | to verify | next priority; be careful outside behavioral context |
 
 ## Verified notes
 
@@ -53,6 +54,7 @@ Current verified notes:
 - `docs/27_literature_verification_online_algorithms.md`
 - `docs/28_literature_verification_implementation_intentions.md`
 - `docs/29_literature_verification_active_inference.md`
+- `docs/30_literature_verification_behavioral_activation.md`
 
 Key result:
 
@@ -66,6 +68,7 @@ exponential search -> direct support for geometric expansion under unknown scale
 online algorithms -> direct support for unavailable offline optimum and robust-rule framing; partial support for UDAM-specific expansion rules unless a formal cost model is defined
 implementation intentions -> direct support for if-result-then-action execution mapping; not support for observation validity or positive action value
 active inference -> direct support for epistemic action and information-seeking policy selection; partial support for UDAM's practical I(a) term
+behavioral activation -> partial support for structured small action after collapse-like avoidance; not support for UDAM as therapy or arbitrary small action
 ```
 
 ## Current caution
@@ -97,6 +100,8 @@ execution support != value support
 if-then planning does not make an observation valid
 I(a) != expected free energy unless formally mapped
 epistemic value != automatic favorability
+UDAM is not behavioral activation therapy
+avoidance != all inaction
 ```
 
 ## Priority
@@ -113,12 +118,12 @@ exponential search / doubling strategies: verified first pass
 online algorithms / robust decision rules: verified first pass
 implementation intentions / if-then planning: verified first pass
 active inference / epistemic value: verified first pass
+behavioral activation: verified first pass
 ```
 
 Second priority:
 
 ```text
-behavioral activation
 shaping / successive approximations
 ```
 
