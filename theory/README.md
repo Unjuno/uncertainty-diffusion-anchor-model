@@ -15,6 +15,8 @@ This directory contains the formal components of the Uncertainty-Diffusion Ancho
 | `proofs.md` | proof sketches |
 | `counterexamples.md` | failure cases and boundary conditions |
 | `timer_three_layer_model.md` | formal timer-specific refinement |
+| `deterministic_event_scope.md` | fixed-target scope of the timer seed model |
+| `controllability_boundary.md` | boundary between actionable uncertainty and uncontrollable external uncertainty |
 | `state_belief_separation.md` | distinction between state dynamics and belief uncertainty dynamics |
 | `consistency_review.md` | known corrections and open consistency issues |
 
@@ -54,6 +56,22 @@ A compact version:
 absolute uncertainty may increase
 relative influence may decrease
 ```
+
+## Fixed-target and controllability caution
+
+The timer seed model assumes:
+
+```text
+fixed target, uncertain position
+```
+
+It excludes:
+
+```text
+uncertain target, uncertain position
+```
+
+The reason is not only mathematical simplicity. Event-occurrence uncertainty is often uncontrollable by the agent, so it should be treated as external, exceptional, or deferred to an extension.
 
 ## State-belief caution
 
