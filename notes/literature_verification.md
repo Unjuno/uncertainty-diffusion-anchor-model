@@ -24,8 +24,9 @@ For each item, check:
 |---|---|---|---|
 | Observation has value when it can improve action choice | value of information | verified: direct support | See `docs/22_literature_verification_value_blackwell.md`; keep cost and expected-decision-value wording |
 | More informative observations can improve decisions | Blackwell informativeness | verified: partial support | See `docs/22_literature_verification_value_blackwell.md`; compatible but not identical to `P(y | S) != P(y)` |
-| Choose observations by expected usefulness | Bayesian experimental design | to verify | likely direct support |
-| Continue observing only while marginal value is positive | sequential analysis / stopping rules | to verify | likely partial support |
+| Choose observations by expected usefulness | Bayesian experimental design | verified: direct support | See `docs/23_literature_verification_bayesian_experimental_design.md`; supports utility-guided observation choice |
+| Prior -> observation -> posterior -> action | Bayesian experimental design | verified: partial to direct support | Direct for prior-posterior updating; action mapping is supported when utility is decision-relevant but remains UDAM-specific in concrete form |
+| Continue observing only while marginal value is positive | sequential analysis / stopping rules | to verify | likely partial support; next priority |
 | Small probes can balance learning and action | multi-armed bandits / exploration-exploitation | to verify | partial; avoid overclaiming |
 | Action can be chosen partly to gain information | active inference / epistemic value | to verify | partial; UDAM is narrower |
 | If-result-then-action mapping improves usability | implementation intentions | to verify | likely practical support |
@@ -37,15 +38,17 @@ For each item, check:
 
 ## Verified notes
 
-Current verified note:
+Current verified notes:
 
 - `docs/22_literature_verification_value_blackwell.md`
+- `docs/23_literature_verification_bayesian_experimental_design.md`
 
 Key result:
 
 ```text
 value of information -> direct support for OV > 0 style observation value
 Blackwell informativeness -> partial support for state-informative observation and conditional action, but not identical to UDAM's local condition
+Bayesian experimental design -> direct support for utility-guided observation choice and prior-posterior updating, but not proof of UDAM's timer-derived synthesis
 ```
 
 ## Current caution
@@ -69,16 +72,16 @@ First priority:
 ```text
 value of information: verified first pass
 Blackwell informativeness: verified first pass
-exponential search
-online algorithms
+Bayesian experimental design: verified first pass
+sequential analysis / stopping rules
 ```
 
 Second priority:
 
 ```text
-Bayesian experimental design
-sequential analysis
 multi-armed bandits
+exponential search
+online algorithms
 implementation intentions
 ```
 
@@ -88,6 +91,7 @@ Third priority:
 active inference
 behavioral activation
 shaping / successive approximations
+ski-rental-type tradeoffs
 ```
 
 ## Status
