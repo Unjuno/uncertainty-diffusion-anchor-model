@@ -10,14 +10,38 @@ The agent does not know whether the other person is angry, indifferent, busy, or
 
 The lost anchor is the social state.
 
-## Uncertainty diffusion
+## State variable
 
-Without contact, uncertainty may grow about:
+The latent state is the actual relationship or social condition:
 
-- the other person's attitude;
-- the meaning of silence;
-- whether repair is still possible;
-- whether action is expected.
+```text
+S_t = current social state
+```
+
+This may include the other person's attitude, availability, expectations, and willingness to respond.
+
+## Belief uncertainty
+
+The agent is uncertain about the social state.
+
+```text
+P_{relation,t} = Var(S_t | D_t)
+```
+
+## Possible state dynamics
+
+The social state may change over time:
+
+- the other person may cool down;
+- misunderstanding may increase;
+- external context may change;
+- the relationship may stabilize without action.
+
+UDAM does not assume that the relationship necessarily worsens during silence.
+
+## Belief dynamics
+
+Even if the social state is stable, the agent's uncertainty may increase without contact.
 
 ```text
 P_{relation,t+Δt} = P_{relation,t} + Q_relation Δt
