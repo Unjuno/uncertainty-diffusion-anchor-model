@@ -19,6 +19,7 @@ This directory contains the formal components of the Uncertainty-Diffusion Ancho
 | `deterministic_event_scope.md` | fixed-target scope of the timer seed model |
 | `controllability_boundary.md` | boundary between actionable uncertainty and uncontrollable external uncertainty |
 | `observability_value.md` | formal value of observation, upside/downside uncertainty, and fixed-target disbelief |
+| `diminishing_information_value.md` | declining marginal value of repeated observation and checking boundaries |
 | `upside_uncertainty.md` | favorable-state discovery through re-anchoring |
 | `downside_uncertainty.md` | hidden downside and false comfort miscalculation |
 | `state_belief_separation.md` | distinction between state dynamics and belief uncertainty dynamics |
@@ -48,6 +49,12 @@ Observability value:
 
 ```text
 OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
+```
+
+Marginal observability value:
+
+```text
+MOV_i = E_y[max_a E[V(a,S) | y, D_i]] - max_a E[V(a,S) | D_i] - C(obs_i)
 ```
 
 Fixed-target discounting error region:
@@ -101,6 +108,14 @@ hidden downside
 ```
 
 But observation is not automatically valuable. It must exceed cost and be actionable.
+
+Repeated observation must satisfy:
+
+```text
+MOV_i > 0
+```
+
+or it becomes checking without sufficient marginal value.
 
 ## State-belief caution
 
