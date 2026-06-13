@@ -137,6 +137,19 @@ Goal: turn the theory into clear, usable examples without overcomplicating the p
 
 Status: complete as a practical application layer. Further examples can be added using the playbook template.
 
+## v0.10: Adaptive observation cadence
+
+Goal: clarify how to handle the first observation and later observations.
+
+- [x] add adaptive observation cadence document
+- [x] distinguish first valid observation from repeated observation
+- [x] connect cadence to hidden upside and hidden downside errors
+- [x] add domain-dependent cadence patterns
+- [x] sync cadence document into application cautions
+- [x] sync cadence document into README
+
+Status: complete as a practical caution layer. Future work may formalize cadence selection by domain.
+
 ## v1.0: Stable theory note
 
 Goal: Publish a coherent theory note with definitions, propositions, proofs, examples, and limitations.
