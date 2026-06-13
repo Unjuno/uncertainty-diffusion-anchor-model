@@ -36,9 +36,10 @@ For each item, check:
 | Repeated small cost versus one large decision | ski-rental-type tradeoffs | verified: direct / analogy support | Direct for rent-or-buy under unknown horizon; analogy for broader UDAM applications |
 | If-result-then-action mapping improves usability | implementation intentions | verified: direct support | See `docs/28_literature_verification_implementation_intentions.md`; direct support for cue-response execution mapping |
 | Concrete cue and feasible response improve execution | implementation intentions | verified: direct support | Supports observable if-part and actionable then-part; does not prove observation validity or action value |
-| Action can be chosen partly to gain information | active inference / epistemic value | to verify | partial; next priority |
+| Action can be chosen partly to gain information | active inference / epistemic value | verified: direct / partial support | See `docs/29_literature_verification_active_inference.md`; direct support for epistemic action, partial support for UDAM's `I(a)` term |
+| Epistemic value makes action automatically favorable | active inference / epistemic value | not supported | Information-seeking still needs UDAM's value, cost, and boundary-risk checks |
 | Small successful steps can justify gradual expansion | shaping / successive approximations | to verify | partial; be careful outside behavioral context |
-| Small action after collapse can matter | behavioral activation | to verify | partial; avoid clinical overclaiming |
+| Small action after collapse can matter | behavioral activation | to verify | partial; next priority; avoid clinical overclaiming |
 
 ## Verified notes
 
@@ -51,6 +52,7 @@ Current verified notes:
 - `docs/26_literature_verification_exponential_search.md`
 - `docs/27_literature_verification_online_algorithms.md`
 - `docs/28_literature_verification_implementation_intentions.md`
+- `docs/29_literature_verification_active_inference.md`
 
 Key result:
 
@@ -63,6 +65,7 @@ multi-armed bandits -> direct support for action-with-feedback and exploration-e
 exponential search -> direct support for geometric expansion under unknown scale in structured search domains; partial support for UDAM expansion; no support for universal doubling
 online algorithms -> direct support for unavailable offline optimum and robust-rule framing; partial support for UDAM-specific expansion rules unless a formal cost model is defined
 implementation intentions -> direct support for if-result-then-action execution mapping; not support for observation validity or positive action value
+active inference -> direct support for epistemic action and information-seeking policy selection; partial support for UDAM's practical I(a) term
 ```
 
 ## Current caution
@@ -92,6 +95,8 @@ robust != optimal
 competitive ratio != expected utility
 execution support != value support
 if-then planning does not make an observation valid
+I(a) != expected free energy unless formally mapped
+epistemic value != automatic favorability
 ```
 
 ## Priority
@@ -107,19 +112,19 @@ multi-armed bandits / exploration-exploitation: verified first pass
 exponential search / doubling strategies: verified first pass
 online algorithms / robust decision rules: verified first pass
 implementation intentions / if-then planning: verified first pass
+active inference / epistemic value: verified first pass
 ```
 
 Second priority:
 
 ```text
-active inference
 behavioral activation
+shaping / successive approximations
 ```
 
 Third priority:
 
 ```text
-shaping / successive approximations
 ski-rental-type tradeoffs: verified as direct/analogy under online algorithms
 ```
 
