@@ -240,7 +240,59 @@ Preferred wording includes:
 - constrained decision context;
 - upper time bound.
 
-## 14. Is UDAM original?
+## 14. Does UDAM say to keep expanding after a good result?
+
+No.
+
+UDAM allows expansion after favorable observations, but only when expansion value exceeds its costs.
+
+The scope update is:
+
+```text
+s_{i+1} = r_i s_i
+```
+
+A common pattern is:
+
+```text
+1 -> 2 -> 4 -> 8
+```
+
+But expansion is favorable only when:
+
+```text
+B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
+```
+
+So expansion is constrained by boundary risk, observation cost, and correction cost.
+
+## 15. Is doubling always optimal?
+
+No.
+
+Doubling can be a useful default when the useful scale is unknown and prior probes are favorable.
+
+But it is not universally optimal.
+
+Use a smaller factor when:
+
+```text
+boundary risk is high
+correction cost is high
+the state changes quickly
+the action is hard to reverse
+```
+
+Use a larger factor only when:
+
+```text
+observation cost is high
+boundary risk is low
+correction is easy
+the state is stable
+```
+
+## 16. Is UDAM original?
 
 UDAM should not claim full mathematical originality.
 
@@ -251,11 +303,13 @@ It is close to existing ideas such as:
 - belief-state models;
 - value of information;
 - active inference;
-- behavioral activation.
+- behavioral activation;
+- exponential search;
+- online decision rules.
 
-Its contribution is the timer-derived formulation connecting uncertainty diffusion, re-anchoring, and small informative action into a practical model of recovery after anchor loss.
+Its contribution is the timer-derived formulation connecting uncertainty diffusion, re-anchoring, observability value, conditional action, and boundary-risk-constrained expansion into a practical model of recovery after anchor loss.
 
-## 15. Does UDAM require simulations?
+## 17. Does UDAM require simulations?
 
 Not at the current stage.
 
