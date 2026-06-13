@@ -15,6 +15,7 @@ Each example should distinguish **state change** from **belief uncertainty**.
 | `life_strategy.md` | application | re-anchoring after model collapse |
 | `missed_reanchor_miscalculation.md` | miscalculation | cases where UDAM applies but the agent fails to use it |
 | `happy_miscalculation.md` | upside example | cases where observation reveals the state is better than expected |
+| `false_comfort_miscalculation.md` | downside example | cases where lack of observation hides a worse-than-expected state |
 
 ## Template
 
@@ -113,6 +114,25 @@ It is an observability effect:
 ```text
 uncertainty may hide upside
 observation can reveal it
+```
+
+## False comfort miscalculation examples
+
+Some examples describe downside hidden inside apparent safety.
+
+The common pattern is:
+
+```text
+uncertainty feels manageable → no observation → hidden downside appears later
+```
+
+This is not pessimism.
+
+It is the same observability logic in the other direction:
+
+```text
+uncertainty may hide downside
+observation can reveal it early
 ```
 
 The action is still justified only when:
