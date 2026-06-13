@@ -1,5 +1,37 @@
 # Changelog
 
+## 0.6.0 - Positioning and novelty layer
+
+Added a positioning layer to prevent overclaiming and clarify that UDAM is a practical synthesis rather than a replacement for existing decision theory.
+
+Added:
+
+- `docs/19_positioning_and_novelty.md`
+
+Changed:
+
+- README now states that UDAM is a timer-derived practical synthesis, not a wholly new mathematical theory of uncertainty.
+- README now links to the positioning and novelty document.
+- `notes/terminology.md` now defines practical synthesis, timer-derived formulation, and overclaim.
+- ROADMAP now includes v0.12: Positioning and novelty.
+
+Core positioning:
+
+```text
+UDAM is a timer-derived practical synthesis of re-anchoring after anchor loss.
+```
+
+Core distinctive claim:
+
+```text
+partial uncertainty does not imply total invalidation
+τ = K + U + R
+```
+
+Status:
+
+- Novelty positioning is now explicit. Future paper drafts should avoid overclaiming mathematical originality.
+
 ## 0.5.0 - Adaptive expansion factor and boundary-risk layer
 
 Added a practical expansion layer for deciding how much to widen action or observation scope after favorable observations.
