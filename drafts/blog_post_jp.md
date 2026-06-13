@@ -1,5 +1,7 @@
 # 不確実性拡散アンカーモデル：小さな情報行動が合理的になる理由
 
+> Draft status: この文書は UDAM の下流向け説明 draft であり、source of truth ではない。formal claim は `theory/`、literature claim は `docs/17_literature_support_map.md` と `notes/literature_verification.md`、simulation claim は `docs/39_simulation_sanity_checks.md` と `simulations/` を優先する。
+
 ## 導入
 
 一度ミスったからといって、その後の計測や行動がすべて無意味になるわけではない。
