@@ -35,6 +35,24 @@ The action may also change:
 a(y) != a_0
 ```
 
+## Monty Hall analogy
+
+This structure is analogous to the Monty Hall problem in decision theory.
+
+The point is not the surface story.
+
+The shared structure is:
+
+```text
+hidden state
+state-informative observation
+rational action switch
+```
+
+In both cases, the observation is useful because it is not independent of the hidden state.
+
+The observation can change the posterior and can justify switching the next action.
+
 ## UDAM interpretation
 
 UDAM should not say:
@@ -48,6 +66,8 @@ It should say:
 ```text
 observe something that can change belief or action
 ```
+
+This is why the observation must be state-informative.
 
 ## Timer seed model
 
