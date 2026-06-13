@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">Observation value decision</title>
+  <desc id="desc">Decision diagram showing that an observation must be observable, state-informative, action-changing, and cost-justified before it is favorable.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#444"/></marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #222; font-size: 18px; }
+      .title { font-size: 28px; font-weight: 700; }
+      .box { fill: #e7f1ff; stroke: #084298; stroke-width: 2; rx: 10; }
+      .check { fill: #fff3cd; stroke: #b58100; stroke-width: 2; rx: 10; }
+      .ok { fill: #d1e7dd; stroke: #0f5132; stroke-width: 2; rx: 10; }
+      .stop { fill: #f8d7da; stroke: #842029; stroke-width: 2; rx: 10; }
+      .formula { fill: #e2e3e5; stroke: #41464b; stroke-width: 2; rx: 10; }
+      .edge { stroke: #444; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .small { font-size: 15px; }
+    </style>
+  </defs>
+  <rect width="1200" height="780" fill="#fff"/>
+  <text x="60" y="52" class="title">Observation value decision</text>
+
+  <rect x="80" y="95" width="260" height="58" class="box"/><text x="118" y="131">Candidate observation y</text>
+  <rect x="430" y="95" width="245" height="58" class="check"/><text x="472" y="131">Observable result?</text>
+  <rect x="760" y="95" width="270" height="58" class="check"/><text x="800" y="131">State-informative?</text>
+  <path d="M340 124 H430" class="edge"/><path d="M675 124 H760" class="edge"/>
+
+  <rect x="80" y="225" width="270" height="58" class="box"/><text x="118" y="261">Update belief p(S | y)</text>
+  <rect x="430" y="225" width="270" height="58" class="check"/><text x="462" y="261">Does action change?</text>
+  <rect x="790" y="225" width="245" height="58" class="check"/><text x="838" y="261">a(y) != a_0?</text>
+  <path d="M895 153 V196 H215 V225" class="edge"/>
+  <path d="M350 254 H430" class="edge"/><path d="M700 254 H790" class="edge"/>
+
+  <rect x="80" y="360" width="310" height="72" class="formula"/><text x="112" y="390">Compute observation value</text><text x="112" y="414" class="small">OV = expected decision gain - C(obs)</text>
+  <rect x="480" y="360" width="230" height="72" class="check"/><text x="552" y="403">OV &gt; 0?</text>
+  <rect x="800" y="360" width="270" height="72" class="ok"/><text x="838" y="390">Favorable observation</text><text x="838" y="414" class="small">Use y to guide action</text>
+  <path d="M912 283 V325 H235 V360" class="edge"/>
+  <path d="M390 396 H480" class="edge"/><path d="M710 396 H800" class="edge"/>
+
+  <rect x="80" y="530" width="310" height="76" class="stop"/><text x="110" y="560">Not observable / not informative</text><text x="110" y="584" class="small">Redesign observation.</text>
+  <rect x="450" y="530" width="310" height="76" class="stop"/><text x="480" y="560">Informative but not actionable</text><text x="480" y="584" class="small">No decision improvement.</text>
+  <rect x="820" y="530" width="310" height="76" class="stop"/><text x="850" y="560">State-informative but not favorable</text><text x="850" y="584" class="small">Cost exceeds action value.</text>
+
+  <text x="280" y="700" class="title">State-informative is not the same as favorable.</text>
+</svg>
