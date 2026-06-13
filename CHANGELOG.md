@@ -1,5 +1,39 @@
 # Changelog
 
+## 0.7.8 - Initial literature verification pass
+
+Started Stage 2 literature verification with value of information and Blackwell informativeness.
+
+Added:
+
+- `docs/22_literature_verification_value_blackwell.md`
+
+Changed:
+
+- `notes/literature_verification.md` now marks value of information as verified direct support and Blackwell informativeness as verified partial support.
+- `docs/17_literature_support_map.md` now records the verification status and wording corrections.
+- ROADMAP now records the start of Stage 2 verification.
+
+Core result:
+
+```text
+value of information -> direct support for OV > 0 style observation value
+Blackwell informativeness -> partial support for state-informative observation and conditional action, but not identical to UDAM's local condition
+```
+
+Required wording corrections:
+
+```text
+state-informative != favorable
+P(y | S) != P(y) is not the full Blackwell order
+component support != proof of the whole UDAM synthesis
+```
+
+Status:
+
+- Stage 2 has started.
+- Next literature checks should cover Bayesian experimental design and sequential analysis.
+
 ## 0.7.7 - English-first refinement order
 
 Corrected the five-stage refinement order so that Japanese documentation is treated as the final synchronization layer, not an immediate next step.
