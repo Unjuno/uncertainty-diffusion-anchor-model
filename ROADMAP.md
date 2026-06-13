@@ -69,10 +69,10 @@ Goal: sharpen the mathematical status of the model.
 - [x] add controllability boundary for actionable versus uncontrollable uncertainty
 - [x] add notation for observation update after re-anchoring
 - [x] formalize diminishing information value for repeated checking
+- [x] define conditions under which `Q > 0`
 - [ ] decide whether `P_t` is variance, covariance, entropy, or a general uncertainty functional
-- [ ] define conditions under which `Q > 0`
 
-Status: major scope and boundary refinements are explicit. Remaining work concerns uncertainty representation and diffusion-rate conditions.
+Status: major scope, boundary, diffusion-rate, and marginal-value refinements are explicit. Remaining work concerns uncertainty representation.
 
 ## v0.6: Public-facing safety and clarity
 
