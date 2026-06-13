@@ -1,5 +1,45 @@
 # Changelog
 
+## 0.7.18 - Stage 3 visual explanation start
+
+Started Stage 3 visual explanation.
+
+Added:
+
+- `docs/32_visual_explanation_layer.md`
+- `assets/diagrams/one_page_udam_flow.mmd`
+
+Changed:
+
+- `assets/diagrams/README.md` now lists the one-page UDAM flow diagram.
+- ROADMAP now marks Stage 3 as started and records the one-page flow source as added.
+
+Core result:
+
+```text
+Stage 3 has started.
+The first visual artifact is a compact one-page flow from anchor loss to valid observation, conditional action, repeated-observation boundary, and risk-constrained expansion.
+```
+
+Design constraints preserved in the visual layer:
+
+```text
+state-informative != favorable
+small != useful
+feedback-producing != favorable
+local success != global expansion permission
+robust != optimal
+execution support != value support
+epistemic value != automatic favorability
+successive approximation != boundary-risk permission
+```
+
+Status:
+
+- Stage 2 first-pass literature verification remains complete enough to proceed.
+- Stage 3 has started with a visual explanation plan and one-page Mermaid flow.
+- Japanese expansion remains deferred until English visual structure stabilizes.
+
 ## 0.7.17 - Shaping and successive approximations literature verification
 
 Completed the current Stage 2 first-pass literature verification sequence with shaping and successive approximations.
