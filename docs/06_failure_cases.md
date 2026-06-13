@@ -100,7 +100,24 @@ one cannot infer:
 U < T - K - R
 ```
 
-## 9. State-belief conflation
+## 9. Uncontrollable occurrence uncertainty
+
+If the uncertainty concerns whether the target condition itself occurs, and that occurrence is not controllable by the agent, then it should not be mixed into the core timer model.
+
+It should be treated as:
+
+- outside the core model;
+- an external parameter;
+- a separate extension;
+- or an exception condition.
+
+Otherwise, the value of re-anchoring becomes diluted by occurrence uncertainty:
+
+```text
+V_reanchor ≈ P(event occurs) · V_position_update - C(a)
+```
+
+## 10. State-belief conflation
 
 UDAM should not be read as saying:
 
@@ -117,7 +134,7 @@ state dynamics
 belief dynamics
 ```
 
-## 10. Safety-critical delay
+## 11. Safety-critical delay
 
 In emergencies, measurement can be inferior to immediate action.
 
