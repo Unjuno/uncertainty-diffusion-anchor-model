@@ -174,6 +174,23 @@ Goal: prevent overclaiming and clarify that UDAM is a practical synthesis, not a
 
 Status: complete as a positioning layer. Future paper drafts should use the safer novelty claim.
 
+## v0.13: Japanese documentation and visual support
+
+Goal: make the model easier to read without creating a separate Japanese repository.
+
+- [x] add `docs/ja/` Japanese documentation index
+- [x] add plain Japanese explanation
+- [x] add Japanese timer model note
+- [x] add Japanese practical protocol
+- [x] add Japanese failure cases
+- [x] add Japanese positioning note
+- [x] link Japanese docs from README
+- [x] add full UDAM flow diagram
+- [x] add positioning map diagram
+- [x] add literature verification checklist
+
+Status: complete as a readability and maintenance layer. Future work may expand Japanese examples and verify literature references.
+
 ## v1.0: Stable theory note
 
 Goal: Publish a coherent theory note with definitions, propositions, proofs, examples, and limitations.
@@ -181,8 +198,7 @@ Goal: Publish a coherent theory note with definitions, propositions, proofs, exa
 Remaining work:
 
 - refine definitions;
-- strengthen proofs;
 - add rendered figures;
 - expand related work with verified citations;
-- add Japanese and English paper-style drafts;
+- expand Japanese examples;
 - audit notation consistency across timer, action-value, observability, and expansion layers.
