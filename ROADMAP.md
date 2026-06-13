@@ -259,6 +259,20 @@ Goal: reduce navigation cost and prevent source-of-truth drift across README, do
 
 Status: Stage 4 has started. `docs/33_project_note_consolidation.md` defines first-pass document roles and source-of-truth assignments. `docs/34_readme_consolidation_audit.md` completes the first README duplication audit. `docs/35_overview_consolidation_audit.md` completes the first overview duplication audit. `docs/36_literature_claims_routing_audit.md` completes the first literature-claims routing audit. `docs/37_formal_claims_routing_audit.md` completes the first formal-claims routing audit. No documents are deprecated yet.
 
+## v0.18: Simulation sanity checks
+
+Goal: add a small reproducible demonstration layer without overclaiming empirical validation.
+
+- [x] add `simulations/` directory
+- [x] add reproducible first-pass sanity-check script
+- [x] record timer re-anchor results
+- [x] record observation-value results
+- [x] record expansion boundary-risk results
+- [x] add simulation result report
+- [x] link simulation sanity checks from README
+
+Status: first-pass toy sanity checks are recorded. The results are demonstrations only, not empirical validation. They show that the expected qualitative UDAM behavior appears in three minimal toy models under the chosen assumptions.
+
 ## v1.0: Stable theory note
 
 Goal: Publish a coherent theory note with definitions, propositions, proofs, examples, and limitations.
