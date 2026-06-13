@@ -25,7 +25,27 @@ belief dynamics: P_t changes
 
 The core uncertainty equation concerns `P_t`.
 
-## A2. Anchor dependence
+## A2. Fixed target condition in the timer seed model
+
+The timer seed model assumes a fixed target condition.
+
+It does not model uncertainty about whether the target condition exists or will occur.
+
+The core timer question is:
+
+```text
+Given a fixed target condition, where is the agent relative to it?
+```
+
+not:
+
+```text
+What is the probability that the target condition itself occurs?
+```
+
+This is a local modeling assumption, not a metaphysical claim that all events are deterministic.
+
+## A3. Anchor dependence
 
 The agent uses anchors to constrain uncertainty about the current state.
 
@@ -39,7 +59,7 @@ An anchor may be:
 - a completed small action;
 - an external confirmation.
 
-## A3. Anchor loss
+## A4. Anchor loss
 
 When an anchor is lost, part of the state becomes uncertain.
 
@@ -51,7 +71,7 @@ In the timer model:
 
 `U` represents the interval that became uncertain after anchor loss.
 
-## A4. Uncertainty diffusion
+## A5. Uncertainty diffusion
 
 In the absence of anchoring observations, belief uncertainty may increase over time.
 
@@ -67,7 +87,7 @@ Q >= 0
 
 This is a belief-uncertainty assumption, not a claim that the world necessarily worsens.
 
-## A5. Timer relative influence
+## A6. Timer relative influence
 
 In the timer model, re-anchoring does not necessarily reduce absolute uncertainty in `U`.
 
@@ -85,7 +105,7 @@ One relative measure is:
 ρ = sqrt(Var(U)) / E[τ]
 ```
 
-## A6. Upper-bound constraint
+## A7. Upper-bound constraint
 
 If there is a fixed upper time bound `T` and the current elapsed time is known to be below it, then:
 
@@ -101,7 +121,7 @@ U < T - K - R
 
 This is an additional constraint, not part of the basic timer decomposition.
 
-## A7. Informative action
+## A8. Informative action
 
 Some actions return information about the state.
 
@@ -111,7 +131,7 @@ Such actions have informational value:
 I(a) > 0
 ```
 
-## A8. Intervention value
+## A9. Intervention value
 
 Some actions improve or degrade the state itself.
 
@@ -123,7 +143,7 @@ B(a)
 
 where `B(a)` can be positive, zero, or negative.
 
-## A9. Cost
+## A10. Cost
 
 All actions may carry cost:
 
@@ -131,7 +151,7 @@ All actions may carry cost:
 C(a) >= 0
 ```
 
-## A10. Rational action condition
+## A11. Rational action condition
 
 An action is favorable under the model when:
 
@@ -139,7 +159,7 @@ An action is favorable under the model when:
 V(a) = I(a) + B(a) - C(a) > 0
 ```
 
-## A11. No arbitrary action principle
+## A12. No arbitrary action principle
 
 UDAM does not claim that action is always better than inaction.
 
