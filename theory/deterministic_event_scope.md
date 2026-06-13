@@ -73,6 +73,26 @@ maybe nothing needs to be done because maybe the target never occurs
 
 UDAM intentionally avoids this weakening at the core level.
 
+## Controllability reason
+
+Event occurrence uncertainty is also excluded because it is often not controllable by the agent.
+
+UDAM is an action-oriented model. It is strongest when the agent can affect at least one of the following:
+
+1. their information about position;
+2. their belief state;
+3. their next decision;
+4. the state itself.
+
+If event occurrence is external and uncontrollable, then it should not be mixed into the core action-value argument.
+
+It should be treated as:
+
+- outside the core model;
+- an external parameter;
+- a separate extension;
+- or an exception condition.
+
 ## Scope boundary
 
 The core model assumes:
