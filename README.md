@@ -39,9 +39,27 @@ The central point is:
 
 Timer re-anchoring should be read in three layers:
 
-1. absolute uncertainty in `U` may remain;
-2. relative uncertainty can be diluted as `R` grows;
+1. absolute uncertainty in `U` may remain or increase;
+2. relative uncertainty can be diluted if the reference scale grows faster than the uncertainty scale;
 3. a fixed upper time bound can constrain the possible range of `U`.
+
+## Deterministic event scope
+
+The timer seed model assumes a fixed target condition.
+
+It asks:
+
+```text
+Given a fixed target, where is the agent relative to it?
+```
+
+It does not ask:
+
+```text
+What is the probability that the target event itself occurs?
+```
+
+This is a local modeling constraint. UDAM does not need to claim that all reality is deterministic; it only keeps event-occurrence uncertainty out of the core timer model.
 
 ## General model
 
@@ -107,23 +125,25 @@ This does **not** justify arbitrary action. It supports actions that return info
 
 1. [`docs/00_overview.md`](docs/00_overview.md)
 2. [`docs/01_timer_model.md`](docs/01_timer_model.md)
-3. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
-4. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
-5. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
-6. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
-7. [`docs/04_action_value.md`](docs/04_action_value.md)
-8. [`docs/05_propositions.md`](docs/05_propositions.md)
-9. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
-10. [`docs/07_applications.md`](docs/07_applications.md)
-11. [`docs/08_related_work.md`](docs/08_related_work.md)
-12. [`docs/09_open_questions.md`](docs/09_open_questions.md)
-13. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
+3. [`docs/13_deterministic_event_scope.md`](docs/13_deterministic_event_scope.md)
+4. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
+5. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
+6. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
+7. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
+8. [`docs/04_action_value.md`](docs/04_action_value.md)
+9. [`docs/05_propositions.md`](docs/05_propositions.md)
+10. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
+11. [`docs/07_applications.md`](docs/07_applications.md)
+12. [`docs/08_related_work.md`](docs/08_related_work.md)
+13. [`docs/09_open_questions.md`](docs/09_open_questions.md)
+14. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
 
 ## Development notes
 
 - [`notes/chat_content_synthesis.md`](notes/chat_content_synthesis.md): organized synthesis of the original discussion.
 - [`theory/consistency_review.md`](theory/consistency_review.md): known corrections, open issues, and consistency checks.
 - [`theory/timer_three_layer_model.md`](theory/timer_three_layer_model.md): formal timer-specific refinement.
+- [`theory/deterministic_event_scope.md`](theory/deterministic_event_scope.md): fixed-target scope of the timer seed model.
 - [`theory/state_belief_separation.md`](theory/state_belief_separation.md): formal distinction between state dynamics and belief dynamics.
 
 ## Applications
@@ -145,6 +165,7 @@ UDAM does not apply cleanly when:
 - feedback is systematically misleading;
 - repeated checking becomes compulsive and uninformative;
 - the state does not diffuse without an anchor;
+- event-occurrence uncertainty is mixed into the timer seed model without adding a separate layer;
 - safety-critical action is delayed by unnecessary measurement.
 
 ## Repository status
