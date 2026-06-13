@@ -74,6 +74,35 @@ The core theory includes uncertainty that action can affect through at least one
 
 Uncontrollable event-occurrence uncertainty is excluded from the core model, or treated as an external parameter, separate extension, or exception condition.
 
+## Observability value
+
+UDAM now treats informational value as more than uncertainty reduction.
+
+A re-anchoring action can increase observability and enable better conditional action.
+
+```text
+OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
+```
+
+Observation is favorable when:
+
+```text
+OV > 0
+```
+
+This explains both directions:
+
+```text
+hidden upside can be revealed
+hidden downside can be revealed early
+```
+
+It also explains fixed-target disbelief. If the agent discounts a fixed target with subjective weight `pi_hat`, a favorable re-anchor can appear unfavorable:
+
+```text
+pi_hat * I_position(a) + B(a) <= C(a) < I_position(a) + B(a)
+```
+
 ## High-stakes example policy
 
 High-stakes examples can be useful because they make the fixed-target and lost-anchor structure clear.
@@ -98,7 +127,8 @@ The FAQ covers:
 - why the timer seed model uses a fixed target;
 - why uncontrollable event-occurrence uncertainty is excluded;
 - how high-stakes examples should be interpreted;
-- why re-anchoring does not always reduce absolute uncertainty.
+- why re-anchoring does not always reduce absolute uncertainty;
+- how observability explains happy miscalculation, false comfort, and fixed-target disbelief.
 
 ## General model
 
@@ -114,6 +144,12 @@ Action value:
 V(a) = I(a) + B(a) - C(a)
 ```
 
+Observability value:
+
+```text
+OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
+```
+
 where:
 
 - `P_t`: uncertainty at time `t`
@@ -122,12 +158,19 @@ where:
 - `I(a)`: informational value
 - `B(a)`: intervention value
 - `C(a)`: action cost
+- `OV`: value of making the state observable enough to support better conditional action
 - `V(a)`: total action value
 
 A small action is favorable when:
 
 ```text
 V(a) > 0
+```
+
+or, for observation-specific actions:
+
+```text
+OV > 0
 ```
 
 ## State versus belief
@@ -145,7 +188,7 @@ belief dynamics: P_t changes
 
 ## Main claim
 
-If uncertainty diffuses in the absence of anchors, then low-cost informative actions can be advantageous because they reduce or constrain uncertainty growth.
+If uncertainty diffuses in the absence of anchors, then low-cost informative actions can be advantageous because they reduce or constrain uncertainty growth, reveal hidden upside, reveal hidden downside early, or enable better conditional action.
 
 This does **not** justify arbitrary action. It supports actions that return information, improve the state, or both, at sufficiently low cost.
 
@@ -186,6 +229,10 @@ This does **not** justify arbitrary action. It supports actions that return info
 - [`theory/timer_three_layer_model.md`](theory/timer_three_layer_model.md): formal timer-specific refinement.
 - [`theory/deterministic_event_scope.md`](theory/deterministic_event_scope.md): fixed-target scope of the timer seed model.
 - [`theory/controllability_boundary.md`](theory/controllability_boundary.md): boundary between actionable uncertainty and uncontrollable external uncertainty.
+- [`theory/observability_value.md`](theory/observability_value.md): formal value of observation and conditional action.
+- [`theory/observability_proofs.md`](theory/observability_proofs.md): proof sketches for observability value and fixed-target discounting.
+- [`theory/upside_uncertainty.md`](theory/upside_uncertainty.md): hidden upside and happy miscalculation.
+- [`theory/downside_uncertainty.md`](theory/downside_uncertainty.md): hidden downside, false comfort, and fixed-target disbelief.
 - [`theory/state_belief_separation.md`](theory/state_belief_separation.md): formal distinction between state dynamics and belief dynamics.
 
 ## Applications
@@ -197,6 +244,9 @@ This does **not** justify arbitrary action. It supports actions that return info
 - relationship uncertainty
 - life strategy after failure
 - cognitive re-orientation after disruption
+- happy miscalculation
+- false comfort miscalculation
+- fixed-target disbelief
 
 ## Failure cases
 
@@ -224,6 +274,7 @@ This repository is currently a theory repository. The first goal is not simulati
 7. related work
 8. consistency review
 9. formal refinement
+10. observability value
 
 ## License
 
