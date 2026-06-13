@@ -1,0 +1,27 @@
+flowchart TD
+    A[UDAM failure cases] --> B[No information]
+    A --> C[High cost]
+    A --> D[Misleading feedback]
+    A --> E[Compulsive checking]
+    A --> F[Non-diffusing state]
+    A --> G[Safety-critical delay]
+    A --> H[Wrong anchor]
+
+    B --> B1["I(a)=0 and B(a)=0"]
+    C --> C1["C(a) > I(a)+B(a)"]
+    D --> D1[False confidence or biased update]
+    E --> E1[Marginal I(a) approaches 0]
+    F --> F1["Q=0"]
+    G --> G1[Measurement delays necessary action]
+    H --> H1[Action measures irrelevant variable]
+
+    B:::bad
+    C:::bad
+    D:::bad
+    E:::bad
+    F:::warn
+    G:::bad
+    H:::bad
+
+    classDef bad fill:#ffebee,stroke:#c62828,stroke-width:1px;
+    classDef warn fill:#fff3e0,stroke:#ef6c00,stroke-width:1px;
