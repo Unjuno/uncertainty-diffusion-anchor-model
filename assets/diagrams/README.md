@@ -12,6 +12,7 @@ The diagrams are written in Mermaid where possible so they can be edited as text
 - `action_value_flow.mmd`: decision rule for whether an action is a useful re-anchor.
 - `failure_taxonomy.mmd`: cases where the model weakens or fails.
 - `observability_value_flow.mmd`: observation value, hidden upside/downside, and fixed-target discounting.
+- `adaptive_expansion_factor.mmd`: expansion factor selection constrained by adverse boundary risk.
 
 ## Rendering
 
