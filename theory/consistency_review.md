@@ -258,7 +258,7 @@ UDAM should not claim full mathematical originality.
 
 Safe claim:
 
-> UDAM is a timer-derived cognitive and decision-theoretic formulation that integrates uncertainty diffusion, re-anchoring, and small informative action into a practical theory of recovery after anchor loss.
+> UDAM is a timer-derived cognitive and decision-theoretic formulation that integrates uncertainty diffusion, re-anchoring, state-informative observation, and small informative action into a practical theory of recovery after anchor loss.
 
 Unsafe claim:
 
@@ -364,6 +364,80 @@ pi_hat * I_position(a) + B(a) <= C(a) < I_position(a) + B(a)
 
 This means the core model favors re-anchoring, but the agent's discounted model does not.
 
+## Issue 14: Valid re-anchor condition
+
+Status: Fixed as refinement.
+
+Potential problem:
+
+UDAM can be misread as saying that any small action is useful.
+
+Correction:
+
+A valid re-anchor must be state-informative.
+
+Formal condition:
+
+```text
+P(y | S) != P(y)
+```
+
+Posterior-change form:
+
+```text
+P(S | y) != P(S)
+```
+
+Practical reading:
+
+```text
+small action is not enough
+small state-informative observation is required
+```
+
+The timer seed model satisfies this because `R` is part of the elapsed-position decomposition:
+
+```text
+τ = K + U + R
+```
+
+See:
+
+- `theory/valid_reanchor_condition.md`
+
+## Issue 15: Conditional action switch and Monty Hall analogy
+
+Status: Fixed as refinement.
+
+The Monty Hall analogy should not be read as a claim that UDAM is the Monty Hall problem.
+
+The useful relation is structural:
+
+```text
+hidden state -> state-informative observation -> conditional action switch
+```
+
+In UDAM notation:
+
+```text
+a(y) != a_0
+```
+
+for at least one possible observation result.
+
+The observation has decision value when it can rationally change the next action and when cost is justified:
+
+```text
+OV > 0
+```
+
+This prevents the practical protocol from becoming vague checking.
+
+See:
+
+- `theory/conditional_action_switch.md`
+- `docs/08_related_work.md`
+
 ## Current conclusion
 
 The main structure remains coherent:
@@ -375,15 +449,20 @@ P_{t+Δt} = P_t + QΔt
 V(a) = I(a) + B(a) - C(a)
 OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
 MOV_i > 0
+P(y | S) != P(y)
+P(S | y) != P(S)
+a(y) != a_0
 ```
 
 The main correction made during review was the timer-specific unit error for `QΔt`.
 
-The main conceptual refinement is now three-layered:
+The main conceptual refinement is now five-layered:
 
 1. timer re-anchoring can produce decreasing relative influence even when absolute uncertainty remains or increases;
 2. observation can produce value by enabling better conditional action;
-3. repeated observation is useful only while marginal value remains positive.
+3. repeated observation is useful only while marginal value remains positive;
+4. a valid re-anchor must be state-informative;
+5. useful observation can justify conditional action switching.
 
 The core representation decision is closed:
 
