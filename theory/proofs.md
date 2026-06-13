@@ -168,6 +168,87 @@ V(a) < 0
 
 Therefore empty activity is unfavorable.
 
+## Proof of Proposition 6
+
+Given:
+
+```text
+τ = K + U + R
+```
+
+with `K` and `R` observed, and `U` having fixed expectation and variance.
+
+Define:
+
+```text
+ρ(R) = sqrt(Var(U)) / E[τ]
+```
+
+Since:
+
+```text
+E[τ] = K + E[U] + R
+```
+
+we get:
+
+```text
+ρ(R) = sqrt(Var(U)) / (K + E[U] + R)
+```
+
+Let:
+
+```text
+A = sqrt(Var(U))
+B = K + E[U]
+```
+
+Then:
+
+```text
+ρ(R) = A / (B + R)
+```
+
+For `A >= 0` and `B + R > 0`, the derivative is:
+
+```text
+dρ/dR = -A / (B + R)^2 <= 0
+```
+
+If `A > 0`, then:
+
+```text
+dρ/dR < 0
+```
+
+Therefore increasing `R` decreases relative uncertainty, even when absolute variance `Var(U)` remains unchanged.
+
+## Proof of Proposition 7
+
+Assume a fixed deadline `T` and that the deadline is not yet reached.
+
+Then:
+
+```text
+τ < T
+```
+
+Using the timer decomposition:
+
+```text
+K + U + R < T
+```
+
+Subtracting `K + R` from both sides gives:
+
+```text
+U < T - K - R
+```
+
+Therefore, as `R` increases, the upper bound on admissible `U` decreases.
+
+This gives a deadline-specific tightening effect.
+
 ## Unit checks
 
 For uncertainty diffusion:
@@ -186,6 +267,20 @@ For timer decomposition:
 
 ```text
 [τ] = [K] = [U] = [R] = s
+```
+
+For relative uncertainty ratio:
+
+```text
+ρ = sqrt(Var(U)) / E[τ]
+```
+
+we have:
+
+```text
+[sqrt(Var(U))] = s
+[E[τ]] = s
+[ρ] = 1
 ```
 
 For action value:
