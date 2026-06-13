@@ -233,14 +233,15 @@ Status: active strategic refinement layer. Stage 1 has a compact failure diagnos
 
 Goal: improve reader comprehension using diagrams and compact visual summaries.
 
+- [x] add Stage 3 visual explanation layer note
+- [x] add a one-page UDAM flow figure source
 - [ ] render existing Mermaid diagrams into figures
-- [ ] add a one-page UDAM flow figure
 - [ ] add an anchor-loss-to-reanchor timeline figure
 - [ ] add observation-value decision diagram
 - [ ] add expansion-with-boundary-risk diagram
 - [ ] add literature-support map figure
 
-Status: next planned stage.
+Status: Stage 3 has started. The first one-page flow source is available under `assets/diagrams/one_page_udam_flow.mmd`.
 
 ## v1.0: Stable theory note
 
