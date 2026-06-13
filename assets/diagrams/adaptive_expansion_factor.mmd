@@ -1,0 +1,11 @@
+flowchart LR
+    A[Small valid observation] --> B[Classify response]
+    B --> C{Response supports expansion?}
+    C -- no --> D[Keep scope small or switch probe]
+    C -- yes --> E[Choose expansion factor r_i]
+    E --> F[Next scope s_{i+1} = r_i s_i]
+    F --> G{Adverse boundary risk acceptable?}
+    G -- yes --> H[Expand and observe next response]
+    G -- no --> I[Reduce r_i or observe sooner]
+    H --> B
+    I --> B
