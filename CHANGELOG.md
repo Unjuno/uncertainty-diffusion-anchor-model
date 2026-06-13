@@ -1,5 +1,39 @@
 # Changelog
 
+## 0.7.4 - Logical synthesis review
+
+Added a dedicated logical synthesis review after checking the current model layers for internal coherence.
+
+Added:
+
+- `theory/logical_synthesis_review.md`
+
+Changed:
+
+- `theory/README.md` now links to the logical synthesis review and summarizes the main watch items.
+- ROADMAP now includes v0.14: Logical synthesis review.
+
+Core review result:
+
+```text
+No major internal contradiction found.
+```
+
+Main watch items:
+
+```text
+I(a) versus OV
+state-informative versus favorable
+first observation versus repeated observation
+expansion versus automatic doubling
+local observation versus global conclusion
+```
+
+Status:
+
+- The current theory stack is coherent if each boundary condition remains explicit.
+- Future work may define a separate contraction rule if scope reduction becomes important.
+
 ## 0.7.3 - Japanese failure examples
 
 Added a Japanese readable failure-example layer and linked it from the Japanese documentation index.
