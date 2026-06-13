@@ -15,6 +15,7 @@ This directory contains the formal components of the Uncertainty-Diffusion Ancho
 | `proofs.md` | proof sketches |
 | `observability_proofs.md` | proof sketches for observability value and fixed-target discounting |
 | `counterexamples.md` | failure cases and boundary conditions |
+| `logical_synthesis_review.md` | review of logical coherence across model layers |
 | `timer_three_layer_model.md` | formal timer-specific refinement |
 | `deterministic_event_scope.md` | fixed-target scope of the timer seed model |
 | `controllability_boundary.md` | boundary between actionable uncertainty and uncontrollable external uncertainty |
@@ -28,6 +29,30 @@ This directory contains the formal components of the Uncertainty-Diffusion Ancho
 | `downside_uncertainty.md` | hidden downside and false comfort miscalculation |
 | `state_belief_separation.md` | distinction between state dynamics and belief uncertainty dynamics |
 | `consistency_review.md` | known corrections and open consistency issues |
+
+## Current synthesis status
+
+The current layer stack is logically coherent when each condition is kept explicit.
+
+The most important synthesis review is:
+
+- `logical_synthesis_review.md`
+
+Core verdict:
+
+```text
+No major internal contradiction found.
+```
+
+Main watch items:
+
+```text
+I(a) versus OV
+state-informative versus favorable
+first observation versus repeated observation
+expansion versus automatic doubling
+local observation versus global conclusion
+```
 
 ## Core equations
 
@@ -107,6 +132,18 @@ Fixed-target discounting error region:
 
 ```text
 pi_hat * I_position(a) + B(a) <= C(a) < I_position(a) + B(a)
+```
+
+Expansion scope update:
+
+```text
+s_{i+1} = r_i s_i
+```
+
+Boundary-risk-constrained expansion:
+
+```text
+B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
 ```
 
 ## Timer-specific caution
@@ -212,6 +249,22 @@ MOV_i > 0
 ```
 
 or it becomes checking without sufficient marginal value.
+
+## Expansion caution
+
+Geometric expansion can be useful, but only under the expansion-value condition.
+
+```text
+s_{i+1} = r_i s_i
+```
+
+A larger expansion is favorable only when:
+
+```text
+B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
+```
+
+Doubling is a possible heuristic, not a universal optimum.
 
 ## State-belief caution
 
