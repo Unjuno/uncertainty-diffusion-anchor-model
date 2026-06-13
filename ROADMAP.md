@@ -255,9 +255,9 @@ Goal: reduce navigation cost and prevent source-of-truth drift across README, do
 - [x] route literature claims to `docs/17_literature_support_map.md` and `notes/literature_verification.md`
 - [x] route formal claims to `theory/` and `docs/10_formal_refinement.md`
 - [x] route visual claims to `docs/32_visual_explanation_layer.md` and `assets/figures/`
-- [ ] decide whether any draft files need source-of-truth disclaimers
+- [x] decide whether any draft files need source-of-truth disclaimers
 
-Status: Stage 4 has started. `docs/33_project_note_consolidation.md` defines first-pass document roles and source-of-truth assignments. `docs/34_readme_consolidation_audit.md` completes the first README duplication audit. `docs/35_overview_consolidation_audit.md` completes the first overview duplication audit. `docs/36_literature_claims_routing_audit.md` completes the first literature-claims routing audit. `docs/37_formal_claims_routing_audit.md` completes the first formal-claims routing audit. `docs/38_visual_claims_routing_audit.md` completes the first visual-claims routing audit. No documents are deprecated yet.
+Status: Stage 4 is first-pass complete. `docs/33_project_note_consolidation.md` defines first-pass document roles and source-of-truth assignments. `docs/34_readme_consolidation_audit.md` completes the README duplication audit. `docs/35_overview_consolidation_audit.md` completes the overview duplication audit. `docs/36_literature_claims_routing_audit.md` completes the literature-claims routing audit. `docs/37_formal_claims_routing_audit.md` completes the formal-claims routing audit. `docs/38_visual_claims_routing_audit.md` completes the visual-claims routing audit. `docs/40_draft_source_of_truth_disclaimer_audit.md` completes the draft-disclaimer audit. No documents are deprecated yet.
 
 ## v0.18: Simulation sanity checks
 
@@ -281,7 +281,7 @@ Remaining work:
 
 - refine definitions;
 - optionally render older non-Stage-3 diagrams;
-- continue Stage 4 project-note consolidation;
+- optional post-Stage-4 compression of README or overview if needed;
 - expand Japanese examples only after English stabilization;
 - audit notation consistency across timer, action-value, observability, and expansion layers;
 - decide whether contraction needs a separate rule from expansion;
