@@ -1,0 +1,35 @@
+flowchart LR
+    A[Start / prior anchor] --> K[Known interval K]
+    K --> L[Anchor lost]
+    L --> U[Unknown interval U]
+    U --> R[Re-anchored interval R]
+    R --> T[Current position tau]
+
+    K -. contributes .-> EQ[tau = K + U + R]
+    U -. contributes uncertainty .-> EQ
+    R -. contributes new valid observation .-> EQ
+
+    L --> D1[Do not erase K]
+    U --> D2[Do not pretend U is known]
+    R --> D3[Do not invalidate R because U is unknown]
+
+    D1 --> P[Partial uncertainty does not imply total invalidation]
+    D2 --> P
+    D3 --> P
+
+    P --> C{Is R valid for the target state S?}
+    C -- No --> C1[No re-anchor yet]
+    C -- Yes --> C2[Use R to update belief]
+
+    C2 --> A1[Future anchor can be valid even after past anchor loss]
+    C1 --> A2[Seek another state-informative observation]
+
+    classDef known fill:#d1e7dd,stroke:#0f5132,color:#222;
+    classDef unknown fill:#fff3cd,stroke:#b58100,color:#222;
+    classDef anchor fill:#cfe2ff,stroke:#084298,color:#222;
+    classDef stop fill:#f8d7da,stroke:#842029,color:#222;
+
+    class K,R,C2,A1 known;
+    class U,D2 unknown;
+    class A,L,T,EQ,P,C anchor;
+    class C1,A2 stop;
