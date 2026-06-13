@@ -22,7 +22,97 @@ Japanese: 再アンカー
 
 The increase of uncertainty over time when no anchoring observations are available.
 
+In UDAM, this usually means belief uncertainty, not necessarily physical deterioration of the external state.
+
 Japanese: 不確実性拡散
+
+## Belief uncertainty
+
+Uncertainty in the agent's belief about the state.
+
+Minimal variance form:
+
+```text
+P_t = Var(S_t | D_t)
+```
+
+Japanese: 信念不確実性 / 認識上の不確実性
+
+## State dynamics
+
+Change in the state itself.
+
+```text
+S_t changes
+```
+
+Japanese: 状態変化
+
+## Belief dynamics
+
+Change in the agent's uncertainty about the state.
+
+```text
+P_t changes
+```
+
+Japanese: 信念変化 / 認識状態の変化
+
+## Fixed target
+
+A target condition treated as fixed inside the local timer seed model.
+
+```text
+fixed target, uncertain position
+```
+
+Japanese: 固定ターゲット / 固定対象条件
+
+## Uncertain target
+
+A target condition whose occurrence is itself uncertain.
+
+This is outside the core timer seed model unless a separate occurrence layer is added.
+
+```text
+uncertain target, uncertain position
+```
+
+Japanese: 不確実ターゲット / 発生不確実な対象条件
+
+## Agent position
+
+The agent's current position relative to a fixed target condition.
+
+In the timer model this is elapsed position:
+
+```text
+τ = K + U + R
+```
+
+Japanese: 現在位置 / 対象に対する位置
+
+## Controllability boundary
+
+The boundary between uncertainty that action can affect and external uncertainty that action cannot control.
+
+UDAM core includes uncertainty that action can affect through observation, belief update, decision improvement, or state intervention.
+
+Japanese: 制御可能性境界
+
+## Actionable uncertainty
+
+Uncertainty that can be affected by action through observation, belief update, decision improvement, or state intervention.
+
+Japanese: 行動可能な不確実性 / 行動で扱える不確実性
+
+## External uncertainty
+
+Uncertainty outside the agent's control.
+
+In UDAM, uncontrollable event-occurrence uncertainty is treated as external, exceptional, or deferred to an extension.
+
+Japanese: 外生的不確実性 / 非制御可能な不確実性
 
 ## Informative action
 
@@ -41,6 +131,41 @@ Japanese: 介入価値
 Activity that consumes cost without informational or intervention value.
 
 Japanese: 空回り行動 / 空虚な多動
+
+## Missed re-anchor miscalculation
+
+A miscalculation where UDAM applies but the agent fails to use it.
+
+Common pattern:
+
+```text
+partial uncertainty → total invalidation
+```
+
+UDAM correction:
+
+```text
+partial uncertainty → re-anchor if the next action has positive value
+```
+
+Japanese: 再アンカー見落とし / 部分的不確実性の全体無効化
+
+## High-stakes fixed-target example
+
+A neutral, non-operational example type used to show the timer structure clearly.
+
+It preserves:
+
+```text
+fixed target
+uncertain position
+lost anchor
+re-anchoring action
+```
+
+without preserving harmful scenario details.
+
+Japanese: 高緊張固定ターゲット例
 
 ## Positive hyperactivity
 
