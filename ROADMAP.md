@@ -97,12 +97,12 @@ Goal: formalize the value of observation as conditional-action value.
 - [x] add downside uncertainty / false comfort miscalculation
 - [x] add fixed-target disbelief inequality
 - [x] sync observability model into README
-- [ ] sync observability model into `docs/10_formal_refinement.md`
-- [ ] sync observability model into `drafts/paper_outline.md`
-- [ ] add observability consistency checks
+- [x] sync observability model into `docs/10_formal_refinement.md`
+- [x] sync observability model into `drafts/paper_outline.md`
+- [x] add observability consistency checks
 - [ ] add an observability diagram
 
-Status: core observability model is formalized. Remaining work is integration into formal-refinement docs, paper drafts, and diagrams.
+Status: core observability model is formalized and integrated. Remaining work is an observability diagram and eventual rendered figures.
 
 ## v1.0: Stable theory note
 
