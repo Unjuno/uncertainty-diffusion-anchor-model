@@ -6,6 +6,7 @@ For stricter formulation, see:
 
 - `theory/propositions.md`
 - `theory/proofs.md`
+- `theory/observability_proofs.md`
 
 ## Proposition 1: Lost intervals do not invalidate future anchors
 
@@ -110,3 +111,82 @@ U < T - K - R
 ```
 
 Thus, in fixed-bound cases, increasing `R` can also shrink the admissible range of `U`.
+
+## Proposition 8: Observation can have non-negative decision value under ideal conditions
+
+Observation can be valuable because it allows the agent to choose an action after seeing more information.
+
+Without observation:
+
+```text
+V_no_obs = max_a E[V(a, S)]
+```
+
+With observation:
+
+```text
+E_y[max_a E[V(a, S) | y]]
+```
+
+Under ideal use of information and zero observation cost:
+
+```text
+E_y[max_a E[V(a, S) | y]] >= max_a E[V(a, S)]
+```
+
+Readable meaning:
+
+> Seeing the state before choosing can never be worse in the idealized model, because the agent can always ignore the observation and choose the same action as before.
+
+## Proposition 9: Observation is favorable when observability value is positive
+
+Define observability value:
+
+```text
+OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
+```
+
+Observation is favorable when:
+
+```text
+OV > 0
+```
+
+Readable meaning:
+
+> Observation is not automatically good. It is good only when the value of better conditional action exceeds the cost of observing.
+
+This proposition explains both:
+
+```text
+hidden upside
+hidden downside
+```
+
+The same observation can reveal that the state is better than expected or worse than expected.
+
+## Proposition 10: Fixed-target disbelief can suppress a favorable re-anchor
+
+In the fixed-target core model, the value of positional re-anchoring is:
+
+```text
+V_reanchor_core = I_position(a) + B(a) - C(a)
+```
+
+If the agent discounts the fixed target with subjective weight `pi_hat`, perceived value becomes:
+
+```text
+V_reanchor_perceived = pi_hat * I_position(a) + B(a) - C(a)
+```
+
+The agent may skip a re-anchor even though the core model favors it when:
+
+```text
+pi_hat * I_position(a) + B(a) <= C(a) < I_position(a) + B(a)
+```
+
+Readable meaning:
+
+> The target is fixed in the model, but the agent discounts it. Because of that, a useful positional observation appears not worth doing.
+
+This captures fixed-target disbelief and the false-comfort pattern.
