@@ -19,7 +19,9 @@ UDAM distinguishes absolute uncertainty from relative influence. Absolute uncert
 
 The paper further formalizes observability value: the value of an observation comes from enabling better conditional action after the state is observed. This explains both happy miscalculation, where observation reveals hidden upside, and false comfort miscalculation, where skipped observation leaves hidden downside unmanaged. Fixed-target disbelief is modeled as subjective discounting of positional information value.
 
-The paper argues that low-cost informative actions can be rational when `V(a)=I(a)+B(a)-C(a)>0` or when observation-specific value `OV>0`. It distinguishes re-anchoring from arbitrary activity and identifies boundary conditions such as misleading feedback, compulsive checking, high-cost action, non-actionable external uncertainty, and safety-critical delay.
+The paper also introduces adaptive observation cadence and adaptive expansion factor. After an initial valid observation, an agent may expand action or observation scope geometrically, but the expansion factor is constrained by adverse-boundary risk: the probability and cost of crossing a relevant boundary before the next observation.
+
+The paper argues that low-cost informative actions can be rational when `V(a)=I(a)+B(a)-C(a)>0`, when observation-specific value `OV>0`, or when expansion value exceeds observation, correction, and boundary-risk costs. It distinguishes re-anchoring from arbitrary activity and identifies boundary conditions such as misleading feedback, compulsive checking, high-cost action, non-actionable external uncertainty, and safety-critical delay.
 
 ## Core thesis
 
@@ -34,6 +36,10 @@ In practical form:
 Observability refinement:
 
 > Observation is valuable when it separates latent states and enables better conditional action.
+
+Expansion refinement:
+
+> Scope may expand after favorable observations, but expansion should be constrained by the risk of crossing a relevant adverse boundary before the next observation.
 
 ## Scope statement
 
@@ -75,15 +81,16 @@ Uncontrollable event-occurrence uncertainty is outside the core model.
 7. Re-anchoring actions
 8. Action value
 9. Observability value
-10. Propositions and proof sketches
-11. Missed re-anchor miscalculations
-12. Happy miscalculation and false comfort
-13. Failure cases and boundary conditions
-14. High-stakes examples as abstract fixed-target cases
-15. Applications
-16. Related work
-17. Limitations and deferred extensions
-18. Conclusion
+10. Adaptive observation cadence and expansion factor
+11. Propositions and proof sketches
+12. Missed re-anchor miscalculations
+13. Happy miscalculation and false comfort
+14. Failure cases and boundary conditions
+15. High-stakes examples as abstract fixed-target cases
+16. Applications
+17. Related work
+18. Limitations and deferred extensions
+19. Conclusion
 
 ## Section notes
 
@@ -247,7 +254,39 @@ OV > 0
 
 This chapter explains why observation can reveal hidden upside or hidden downside.
 
-### 10. Propositions and proof sketches
+### 10. Adaptive observation cadence and expansion factor
+
+First observation and later observations should be separated.
+
+If observation has been zero, the first valid observation often has high value.
+
+After that, repeated observation is justified only when:
+
+```text
+MOV_i > 0
+```
+
+If a response supports expansion, the next scope can be modeled as:
+
+```text
+s_{i+1} = r_i s_i
+```
+
+A default geometric pattern is:
+
+```text
+1 -> 2 -> 4 -> 8
+```
+
+However, expansion is favorable only when:
+
+```text
+B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
+```
+
+This chapter distinguishes search-energy efficiency from adverse-boundary risk.
+
+### 11. Propositions and proof sketches
 
 Include propositions on:
 
@@ -260,9 +299,12 @@ Include propositions on:
 7. fixed upper-bound conditions can constrain the unknown interval;
 8. observation can have non-negative decision value under ideal conditions;
 9. observation is favorable when `OV > 0`;
-10. fixed-target disbelief can suppress a favorable re-anchor.
+10. fixed-target disbelief can suppress a favorable re-anchor;
+11. valid re-anchor must be state-informative;
+12. useful observation can justify a conditional action switch;
+13. expansion factor is constrained by adverse boundary risk.
 
-### 11. Missed re-anchor miscalculations
+### 12. Missed re-anchor miscalculations
 
 Define the agent-side error:
 
@@ -283,7 +325,7 @@ Examples:
 - avoiding a project because the project state is unclear;
 - waiting for full confidence before diagnostic action.
 
-### 12. Happy miscalculation and false comfort
+### 13. Happy miscalculation and false comfort
 
 Happy miscalculation:
 
@@ -305,7 +347,7 @@ pi_hat * I_position(a) + B(a) <= C(a) < I_position(a) + B(a)
 
 All three are explained by observability and conditional action.
 
-### 13. Failure cases and boundary conditions
+### 14. Failure cases and boundary conditions
 
 Include:
 
@@ -319,9 +361,10 @@ Include:
 - state-belief conflation;
 - safety-critical delay;
 - observation with no actionable consequence;
-- excessive observation cost.
+- excessive observation cost;
+- expansion too large for boundary risk.
 
-### 14. High-stakes examples as abstract fixed-target cases
+### 15. High-stakes examples as abstract fixed-target cases
 
 High-stakes examples can clarify the structure:
 
@@ -334,7 +377,7 @@ re-anchoring action
 
 But public wording should remain neutral, non-operational, and abstract.
 
-### 15. Applications
+### 16. Applications
 
 Applications:
 
@@ -344,10 +387,12 @@ Applications:
 - relationship uncertainty;
 - health tracking;
 - life strategy after failure;
+- adaptive observation cadence;
+- adaptive expansion factor;
 - happy miscalculation;
 - false comfort miscalculation.
 
-### 16. Related work
+### 17. Related work
 
 Discuss overlap with:
 
@@ -357,9 +402,11 @@ Discuss overlap with:
 - active inference;
 - value of information;
 - behavioral activation;
-- cognitive anchoring.
+- cognitive anchoring;
+- exponential search and doubling strategies;
+- online algorithms and robust sequential decision rules.
 
-### 17. Limitations and deferred extensions
+### 18. Limitations and deferred extensions
 
 Deferred extensions:
 
@@ -367,9 +414,10 @@ Deferred extensions:
 - entropy or general uncertainty functional;
 - nonlinear diffusion;
 - empirical testing;
-- rendered simulations or diagrams.
+- rendered simulations or diagrams;
+- optimal expansion factor under specific loss functions.
 
-### 18. Conclusion
+### 19. Conclusion
 
 Conclude:
 
@@ -379,6 +427,10 @@ Add:
 
 > Observation is valuable when it makes action conditional on the actual state.
 
+Add:
+
+> Expansion is useful when a favorable observation supports a larger scope, but the expansion factor must be constrained by adverse-boundary risk.
+
 ## Core equations
 
 ```text
@@ -387,6 +439,8 @@ P_{t+Δt} = P_t + QΔt
 ρ = sqrt(Var(U)) / E[τ]
 V(a) = I(a) + B(a) - C(a)
 OV = E_y[max_a E[V(a, S) | y]] - max_a E[V(a, S)] - C(obs)
+s_{i+1} = r_i s_i
+B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
 ```
 
 ## Main contribution
@@ -399,9 +453,10 @@ Its distinctive contribution is the timer-derived structure:
 partial uncertainty does not imply total invalidation
 ```
 
-combined with action-value and observability rules:
+combined with action-value, observability, and expansion rules:
 
 ```text
 act only when I(a) + B(a) > C(a)
 observe only when OV > 0
+expand only when expansion value exceeds observation, correction, and boundary-risk costs
 ```
