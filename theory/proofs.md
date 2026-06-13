@@ -1,6 +1,6 @@
 # Proofs
 
-This file contains initial proof sketches. These are intentionally minimal.
+This file contains initial proof sketches. These are intentionally minimal but dimensionally explicit.
 
 ## Proof of Proposition 1
 
@@ -21,10 +21,16 @@ Var(τ | K, R) = Var(K + U + R | K, R)
 Since `K` and `R` are observed constants under the conditioning:
 
 ```text
-Var(K + U + R | K, R) = Var(U)
+Var(K + U + R | K, R) = Var(U | K, R)
 ```
 
-Therefore, the uncertainty in `τ` is exactly the uncertainty in `U`, not in `R`.
+If `U` is independent of the measurement noise in `K` and `R`, or if `K` and `R` are treated as fixed observations, this reduces to:
+
+```text
+Var(τ | K, R) = Var(U)
+```
+
+Therefore, the uncertainty in `τ` is located in `U`, not in `R`.
 
 Thus `R` remains valid information.
 
@@ -73,7 +79,62 @@ V(a) > 0
 
 then the net value of action `a` is positive under the model.
 
-Therefore `a` is favorable compared with inaction normalized to zero value.
+If inaction is normalized to:
+
+```text
+V(inaction) = 0
+```
+
+then:
+
+```text
+V(a) > V(inaction)
+```
+
+Therefore `a` is favorable compared with inaction under the model.
+
+## Proof sketch of Proposition 4
+
+Assume uncertainty grows without anchors by:
+
+```text
+P_{t+Δt} = P_t + QΔt
+```
+
+Now suppose a re-anchoring action occurs at discrete times:
+
+```text
+t_1, t_2, ..., t_n
+```
+
+and each action reduces uncertainty by an amount `r_i >= 0` after local diffusion.
+
+A simple recurrence is:
+
+```text
+P_{i+1} = P_i + QΔt_i - r_i
+```
+
+where:
+
+- `Δt_i` is the time since the previous anchor;
+- `r_i` is uncertainty reduction from the next re-anchor.
+
+If:
+
+```text
+r_i > 0
+```
+
+then the uncertainty after action is lower than it would have been under pure diffusion:
+
+```text
+P_i + QΔt_i - r_i < P_i + QΔt_i
+```
+
+Therefore repeated informative re-anchors constrain uncertainty relative to the no-action trajectory.
+
+This does not prove that any frequency is optimal. It proves only comparative containment against unchecked diffusion, assuming positive uncertainty reduction and acceptable cost.
 
 ## Proof of Proposition 5
 
@@ -134,3 +195,9 @@ For action value:
 ```
 
 All core equations are dimensionally consistent under the stated definitions.
+
+## Current proof status
+
+These are proof sketches, not final formal proofs.
+
+The next formal step is to specify whether `P_t` is always variance, covariance, entropy, or a more general uncertainty functional.
