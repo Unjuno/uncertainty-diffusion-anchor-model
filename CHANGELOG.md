@@ -1,5 +1,42 @@
 # Changelog
 
+## 0.7.20 - Observation value decision visual
+
+Continued Stage 3 visual explanation with an observation-value decision diagram.
+
+Added:
+
+- `assets/diagrams/observation_value_decision.mmd`
+
+Changed:
+
+- `docs/32_visual_explanation_layer.md` now documents the third Stage 3 visual artifact.
+- `assets/diagrams/README.md` now lists the observation value decision diagram.
+- ROADMAP now marks the observation-value decision diagram source as added.
+
+Core result:
+
+```text
+The observation-value decision diagram separates state-informativeness from favorability.
+A result y must be observable, state-informative, action-changing, and cost-justified before it becomes favorable.
+```
+
+Design constraints preserved:
+
+```text
+state-informative != favorable
+informative does not imply actionable
+a(y) != a_0 is required for action improvement
+OV > 0 is required after observation cost
+curiosity alone is not enough
+```
+
+Status:
+
+- Stage 3 now has three Mermaid visual sources.
+- The next visual artifact should cover expansion with boundary risk.
+- Japanese expansion remains deferred until English visual structure stabilizes.
+
 ## 0.7.19 - Anchor reanchor timeline visual
 
 Continued Stage 3 visual explanation with a timer-seed timeline diagram.
