@@ -1,5 +1,42 @@
 # Changelog
 
+## 0.7.15 - Active inference literature verification
+
+Continued Stage 2 literature verification with active inference and epistemic value.
+
+Added:
+
+- `docs/29_literature_verification_active_inference.md`
+
+Changed:
+
+- `notes/literature_verification.md` now marks active inference / epistemic value as verified first-pass support for epistemic action and information-seeking policy selection.
+- `docs/17_literature_support_map.md` now records active inference as direct support for epistemic action, partial support for UDAM's practical `I(a)` term, and no support for treating `I(a)` as expected free energy without a formal mapping.
+- ROADMAP now records active inference / epistemic value as part of the active Stage 2 verification sequence.
+
+Core result:
+
+```text
+active inference -> direct support for epistemic action and information-seeking policy selection
+expected free energy literature -> partial alignment with UDAM's I(a) term
+active inference -> not support for treating I(a) as expected free energy without formal mapping
+```
+
+Required wording corrections:
+
+```text
+I(a) != expected free energy unless formally mapped
+epistemic value != automatic favorability
+action selection != execution mapping
+active inference supports one component, not the whole timer-derived UDAM synthesis
+```
+
+Status:
+
+- Stage 2 has verified one more literature area.
+- The next literature check should cover behavioral activation or shaping / successive approximations.
+- Japanese expansion remains deferred until English structure stabilizes.
+
 ## 0.7.14 - Implementation intentions literature verification
 
 Continued Stage 2 literature verification with implementation intentions and if-then planning.
