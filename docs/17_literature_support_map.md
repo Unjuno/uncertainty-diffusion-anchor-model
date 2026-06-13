@@ -215,7 +215,79 @@ UDAM expression:
 small valid observation -> favorable result -> expand scope
 ```
 
-## 9. What the literature supports
+## 9. Exponential search and doubling strategies
+
+UDAM claim:
+
+```text
+when useful scale is unknown, the agent can expand scope geometrically after successful probes
+```
+
+Nearby literature:
+
+- exponential search;
+- doubling search;
+- geometric search;
+- unbounded search over ordered domains.
+
+UDAM expression:
+
+```text
+s_{i+1} = r_i s_i
+```
+
+Default example:
+
+```text
+1 -> 2 -> 4 -> 8
+```
+
+Interpretation:
+
+```text
+previous scope was safe or useful -> test a larger scope
+```
+
+UDAM differs by adding adverse boundary risk:
+
+```text
+P_boundary(i) * C_boundary
+```
+
+## 10. Online algorithms and robust decision rules
+
+UDAM claim:
+
+```text
+when future duration or boundary location is unknown, the agent needs a robust sequential rule rather than a perfect offline optimum
+```
+
+Nearby literature:
+
+- online algorithms;
+- competitive analysis;
+- ski-rental-type tradeoffs;
+- robust sequential decision-making.
+
+UDAM interpretation:
+
+```text
+choose expansion under uncertainty, knowing that the offline optimum is unavailable
+```
+
+The practical question is not always:
+
+```text
+what is the perfect expansion factor?
+```
+
+but often:
+
+```text
+what expansion factor is not too bad under uncertainty?
+```
+
+## 11. What the literature supports
 
 The literature supports these parts:
 
@@ -228,9 +300,11 @@ exploration and exploitation must be balanced
 actions can be chosen for epistemic value
 if-then mappings improve action execution
 small steps can support gradual expansion
+geometric expansion can reduce search cost when scale is unknown
+online rules can be useful when offline optimum is unavailable
 ```
 
-## 10. What remains UDAM-specific
+## 12. What remains UDAM-specific
 
 UDAM-specific synthesis:
 
@@ -243,10 +317,10 @@ The distinctive contribution is not a new theorem replacing decision theory.
 The distinctive contribution is the practical unification:
 
 ```text
-when you feel unable to conclude because the anchor is lost, do not globally invalidate the future; take one valid local observation, map the result, and expand only when the response supports expansion
+when you feel unable to conclude because the anchor is lost, do not globally invalidate the future; take one valid local observation, map the result, and expand only when the response supports expansion and boundary risk allows it
 ```
 
-## 11. Current research task
+## 13. Current research task
 
 For a future paper, the next step is to turn this map into a formal related-work section with verified citations.
 
@@ -261,4 +335,7 @@ multi-armed bandits
 active inference
 implementation intentions
 successive approximations
+exponential search
+online algorithms
+ski-rental-type tradeoffs
 ```
