@@ -163,6 +163,17 @@ Goal: clarify how much to expand action or observation scope after favorable pro
 
 Status: complete as a practical expansion layer. Future work may formalize optimal expansion factors under specific loss functions.
 
+## v0.12: Positioning and novelty
+
+Goal: prevent overclaiming and clarify that UDAM is a practical synthesis, not a replacement for existing decision theory.
+
+- [x] add positioning and novelty document
+- [x] add terminology entries for practical synthesis, timer-derived formulation, and overclaim
+- [x] update README novelty position
+- [x] link positioning note from README
+
+Status: complete as a positioning layer. Future paper drafts should use the safer novelty claim.
+
 ## v1.0: Stable theory note
 
 Goal: Publish a coherent theory note with definitions, propositions, proofs, examples, and limitations.
@@ -172,7 +183,6 @@ Remaining work:
 - refine definitions;
 - strengthen proofs;
 - add rendered figures;
-- add a formal novelty statement;
-- expand related work;
+- expand related work with verified citations;
 - add Japanese and English paper-style drafts;
-- audit notation consistency across timer, action-value, and observability layers.
+- audit notation consistency across timer, action-value, observability, and expansion layers.
