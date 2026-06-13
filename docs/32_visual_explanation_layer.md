@@ -165,6 +165,48 @@ Its main visual claim is:
 an observation is useful only when it can improve action enough to justify its cost
 ```
 
+## Fourth visual artifact
+
+The fourth Stage 3 diagram is:
+
+```text
+assets/diagrams/expansion_boundary_risk.mmd
+```
+
+It is intended to show why a favorable local result does not automatically permit expansion.
+
+It separates:
+
+```text
+local success
+candidate expansion factor r_i
+next scope s_{i+1} = r_i s_i
+expected expansion benefit
+expected information value
+observation cost
+boundary-crossing probability
+boundary cost
+correction cost
+```
+
+The diagram centers the expansion inequality:
+
+```text
+B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) C_boundary + C_correct(r_i)
+```
+
+Its main visual claim is:
+
+```text
+local success is evidence, not permission
+```
+
+and:
+
+```text
+r_i is selected, not automatically 2
+```
+
 ## Diagram inventory for Stage 3
 
 Planned Stage 3 visual set:
@@ -174,7 +216,7 @@ Planned Stage 3 visual set:
 | `one_page_udam_flow.mmd` | compact full flow from anchor loss to risk-constrained expansion | added |
 | `anchor_reanchor_timeline.mmd` | show `K + U + R` and why unknown `U` does not erase valid `R` | added |
 | `observation_value_decision.mmd` | show `state-informative != favorable`, `a(y) != a_0`, and `OV > 0` | added |
-| expansion-with-boundary-risk diagram | show why expansion is not automatic doubling | planned |
+| `expansion_boundary_risk.mmd` | show why expansion is not automatic doubling and must satisfy boundary-risk constraints | added |
 | literature-support map figure | show which components are directly supported, partial, analogy-only, unsupported | planned |
 
 ## Intended reader path
@@ -186,6 +228,7 @@ README
 -> one-page UDAM flow diagram
 -> anchor-reanchor timeline
 -> observation-value decision diagram
+-> expansion-with-boundary-risk diagram
 -> failure decision tree
 -> logical synthesis review
 -> literature support map
@@ -271,6 +314,32 @@ Curiosity is enough
 Observation guarantees action improvement
 ```
 
+## Expansion-boundary diagram text
+
+The expansion-boundary diagram should keep expansion separate from local success.
+
+Preferred node labels:
+
+```text
+Favorable local result
+Candidate expansion factor r_i
+Next scope s_{i+1} = r_i s_i
+Expansion inequality holds?
+Boundary risk acceptable?
+Expand by selected r_i
+Local success is evidence, not permission
+r_i is selected, not automatically 2
+```
+
+Avoid node labels such as:
+
+```text
+Double after success
+Local success proves global safety
+Boundary risk is negligible
+Expansion is always the next step
+```
+
 ## Status
 
 Stage 3 has started.
@@ -281,6 +350,7 @@ The current visual work adds:
 assets/diagrams/one_page_udam_flow.mmd
 assets/diagrams/anchor_reanchor_timeline.mmd
 assets/diagrams/observation_value_decision.mmd
+assets/diagrams/expansion_boundary_risk.mmd
 ```
 
 Rendered figures can be added later under:
