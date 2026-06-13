@@ -34,8 +34,9 @@ For each item, check:
 | Doubling is always optimal | exponential search / doubling search | not supported | Doubling is a useful default example in some search settings, not a universal rule |
 | Robust rules matter when the offline optimum is unavailable | online algorithms | verified: direct / partial support | See `docs/27_literature_verification_online_algorithms.md`; direct for offline optimum unavailable, partial for UDAM-specific expansion rules |
 | Repeated small cost versus one large decision | ski-rental-type tradeoffs | verified: direct / analogy support | Direct for rent-or-buy under unknown horizon; analogy for broader UDAM applications |
-| Action can be chosen partly to gain information | active inference / epistemic value | to verify | partial; UDAM is narrower |
-| If-result-then-action mapping improves usability | implementation intentions | to verify | likely practical support; next priority |
+| If-result-then-action mapping improves usability | implementation intentions | verified: direct support | See `docs/28_literature_verification_implementation_intentions.md`; direct support for cue-response execution mapping |
+| Concrete cue and feasible response improve execution | implementation intentions | verified: direct support | Supports observable if-part and actionable then-part; does not prove observation validity or action value |
+| Action can be chosen partly to gain information | active inference / epistemic value | to verify | partial; next priority |
 | Small successful steps can justify gradual expansion | shaping / successive approximations | to verify | partial; be careful outside behavioral context |
 | Small action after collapse can matter | behavioral activation | to verify | partial; avoid clinical overclaiming |
 
@@ -49,6 +50,7 @@ Current verified notes:
 - `docs/25_literature_verification_multi_armed_bandits.md`
 - `docs/26_literature_verification_exponential_search.md`
 - `docs/27_literature_verification_online_algorithms.md`
+- `docs/28_literature_verification_implementation_intentions.md`
 
 Key result:
 
@@ -60,6 +62,7 @@ sequential analysis / stopping rules -> direct support for treating repeated obs
 multi-armed bandits -> direct support for action-with-feedback and exploration-exploitation tradeoff; partial support for UDAM's practical small-probe framing
 exponential search -> direct support for geometric expansion under unknown scale in structured search domains; partial support for UDAM expansion; no support for universal doubling
 online algorithms -> direct support for unavailable offline optimum and robust-rule framing; partial support for UDAM-specific expansion rules unless a formal cost model is defined
+implementation intentions -> direct support for if-result-then-action execution mapping; not support for observation validity or positive action value
 ```
 
 ## Current caution
@@ -87,6 +90,8 @@ unknown scale != unknown state
 doubling is not always optimal
 robust != optimal
 competitive ratio != expected utility
+execution support != value support
+if-then planning does not make an observation valid
 ```
 
 ## Priority
@@ -101,19 +106,19 @@ sequential analysis / stopping rules: verified first pass
 multi-armed bandits / exploration-exploitation: verified first pass
 exponential search / doubling strategies: verified first pass
 online algorithms / robust decision rules: verified first pass
+implementation intentions / if-then planning: verified first pass
 ```
 
 Second priority:
 
 ```text
-implementation intentions
 active inference
+behavioral activation
 ```
 
 Third priority:
 
 ```text
-behavioral activation
 shaping / successive approximations
 ski-rental-type tradeoffs: verified as direct/analogy under online algorithms
 ```
