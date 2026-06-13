@@ -1,5 +1,43 @@
 # Changelog
 
+## 0.7.12 - Exponential search literature verification
+
+Continued Stage 2 literature verification with exponential search and doubling strategies.
+
+Added:
+
+- `docs/26_literature_verification_exponential_search.md`
+
+Changed:
+
+- `notes/literature_verification.md` now marks exponential search / doubling strategies as verified first-pass support for geometric expansion under unknown scale in structured search settings.
+- `docs/17_literature_support_map.md` now records exponential search as direct support for geometric expansion in ordered or spatial search settings, partial support for UDAM's practical expansion-factor layer, and only analogy-level support for boundary-risk-constrained expansion.
+- ROADMAP now records exponential search / doubling strategies as part of the active Stage 2 verification sequence.
+
+Core result:
+
+```text
+exponential search -> direct support for geometric expansion under unknown scale in structured search domains
+doubling -> partial support as a common default example, not a universal optimum
+online search / cow-path literature -> partial support for bounded-overhead search under unknown distance
+```
+
+Required wording corrections:
+
+```text
+unknown scale != unknown state
+doubling is not always optimal
+local probe success != global expansion permission
+boundary-risk-constrained expansion remains UDAM-specific
+exponential search supports one component, not the whole timer-derived UDAM synthesis
+```
+
+Status:
+
+- Stage 2 has verified one more literature area.
+- The next literature check should cover online algorithms / robust decision rules.
+- Japanese expansion remains deferred until English structure stabilizes.
+
 ## 0.7.11 - Multi-armed bandit literature verification
 
 Continued Stage 2 literature verification with multi-armed bandits and exploration-exploitation.
