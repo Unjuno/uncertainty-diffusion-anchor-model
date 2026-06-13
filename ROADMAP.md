@@ -26,6 +26,8 @@ Goal: Add structured application examples.
 - [x] relationship uncertainty
 - [x] life strategy after failure
 - [x] missed re-anchor miscalculation examples
+- [x] happy miscalculation examples
+- [x] false comfort miscalculation examples
 
 Status: initial examples added. Further examples can be added later.
 
@@ -83,6 +85,25 @@ Goal: keep examples useful while preventing misreadings.
 
 Status: public-facing clarification is mostly complete. Remaining work is visual rendering.
 
+## v0.7: Observability value model
+
+Goal: formalize the value of observation as conditional-action value.
+
+- [x] add observability value model
+- [x] add observability variables to `theory/variables.md`
+- [x] add observability propositions
+- [x] add observability proof sketches
+- [x] add upside uncertainty / happy miscalculation
+- [x] add downside uncertainty / false comfort miscalculation
+- [x] add fixed-target disbelief inequality
+- [x] sync observability model into README
+- [ ] sync observability model into `docs/10_formal_refinement.md`
+- [ ] sync observability model into `drafts/paper_outline.md`
+- [ ] add observability consistency checks
+- [ ] add an observability diagram
+
+Status: core observability model is formalized. Remaining work is integration into formal-refinement docs, paper drafts, and diagrams.
+
 ## v1.0: Stable theory note
 
 Goal: Publish a coherent theory note with definitions, propositions, proofs, examples, and limitations.
@@ -94,4 +115,5 @@ Remaining work:
 - add rendered figures;
 - add a formal novelty statement;
 - expand related work;
-- add Japanese and English paper-style drafts.
+- add Japanese and English paper-style drafts;
+- audit notation consistency across timer, action-value, and observability layers.
