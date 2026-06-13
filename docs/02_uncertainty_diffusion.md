@@ -106,17 +106,42 @@ In this case, the agent's current estimate might be read as roughly:
 
 where `5 s` is the standard deviation, not the variance.
 
+## Diffusion versus dilution
+
+The timer model now has a separate three-layer interpretation:
+
+```text
+τ = K + U + R
+```
+
+In that timer-specific setting, adding `R` does not necessarily reduce the absolute variance of `U`.
+
+Instead, it can dilute the relative influence of `U`:
+
+```text
+ρ(R) = sqrt(Var(U)) / E[τ]
+```
+
+This is different from uncertainty diffusion.
+
+- **Diffusion**: uncertainty grows during unanchored time.
+- **Dilution**: a known interval grows around an already-localized unknown interval.
+
+The two can coexist, but they are not the same claim.
+
 ## Interpretation
 
 The model does not claim that every state diffuses equally. It says:
 
 > In domains where the agent lacks anchoring observations, uncertainty about the current state may increase with time.
 
+The diffusion equation is a minimal abstraction, not a universal law. Some domains may have nonlinear, bounded, or state-dependent uncertainty growth.
+
 ## Examples of diffusion
 
 | Domain | State | Why uncertainty grows |
 |---|---|---|
-| timer | elapsed time | uncounted intervals accumulate |
+| timer | elapsed time | uncounted intervals accumulate before re-anchoring |
 | learning | skill level | forgetting and unknown retention |
 | work | project status | dependencies change while unattended |
 | relationship | other person's attitude | unobserved reactions accumulate |
