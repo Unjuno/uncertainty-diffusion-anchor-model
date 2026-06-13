@@ -299,12 +299,11 @@ Do not perform broad repository rewrites while making a routing or policy edit.
 Good next tasks:
 
 ```text
-1. Safe CHANGELOG catch-up insertion.
-2. Paper draft cleanup under AGENTS.md and docs/43 notation constraints.
-3. Optional older diagram rendering.
-4. English-stable Japanese sync.
-5. Optional simulation extensions, still labeled toy demonstrations / sanity checks.
-6. Empirical validation only with a concrete domain, operationalized variables, data plan, and falsifiable criterion.
+1. Safe CHANGELOG catch-up insertion only if a patch-safe path is available.
+2. Optional older diagram rendering.
+3. English-stable Japanese sync.
+4. Optional simulation extensions, still labeled toy demonstrations / sanity checks.
+5. Empirical validation only with a concrete domain, operationalized variables, data plan, and falsifiable criterion.
 ```
 
 Tasks no longer immediate blockers after the latest stabilization pass:
@@ -316,6 +315,7 @@ contraction rule decision
 README / overview compression decision
 publication-readiness audit
 remaining-work register
+paper draft cleanup first pass
 ```
 
 Bad next tasks:
