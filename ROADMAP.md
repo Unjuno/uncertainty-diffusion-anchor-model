@@ -244,6 +244,21 @@ Goal: improve reader comprehension using diagrams and compact visual summaries.
 
 Status: Stage 3 is first-pass complete as a visual explanation layer. The five Stage 3 Mermaid sources are available under `assets/diagrams/`, and their rendered SVG counterparts are available under `assets/figures/`.
 
+## v0.17: Project-note consolidation
+
+Goal: reduce navigation cost and prevent source-of-truth drift across README, docs, notes, theory, examples, assets, and drafts.
+
+- [x] add project-note consolidation map
+- [x] link consolidation map from README
+- [ ] audit README for duplicated long explanations
+- [ ] audit `docs/00_overview.md` for duplicated long explanations
+- [ ] route literature claims to `docs/17_literature_support_map.md` and `notes/literature_verification.md`
+- [ ] route formal claims to `theory/` and `docs/10_formal_refinement.md`
+- [ ] route visual claims to `docs/32_visual_explanation_layer.md` and `assets/figures/`
+- [ ] decide whether any draft files need source-of-truth disclaimers
+
+Status: Stage 4 has started. `docs/33_project_note_consolidation.md` defines first-pass document roles and source-of-truth assignments. No documents are deprecated yet.
+
 ## v1.0: Stable theory note
 
 Goal: Publish a coherent theory note with definitions, propositions, proofs, examples, and limitations.
@@ -252,6 +267,7 @@ Remaining work:
 
 - refine definitions;
 - optionally render older non-Stage-3 diagrams;
+- continue Stage 4 project-note consolidation;
 - expand Japanese examples only after English stabilization;
 - audit notation consistency across timer, action-value, observability, and expansion layers;
 - decide whether contraction needs a separate rule from expansion;
