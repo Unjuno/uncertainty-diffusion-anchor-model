@@ -64,6 +64,30 @@ This may be useful in another theory, but it weakens the minimal timer argument 
 
 UDAM's core timer argument intentionally keeps only the second.
 
+## Why stochastic occurrence weakens the advantage
+
+If the target may not occur, the value of re-anchoring can be discounted by event occurrence uncertainty.
+
+A simplified form is:
+
+```text
+V_reanchor ≈ P(event occurs) · V_position_update - C(a)
+```
+
+If `P(event occurs)` is low or undefined, then the advantage of positional re-anchoring becomes ambiguous.
+
+This can produce a weak practical conclusion:
+
+```text
+maybe nothing needs to be done because maybe the target never occurs
+```
+
+The core timer model avoids this by assuming:
+
+```text
+fixed target, uncertain position
+```
+
 ## Local determinism, not metaphysical determinism
 
 The model does not need to claim that all reality is deterministic.
@@ -81,6 +105,25 @@ not:
 ```text
 uncertain target, uncertain position
 ```
+
+## Deferred extension
+
+A stochastic occurrence extension is possible but deferred.
+
+It would require at least:
+
+```text
+P(event occurs)
+P(position | event occurs)
+```
+
+and the action value would become something like:
+
+```text
+V(a) = P(event occurs) · I_position(a) + B(a) - C(a)
+```
+
+This is outside the core model because it changes the source of the advantage.
 
 ## Correct scope
 
