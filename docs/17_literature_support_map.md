@@ -13,6 +13,7 @@ UDAM combines existing decision-theoretic and cognitive ideas into a timer-deriv
 For detailed verification notes, see:
 
 - `docs/22_literature_verification_value_blackwell.md`
+- `docs/23_literature_verification_bayesian_experimental_design.md`
 - `notes/literature_verification.md`
 
 ## 1. Value of information
@@ -117,7 +118,8 @@ Nearby literature:
 - Bayesian experimental design;
 - expected information gain;
 - experiment utility;
-- prior-posterior update.
+- prior-posterior update;
+- adaptive Bayesian design.
 
 UDAM expression:
 
@@ -125,11 +127,41 @@ UDAM expression:
 observe y -> update p(S | y) -> choose a(y)
 ```
 
+Interpretation:
+
+```text
+an observation is selected because its expected result can improve belief, prediction, or downstream action enough to justify the observation
+```
+
 Verification status:
 
 ```text
-to verify
+verified: direct support for utility-guided observation choice
+verified: direct support for prior-posterior updating
+verified: partial to direct support for conditional action when utility is decision-relevant
 ```
+
+Correction:
+
+```text
+Bayesian experimental design supports the observation-selection component, not the full timer-derived UDAM synthesis.
+```
+
+Recommended wording:
+
+```text
+Bayesian experimental design directly supports UDAM's utility-guided observation-selection layer, while UDAM's anchor-loss and re-anchor framing remain UDAM-specific.
+```
+
+Avoid:
+
+```text
+UDAM is Bayesian experimental design.
+```
+
+See:
+
+- `docs/23_literature_verification_bayesian_experimental_design.md`
 
 ## 4. Sequential analysis
 
@@ -162,6 +194,12 @@ Verification status:
 
 ```text
 to verify
+```
+
+Next check:
+
+```text
+sequential analysis should be used to verify repeated observation, stopping, and MOV_i wording
 ```
 
 ## 5. Multi-armed bandits and exploration-exploitation
@@ -377,7 +415,9 @@ The literature currently supports these parts at different levels:
 ```text
 information can have decision value: verified direct support
 more informative signals can improve action choice: verified partial/direct alignment
-sampling can be adaptive: to verify
+utility-guided observation choice: verified direct support
+prior-observation-posterior updating: verified direct support
+conditional action after observation: verified partial to direct support when utility is decision-relevant
 sequential observation needs stopping rules: to verify
 exploration and exploitation must be balanced: to verify
 actions can be chosen for epistemic value: to verify
@@ -412,18 +452,19 @@ Verified first pass:
 ```text
 value of information
 Blackwell informativeness
+Bayesian experimental design
 ```
 
 Priority remaining sources:
 
 ```text
-Bayesian experimental design
 sequential analysis
 multi-armed bandits
-active inference
-implementation intentions
-successive approximations
 exponential search
 online algorithms
+implementation intentions
+active inference
+successive approximations
+behavioral activation
 ski-rental-type tradeoffs
 ```
