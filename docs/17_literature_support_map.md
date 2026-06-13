@@ -15,6 +15,7 @@ For detailed verification notes, see:
 - `docs/22_literature_verification_value_blackwell.md`
 - `docs/23_literature_verification_bayesian_experimental_design.md`
 - `docs/24_literature_verification_sequential_analysis.md`
+- `docs/25_literature_verification_multi_armed_bandits.md`
 - `notes/literature_verification.md`
 
 ## 1. Value of information
@@ -248,6 +249,8 @@ Nearby literature:
 - multi-armed bandit problems;
 - exploration-exploitation tradeoff;
 - adaptive sampling;
+- regret minimization;
+- action-with-feedback models;
 - explore-then-commit strategies.
 
 UDAM interpretation:
@@ -265,8 +268,44 @@ probe small -> observe response -> expand when favorable
 Verification status:
 
 ```text
-to verify
+verified: direct support for action-with-feedback structure
+verified: direct support for exploration-exploitation as a value tradeoff
+verified: partial support for UDAM's practical post-anchor-loss small-probe framing
 ```
+
+Correction:
+
+```text
+Bandit theory supports probes as actions that produce feedback, but it does not imply that any small action is useful.
+```
+
+Additional correction:
+
+```text
+Local probe success does not imply global expansion permission or automatic doubling.
+```
+
+Recommended wording:
+
+```text
+Multi-armed bandit theory supports UDAM's small-probe layer in a limited sense: an action can both produce payoff and reveal information for later action selection.
+```
+
+Avoid:
+
+```text
+Any small action is useful.
+```
+
+Avoid:
+
+```text
+UDAM is a bandit algorithm.
+```
+
+See:
+
+- `docs/25_literature_verification_multi_armed_bandits.md`
 
 ## 6. Active inference and epistemic value
 
@@ -402,6 +441,12 @@ Verification status:
 to verify
 ```
 
+Next check:
+
+```text
+exponential search should verify whether geometric expansion is supported under unknown scale, and where automatic doubling overclaims
+```
+
 ## 10. Online algorithms and robust decision rules
 
 UDAM claim:
@@ -454,7 +499,8 @@ conditional action after observation: verified partial to direct support when ut
 repeated observation as a continue-or-stop problem: verified direct support
 stopping-rule discipline for checking loops: verified direct support
 MOV_i as a specific formula: verified partial support only; UDAM-specific notation
-exploration and exploitation must be balanced: to verify
+action-with-feedback small probes: verified direct / partial support
+exploration-exploitation as value tradeoff: verified direct support
 actions can be chosen for epistemic value: to verify
 if-then mappings improve action execution: to verify
 small steps can support gradual expansion: to verify
@@ -489,12 +535,12 @@ value of information
 Blackwell informativeness
 Bayesian experimental design
 sequential analysis / stopping rules
+multi-armed bandits / exploration-exploitation
 ```
 
 Priority remaining sources:
 
 ```text
-multi-armed bandits
 exponential search
 online algorithms
 implementation intentions
