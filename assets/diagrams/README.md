@@ -16,6 +16,7 @@ The diagrams are written in Mermaid where possible so they can be edited as text
 - `adaptive_expansion_factor.mmd`: expansion factor selection constrained by adverse boundary risk.
 - `full_udam_flow.mmd`: full practical UDAM flow from anchor loss to risk-constrained expansion.
 - `one_page_udam_flow.mmd`: compact Stage 3 entry-point flow from anchor loss to observation, action, repeated checking, and boundary-risk-constrained expansion.
+- `anchor_reanchor_timeline.mmd`: Stage 3 timeline showing `K + U + R` and why unknown `U` does not automatically invalidate a valid future re-anchor `R`.
 - `positioning_map.mmd`: positioning map showing UDAM as a timer-derived practical synthesis of existing ideas.
 
 ## Rendering
