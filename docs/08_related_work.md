@@ -71,6 +71,45 @@ See:
 - `theory/conditional_action_switch.md`
 - `theory/valid_reanchor_condition.md`
 
+## Adaptive expansion, exponential search, and online rules
+
+UDAM's adaptive expansion factor is related to search methods that expand the tested range when the useful scale is unknown.
+
+A basic UDAM form is:
+
+```text
+s_{i+1} = r_i s_i
+```
+
+A common geometric pattern is:
+
+```text
+1 -> 2 -> 4 -> 8
+```
+
+Nearby concepts:
+
+- exponential search;
+- doubling search;
+- geometric search;
+- online algorithms;
+- robust sequential decision rules.
+
+The similarity is that the agent does not know the useful scale in advance, so it uses a sequential rule rather than an offline optimum.
+
+UDAM's additional constraint is adverse boundary risk:
+
+```text
+P_boundary(i) * C_boundary
+```
+
+This makes the expansion problem different from pure search. The agent is not only trying to locate a useful scale efficiently. The agent must also avoid crossing a relevant adverse boundary before the next observation.
+
+See:
+
+- `docs/18_adaptive_expansion_factor.md`
+- `theory/propositions.md` Proposition 13
+
 ## Active inference
 
 Active inference also frames action as a way to reduce uncertainty and prediction error.
@@ -95,4 +134,4 @@ UDAM should not claim full mathematical originality.
 
 A safer claim is:
 
-> UDAM is a timer-derived cognitive and decision-theoretic formulation that integrates uncertainty diffusion, re-anchoring, state-informative observation, and small informative actions into a practical theory of recovery after anchor loss.
+> UDAM is a timer-derived cognitive and decision-theoretic formulation that integrates uncertainty diffusion, re-anchoring, state-informative observation, adaptive expansion, and boundary-risk-constrained small informative actions into a practical theory of recovery after anchor loss.
