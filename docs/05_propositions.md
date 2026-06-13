@@ -232,3 +232,29 @@ Readable meaning:
 > The point of observation is not observation itself. The point is that different results can justify different next actions.
 
 This is the Monty-Hall-type structure in UDAM.
+
+## Proposition 13: Expansion must account for adverse boundary risk
+
+After a favorable small observation, the agent may expand the next scope.
+
+```text
+s_{i+1} = r_i s_i
+```
+
+For example:
+
+```text
+1 -> 2 -> 4 -> 8
+```
+
+This can reduce search energy.
+
+However, larger expansion is favorable only when expected expansion value exceeds observation, correction, and boundary-crossing costs:
+
+```text
+B_expand(r_i) + I_expand(r_i) > C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
+```
+
+Readable meaning:
+
+> Doubling can be a useful default, but it is not a universal optimum. The next expansion should be smaller when there is meaningful risk that a relevant adverse boundary will be crossed before the next observation.
