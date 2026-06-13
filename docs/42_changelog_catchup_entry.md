@@ -1,14 +1,14 @@
 # 42 Changelog Catch-up Entry
 
-This document stores a compact catch-up entry intended for `CHANGELOG.md`.
+This document stores compact catch-up entries intended for `CHANGELOG.md`.
 
 It is kept separate because `CHANGELOG.md` is already large, and direct full-file replacement should be avoided unless the full file can be safely patched.
 
 ## Intended placement
 
-This entry should be inserted near the top of `CHANGELOG.md`, above the current `0.7.22` entry.
+These entries should be inserted near the top of `CHANGELOG.md`, above the current `0.7.22` entry.
 
-## Proposed changelog entry
+## Proposed changelog entry: 0.8.0
 
 ```markdown
 ## 0.8.0 - Stage 3, Stage 4, and simulation sanity-check catch-up
@@ -66,10 +66,70 @@ Details:
 - Changelog policy: `docs/41_changelog_maintenance_policy.md`
 ```
 
+## Proposed changelog entry: 0.9.0
+
+```markdown
+## 0.9.0 - Agent guidance and stabilization-pass catch-up
+
+Summary:
+
+- Added repository editing guidance for future agents and automated assistants.
+- Recorded a first-pass notation consistency audit.
+- Recorded a contraction-rule decision without adding a new contraction theory layer.
+- Recorded publication-readiness, README / overview compression, and remaining-work decisions.
+
+Added:
+
+- `AGENTS.md`
+- `docs/43_notation_consistency_audit.md`
+- `docs/44_contraction_rule_decision.md`
+- `docs/45_publication_readiness_audit.md`
+- `docs/46_readme_overview_compression_decision.md`
+- `docs/47_remaining_work_register.md`
+- `docs/48_stabilization_pass_summary.md`
+
+Changed:
+
+- README now links the agent guidance and stabilization-pass documents from Development notes.
+- ROADMAP now records the stabilization pass as milestone-level work.
+- `AGENTS.md` now treats notation, contraction, publication-readiness, compression, and remaining-work decisions as first-pass complete.
+
+Interpretation:
+
+- This is a repository-stabilization milestone, not a new theory milestone.
+- No new empirical validation is claimed.
+- No separate contraction equation is introduced.
+- Broad README / overview compression is not an immediate blocker.
+
+Guardrails preserved:
+
+```text
+state-informative != favorable
+small != useful
+local success != global expansion permission
+component support does not prove full synthesis
+toy simulations are not empirical validation
+visual artifacts summarize theory; they do not authorize theory
+drafts present the model; drafts do not define the model
+```
+
+Details:
+
+- Agent guidance: `AGENTS.md`
+- Notation audit: `docs/43_notation_consistency_audit.md`
+- Contraction decision: `docs/44_contraction_rule_decision.md`
+- Publication readiness: `docs/45_publication_readiness_audit.md`
+- Compression decision: `docs/46_readme_overview_compression_decision.md`
+- Remaining work: `docs/47_remaining_work_register.md`
+- Stabilization summary: `docs/48_stabilization_pass_summary.md`
+```
+
 ## Current decision
 
-Do not expand this into many missed micro-entries.
+Do not expand these into many missed micro-entries.
 
-One compact catch-up entry is sufficient.
+The compact catch-up entries are sufficient.
 
 Future changelog entries should follow `docs/41_changelog_maintenance_policy.md`.
+
+Do not edit `CHANGELOG.md` by broad full-file replacement unless a safe patch path is available.
