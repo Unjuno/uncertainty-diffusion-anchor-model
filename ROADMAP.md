@@ -191,6 +191,21 @@ Goal: make the model easier to read without creating a separate Japanese reposit
 
 Status: complete as a readability and maintenance layer. Future work may expand Japanese examples and verify literature references.
 
+## v0.14: Logical synthesis review
+
+Goal: check whether the current model layers are logically coherent and whether any contradictions remain.
+
+- [x] review propositions, variables, formal refinement, and consistency notes
+- [x] add logical synthesis review
+- [x] distinguish valid observation from favorable observation
+- [x] clarify `I(a)` versus `OV`
+- [x] clarify first observation versus repeated observation
+- [x] clarify expansion versus automatic doubling
+- [x] clarify local observation versus global conclusion
+- [x] link logical synthesis review from theory index
+
+Status: complete as a coherence-check layer. No major internal contradiction found; watch items are documented.
+
 ## v1.0: Stable theory note
 
 Goal: Publish a coherent theory note with definitions, propositions, proofs, examples, and limitations.
@@ -201,4 +216,5 @@ Remaining work:
 - add rendered figures;
 - expand related work with verified citations;
 - expand Japanese examples;
-- audit notation consistency across timer, action-value, observability, and expansion layers.
+- audit notation consistency across timer, action-value, observability, and expansion layers;
+- decide whether contraction needs a separate rule from expansion.
