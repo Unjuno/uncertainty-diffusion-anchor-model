@@ -42,11 +42,18 @@ V(a) = I(a) + B(a) - C(a)
 
 In the timer model, re-anchoring does not necessarily reduce absolute uncertainty in `U`.
 
-The safer interpretation is three-layered:
+The safer interpretation is layered:
 
-1. `Var(U)` may remain unchanged.
-2. relative uncertainty can be diluted as `R` grows.
+1. `Var(U)` may remain unchanged or increase.
+2. relative uncertainty can still be diluted if the reference scale grows faster than the uncertainty scale.
 3. an upper bound can constrain the admissible range of `U`.
+
+A compact version:
+
+```text
+absolute uncertainty may increase
+relative influence may decrease
+```
 
 ## State-belief caution
 
