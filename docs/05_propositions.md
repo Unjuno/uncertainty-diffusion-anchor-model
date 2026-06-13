@@ -190,3 +190,45 @@ Readable meaning:
 > The target is fixed in the model, but the agent discounts it. Because of that, a useful positional observation appears not worth doing.
 
 This captures fixed-target disbelief and the false-comfort pattern.
+
+## Proposition 11: A valid re-anchor must be state-informative
+
+A re-anchor is not just any small action.
+
+It must return information about the relevant hidden state.
+
+Formal condition:
+
+```text
+P(y | S) != P(y)
+```
+
+Posterior-change form:
+
+```text
+P(S | y) != P(S)
+```
+
+Readable meaning:
+
+> A future observation remains valid after anchor loss only if it is informative about the state being estimated.
+
+This explains why the timer case works: `R` matters because it is part of the elapsed-position decomposition.
+
+## Proposition 12: A useful observation can justify a conditional action switch
+
+A useful observation can change the next action.
+
+Let `a_0` be the action before observation and `a(y)` the action after observation.
+
+Conditional switch condition:
+
+```text
+a(y) != a_0
+```
+
+Readable meaning:
+
+> The point of observation is not observation itself. The point is that different results can justify different next actions.
+
+This is the Monty-Hall-type structure in UDAM.
