@@ -16,6 +16,10 @@ Each example should distinguish **state change** from **belief uncertainty**.
 | `missed_reanchor_miscalculation.md` | miscalculation | cases where UDAM applies but the agent fails to use it |
 | `happy_miscalculation.md` | upside example | cases where observation reveals the state is better than expected |
 | `false_comfort_miscalculation.md` | downside example | cases where lack of observation hides a worse-than-expected state |
+| `failure_state_uninformative_observation.md` | failure example | action feels like checking but is not informative about the relevant state |
+| `failure_checking_loop.md` | failure example | repeated observation loses marginal decision value |
+| `failure_over_expansion.md` | failure example | favorable small probe is overextended into an excessive scope |
+| `failure_local_to_global_judgment.md` | failure example | local observation is misused as a global conclusion |
 | `concrete_learning_reanchor.md` | concrete daily case | one representative problem as learning re-anchor |
 | `concrete_work_reanchor.md` | concrete daily case | task list inspection as project re-anchor |
 | `concrete_relationship_reanchor.md` | concrete daily case | low-pressure message as social re-anchor |
@@ -155,6 +159,33 @@ The action is still justified only when:
 
 ```text
 V(a) > 0
+```
+
+## Failure examples
+
+Failure examples show where UDAM weakens or is misused.
+
+They are different from missed-application examples.
+
+A missed application says:
+
+```text
+UDAM would apply, but the agent fails to use it
+```
+
+A failure example says:
+
+```text
+UDAM does not apply cleanly, or the agent applies it to the wrong object
+```
+
+Common failure conditions:
+
+```text
+P(y | S) = P(y)
+a(y) = a_0
+MOV_i <= 0
+B_expand(r_i) + I_expand(r_i) <= C_obs(r_i) + P_boundary(i) * C_boundary + C_correct(r_i)
 ```
 
 ## High-stakes examples
