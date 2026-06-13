@@ -1,0 +1,47 @@
+flowchart TD
+    A[Candidate observation y] --> B{Observable result?}
+
+    B -- No --> B1[Not usable as observation]
+    B -- Yes --> C{State-informative?}
+
+    C -- No --> C1[Not a valid re-anchor]
+    C -- Yes --> D[Update belief p(S | y)]
+
+    D --> E{Does feasible action change?}
+
+    E -- No --> E1[Informative but not actionable]
+    E -- Yes --> F[Define conditional action a(y)]
+
+    F --> G[Compare with default action a_0]
+    G --> H{a(y) != a_0?}
+
+    H -- No --> H1[No decision improvement]
+    H -- Yes --> I[Compute observation value]
+
+    I --> J[OV = E_y max_a E[V(a,S)|y] - max_a E[V(a,S)] - C(obs)]
+    J --> K{OV > 0?}
+
+    K -- No --> K1[State-informative but not favorable]
+    K -- Yes --> L[Favorable observation]
+
+    L --> M[Use y to guide action]
+    M --> N[Continue only while later MOV_i > 0]
+
+    B1 --> R[Failure or redesign]
+    C1 --> R
+    E1 --> R
+    H1 --> R
+    K1 --> R
+
+    R --> S[State-informative is not the same as favorable]
+    L --> T[Observation is useful only through better action after cost]
+
+    classDef ok fill:#d1e7dd,stroke:#0f5132,color:#222;
+    classDef warn fill:#fff3cd,stroke:#b58100,color:#222;
+    classDef stop fill:#f8d7da,stroke:#842029,color:#222;
+    classDef formula fill:#e2e3e5,stroke:#41464b,color:#222;
+
+    class L,M,N,T ok;
+    class S warn;
+    class B1,C1,E1,H1,K1,R stop;
+    class J formula;
