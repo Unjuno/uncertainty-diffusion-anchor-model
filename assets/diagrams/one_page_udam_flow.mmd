@@ -1,0 +1,57 @@
+flowchart TD
+    A[Anchor lost] --> B[Do not globally invalidate]
+    B --> C[Name target state S]
+    C --> D{Is action possible?}
+
+    D -- No --> D1[Stop or seek external support]
+    D -- Yes --> E[Choose one small bounded observation or action]
+
+    E --> F{Is result y observable?}
+    F -- No --> F1[Change observation mode]
+    F -- Yes --> G{State-informative?}
+
+    G -- No --> G1[Not a valid re-anchor]
+    G -- Yes --> H{Does action change?}
+
+    H -- No --> H1[Information may be true but not actionable]
+    H -- Yes --> I{Value greater than cost?}
+
+    I -- No --> I1[Do not use this action]
+    I -- Yes --> J{First observation or repeated check?}
+
+    J -- First observation --> K[Use result to update belief]
+    J -- Repeated check --> L{Marginal observation value positive?}
+
+    L -- No --> L1[Stop or switch observation mode]
+    L -- Yes --> K
+
+    K --> M{Expand scope?}
+
+    M -- No --> M1[Act locally or hold]
+    M -- Yes --> N{Boundary risk acceptable?}
+
+    N -- No --> N1[Do not expand; reduce scope]
+    N -- Yes --> O[Expand by selected factor r_i]
+
+    O --> P[Observe new result]
+    P --> Q[Re-evaluate value, cost, and boundary risk]
+    Q --> M
+
+    G1 --> R[Failure boundary]
+    H1 --> R
+    I1 --> R
+    L1 --> R
+    N1 --> R
+
+    R --> S[Local failure does not imply global invalidation]
+    O --> T[Local success does not imply global safety]
+
+    T --> Q
+
+    classDef warning fill:#fff3cd,stroke:#b58100,color:#222;
+    classDef stop fill:#f8d7da,stroke:#842029,color:#222;
+    classDef ok fill:#d1e7dd,stroke:#0f5132,color:#222;
+
+    class R,S,T warning;
+    class D1,F1,G1,H1,I1,L1,N1 stop;
+    class K,O ok;
