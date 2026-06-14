@@ -1,0 +1,37 @@
+name: Simulation plots
+
+on:
+  push:
+    paths:
+      - "simulations/**"
+      - ".github/workflows/simulation-plots.yml"
+  pull_request:
+    paths:
+      - "simulations/**"
+      - ".github/workflows/simulation-plots.yml"
+  workflow_dispatch:
+
+jobs:
+  generate-plots:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Regenerate toy simulation outputs
+        run: |
+          python simulations/udam_sanity_checks.py
+          python simulations/udam_extended_sanity_checks.py
+          python simulations/udam_repository_sensitivity_checks.py
+          python simulations/plot_sanity_checks.py
+
+      - name: Upload generated simulation plots
+        uses: actions/upload-artifact@v4
+        with:
+          name: udam-simulation-plots
+          path: simulations/plots/*.svg
