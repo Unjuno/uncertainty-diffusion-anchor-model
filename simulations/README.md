@@ -2,9 +2,9 @@
 
 This directory contains small UDAM sanity-check simulations.
 
-These simulations are demonstrations, not empirical validation.
+These simulations are toy demonstrations, not empirical validation.
 
-They are intended to check whether minimal toy models reproduce the expected qualitative behavior of UDAM.
+They are intended to check whether minimal toy models reproduce the expected qualitative pattern encoded by the repository assumptions.
 
 ## Current simulation set
 
@@ -46,15 +46,15 @@ The current simulation layer checks:
 A passing sanity check means:
 
 ```text
-the toy model reproduces the expected UDAM behavior under the chosen assumptions
+the toy model reproduces the expected qualitative pattern under the chosen toy assumptions
 ```
 
 It does not mean:
 
 ```text
-UDAM is empirically validated
-UDAM is proven in general
-UDAM is superior to existing decision theory
+empirical validation of UDAM
+general proof of UDAM
+superiority over existing decision theory
 ```
 
 ## Current first-pass result
