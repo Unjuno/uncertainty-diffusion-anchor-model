@@ -30,11 +30,12 @@ lost anchor does not imply future anchor invalidation
 
 The English theory is the source of truth for now.
 
-Japanese explanations are maintained in the same repository, but further Japanese expansion is deferred until the English structure stabilizes.
-
-Current Japanese entry point:
+Japanese explanations are maintained in the same repository. The current Japanese repository-status and simulation note is:
 
 - [`docs/ja/README.md`](docs/ja/README.md)
+- [`docs/ja/06_repository_status_and_simulations.md`](docs/ja/06_repository_status_and_simulations.md)
+
+Future work should be small repository corrections only unless the maintainer explicitly asks for a new scope.
 
 ## Visual entry points
 
@@ -48,24 +49,12 @@ For a quick visual reading path, start with:
 - [`assets/figures/expansion_boundary_risk.svg`](assets/figures/expansion_boundary_risk.svg)
 - [`assets/figures/literature_support_map.svg`](assets/figures/literature_support_map.svg)
 
-Editable Mermaid sources are kept under:
+Repository-facing simulation plots live under:
 
-- [`assets/diagrams/one_page_udam_flow.mmd`](assets/diagrams/one_page_udam_flow.mmd)
-- [`assets/diagrams/anchor_reanchor_timeline.mmd`](assets/diagrams/anchor_reanchor_timeline.mmd)
-- [`assets/diagrams/observation_value_decision.mmd`](assets/diagrams/observation_value_decision.mmd)
-- [`assets/diagrams/expansion_boundary_risk.mmd`](assets/diagrams/expansion_boundary_risk.mmd)
-- [`assets/diagrams/literature_support_map.mmd`](assets/diagrams/literature_support_map.mmd)
-
-The visual sequence is:
-
-```text
-anchor loss
--> K + U + R
--> valid observation
--> favorable observation
--> boundary-risk-constrained expansion
--> literature support strength
-```
+- [`simulations/plots/README.md`](simulations/plots/README.md)
+- [`simulations/plots/repeated_checking_mov.svg`](simulations/plots/repeated_checking_mov.svg)
+- [`simulations/plots/boundary_risk_sensitivity.svg`](simulations/plots/boundary_risk_sensitivity.svg)
+- [`simulations/plots/observation_cost_threshold.svg`](simulations/plots/observation_cost_threshold.svg)
 
 The visual layer is meant to improve comprehension, not to introduce new theory.
 
@@ -180,30 +169,24 @@ B_expand(r_i) + I_expand(r_i) <= C_obs(r_i) + P_boundary(i) * C_boundary + C_cor
 one local result -> total judgment
 ```
 
-## Five-stage refinement roadmap
-
-After the core theory stabilized, development moved to a five-stage refinement process:
-
-```text
-1. failure boundaries
-2. literature verification
-3. visual explanation
-4. project-note consolidation
-5. Japanese explanation sync
-```
-
-See:
-
-- [`docs/20_five_stage_development_roadmap.md`](docs/20_five_stage_development_roadmap.md)
-- [`notes/evidence_hierarchy.md`](notes/evidence_hierarchy.md)
+## Support and simulation status
 
 Current support status:
 
 ```text
 Levels 1-4: strong enough for a hobby theory project
 Level 5: first-pass literature verification complete enough to support component-level claims
-Level 6: toy sanity-check simulations recorded; empirical validation is out of scope for repository completion
+Level 6: six toy sanity checks recorded; not empirical validation
+repository-facing plots: three SVG plots available
+CI plot workflow: available under .github/workflows/simulation-plots.yml
 ```
+
+For simulation details, see:
+
+- [`simulations/README.md`](simulations/README.md)
+- [`docs/39_simulation_sanity_checks.md`](docs/39_simulation_sanity_checks.md)
+- [`docs/49_extended_simulation_sanity_checks.md`](docs/49_extended_simulation_sanity_checks.md)
+- [`docs/55_repository_simulation_plots_and_sensitivity.md`](docs/55_repository_simulation_plots_and_sensitivity.md)
 
 ## Logical synthesis status
 
@@ -246,6 +229,7 @@ Visual-first reading order:
 5. [`assets/figures/observation_value_decision.svg`](assets/figures/observation_value_decision.svg)
 6. [`assets/figures/expansion_boundary_risk.svg`](assets/figures/expansion_boundary_risk.svg)
 7. [`assets/figures/literature_support_map.svg`](assets/figures/literature_support_map.svg)
+8. [`simulations/plots/README.md`](simulations/plots/README.md)
 
 English-first practical reading order:
 
@@ -254,90 +238,47 @@ English-first practical reading order:
 3. [`docs/16_adaptive_observation_cadence.md`](docs/16_adaptive_observation_cadence.md)
 4. [`docs/18_adaptive_expansion_factor.md`](docs/18_adaptive_expansion_factor.md)
 5. [`docs/21_failure_decision_tree.md`](docs/21_failure_decision_tree.md)
-6. [`docs/20_five_stage_development_roadmap.md`](docs/20_five_stage_development_roadmap.md)
-7. [`docs/32_visual_explanation_layer.md`](docs/32_visual_explanation_layer.md)
-8. [`docs/19_positioning_and_novelty.md`](docs/19_positioning_and_novelty.md)
-9. [`docs/00_overview.md`](docs/00_overview.md)
-10. [`FAQ.md`](FAQ.md)
-11. [`docs/01_timer_model.md`](docs/01_timer_model.md)
-12. [`docs/13_deterministic_event_scope.md`](docs/13_deterministic_event_scope.md)
-13. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
-14. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
-15. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
-16. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
-17. [`docs/04_action_value.md`](docs/04_action_value.md)
-18. [`docs/05_propositions.md`](docs/05_propositions.md)
-19. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
-20. [`docs/07_applications.md`](docs/07_applications.md)
-21. [`docs/08_related_work.md`](docs/08_related_work.md)
-22. [`docs/17_literature_support_map.md`](docs/17_literature_support_map.md)
-23. [`docs/09_open_questions.md`](docs/09_open_questions.md)
-24. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
-25. [`docs/33_project_note_consolidation.md`](docs/33_project_note_consolidation.md)
-26. [`docs/34_readme_consolidation_audit.md`](docs/34_readme_consolidation_audit.md)
-27. [`docs/35_overview_consolidation_audit.md`](docs/35_overview_consolidation_audit.md)
-28. [`docs/36_literature_claims_routing_audit.md`](docs/36_literature_claims_routing_audit.md)
-29. [`docs/37_formal_claims_routing_audit.md`](docs/37_formal_claims_routing_audit.md)
-30. [`docs/38_visual_claims_routing_audit.md`](docs/38_visual_claims_routing_audit.md)
-31. [`docs/39_simulation_sanity_checks.md`](docs/39_simulation_sanity_checks.md)
-32. [`docs/49_extended_simulation_sanity_checks.md`](docs/49_extended_simulation_sanity_checks.md)
-33. [`docs/40_draft_source_of_truth_disclaimer_audit.md`](docs/40_draft_source_of_truth_disclaimer_audit.md)
-34. [`docs/47_remaining_work_register.md`](docs/47_remaining_work_register.md)
-35. [`docs/48_stabilization_pass_summary.md`](docs/48_stabilization_pass_summary.md)
-36. [`docs/53_repository_completion_check.md`](docs/53_repository_completion_check.md)
-37. [`simulations/README.md`](simulations/README.md)
+6. [`docs/00_overview.md`](docs/00_overview.md)
+7. [`FAQ.md`](FAQ.md)
+8. [`docs/01_timer_model.md`](docs/01_timer_model.md)
+9. [`docs/13_deterministic_event_scope.md`](docs/13_deterministic_event_scope.md)
+10. [`docs/11_timer_three_layer_model.md`](docs/11_timer_three_layer_model.md)
+11. [`docs/02_uncertainty_diffusion.md`](docs/02_uncertainty_diffusion.md)
+12. [`docs/12_state_vs_belief.md`](docs/12_state_vs_belief.md)
+13. [`docs/03_reanchoring.md`](docs/03_reanchoring.md)
+14. [`docs/04_action_value.md`](docs/04_action_value.md)
+15. [`docs/05_propositions.md`](docs/05_propositions.md)
+16. [`docs/06_failure_cases.md`](docs/06_failure_cases.md)
+17. [`docs/07_applications.md`](docs/07_applications.md)
+18. [`docs/08_related_work.md`](docs/08_related_work.md)
+19. [`docs/17_literature_support_map.md`](docs/17_literature_support_map.md)
+20. [`docs/09_open_questions.md`](docs/09_open_questions.md)
+21. [`docs/10_formal_refinement.md`](docs/10_formal_refinement.md)
+22. [`docs/33_project_note_consolidation.md`](docs/33_project_note_consolidation.md)
+23. [`docs/47_remaining_work_register.md`](docs/47_remaining_work_register.md)
+24. [`docs/48_stabilization_pass_summary.md`](docs/48_stabilization_pass_summary.md)
+25. [`docs/53_repository_completion_check.md`](docs/53_repository_completion_check.md)
+26. [`docs/54_final_repository_audit.md`](docs/54_final_repository_audit.md)
+27. [`docs/55_repository_simulation_plots_and_sensitivity.md`](docs/55_repository_simulation_plots_and_sensitivity.md)
+28. [`simulations/README.md`](simulations/README.md)
 
-Japanese documentation, to be synchronized after English stabilization:
+Japanese documentation:
 
 - [`docs/ja/README.md`](docs/ja/README.md)
+- [`docs/ja/06_repository_status_and_simulations.md`](docs/ja/06_repository_status_and_simulations.md)
 
 ## Repository map
 
 | Path | Role |
 |---|---|
 | `docs/` | readable theory explanation |
-| `docs/ja/` | Japanese explanations; currently a later synchronization layer |
+| `docs/ja/` | Japanese explanations; English Markdown remains source of truth |
 | `theory/` | definitions, variables, assumptions, axioms, propositions, proofs, counterexamples, logical review |
 | `examples/` | structured applications and failure examples |
 | `notes/` | origin notes, terminology, research notes, evidence hierarchy, verification notes |
 | `assets/` | diagrams and figures |
-| `simulations/` | toy sanity-check scripts and result files; not empirical validation |
+| `simulations/` | toy sanity-check scripts, result files, and repository-facing plots; not empirical validation |
 | `drafts/` | downstream paper, blog, manifesto, and project-note drafts; not source of truth |
-
-For source-of-truth assignments and consolidation rules, see:
-
-- [`docs/33_project_note_consolidation.md`](docs/33_project_note_consolidation.md)
-
-For the README-specific consolidation audit, see:
-
-- [`docs/34_readme_consolidation_audit.md`](docs/34_readme_consolidation_audit.md)
-
-For the overview-specific consolidation audit, see:
-
-- [`docs/35_overview_consolidation_audit.md`](docs/35_overview_consolidation_audit.md)
-
-For literature-claims routing rules, see:
-
-- [`docs/36_literature_claims_routing_audit.md`](docs/36_literature_claims_routing_audit.md)
-
-For formal-claims routing rules, see:
-
-- [`docs/37_formal_claims_routing_audit.md`](docs/37_formal_claims_routing_audit.md)
-
-For visual-claims routing rules, see:
-
-- [`docs/38_visual_claims_routing_audit.md`](docs/38_visual_claims_routing_audit.md)
-
-For draft source-of-truth disclaimer rules, see:
-
-- [`docs/40_draft_source_of_truth_disclaimer_audit.md`](docs/40_draft_source_of_truth_disclaimer_audit.md)
-- [`drafts/README.md`](drafts/README.md)
-
-For toy simulation sanity checks, see:
-
-- [`docs/39_simulation_sanity_checks.md`](docs/39_simulation_sanity_checks.md)
-- [`docs/49_extended_simulation_sanity_checks.md`](docs/49_extended_simulation_sanity_checks.md)
-- [`simulations/README.md`](simulations/README.md)
 
 ## Development notes
 
@@ -352,15 +293,9 @@ For toy simulation sanity checks, see:
 - [`docs/50_visual_rendering_audit.md`](docs/50_visual_rendering_audit.md): older-diagram rendering audit.
 - [`docs/51_release_history_routing_decision.md`](docs/51_release_history_routing_decision.md): release-history routing decision.
 - [`docs/53_repository_completion_check.md`](docs/53_repository_completion_check.md): repository-completion consistency check.
-- [`docs/33_project_note_consolidation.md`](docs/33_project_note_consolidation.md): source-of-truth map for repository consolidation.
-- [`docs/34_readme_consolidation_audit.md`](docs/34_readme_consolidation_audit.md): first-pass audit of README duplication and routing risk.
-- [`docs/35_overview_consolidation_audit.md`](docs/35_overview_consolidation_audit.md): first-pass audit of overview duplication and conceptual-boundary role.
-- [`docs/36_literature_claims_routing_audit.md`](docs/36_literature_claims_routing_audit.md): routing rules for literature claims and verification status.
-- [`docs/37_formal_claims_routing_audit.md`](docs/37_formal_claims_routing_audit.md): routing rules for variables, propositions, proofs, counterexamples, and formal refinement.
-- [`docs/38_visual_claims_routing_audit.md`](docs/38_visual_claims_routing_audit.md): routing rules for diagrams, rendered figures, and visual summaries.
-- [`docs/39_simulation_sanity_checks.md`](docs/39_simulation_sanity_checks.md): first-pass toy simulation sanity-check summary.
-- [`docs/40_draft_source_of_truth_disclaimer_audit.md`](docs/40_draft_source_of_truth_disclaimer_audit.md): routing rules and disclaimer policy for downstream drafts.
-- [`simulations/README.md`](simulations/README.md): reproducible toy simulation scripts and result files.
+- [`docs/54_final_repository_audit.md`](docs/54_final_repository_audit.md): final repository audit.
+- [`docs/55_repository_simulation_plots_and_sensitivity.md`](docs/55_repository_simulation_plots_and_sensitivity.md): repository-facing simulation plots and sensitivity summary.
+- [`simulations/README.md`](simulations/README.md): reproducible toy simulation scripts, result files, plots, and CI workflow.
 - [`drafts/README.md`](drafts/README.md): downstream draft index and source-of-truth disclaimer.
 - [`notes/literature_verification.md`](notes/literature_verification.md): checklist for verifying related-work claims before treating them as citations.
 - [`notes/evidence_hierarchy.md`](notes/evidence_hierarchy.md): support levels for UDAM claims.
@@ -370,7 +305,7 @@ For toy simulation sanity checks, see:
 
 ## Repository status
 
-This repository is currently a scoped GitHub theory repository. The current goal is repository completion and readable refinement, not implementation, paperization, or empirical validation.
+This repository is currently a completed GitHub theory repository. The current goal is small correction only, not implementation, paperization, or empirical validation.
 
 Current status:
 
@@ -379,10 +314,13 @@ core theory: stable enough to refine
 failure boundaries: strong
 literature verification: first-pass complete
 visual explanation: Stage 3 SVG figures available; older rendering audited and deferred
-simulation sanity checks: five toy checks recorded; not empirical validation
+simulation sanity checks: six toy checks recorded; not empirical validation
+repository-facing plots: three SVG plots available
+CI plot workflow: added
 project-note consolidation: first-pass complete
-Japanese layer: minimal guardrail sync complete; full sync deferred unless needed for readability
-repository completion check: first-pass complete
+Japanese layer: repository-facing sync complete; English Markdown remains source of truth
+repository completion check: complete
+final repository audit: pass
 ```
 
 ## License
