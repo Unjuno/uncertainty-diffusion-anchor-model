@@ -18,6 +18,7 @@ docs/45_publication_readiness_audit.md
 docs/46_readme_overview_compression_decision.md
 docs/47_remaining_work_register.md
 docs/49_extended_simulation_sanity_checks.md
+docs/50_visual_rendering_audit.md
 simulations/udam_extended_sanity_checks.py
 ```
 
@@ -27,13 +28,14 @@ Updated:
 README.md linked to AGENTS.md
 README.md linked stabilization-pass documents from Development notes
 ROADMAP.md recorded v0.20 through v0.25 stabilization milestones
-AGENTS.md updated after stabilization audits, draft cleanup, Japanese guardrail sync, and simulation extension
-docs/42_changelog_catchup_entry.md extended with a 0.9.0 compact entry
+AGENTS.md updated after stabilization audits, draft cleanup, Japanese guardrail sync, simulation extension, and visual rendering audit
+docs/42_changelog_catchup_entry.md extended with 0.9.0 and 0.10.0 compact entries
 drafts/paper_outline.md added direct source-of-truth disclaimer and safer conditional wording
 drafts/blog_post_jp.md added direct source-of-truth disclaimer
 drafts/short_manifesto.md added direct source-of-truth disclaimer
 docs/ja/README.md clarified English source-of-truth status
 simulations/README.md linked extended toy checks
+assets/figures/README.md linked the visual rendering audit
 ```
 
 ## Interpretation
@@ -54,6 +56,7 @@ remaining-work prioritization
 draft-source-of-truth safety
 Japanese source-of-truth guardrails
 simulation-layer coverage as toy demonstration only
+visual-rendering discipline
 ```
 
 ## Decisions recorded
@@ -147,12 +150,27 @@ repeated-checking MOV_i
 boundary-risk sensitivity
 ```
 
-### 9. Remaining work
+### 9. Visual rendering audit
 
 Decision:
 
 ```text
-Remaining work is mostly release hygiene, optional rendering, full Japanese sync after English wording stabilizes, optional simulation plots or further toy sensitivity checks, and empirical validation only if a concrete study design exists.
+Do not render every older Mermaid diagram now.
+Render older diagrams only when a publication, export, or reader-facing route needs them.
+```
+
+Current preferred render candidate if needed later:
+
+```text
+failure_decision_tree.mmd
+```
+
+### 10. Remaining work
+
+Decision:
+
+```text
+Remaining work is mostly release hygiene, full Japanese sync after English wording stabilizes, optional simulation plots or further toy sensitivity checks, and empirical validation only if a concrete study design exists.
 ```
 
 ## Current completion estimate
@@ -160,8 +178,8 @@ Remaining work is mostly release hygiene, optional rendering, full Japanese sync
 Internal maintenance estimate:
 
 ```text
-public repository readiness: 90-92%
-paperization readiness: 62-66%
+public repository readiness: 91-93%
+paperization readiness: 63-67%
 empirical validation readiness: 10-15%
 ```
 
