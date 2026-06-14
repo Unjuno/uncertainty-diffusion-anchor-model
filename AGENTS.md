@@ -4,7 +4,7 @@ This file gives repository-editing guidance for future agents and automated assi
 
 UDAM means **Uncertainty-Diffusion Anchor Model** / **不確実性拡散アンカーモデル**.
 
-The current project phase is GitHub repository completion and stabilization, not theory expansion, external posting, or paperization.
+The current project phase is completed GitHub repository stabilization, not theory expansion, external posting, or paperization.
 
 ## 1. Project identity
 
@@ -40,22 +40,20 @@ Japanese rendering:
 
 Do not add new UDAM theory unless explicitly requested by the maintainer.
 
-The current work is to complete and stabilize the GitHub repository:
+The current work is complete enough for the GitHub repository. Future work should be limited to concrete defects such as:
 
 ```text
-English theory
-reader-facing explanations
-figures and diagrams
-literature-support routing
-repository structure
-safe wording
-simulation disclaimers
-repository completion status
+broken links
+incorrect routing
+stale completion status
+CI failures
+typographical errors
+claim-strength drift
 ```
 
 Do not create external-publication drafts, Quora-specific files, or paperization work unless explicitly requested.
 
-Prefer compression, routing, consistency checks, and completion status over expansion.
+Prefer small corrections over structural expansion.
 
 ## 3. Source-of-truth map
 
@@ -71,14 +69,15 @@ Use the following routing unless the maintainer changes it:
 | Failure boundaries | `docs/21_failure_decision_tree.md` | `docs/06_failure_cases.md`, `theory/counterexamples.md` |
 | Literature support | `docs/17_literature_support_map.md` | `notes/literature_verification.md`, `docs/22` through `docs/31` |
 | Visual explanation | `docs/32_visual_explanation_layer.md` | `assets/diagrams/`, `assets/figures/`, `docs/50_visual_rendering_audit.md` |
-| Simulation sanity checks | `docs/39_simulation_sanity_checks.md`, `docs/49_extended_simulation_sanity_checks.md` | `simulations/` |
+| Simulation sanity checks | `docs/39_simulation_sanity_checks.md`, `docs/49_extended_simulation_sanity_checks.md`, `docs/55_repository_simulation_plots_and_sensitivity.md` | `simulations/` |
 | Changelog policy | `docs/41_changelog_maintenance_policy.md` | `docs/42_changelog_catchup_entry.md`, `docs/51_release_history_routing_decision.md` |
 | Notation audit | `docs/43_notation_consistency_audit.md` | `theory/variables.md`, `theory/propositions.md`, `theory/proofs.md` |
 | Contraction-rule decision | `docs/44_contraction_rule_decision.md` | `docs/18_adaptive_expansion_factor.md`, `docs/21_failure_decision_tree.md` |
 | Publication readiness | `docs/45_publication_readiness_audit.md` | `docs/47_remaining_work_register.md` |
 | README / overview compression | `docs/46_readme_overview_compression_decision.md` | `README.md`, `docs/00_overview.md` |
 | Remaining work register | `docs/47_remaining_work_register.md` | `ROADMAP.md` |
-| Japanese explanation | `docs/ja/README.md` | `docs/ja/*` |
+| Repository completion / audit | `docs/53_repository_completion_check.md`, `docs/54_final_repository_audit.md` | `docs/47_remaining_work_register.md`, `docs/48_stabilization_pass_summary.md` |
+| Japanese explanation | `docs/ja/README.md`, `docs/ja/06_repository_status_and_simulations.md` | `docs/ja/*` |
 | Presentations and drafts | `drafts/` | `README.md`, `docs/00_overview.md` |
 
 When a claim is duplicated, keep the detailed version in its source-of-truth layer and make the duplicate a short pointer.
@@ -158,7 +157,13 @@ Older diagram rendering decisions route through:
 docs/50_visual_rendering_audit.md
 ```
 
-When editing figures, update the Mermaid source first when possible, then render the SVG output.
+Repository-facing simulation plots live in:
+
+```text
+simulations/plots/
+```
+
+When editing theory figures, update the Mermaid source first when possible, then render the SVG output. When editing simulation plots, regenerate them from CSV outputs using `simulations/plot_sanity_checks.py`.
 
 ## 8. Simulation claim rules
 
@@ -170,6 +175,7 @@ Use:
 toy demonstration
 sanity check
 not empirical validation
+repository-facing plot
 ```
 
 Do not use:
@@ -181,7 +187,7 @@ proved
 empirical support
 ```
 
-The current simulation layer demonstrates five limited patterns:
+The current simulation layer demonstrates six limited patterns:
 
 ```text
 Timer re-anchor: R can reduce the relative influence of U.
@@ -189,6 +195,21 @@ Observation value: state-informative observations can still be unfavorable when 
 Expansion boundary risk: large r_i can become unfavorable under boundary risk or correction cost.
 Repeated checking: MOV_i can become non-positive after repeated observation under toy assumptions.
 Boundary-risk sensitivity: harsher risk/correction settings can shrink or eliminate favorable expansion factors.
+Observation-cost threshold sensitivity: more accurate signals can tolerate higher observation cost before OV stops being favorable in the toy setup.
+```
+
+The current repository-facing plots are:
+
+```text
+simulations/plots/repeated_checking_mov.svg
+simulations/plots/boundary_risk_sensitivity.svg
+simulations/plots/observation_cost_threshold.svg
+```
+
+The CI workflow is:
+
+```text
+.github/workflows/simulation-plots.yml
 ```
 
 These results do not establish external validity.
@@ -249,7 +270,7 @@ Avoid full-file replacement of long changelog content unless necessary.
 
 English Markdown is the current source of truth.
 
-Japanese documentation should not be substantially expanded until the English structure stabilizes.
+Repository-facing Japanese sync is complete for the current pass.
 
 When syncing Japanese files, translate stable claims conservatively. Do not introduce stronger claims in Japanese than the English version supports.
 
@@ -276,7 +297,7 @@ Drafts define the model
 Prefer:
 
 ```text
-first-pass complete
+complete for repository-facing use
 toy demonstration
 sanity check
 reader-facing layer
@@ -288,7 +309,7 @@ not proof
 not source of truth
 ```
 
-For high-stakes domains, including medical, clinical, financial, security, and safety-critical decisions, use neutral cautionary wording. Do not present UDAM as advice, diagnosis, treatment, risk approval, or operational validation.
+For high-stakes domains, use neutral cautionary wording. Do not present UDAM as advice, diagnosis, treatment, risk approval, or operational validation.
 
 ## 14. Editing workflow rules
 
@@ -314,12 +335,12 @@ Do not perform broad repository rewrites while making a routing or policy edit.
 Good next tasks:
 
 ```text
-1. Repository completion check across README, ROADMAP, AGENTS, docs/47, docs/48, simulations/README, and docs/ja/README.
-2. Full Japanese synchronization only if needed for repository readability.
-3. Optional repository-facing simulation plots or further toy sensitivity checks, still labeled toy demonstrations / sanity checks.
+1. Fix concrete repository defects only: broken links, stale status wording, CI failures, typos, or claim-strength drift.
+2. Keep future edits small and routing-preserving.
+3. Stop structural expansion unless the maintainer explicitly asks for a new scope.
 ```
 
-Tasks no longer immediate blockers after the latest stabilization pass:
+Tasks no longer immediate blockers after the latest completion pass:
 
 ```text
 agent editing guidance
@@ -330,7 +351,11 @@ publication-readiness audit
 remaining-work register
 paper draft cleanup first pass
 minimal Japanese source-of-truth guardrail
+repository-facing Japanese sync
 extended toy simulation pass
+repository-facing simulation plots
+additional toy sensitivity check
+CI simulation plot workflow
 older diagram rendering audit
 release-history routing decision
 empirical validation for current repository completion
