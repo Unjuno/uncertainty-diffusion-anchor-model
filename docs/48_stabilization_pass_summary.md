@@ -37,7 +37,15 @@ docs/47_remaining_work_register.md
 docs/49_extended_simulation_sanity_checks.md
 docs/50_visual_rendering_audit.md
 docs/51_release_history_routing_decision.md
+docs/53_repository_completion_check.md
+docs/54_final_repository_audit.md
+docs/55_repository_simulation_plots_and_sensitivity.md
+docs/ja/06_repository_status_and_simulations.md
 simulations/udam_extended_sanity_checks.py
+simulations/udam_repository_sensitivity_checks.py
+simulations/plot_sanity_checks.py
+simulations/plots/README.md
+.github/workflows/simulation-plots.yml
 ```
 
 Updated:
@@ -45,13 +53,13 @@ Updated:
 ```text
 README.md linked to AGENTS.md and stabilization documents
 ROADMAP.md recorded v0.20 through v0.25 stabilization milestones
-AGENTS.md now narrows future work to repository completion
+AGENTS.md narrows future work to small repository corrections after completion
+simulations/README.md now documents six toy checks, SVG plots, and CI regeneration
+docs/ja/README.md links the repository status and simulation note
+docs/47_remaining_work_register.md records Japanese sync, plots, sensitivity, and CI as complete
 docs/42_changelog_catchup_entry.md stores 0.8.0 through 0.11.0 compact entries
 drafts now state downstream/source-of-truth status directly
-docs/ja/README.md clarifies English source-of-truth status
-simulations/README.md links extended toy checks
-assets/figures/README.md links visual rendering audit
-docs/47_remaining_work_register.md narrows remaining work to repository completion
+assets/figures/README.md links the visual rendering audit
 ```
 
 ## Decisions recorded
@@ -59,7 +67,7 @@ docs/47_remaining_work_register.md narrows remaining work to repository completi
 ### 1. Agent guidance
 
 ```text
-Future agents should treat the project as GitHub repository completion and stabilization, not theory expansion.
+Future agents should treat the project as completed GitHub repository stabilization, not theory expansion.
 ```
 
 ### 2. Notation audit
@@ -79,7 +87,7 @@ Treat failed expansion tests as reduce, pause, re-observe, stop, or switch under
 ### 4. Repository readiness
 
 ```text
-The repository is close to complete as a scoped GitHub theory repository.
+The repository is complete enough as a scoped GitHub theory repository.
 It is not a formal validation package.
 ```
 
@@ -97,17 +105,18 @@ Draft files should state their downstream status directly.
 Do not continue paperization or external-publication drafting unless explicitly requested.
 ```
 
-### 7. Japanese guardrail sync
+### 7. Japanese sync
 
 ```text
-Japanese docs may clarify source-of-truth status now.
-Full Japanese expansion remains deferred unless needed for repository readability.
+Repository-facing Japanese sync is complete.
+English Markdown remains the source of truth.
 ```
 
-### 8. Extended toy simulations
+### 8. Toy simulations and plots
 
 ```text
-Simulation extensions may add toy sanity checks, but must not claim empirical validation.
+The simulation layer now has six toy sanity checks and three repository-facing SVG plots.
+Simulation and plot outputs must not claim empirical validation.
 ```
 
 ### 9. Visual rendering audit
@@ -129,10 +138,10 @@ Use docs/42_changelog_catchup_entry.md as the catch-up ledger until CHANGELOG.md
 Internal maintenance estimate:
 
 ```text
-GitHub repository completion: 94-96%
-repository readability / navigation: 92-94%
+GitHub repository completion: 97-98%
+repository readability / navigation: 95%+
 guardrail and source-of-truth routing: 95%+
-toy simulation demonstration layer: 75-80%
+toy simulation and plot layer: complete for repository-facing use
 empirical validation: out of scope for this repository-completion pass
 paperization: out of scope for this repository-completion pass
 ```
@@ -156,12 +165,6 @@ drafts present the model; drafts do not define the model
 Recommended next action:
 
 ```text
-Repository completion check across README, ROADMAP, AGENTS, docs/47, docs/48, simulations/README, and docs/ja/README.
-```
-
-Other optional repository-only work:
-
-```text
-full Japanese synchronization only if needed for repository readability
-repository-facing simulation plots or further toy sensitivity checks
+Stop structural expansion unless a concrete repository defect is found.
+Future work should be small corrections only.
 ```
