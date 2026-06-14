@@ -69,7 +69,7 @@ Use the following routing unless the maintainer changes it:
 | Literature support | `docs/17_literature_support_map.md` | `notes/literature_verification.md`, `docs/22` through `docs/31` |
 | Visual explanation | `docs/32_visual_explanation_layer.md` | `assets/diagrams/`, `assets/figures/`, `docs/50_visual_rendering_audit.md` |
 | Simulation sanity checks | `docs/39_simulation_sanity_checks.md`, `docs/49_extended_simulation_sanity_checks.md` | `simulations/` |
-| Changelog policy | `docs/41_changelog_maintenance_policy.md` | `docs/42_changelog_catchup_entry.md` |
+| Changelog policy | `docs/41_changelog_maintenance_policy.md` | `docs/42_changelog_catchup_entry.md`, `docs/51_release_history_routing_decision.md` |
 | Notation audit | `docs/43_notation_consistency_audit.md` | `theory/variables.md`, `theory/propositions.md`, `theory/proofs.md` |
 | Contraction-rule decision | `docs/44_contraction_rule_decision.md` | `docs/18_adaptive_expansion_factor.md`, `docs/21_failure_decision_tree.md` |
 | Publication readiness | `docs/45_publication_readiness_audit.md` | `docs/47_remaining_work_register.md` |
@@ -228,13 +228,15 @@ For the current compression decision, see:
 docs/46_readme_overview_compression_decision.md
 ```
 
-## 11. Changelog rules
+## 11. Changelog and release-history rules
 
 Keep `CHANGELOG.md`.
 
 Use it only for milestone-level changes.
 
-Do not backfill every missed micro-edit. Use `docs/41_changelog_maintenance_policy.md` and `docs/42_changelog_catchup_entry.md` before editing `CHANGELOG.md`.
+Do not backfill every missed micro-edit. Use `docs/41_changelog_maintenance_policy.md`, `docs/42_changelog_catchup_entry.md`, and `docs/51_release_history_routing_decision.md` before editing `CHANGELOG.md`.
+
+Direct catch-up insertion into `CHANGELOG.md` is deferred until a patch-safe path exists. It is not a public-release blocker while `docs/42_changelog_catchup_entry.md`, `ROADMAP.md`, `docs/47_remaining_work_register.md`, and Git history preserve milestone history.
 
 Avoid full-file replacement of long changelog content unless necessary.
 
@@ -307,9 +309,9 @@ Do not perform broad repository rewrites while making a routing or policy edit.
 Good next tasks:
 
 ```text
-1. Safe CHANGELOG catch-up insertion only if a patch-safe path is available.
-2. Full Japanese synchronization only after English wording stabilizes.
-3. Optional simulation plots or further toy sensitivity checks, still labeled toy demonstrations / sanity checks.
+1. Full Japanese synchronization only after English wording stabilizes.
+2. Optional simulation plots or further toy sensitivity checks, still labeled toy demonstrations / sanity checks.
+3. Optional full prose-level paper rewrite and citation insertion after source wording is finalized.
 4. Empirical validation only with a concrete domain, operationalized variables, data plan, and falsifiable criterion.
 ```
 
@@ -326,6 +328,7 @@ paper draft cleanup first pass
 minimal Japanese source-of-truth guardrail
 extended toy simulation pass
 older diagram rendering audit
+release-history routing decision
 ```
 
 Bad next tasks:
