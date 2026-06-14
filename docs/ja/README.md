@@ -30,6 +30,7 @@ docs/47_remaining_work_register.md
 docs/48_stabilization_pass_summary.md
 docs/53_repository_completion_check.md
 docs/54_final_repository_audit.md
+docs/55_repository_simulation_plots_and_sensitivity.md
 ```
 
 ## 目的
@@ -124,7 +125,7 @@ R = そこから再開して新しくわかった部分
 | `03_failure_cases.md` | `docs/06_failure_cases.md` |
 | `05_failure_examples.md` | `examples/failure_*.md` |
 | `04_positioning.md` | `docs/19_positioning_and_novelty.md` |
-| `06_repository_status_and_simulations.md` | `docs/53_repository_completion_check.md`, `docs/54_final_repository_audit.md`, `simulations/README.md` |
+| `06_repository_status_and_simulations.md` | `docs/53_repository_completion_check.md`, `docs/54_final_repository_audit.md`, `docs/55_repository_simulation_plots_and_sensitivity.md`, `simulations/README.md` |
 
 ## 注意
 
