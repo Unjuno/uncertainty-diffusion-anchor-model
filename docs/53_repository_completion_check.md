@@ -32,8 +32,11 @@ ROADMAP.md
 AGENTS.md
 docs/47_remaining_work_register.md
 docs/48_stabilization_pass_summary.md
+docs/54_final_repository_audit.md
+docs/55_repository_simulation_plots_and_sensitivity.md
 simulations/README.md
 docs/ja/README.md
+docs/ja/06_repository_status_and_simulations.md
 ```
 
 ## Result summary
@@ -41,17 +44,17 @@ docs/ja/README.md
 Current result:
 
 ```text
-repository completion check: first-pass complete
-repository is close to complete as a scoped GitHub theory repository
+repository completion check: complete
+repository is complete enough as a scoped GitHub theory repository
 ```
 
 Current internal estimate:
 
 ```text
-GitHub repository completion: 94-96%
-repository readability / navigation: 92-94%
+GitHub repository completion: 97-98%
+repository readability / navigation: 95%+
 guardrail and source-of-truth routing: 95%+
-toy simulation demonstration layer: 75-80%
+toy simulation and plot layer: complete for repository-facing use
 ```
 
 These are internal maintenance estimates, not external validation metrics.
@@ -60,37 +63,40 @@ These are internal maintenance estimates, not external validation metrics.
 
 | File | Status | Notes |
 |---|---|---|
-| `README.md` | mostly aligned | Development notes and repository status may receive minor link/status refreshes only |
-| `ROADMAP.md` | usable, but conservative | Contains older optional future-work language; do not broad-rewrite unless necessary |
-| `AGENTS.md` | aligned | Current phase is GitHub repository completion and stabilization |
-| `docs/47_remaining_work_register.md` | aligned | Remaining work narrowed to repository completion only |
-| `docs/48_stabilization_pass_summary.md` | aligned | Completion estimates now use repository-completion framing |
-| `simulations/README.md` | aligned | Simulation layer remains toy demonstration / sanity check only |
-| `docs/ja/README.md` | aligned | English Markdown remains source of truth; Japanese sync remains minimal |
+| `README.md` | aligned | Status now reflects six toy checks, three plots, CI workflow, and completed repository-facing sync |
+| `ROADMAP.md` | usable as history | May contain older optional wording; active state is governed by AGENTS, docs/47, docs/48, docs/54, and docs/55 |
+| `AGENTS.md` | aligned | Future work narrowed to small corrections only |
+| `docs/47_remaining_work_register.md` | aligned | Japanese sync, plots, sensitivity, and CI workflow are complete |
+| `docs/48_stabilization_pass_summary.md` | aligned | Completion estimates now reflect current repository-facing completion state |
+| `docs/54_final_repository_audit.md` | aligned | Final audit now treats plot/sensitivity/Japanese sync as complete |
+| `docs/55_repository_simulation_plots_and_sensitivity.md` | aligned | Records plots, sensitivity check, and CI workflow |
+| `simulations/README.md` | aligned | Documents six toy checks, three plots, reproduction commands, and CI workflow |
+| `docs/ja/README.md` | aligned | Links repository status and simulation note |
+| `docs/ja/06_repository_status_and_simulations.md` | aligned | Japanese status note preserves English source-of-truth boundary |
 
 ## Current blockers
 
-No blocker remains for a repository-level public summary.
+No blocker remains for repository-level completion.
 
 The following are not blockers:
 
 ```text
 CHANGELOG.md direct catch-up insertion
-full Japanese sync
-optional older diagram rendering
-optional simulation plots
+older diagram rendering beyond current routed set
 paperization
 empirical validation
 ```
 
-## Remaining optional repository-only work
+## Remaining repository-only work
 
-Optional work:
+Remaining work should be limited to concrete defects:
 
 ```text
-README status/link refresh
-full Japanese synchronization only if needed for repository readability
-repository-facing simulation plots or further toy sensitivity checks
+broken links
+stale status wording
+CI failures
+typographical errors
+claim-strength drift
 ```
 
 Do not:
@@ -108,20 +114,19 @@ add new theory
 Repository can be treated as:
 
 ```text
-a mostly completed GitHub theory repository with clear source-of-truth routing and guardrails
+a completed GitHub theory repository with clear source-of-truth routing, guardrails, Japanese repository-status sync, toy simulation plots, and CI plot regeneration
 ```
 
 Repository should not be treated as:
 
 ```text
 a validated empirical model
-a clinical or financial decision protocol
 a replacement for existing decision theory
 a completed paper package
 ```
 
 ## Final repository-completion rule
 
-Before future edits, check whether the edit improves the GitHub repository itself.
+Before future edits, check whether the edit fixes a concrete repository defect.
 
 If it is mainly for an external platform, paper submission, or new theory expansion, do not do it unless explicitly requested.
