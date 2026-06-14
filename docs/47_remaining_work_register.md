@@ -1,6 +1,6 @@
 # 47 Remaining Work Register
 
-This document records the remaining work after the first-pass agent guidance, notation audit, contraction-rule decision, publication-readiness audit, README/overview compression decision, roadmap update, changelog catch-up preparation, draft cleanup pass, minimal Japanese sync guardrail, extended toy simulation pass, visual rendering audit, release-history routing decision, and repository completion check.
+This document records the remaining work after the first-pass agent guidance, notation audit, contraction-rule decision, publication-readiness audit, README/overview compression decision, roadmap update, changelog catch-up preparation, draft cleanup pass, minimal Japanese sync guardrail, extended toy simulation pass, visual rendering audit, release-history routing decision, repository completion check, and final repository audit.
 
 The purpose is to keep the project in stabilization mode.
 
@@ -25,6 +25,7 @@ docs/45_publication_readiness_audit.md added
 docs/46_readme_overview_compression_decision.md added
 docs/48_stabilization_pass_summary.md added
 docs/53_repository_completion_check.md added
+docs/54_final_repository_audit.md added
 drafts/paper_outline.md source-of-truth disclaimer added and abstract wording softened
 drafts/blog_post_jp.md source-of-truth disclaimer added
 drafts/short_manifesto.md source-of-truth disclaimer added
@@ -42,7 +43,31 @@ docs/51_release_history_routing_decision.md added
 
 ## Remaining work by priority
 
-### P1. Repository completion check
+### P1. Final repository audit
+
+Status:
+
+```text
+complete; pass with minor non-blocking notes
+```
+
+Completed:
+
+```text
+docs/54_final_repository_audit.md added.
+No blocking repository-completion issue remains.
+```
+
+Do not:
+
+```text
+add external-publication drafts
+add Quora-specific files
+expand toward paperization
+claim empirical validation
+```
+
+### P2. Repository completion check
 
 Status:
 
@@ -58,16 +83,7 @@ README.md repository status refreshed.
 AGENTS.md and docs/48 now narrow scope to GitHub repository completion and stabilization.
 ```
 
-Do not:
-
-```text
-add external-publication drafts
-add Quora-specific files
-expand toward paperization
-claim empirical validation
-```
-
-### P2. Release history routing
+### P3. Release history routing
 
 Status:
 
@@ -96,21 +112,12 @@ backfill many micro-entries
 turn CHANGELOG into ROADMAP or Git history
 ```
 
-### P3. Draft cleanup
+### P4. Draft cleanup
 
 Status:
 
 ```text
 first-pass complete
-```
-
-Completed:
-
-```text
-drafts/paper_outline.md now states draft/source-of-truth status directly.
-drafts/paper_outline.md now uses safer conditional title and abstract wording.
-drafts/blog_post_jp.md now states draft/source-of-truth status directly.
-drafts/short_manifesto.md now states draft/source-of-truth status directly.
 ```
 
 Current decision:
@@ -126,19 +133,12 @@ Do not:
 let drafts introduce stronger claims than theory/ or docs/17 support
 ```
 
-### P4. Older diagram rendering
+### P5. Older diagram rendering
 
 Status:
 
 ```text
 first-pass audit complete; additional rendering deferred
-```
-
-Completed:
-
-```text
-docs/50_visual_rendering_audit.md classifies older Mermaid diagrams.
-assets/figures/README.md now points to the rendering audit.
 ```
 
 Decision:
@@ -148,31 +148,18 @@ Do not render every older Mermaid diagram now.
 Render older diagrams only when a repository-facing route needs them.
 ```
 
-Priority candidate if rendering is later needed:
-
-```text
-failure_decision_tree.mmd
-```
-
 Do not:
 
 ```text
 turn visual work into theory authorization
 ```
 
-### P5. Japanese sync
+### P6. Japanese sync
 
 Status:
 
 ```text
 minimal guardrail sync complete; full sync deferred
-```
-
-Completed:
-
-```text
-docs/ja/README.md now states that English Markdown is the source of truth.
-docs/ja/README.md now lists avoided overclaims in Japanese.
 ```
 
 Remaining optional work:
@@ -188,21 +175,12 @@ Do not:
 expand Japanese docs beyond the stable English claim strength
 ```
 
-### P6. Simulation extension
+### P7. Simulation extension
 
 Status:
 
 ```text
 first extended toy pass complete
-```
-
-Completed:
-
-```text
-repeated-checking MOV_i simulation
-boundary-risk sensitivity simulation
-extended toy simulation report
-simulation README routing update
 ```
 
 Remaining optional work:
@@ -217,7 +195,7 @@ Do not:
 present simulations as empirical validation
 ```
 
-### P7. Empirical validation
+### P8. Empirical validation
 
 Status:
 
@@ -256,6 +234,7 @@ minimal Japanese source-of-truth guardrail
 extended toy simulation pass
 older diagram rendering audit
 repository completion check
+final repository audit
 ```
 
 ## Current release posture
@@ -270,7 +249,6 @@ Repository should not be treated as:
 
 ```text
 a validated empirical model
-a clinical or financial decision protocol
 a replacement for existing decision theory
 a completed paper package
 ```
