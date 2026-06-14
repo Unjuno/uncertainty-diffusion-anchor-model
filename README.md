@@ -202,7 +202,7 @@ Current support status:
 ```text
 Levels 1-4: strong enough for a hobby theory project
 Level 5: first-pass literature verification complete enough to support component-level claims
-Level 6: toy sanity-check simulations recorded; empirical validation deferred
+Level 6: toy sanity-check simulations recorded; empirical validation is out of scope for repository completion
 ```
 
 ## Logical synthesis status
@@ -280,8 +280,12 @@ English-first practical reading order:
 29. [`docs/37_formal_claims_routing_audit.md`](docs/37_formal_claims_routing_audit.md)
 30. [`docs/38_visual_claims_routing_audit.md`](docs/38_visual_claims_routing_audit.md)
 31. [`docs/39_simulation_sanity_checks.md`](docs/39_simulation_sanity_checks.md)
-32. [`docs/40_draft_source_of_truth_disclaimer_audit.md`](docs/40_draft_source_of_truth_disclaimer_audit.md)
-33. [`simulations/README.md`](simulations/README.md)
+32. [`docs/49_extended_simulation_sanity_checks.md`](docs/49_extended_simulation_sanity_checks.md)
+33. [`docs/40_draft_source_of_truth_disclaimer_audit.md`](docs/40_draft_source_of_truth_disclaimer_audit.md)
+34. [`docs/47_remaining_work_register.md`](docs/47_remaining_work_register.md)
+35. [`docs/48_stabilization_pass_summary.md`](docs/48_stabilization_pass_summary.md)
+36. [`docs/53_repository_completion_check.md`](docs/53_repository_completion_check.md)
+37. [`simulations/README.md`](simulations/README.md)
 
 Japanese documentation, to be synchronized after English stabilization:
 
@@ -332,6 +336,7 @@ For draft source-of-truth disclaimer rules, see:
 For toy simulation sanity checks, see:
 
 - [`docs/39_simulation_sanity_checks.md`](docs/39_simulation_sanity_checks.md)
+- [`docs/49_extended_simulation_sanity_checks.md`](docs/49_extended_simulation_sanity_checks.md)
 - [`simulations/README.md`](simulations/README.md)
 
 ## Development notes
@@ -343,6 +348,10 @@ For toy simulation sanity checks, see:
 - [`docs/46_readme_overview_compression_decision.md`](docs/46_readme_overview_compression_decision.md): decision note on README and overview compression.
 - [`docs/47_remaining_work_register.md`](docs/47_remaining_work_register.md): remaining-work register after the stabilization pass.
 - [`docs/48_stabilization_pass_summary.md`](docs/48_stabilization_pass_summary.md): summary of the latest stabilization pass.
+- [`docs/49_extended_simulation_sanity_checks.md`](docs/49_extended_simulation_sanity_checks.md): extended toy simulation sanity-check summary.
+- [`docs/50_visual_rendering_audit.md`](docs/50_visual_rendering_audit.md): older-diagram rendering audit.
+- [`docs/51_release_history_routing_decision.md`](docs/51_release_history_routing_decision.md): release-history routing decision.
+- [`docs/53_repository_completion_check.md`](docs/53_repository_completion_check.md): repository-completion consistency check.
 - [`docs/33_project_note_consolidation.md`](docs/33_project_note_consolidation.md): source-of-truth map for repository consolidation.
 - [`docs/34_readme_consolidation_audit.md`](docs/34_readme_consolidation_audit.md): first-pass audit of README duplication and routing risk.
 - [`docs/35_overview_consolidation_audit.md`](docs/35_overview_consolidation_audit.md): first-pass audit of overview duplication and conceptual-boundary role.
@@ -361,7 +370,7 @@ For toy simulation sanity checks, see:
 
 ## Repository status
 
-This repository is currently a theory repository. The first goal is not implementation or empirical validation, but precise formulation and readable refinement.
+This repository is currently a scoped GitHub theory repository. The current goal is repository completion and readable refinement, not implementation, paperization, or empirical validation.
 
 Current status:
 
@@ -369,14 +378,13 @@ Current status:
 core theory: stable enough to refine
 failure boundaries: strong
 literature verification: first-pass complete
-visual explanation: first-pass Mermaid source set complete; Stage 3 SVG figures available
-simulation sanity checks: first toy set recorded; not empirical validation
+visual explanation: Stage 3 SVG figures available; older rendering audited and deferred
+simulation sanity checks: five toy checks recorded; not empirical validation
 project-note consolidation: first-pass complete
-Japanese layer: minimal, deferred for later sync
+Japanese layer: minimal guardrail sync complete; full sync deferred unless needed for readability
+repository completion check: first-pass complete
 ```
 
 ## License
 
 Documentation and theory texts are licensed under **CC BY 4.0**.
-
-Code, if added later, should be licensed separately, preferably under the MIT License unless otherwise stated.
