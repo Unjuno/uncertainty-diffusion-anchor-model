@@ -4,7 +4,7 @@ This file gives repository-editing guidance for future agents and automated assi
 
 UDAM means **Uncertainty-Diffusion Anchor Model** / **不確実性拡散アンカーモデル**.
 
-The current project phase is stabilization, not theory expansion.
+The current project phase is GitHub repository completion and stabilization, not theory expansion, external posting, or paperization.
 
 ## 1. Project identity
 
@@ -40,7 +40,7 @@ Japanese rendering:
 
 Do not add new UDAM theory unless explicitly requested by the maintainer.
 
-The current work is to stabilize:
+The current work is to complete and stabilize the GitHub repository:
 
 ```text
 English theory
@@ -50,9 +50,12 @@ literature-support routing
 repository structure
 safe wording
 simulation disclaimers
+repository completion status
 ```
 
-Prefer compression, routing, and consistency checks over expansion.
+Do not create external-publication drafts, Quora-specific files, or paperization work unless explicitly requested.
+
+Prefer compression, routing, consistency checks, and completion status over expansion.
 
 ## 3. Source-of-truth map
 
@@ -196,6 +199,8 @@ These results do not establish external validity.
 
 Drafts may explain or package the model, but they do not define it.
 
+Do not continue paperization or external-publication drafting unless explicitly requested.
+
 If a draft conflicts with `theory/`, `docs/17_literature_support_map.md`, `notes/literature_verification.md`, or `docs/32_visual_explanation_layer.md`, treat the source-of-truth file as authoritative.
 
 ## 10. README and overview rules
@@ -309,10 +314,9 @@ Do not perform broad repository rewrites while making a routing or policy edit.
 Good next tasks:
 
 ```text
-1. Full Japanese synchronization only after English wording stabilizes.
-2. Optional simulation plots or further toy sensitivity checks, still labeled toy demonstrations / sanity checks.
-3. Optional full prose-level paper rewrite and citation insertion after source wording is finalized.
-4. Empirical validation only with a concrete domain, operationalized variables, data plan, and falsifiable criterion.
+1. Repository completion check across README, ROADMAP, AGENTS, docs/47, docs/48, simulations/README, and docs/ja/README.
+2. Full Japanese synchronization only if needed for repository readability.
+3. Optional repository-facing simulation plots or further toy sensitivity checks, still labeled toy demonstrations / sanity checks.
 ```
 
 Tasks no longer immediate blockers after the latest stabilization pass:
@@ -329,6 +333,9 @@ minimal Japanese source-of-truth guardrail
 extended toy simulation pass
 older diagram rendering audit
 release-history routing decision
+empirical validation for current repository completion
+paperization for current repository completion
+external-publication drafting
 ```
 
 Bad next tasks:
@@ -339,4 +346,5 @@ inflating README
 presenting simulations as validation
 turning drafts into source-of-truth files
 making strong high-stakes application claims
+creating Quora-specific or external-publication files unless explicitly requested
 ```
