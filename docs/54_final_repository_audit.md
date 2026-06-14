@@ -17,8 +17,10 @@ AGENTS.md
 docs/47_remaining_work_register.md
 docs/48_stabilization_pass_summary.md
 docs/53_repository_completion_check.md
+docs/55_repository_simulation_plots_and_sensitivity.md
 simulations/README.md
 docs/ja/README.md
+docs/ja/06_repository_status_and_simulations.md
 ```
 
 Out of scope:
@@ -35,13 +37,13 @@ empirical validation
 Result:
 
 ```text
-final repository audit: pass with minor non-blocking notes
+final repository audit: pass
 ```
 
 Repository can be treated as:
 
 ```text
-a mostly completed GitHub theory repository with clear source-of-truth routing and guardrails
+a completed GitHub theory repository with clear source-of-truth routing, guardrails, Japanese repository-status sync, and repository-facing toy simulation plots
 ```
 
 Repository should not be treated as:
@@ -57,10 +59,10 @@ a completed paper package
 Current internal maintenance estimate:
 
 ```text
-GitHub repository completion: 95-97%
-repository readability / navigation: 93-95%
+GitHub repository completion: 97-98%
+repository readability / navigation: 95%+
 guardrail and source-of-truth routing: 95%+
-toy simulation demonstration layer: 75-80%
+toy simulation and plot layer: complete for repository-facing use
 ```
 
 These are not external validation metrics.
@@ -87,14 +89,14 @@ Repository status is framed as GitHub theory repository completion, not paperiza
 Status:
 
 ```text
-pass
+pass after inconsistency fix
 ```
 
 Finding:
 
 ```text
-AGENTS.md narrows future assistant work to GitHub repository completion and stabilization.
-It blocks external-platform drafts, paperization work, and empirical-validation work unless explicitly requested.
+AGENTS.md narrows future assistant work to small repository corrections after completion.
+Previously optional items such as Japanese sync, repository-facing plots, and additional toy sensitivity checks are now complete.
 ```
 
 ### 3. docs/47_remaining_work_register.md
@@ -108,8 +110,8 @@ pass
 Finding:
 
 ```text
-Remaining work is narrowed to repository completion.
-Repository completion check is first-pass complete.
+Remaining work is narrowed to small corrections only.
+Japanese sync, repository-facing plots, additional toy sensitivity, and CI plot workflow are complete.
 Empirical validation is out of scope for the current completion pass.
 ```
 
@@ -118,7 +120,7 @@ Empirical validation is out of scope for the current completion pass.
 Status:
 
 ```text
-pass
+pass after inconsistency fix
 ```
 
 Finding:
@@ -126,9 +128,25 @@ Finding:
 ```text
 Completion estimates use repository-completion framing.
 Paperization and empirical validation are marked out of scope for the current completion pass.
+Japanese sync, plots, sensitivity, and CI workflow are now recorded as completed repository-facing work.
 ```
 
 ### 5. docs/53_repository_completion_check.md
+
+Status:
+
+```text
+superseded by docs/54 and docs/55 for the latest completion state
+```
+
+Finding:
+
+```text
+docs/53 remains usable as the first repository-completion check.
+The latest completion state is now recorded in docs/47, docs/48, docs/54, and docs/55.
+```
+
+### 6. docs/55_repository_simulation_plots_and_sensitivity.md
 
 Status:
 
@@ -139,11 +157,11 @@ pass
 Finding:
 
 ```text
-No blocker remains for a repository-level public summary.
-Optional work is limited to repository-facing readability improvements.
+Repository-facing simulation plots, additional toy sensitivity check, and CI plot workflow are recorded as complete.
+The document preserves toy demonstration / sanity check wording.
 ```
 
-### 6. simulations/README.md
+### 7. simulations/README.md
 
 Status:
 
@@ -155,10 +173,10 @@ Finding:
 
 ```text
 Simulation results are labeled toy demonstrations / sanity checks.
-The file explicitly says they are not empirical validation.
+The file documents six toy checks, three repository-facing SVG plots, and the CI workflow.
 ```
 
-### 7. docs/ja/README.md
+### 8. docs/ja/README.md and docs/ja/06_repository_status_and_simulations.md
 
 Status:
 
@@ -170,22 +188,22 @@ Finding:
 
 ```text
 Japanese docs identify English Markdown as the source of truth.
-They avoid stronger claims such as proof, empirical validation, simulation confirmation, and replacement of decision theory.
+Japanese repository-status and simulation notes are now synchronized at a conservative repository-facing level.
 ```
 
-### 8. ROADMAP.md
+### 9. ROADMAP.md
 
 Status:
 
 ```text
-pass with non-blocking note
+pass with historical-note caveat
 ```
 
 Finding:
 
 ```text
 ROADMAP.md remains usable as milestone history.
-It contains older optional future-work wording, but active work is now governed by AGENTS.md, docs/47, docs/48, and docs/53.
+It may contain older optional future-work wording, but active work is now governed by AGENTS.md, docs/47, docs/48, docs/54, and docs/55.
 ```
 
 Decision:
@@ -201,9 +219,8 @@ Non-blocking notes:
 
 ```text
 1. CHANGELOG.md catch-up entries remain prepared in docs/42, not inserted directly.
-2. Full Japanese synchronization remains deferred unless needed for repository readability.
-3. Optional simulation plots are not required for repository completion.
-4. Optional older diagram rendering remains deferred.
+2. ROADMAP.md remains a milestone-history document and may contain older optional phrasing.
+3. Future work should be limited to concrete defect correction.
 ```
 
 ## Guardrail check
