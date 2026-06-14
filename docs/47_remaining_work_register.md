@@ -1,6 +1,6 @@
 # 47 Remaining Work Register
 
-This document records the remaining work after the first-pass agent guidance, notation audit, contraction-rule decision, publication-readiness audit, README/overview compression decision, roadmap update, changelog catch-up preparation, draft cleanup pass, minimal Japanese sync guardrail, and extended toy simulation pass.
+This document records the remaining work after the first-pass agent guidance, notation audit, contraction-rule decision, publication-readiness audit, README/overview compression decision, roadmap update, changelog catch-up preparation, draft cleanup pass, minimal Japanese sync guardrail, extended toy simulation pass, and visual rendering audit.
 
 The purpose is to keep the project in stabilization mode.
 
@@ -14,8 +14,8 @@ Completed in the latest stabilization pass:
 AGENTS.md added
 README linked to AGENTS.md
 README linked stabilization-pass documents from Development notes
-ROADMAP.md recorded v0.20 through v0.24 stabilization milestones
-docs/42_changelog_catchup_entry.md extended with a 0.9.0 compact entry
+ROADMAP.md recorded v0.20 through v0.25 stabilization milestones
+docs/42_changelog_catchup_entry.md extended with 0.9.0 and 0.10.0 compact entries
 docs/43_notation_consistency_audit.md added
 docs/44_contraction_rule_decision.md added
 docs/45_publication_readiness_audit.md added
@@ -31,6 +31,8 @@ simulations/results/boundary_risk_sensitivity_summary.csv added
 simulations/results/extended_sanity_check_report.md added
 docs/49_extended_simulation_sanity_checks.md added
 simulations/README.md updated
+docs/50_visual_rendering_audit.md added
+assets/figures/README.md updated with older-diagram rendering policy
 ```
 
 ## Remaining work by priority
@@ -94,18 +96,32 @@ Do not:
 let drafts introduce stronger claims than theory/ or docs/17 support
 ```
 
-### P3. Optional older diagram rendering
+### P3. Older diagram rendering
 
 Status:
 
 ```text
-optional
+first-pass audit complete; additional rendering deferred
 ```
 
-Action:
+Completed:
 
 ```text
-Render older non-Stage-3 Mermaid diagrams only if they are still reader-facing.
+docs/50_visual_rendering_audit.md classifies older Mermaid diagrams.
+assets/figures/README.md now points to the rendering audit.
+```
+
+Decision:
+
+```text
+Do not render every older Mermaid diagram now.
+Render older diagrams only when a publication, export, or reader-facing route needs them.
+```
+
+Priority candidate if rendering is later needed:
+
+```text
+failure_decision_tree.mmd
 ```
 
 Do not:
@@ -209,6 +225,7 @@ remaining-work register
 draft source-of-truth disclaimer insertion
 minimal Japanese source-of-truth guardrail
 extended toy simulation pass
+older diagram rendering audit
 ```
 
 ## Current release posture
