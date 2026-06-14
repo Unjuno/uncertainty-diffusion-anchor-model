@@ -1,6 +1,6 @@
 # 47 Remaining Work Register
 
-This document records the remaining work after the first-pass agent guidance, notation audit, contraction-rule decision, publication-readiness audit, README/overview compression decision, roadmap update, changelog catch-up preparation, draft cleanup pass, minimal Japanese sync guardrail, extended toy simulation pass, visual rendering audit, release-history routing decision, repository completion check, and final repository audit.
+This document records the remaining work after the first-pass agent guidance, notation audit, contraction-rule decision, publication-readiness audit, README/overview compression decision, roadmap update, changelog catch-up preparation, draft cleanup pass, minimal Japanese sync guardrail, extended toy simulation pass, visual rendering audit, release-history routing decision, repository completion check, final repository audit, Japanese sync update, repository-facing simulation plots, and additional toy sensitivity check.
 
 The purpose is to keep the project in stabilization mode.
 
@@ -26,75 +26,109 @@ docs/46_readme_overview_compression_decision.md added
 docs/48_stabilization_pass_summary.md added
 docs/53_repository_completion_check.md added
 docs/54_final_repository_audit.md added
-drafts/paper_outline.md source-of-truth disclaimer added and abstract wording softened
-drafts/blog_post_jp.md source-of-truth disclaimer added
-drafts/short_manifesto.md source-of-truth disclaimer added
-docs/ja/README.md source-of-truth status clarified
+docs/55_repository_simulation_plots_and_sensitivity.md added
+docs/ja/06_repository_status_and_simulations.md added
+docs/ja/README.md source-of-truth status and simulation routing refreshed
 simulations/udam_extended_sanity_checks.py added
+simulations/udam_repository_sensitivity_checks.py added
+simulations/plot_sanity_checks.py added
 simulations/results/repeated_checking_mov_summary.csv added
 simulations/results/boundary_risk_sensitivity_summary.csv added
+simulations/results/observation_cost_threshold_sensitivity.csv added
 simulations/results/extended_sanity_check_report.md added
-docs/49_extended_simulation_sanity_checks.md added
+simulations/results/repository_sensitivity_check_report.md added
+simulations/plots/README.md added
+simulations/plots/repeated_checking_mov.svg added
+simulations/plots/boundary_risk_sensitivity.svg added
+simulations/plots/observation_cost_threshold.svg added
+.github/workflows/simulation-plots.yml added
 simulations/README.md updated
-docs/50_visual_rendering_audit.md added
 assets/figures/README.md updated with older-diagram rendering policy
+docs/49_extended_simulation_sanity_checks.md added
+docs/50_visual_rendering_audit.md added
 docs/51_release_history_routing_decision.md added
 ```
 
 ## Remaining work by priority
 
-### P1. Final repository audit
+### P1. Japanese sync
 
 Status:
 
 ```text
-complete; pass with minor non-blocking notes
+repository-facing sync complete
 ```
 
 Completed:
 
 ```text
-docs/54_final_repository_audit.md added.
-No blocking repository-completion issue remains.
+docs/ja/06_repository_status_and_simulations.md added.
+docs/ja/README.md now links the repository status and simulation note.
+Japanese docs preserve English Markdown as source of truth.
 ```
 
 Do not:
 
 ```text
-add external-publication drafts
-add Quora-specific files
-expand toward paperization
-claim empirical validation
+expand Japanese docs beyond the stable English claim strength
 ```
 
-### P2. Repository completion check
+### P2. Repository-facing simulation plots
 
 Status:
 
 ```text
-first-pass complete
+complete
 ```
 
 Completed:
 
 ```text
-docs/53_repository_completion_check.md added.
-README.md repository status refreshed.
-AGENTS.md and docs/48 now narrow scope to GitHub repository completion and stabilization.
+simulations/plot_sanity_checks.py added
+simulations/plots/README.md added
+simulations/plots/repeated_checking_mov.svg added
+simulations/plots/boundary_risk_sensitivity.svg added
+simulations/plots/observation_cost_threshold.svg added
+.github/workflows/simulation-plots.yml added
 ```
 
-### P3. Release history routing
+Do not:
+
+```text
+present plots as validation
+```
+
+### P3. Additional toy sensitivity check
+
+Status:
+
+```text
+complete
+```
+
+Completed:
+
+```text
+observation-cost threshold sensitivity added
+simulations/udam_repository_sensitivity_checks.py added
+simulations/results/observation_cost_threshold_sensitivity.csv added
+simulations/results/repository_sensitivity_check_report.md added
+docs/55_repository_simulation_plots_and_sensitivity.md added
+```
+
+Interpretation boundary:
+
+```text
+higher signal accuracy raises the break-even observation cost in the toy setup
+not: more observation is always better
+```
+
+### P4. Release history routing
 
 Status:
 
 ```text
 first-pass complete; CHANGELOG.md direct insertion deferred
-```
-
-Current source:
-
-```text
-docs/42_changelog_catchup_entry.md
 ```
 
 Decision:
@@ -104,98 +138,7 @@ Do not treat direct CHANGELOG.md catch-up insertion as a public-release blocker.
 Use docs/42_changelog_catchup_entry.md as the catch-up ledger until CHANGELOG.md can be patched safely.
 ```
 
-Do not:
-
-```text
-rewrite the whole changelog casually
-backfill many micro-entries
-turn CHANGELOG into ROADMAP or Git history
-```
-
-### P4. Draft cleanup
-
-Status:
-
-```text
-first-pass complete
-```
-
-Current decision:
-
-```text
-Do not continue paperization unless explicitly requested.
-Drafts remain downstream presentations, not source-of-truth files.
-```
-
-Do not:
-
-```text
-let drafts introduce stronger claims than theory/ or docs/17 support
-```
-
-### P5. Older diagram rendering
-
-Status:
-
-```text
-first-pass audit complete; additional rendering deferred
-```
-
-Decision:
-
-```text
-Do not render every older Mermaid diagram now.
-Render older diagrams only when a repository-facing route needs them.
-```
-
-Do not:
-
-```text
-turn visual work into theory authorization
-```
-
-### P6. Japanese sync
-
-Status:
-
-```text
-minimal guardrail sync complete; full sync deferred
-```
-
-Remaining optional work:
-
-```text
-full Japanese synchronization only if needed for repository readability
-Japanese examples only when they do not exceed English claim strength
-```
-
-Do not:
-
-```text
-expand Japanese docs beyond the stable English claim strength
-```
-
-### P7. Simulation extension
-
-Status:
-
-```text
-first extended toy pass complete
-```
-
-Remaining optional work:
-
-```text
-only repository-facing plots or further toy sensitivity checks if they improve readability
-```
-
-Do not:
-
-```text
-present simulations as empirical validation
-```
-
-### P8. Empirical validation
+### P5. Empirical validation
 
 Status:
 
@@ -209,15 +152,9 @@ Decision:
 Do not pursue empirical validation as part of this GitHub completion pass.
 ```
 
-Do not:
-
-```text
-claim external validity from toy simulations
-```
-
 ## Work no longer considered immediate blockers
 
-These were addressed in first-pass form:
+These were addressed in first-pass or repository-facing form:
 
 ```text
 agent editing guidance
@@ -235,6 +172,10 @@ extended toy simulation pass
 older diagram rendering audit
 repository completion check
 final repository audit
+Japanese repository-status sync
+repository-facing simulation plots
+additional toy sensitivity check
+CI simulation plot workflow
 ```
 
 ## Current release posture
@@ -242,7 +183,7 @@ final repository audit
 Repository can be treated as:
 
 ```text
-a mostly completed GitHub theory repository with clear guardrails
+a completed GitHub theory repository with clear guardrails and repository-facing toy simulation plots
 ```
 
 Repository should not be treated as:
