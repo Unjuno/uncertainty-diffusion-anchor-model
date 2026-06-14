@@ -177,6 +177,47 @@ Details:
 - Remaining work: `docs/47_remaining_work_register.md`
 ```
 
+## Proposed changelog entry: 0.11.0
+
+```markdown
+## 0.11.0 - Visual rendering audit catch-up
+
+Summary:
+
+- Added a first-pass audit of older Mermaid diagrams.
+- Decided not to render every older diagram now.
+- Updated rendered-figure policy to avoid visual churn and source-of-truth drift.
+
+Added:
+
+- `docs/50_visual_rendering_audit.md`
+
+Changed:
+
+- `assets/figures/README.md` now links to the older-diagram rendering audit.
+- `AGENTS.md`, `docs/47_remaining_work_register.md`, and `docs/48_stabilization_pass_summary.md` now record the visual rendering audit decision.
+
+Interpretation:
+
+- The Stage 3 SVG figure set remains the main reader-facing visual path.
+- Older diagrams remain editable Mermaid sources unless a publication, export, or reader-facing route requires static figures.
+- `failure_decision_tree.mmd` is the preferred future candidate if one older diagram needs rendering.
+
+Guardrails preserved:
+
+```text
+visual artifacts summarize theory; they do not authorize theory
+rendered figures are secondary outputs
+Mermaid sources remain the editable source layer
+```
+
+Details:
+
+- Visual rendering audit: `docs/50_visual_rendering_audit.md`
+- Rendered figures: `assets/figures/README.md`
+- Editable sources: `assets/diagrams/`
+```
+
 ## Current decision
 
 Do not expand these into many missed micro-entries.
