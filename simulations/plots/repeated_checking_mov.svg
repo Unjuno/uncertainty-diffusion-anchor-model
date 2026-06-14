@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+<title id="title">Repeated-checking MOV_i</title>
+<desc id="desc">Toy check: marginal observation value turns non-positive after repeated checks.</desc>
+<style>
+  text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1f2937; }
+  .title { font-size: 24px; font-weight: 700; }
+  .subtitle { font-size: 14px; fill: #4b5563; }
+  .axis { stroke: #111827; stroke-width: 1.4; }
+  .grid { stroke: #e5e7eb; stroke-width: 1; }
+  .zero { stroke: #6b7280; stroke-width: 1.5; stroke-dasharray: 5 5; }
+  .series { fill: none; stroke: #2563eb; stroke-width: 3; }
+  circle { fill: #2563eb; }
+  .tick { font-size: 12px; fill: #4b5563; }
+  .label { font-size: 14px; font-weight: 600; fill: #374151; }
+</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="90" y="35" class="title">Repeated-checking MOV_i</text>
+<text x="90" y="56" class="subtitle">Toy check: MOV_i becomes non-positive after repeated checks.</text>
+<line x1="85" y1="450" x2="860" y2="450" class="grid"/><text x="80" y="454" class="tick" text-anchor="end">-3</text>
+<line x1="85" y1="376" x2="860" y2="376" class="grid"/><text x="80" y="380" class="tick" text-anchor="end">-1</text>
+<line x1="85" y1="339" x2="860" y2="339" class="zero"/><text x="80" y="343" class="tick" text-anchor="end">0</text>
+<line x1="85" y1="265" x2="860" y2="265" class="grid"/><text x="80" y="269" class="tick" text-anchor="end">2</text>
+<line x1="85" y1="191" x2="860" y2="191" class="grid"/><text x="80" y="195" class="tick" text-anchor="end">4</text>
+<line x1="85" y1="117" x2="860" y2="117" class="grid"/><text x="80" y="121" class="tick" text-anchor="end">6</text>
+<line x1="90" y1="70" x2="90" y2="440" class="axis"/>
+<line x1="90" y1="440" x2="860" y2="440" class="axis"/>
+<polyline points="90,148 160,239 230,298 300,337 370,364 440,383 510,397 580,408 650,418 720,426 790,434 860,441" class="series"/>
+<circle cx="90" cy="148" r="4"><title>i=1, MOV_i=5.2</title></circle>
+<circle cx="160" cy="239" r="4"><title>i=2, MOV_i=2.74</title></circle>
+<circle cx="230" cy="298" r="4"><title>i=3, MOV_i=1.1464</title></circle>
+<circle cx="300" cy="337" r="4"><title>i=4, MOV_i=0.089968</title></circle>
+<circle cx="370" cy="364" r="4"><title>i=5, MOV_i=-0.63342</title></circle>
+<circle cx="440" cy="383" r="4"><title>i=6, MOV_i=-1.15032</title></circle>
+<circle cx="510" cy="397" r="4"><title>i=7, MOV_i=-1.539199</title></circle>
+<circle cx="580" cy="408" r="4"><title>i=8, MOV_i=-1.848703</title></circle>
+<circle cx="650" cy="418" r="4"><title>i=9, MOV_i=-2.108996</title></circle>
+<circle cx="720" cy="426" r="4"><title>i=10, MOV_i=-2.338777</title></circle>
+<circle cx="790" cy="434" r="4"><title>i=11, MOV_i=-2.549642</title></circle>
+<circle cx="860" cy="441" r="4"><title>i=12, MOV_i=-2.748778</title></circle>
+<text x="475" y="495" class="label" text-anchor="middle">Check index i</text>
+<text x="24" y="255" class="label" transform="rotate(-90 24 255)" text-anchor="middle">MOV_i</text>
+</svg>
