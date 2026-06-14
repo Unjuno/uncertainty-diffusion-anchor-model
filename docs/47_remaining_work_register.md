@@ -6,6 +6,8 @@ The purpose is to keep the project in stabilization mode.
 
 This document does not add new UDAM theory.
 
+The current task is GitHub repository completion only.
+
 ## Current state
 
 Completed in the latest stabilization pass:
@@ -38,7 +40,30 @@ docs/51_release_history_routing_decision.md added
 
 ## Remaining work by priority
 
-### P1. Release history routing
+### P1. Repository completion check
+
+Status:
+
+```text
+active
+```
+
+Action:
+
+```text
+Ensure README, ROADMAP, AGENTS, docs/47, docs/48, simulations/README, and docs/ja/README agree on the repository's current status and limits.
+```
+
+Do not:
+
+```text
+add external-publication drafts
+add Quora-specific files
+expand toward paperization
+claim empirical validation
+```
+
+### P2. Release history routing
 
 Status:
 
@@ -67,7 +92,7 @@ backfill many micro-entries
 turn CHANGELOG into ROADMAP or Git history
 ```
 
-### P2. Paper draft cleanup
+### P3. Draft cleanup
 
 Status:
 
@@ -84,12 +109,11 @@ drafts/blog_post_jp.md now states draft/source-of-truth status directly.
 drafts/short_manifesto.md now states draft/source-of-truth status directly.
 ```
 
-Remaining optional work:
+Current decision:
 
 ```text
-full prose-level paper rewrite
-citation insertion after literature sources are finalized
-journal-style formatting
+Do not continue paperization unless explicitly requested.
+Drafts remain downstream presentations, not source-of-truth files.
 ```
 
 Do not:
@@ -98,7 +122,7 @@ Do not:
 let drafts introduce stronger claims than theory/ or docs/17 support
 ```
 
-### P3. Older diagram rendering
+### P4. Older diagram rendering
 
 Status:
 
@@ -117,7 +141,7 @@ Decision:
 
 ```text
 Do not render every older Mermaid diagram now.
-Render older diagrams only when a publication, export, or reader-facing route needs them.
+Render older diagrams only when a repository-facing route needs them.
 ```
 
 Priority candidate if rendering is later needed:
@@ -132,7 +156,7 @@ Do not:
 turn visual work into theory authorization
 ```
 
-### P4. Japanese sync
+### P5. Japanese sync
 
 Status:
 
@@ -150,7 +174,7 @@ docs/ja/README.md now lists avoided overclaims in Japanese.
 Remaining optional work:
 
 ```text
-full Japanese synchronization after English wording stabilizes
+full Japanese synchronization only if needed for repository readability
 Japanese examples only when they do not exceed English claim strength
 ```
 
@@ -160,7 +184,7 @@ Do not:
 expand Japanese docs beyond the stable English claim strength
 ```
 
-### P5. Simulation extension
+### P6. Simulation extension
 
 Status:
 
@@ -180,9 +204,7 @@ simulation README routing update
 Remaining optional work:
 
 ```text
-stochastic diffusion-and-reanchor time series
-sensitivity analysis over observation-value parameters
-public-facing plots if useful
+only repository-facing plots or further toy sensitivity checks if they improve readability
 ```
 
 Do not:
@@ -191,18 +213,18 @@ Do not:
 present simulations as empirical validation
 ```
 
-### P6. Empirical validation
+### P7. Empirical validation
 
 Status:
 
 ```text
-not started in a serious sense
+out of scope for current repository completion
 ```
 
-Action:
+Decision:
 
 ```text
-Only begin if there is a concrete empirical domain, operationalized variables, data plan, and falsifiable evaluation criterion.
+Do not pursue empirical validation as part of this GitHub completion pass.
 ```
 
 Do not:
@@ -236,7 +258,7 @@ older diagram rendering audit
 Repository can be treated as:
 
 ```text
-a mostly stabilized English theory repository with clear guardrails
+a mostly stabilized GitHub theory repository with clear guardrails
 ```
 
 Repository should not be treated as:
