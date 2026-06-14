@@ -26,8 +26,10 @@ UDAM は治療法である
 AGENTS.md
 docs/33_project_note_consolidation.md
 docs/43_notation_consistency_audit.md
-docs/45_publication_readiness_audit.md
 docs/47_remaining_work_register.md
+docs/48_stabilization_pass_summary.md
+docs/53_repository_completion_check.md
+docs/54_final_repository_audit.md
 ```
 
 ## 目的
@@ -92,17 +94,25 @@ R = そこから再開して新しくわかった部分
    具体的な失敗例。
 6. [`04_positioning.md`](04_positioning.md)  
    UDAM が何で、何ではないか。
+7. [`06_repository_status_and_simulations.md`](06_repository_status_and_simulations.md)  
+   リポジトリ状態と toy simulation の位置づけ。
 
 ## 図
 
-図は英語名のまま `assets/diagrams/` に置いています。
+図は英語名のまま `assets/diagrams/` と `assets/figures/` に置いています。
 
-まず見るなら、この2つです。
+まず見るなら、英語版の Stage 3 SVG 図です。
 
-- [`../../assets/diagrams/full_udam_flow.mmd`](../../assets/diagrams/full_udam_flow.mmd)  
-  アンカー喪失から、観測、条件付き行動、拡張、境界リスク確認までの全体図。
-- [`../../assets/diagrams/positioning_map.mmd`](../../assets/diagrams/positioning_map.mmd)  
-  UDAM が既存理論とどう関係し、どこに独自の整理があるかを示す図。
+- [`../../assets/figures/one_page_udam_flow.svg`](../../assets/figures/one_page_udam_flow.svg)  
+  全体の流れ。
+- [`../../assets/figures/anchor_reanchor_timeline.svg`](../../assets/figures/anchor_reanchor_timeline.svg)  
+  アンカー喪失から再アンカーまで。
+- [`../../assets/figures/observation_value_decision.svg`](../../assets/figures/observation_value_decision.svg)  
+  観測価値と条件付き行動。
+- [`../../assets/figures/expansion_boundary_risk.svg`](../../assets/figures/expansion_boundary_risk.svg)  
+  拡張と境界リスク。
+
+古い Mermaid 図のレンダリング判断は、英語版の `docs/50_visual_rendering_audit.md` を優先します。
 
 ## 英語版との対応
 
@@ -114,6 +124,7 @@ R = そこから再開して新しくわかった部分
 | `03_failure_cases.md` | `docs/06_failure_cases.md` |
 | `05_failure_examples.md` | `examples/failure_*.md` |
 | `04_positioning.md` | `docs/19_positioning_and_novelty.md` |
+| `06_repository_status_and_simulations.md` | `docs/53_repository_completion_check.md`, `docs/54_final_repository_audit.md`, `simulations/README.md` |
 
 ## 注意
 
@@ -124,3 +135,5 @@ UDAM は、完全に新しい数学理論ではありません。
 ```text
 新しい基礎数学ではなく、タイマー由来の実践的統合モデル。
 ```
+
+シミュレーションは説明補助の toy demonstration / sanity check であり、実証ではありません。
