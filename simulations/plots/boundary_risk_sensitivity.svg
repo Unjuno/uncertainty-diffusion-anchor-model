@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+<title id="title">Boundary-risk sensitivity</title>
+<desc id="desc">Toy check: harsher boundary/correction settings shrink favorable expansion.</desc>
+<style>
+  text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1f2937; }
+  .title { font-size: 24px; font-weight: 700; }
+  .subtitle { font-size: 14px; fill: #4b5563; }
+  .axis { stroke: #111827; stroke-width: 1.4; }
+  .grid { stroke: #e5e7eb; stroke-width: 1; }
+  rect { fill: #2563eb; }
+  .tick { font-size: 11px; fill: #4b5563; }
+  .label { font-size: 14px; font-weight: 600; fill: #374151; }
+</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="100" y="38" class="title">Boundary-risk sensitivity</text>
+<text x="100" y="60" class="subtitle">Toy check: harsher boundary/correction settings reduce max favorable r_i.</text>
+<line x1="95" y1="490" x2="960" y2="490" class="grid"/><text x="90" y="494" class="tick" text-anchor="end">0</text>
+<line x1="95" y1="387" x2="960" y2="387" class="grid"/><text x="90" y="391" class="tick" text-anchor="end">1</text>
+<line x1="95" y1="285" x2="960" y2="285" class="grid"/><text x="90" y="289" class="tick" text-anchor="end">2</text>
+<line x1="95" y1="182" x2="960" y2="182" class="grid"/><text x="90" y="186" class="tick" text-anchor="end">3</text>
+<line x1="95" y1="80" x2="960" y2="80" class="grid"/><text x="90" y="84" class="tick" text-anchor="end">4</text>
+<line x1="100" y1="80" x2="100" y2="490" class="axis"/>
+<line x1="100" y1="490" x2="960" y2="490" class="axis"/>
+<rect x="110" y="80" width="45" height="410" rx="3"><title>a0.08 / c0.4: 4.0</title></rect>
+<rect x="165" y="80" width="45" height="410" rx="3"><title>a0.08 / c0.8: 4.0</title></rect>
+<rect x="220" y="182" width="45" height="308" rx="3"><title>a0.08 / c1.2: 3.0</title></rect>
+<rect x="275" y="80" width="45" height="410" rx="3"><title>a0.12 / c0.4: 4.0</title></rect>
+<rect x="330" y="182" width="45" height="308" rx="3"><title>a0.12 / c0.8: 3.0</title></rect>
+<rect x="385" y="285" width="45" height="205" rx="3"><title>a0.12 / c1.2: 2.0</title></rect>
+<rect x="440" y="182" width="45" height="308" rx="3"><title>a0.18 / c0.4: 3.0</title></rect>
+<rect x="495" y="285" width="45" height="205" rx="3"><title>a0.18 / c0.8: 2.0</title></rect>
+<rect x="550" y="285" width="45" height="205" rx="3"><title>a0.18 / c1.2: 2.0</title></rect>
+<rect x="605" y="285" width="45" height="205" rx="3"><title>a0.25 / c0.4: 2.0</title></rect>
+<rect x="660" y="285" width="45" height="205" rx="3"><title>a0.25 / c0.8: 2.0</title></rect>
+<rect x="715" y="490" width="45" height="0" rx="3"><title>a0.25 / c1.2: 0.0</title></rect>
+<rect x="770" y="336" width="45" height="154" rx="3"><title>a0.35 / c0.4: 1.5</title></rect>
+<rect x="825" y="490" width="45" height="0" rx="3"><title>a0.35 / c0.8: 0.0</title></rect>
+<rect x="880" y="490" width="45" height="0" rx="3"><title>a0.35 / c1.2: 0.0</title></rect>
+<text x="132" y="510" class="tick" text-anchor="end" transform="rotate(-55 132 510)">a0.08 / c0.4</text>
+<text x="187" y="510" class="tick" text-anchor="end" transform="rotate(-55 187 510)">a0.08 / c0.8</text>
+<text x="242" y="510" class="tick" text-anchor="end" transform="rotate(-55 242 510)">a0.08 / c1.2</text>
+<text x="297" y="510" class="tick" text-anchor="end" transform="rotate(-55 297 510)">a0.12 / c0.4</text>
+<text x="352" y="510" class="tick" text-anchor="end" transform="rotate(-55 352 510)">a0.12 / c0.8</text>
+<text x="407" y="510" class="tick" text-anchor="end" transform="rotate(-55 407 510)">a0.12 / c1.2</text>
+<text x="462" y="510" class="tick" text-anchor="end" transform="rotate(-55 462 510)">a0.18 / c0.4</text>
+<text x="517" y="510" class="tick" text-anchor="end" transform="rotate(-55 517 510)">a0.18 / c0.8</text>
+<text x="572" y="510" class="tick" text-anchor="end" transform="rotate(-55 572 510)">a0.18 / c1.2</text>
+<text x="627" y="510" class="tick" text-anchor="end" transform="rotate(-55 627 510)">a0.25 / c0.4</text>
+<text x="682" y="510" class="tick" text-anchor="end" transform="rotate(-55 682 510)">a0.25 / c0.8</text>
+<text x="737" y="510" class="tick" text-anchor="end" transform="rotate(-55 737 510)">a0.25 / c1.2</text>
+<text x="792" y="510" class="tick" text-anchor="end" transform="rotate(-55 792 510)">a0.35 / c0.4</text>
+<text x="847" y="510" class="tick" text-anchor="end" transform="rotate(-55 847 510)">a0.35 / c0.8</text>
+<text x="902" y="510" class="tick" text-anchor="end" transform="rotate(-55 902 510)">a0.35 / c1.2</text>
+<text x="530" y="595" class="label" text-anchor="middle">Boundary alpha / correction multiplier</text>
+<text x="28" y="285" class="label" transform="rotate(-90 28 285)" text-anchor="middle">Max favorable r_i</text>
+</svg>
