@@ -19,6 +19,7 @@ docs/46_readme_overview_compression_decision.md
 docs/47_remaining_work_register.md
 docs/49_extended_simulation_sanity_checks.md
 docs/50_visual_rendering_audit.md
+docs/51_release_history_routing_decision.md
 simulations/udam_extended_sanity_checks.py
 ```
 
@@ -28,14 +29,15 @@ Updated:
 README.md linked to AGENTS.md
 README.md linked stabilization-pass documents from Development notes
 ROADMAP.md recorded v0.20 through v0.25 stabilization milestones
-AGENTS.md updated after stabilization audits, draft cleanup, Japanese guardrail sync, simulation extension, and visual rendering audit
-docs/42_changelog_catchup_entry.md extended with 0.9.0 and 0.10.0 compact entries
+AGENTS.md updated after stabilization audits, draft cleanup, Japanese guardrail sync, simulation extension, visual rendering audit, and release-history routing decision
+docs/42_changelog_catchup_entry.md extended with 0.8.0 through 0.11.0 compact entries
 drafts/paper_outline.md added direct source-of-truth disclaimer and safer conditional wording
 drafts/blog_post_jp.md added direct source-of-truth disclaimer
 drafts/short_manifesto.md added direct source-of-truth disclaimer
 docs/ja/README.md clarified English source-of-truth status
 simulations/README.md linked extended toy checks
 assets/figures/README.md linked the visual rendering audit
+docs/47_remaining_work_register.md now treats direct CHANGELOG insertion as deferred rather than a public-release blocker
 ```
 
 ## Interpretation
@@ -57,6 +59,7 @@ draft-source-of-truth safety
 Japanese source-of-truth guardrails
 simulation-layer coverage as toy demonstration only
 visual-rendering discipline
+release-history routing discipline
 ```
 
 ## Decisions recorded
@@ -165,12 +168,21 @@ Current preferred render candidate if needed later:
 failure_decision_tree.mmd
 ```
 
-### 10. Remaining work
+### 10. Release-history routing
 
 Decision:
 
 ```text
-Remaining work is mostly release hygiene, full Japanese sync after English wording stabilizes, optional simulation plots or further toy sensitivity checks, and empirical validation only if a concrete study design exists.
+Do not treat direct CHANGELOG.md catch-up insertion as a public-release blocker.
+Use docs/42_changelog_catchup_entry.md as the catch-up ledger until CHANGELOG.md can be patched safely.
+```
+
+### 11. Remaining work
+
+Decision:
+
+```text
+Remaining work is mostly full Japanese sync after English wording stabilizes, optional simulation plots or further toy sensitivity checks, optional paper rewrite/citation insertion, and empirical validation only if a concrete study design exists.
 ```
 
 ## Current completion estimate
@@ -178,8 +190,8 @@ Remaining work is mostly release hygiene, full Japanese sync after English wordi
 Internal maintenance estimate:
 
 ```text
-public repository readiness: 91-93%
-paperization readiness: 63-67%
+public repository readiness: 92-94%
+paperization readiness: 64-68%
 empirical validation readiness: 10-15%
 ```
 
@@ -202,11 +214,13 @@ drafts present the model; drafts do not define the model
 Recommended next action:
 
 ```text
-Perform safe CHANGELOG catch-up insertion only if CHANGELOG.md can be patched without broad risky replacement.
+Full Japanese synchronization only after English wording stabilizes.
 ```
 
-If not, leave the catch-up entry in:
+Other optional work:
 
 ```text
-docs/42_changelog_catchup_entry.md
+simulation plots or further toy sensitivity checks
+full prose-level paper rewrite and citation insertion
+empirical validation design only with concrete domain and falsifiable criterion
 ```
