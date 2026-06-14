@@ -67,7 +67,7 @@ Use the following routing unless the maintainer changes it:
 | Practical protocol | `docs/14_practical_reanchor_protocol.md` | `docs/15_application_cautions.md`, `docs/16_adaptive_observation_cadence.md`, `docs/18_adaptive_expansion_factor.md` |
 | Failure boundaries | `docs/21_failure_decision_tree.md` | `docs/06_failure_cases.md`, `theory/counterexamples.md` |
 | Literature support | `docs/17_literature_support_map.md` | `notes/literature_verification.md`, `docs/22` through `docs/31` |
-| Visual explanation | `docs/32_visual_explanation_layer.md` | `assets/diagrams/`, `assets/figures/` |
+| Visual explanation | `docs/32_visual_explanation_layer.md` | `assets/diagrams/`, `assets/figures/`, `docs/50_visual_rendering_audit.md` |
 | Simulation sanity checks | `docs/39_simulation_sanity_checks.md`, `docs/49_extended_simulation_sanity_checks.md` | `simulations/` |
 | Changelog policy | `docs/41_changelog_maintenance_policy.md` | `docs/42_changelog_catchup_entry.md` |
 | Notation audit | `docs/43_notation_consistency_audit.md` | `theory/variables.md`, `theory/propositions.md`, `theory/proofs.md` |
@@ -147,6 +147,12 @@ Rendered reader-facing figures live in:
 
 ```text
 assets/figures/
+```
+
+Older diagram rendering decisions route through:
+
+```text
+docs/50_visual_rendering_audit.md
 ```
 
 When editing figures, update the Mermaid source first when possible, then render the SVG output.
@@ -302,10 +308,9 @@ Good next tasks:
 
 ```text
 1. Safe CHANGELOG catch-up insertion only if a patch-safe path is available.
-2. Optional older diagram rendering.
-3. Full Japanese synchronization only after English wording stabilizes.
-4. Optional simulation plots or further toy sensitivity checks, still labeled toy demonstrations / sanity checks.
-5. Empirical validation only with a concrete domain, operationalized variables, data plan, and falsifiable criterion.
+2. Full Japanese synchronization only after English wording stabilizes.
+3. Optional simulation plots or further toy sensitivity checks, still labeled toy demonstrations / sanity checks.
+4. Empirical validation only with a concrete domain, operationalized variables, data plan, and falsifiable criterion.
 ```
 
 Tasks no longer immediate blockers after the latest stabilization pass:
@@ -320,6 +325,7 @@ remaining-work register
 paper draft cleanup first pass
 minimal Japanese source-of-truth guardrail
 extended toy simulation pass
+older diagram rendering audit
 ```
 
 Bad next tasks:
