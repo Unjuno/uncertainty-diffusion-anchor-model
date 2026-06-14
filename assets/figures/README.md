@@ -16,6 +16,23 @@ Rendered figures are secondary outputs for easier reading, embedding, and presen
 | `expansion_boundary_risk.svg` | `../diagrams/expansion_boundary_risk.mmd` | expansion factor selection under boundary-risk constraints |
 | `literature_support_map.svg` | `../diagrams/literature_support_map.mmd` | direct, partial, analogy-only, avoid, and UDAM-specific support categories |
 
+## Older diagram rendering
+
+Older Mermaid diagrams remain editable source files unless they become directly reader-facing.
+
+See:
+
+```text
+docs/50_visual_rendering_audit.md
+```
+
+Current decision:
+
+```text
+Do not render every older Mermaid diagram now.
+Render older diagrams only when a publication, export, or reader-facing route needs them.
+```
+
 ## Source policy
 
 Do not edit rendered figures as the primary source.
