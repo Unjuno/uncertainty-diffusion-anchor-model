@@ -1,12 +1,29 @@
 # 48 Stabilization Pass Summary
 
-This document summarizes the stabilization pass that followed the creation of `AGENTS.md`.
+This document summarizes the repository stabilization pass after `AGENTS.md` was added.
 
-The purpose is to record what changed without turning `CHANGELOG.md` into a micro-edit ledger.
+The purpose is to record repository-completion work without turning `CHANGELOG.md` into a micro-edit ledger.
+
+## Current scope
+
+Current scope:
+
+```text
+GitHub repository completion and stabilization
+```
+
+Not current scope:
+
+```text
+new theory expansion
+external-posting drafts
+paperization
+empirical validation
+```
 
 ## Summary
 
-This pass focused on repository stability, not new theory.
+This pass focused on repository stability.
 
 Added:
 
@@ -26,55 +43,26 @@ simulations/udam_extended_sanity_checks.py
 Updated:
 
 ```text
-README.md linked to AGENTS.md
-README.md linked stabilization-pass documents from Development notes
+README.md linked to AGENTS.md and stabilization documents
 ROADMAP.md recorded v0.20 through v0.25 stabilization milestones
-AGENTS.md updated after stabilization audits, draft cleanup, Japanese guardrail sync, simulation extension, visual rendering audit, and release-history routing decision
-docs/42_changelog_catchup_entry.md extended with 0.8.0 through 0.11.0 compact entries
-drafts/paper_outline.md added direct source-of-truth disclaimer and safer conditional wording
-drafts/blog_post_jp.md added direct source-of-truth disclaimer
-drafts/short_manifesto.md added direct source-of-truth disclaimer
-docs/ja/README.md clarified English source-of-truth status
-simulations/README.md linked extended toy checks
-assets/figures/README.md linked the visual rendering audit
-docs/47_remaining_work_register.md now treats direct CHANGELOG insertion as deferred rather than a public-release blocker
-```
-
-## Interpretation
-
-This pass does not prove UDAM.
-
-This pass does not empirically validate UDAM.
-
-This pass improves:
-
-```text
-source-of-truth routing
-future-agent editing safety
-notation consistency tracking
-expansion/contraction wording discipline
-publication-readiness judgment
-remaining-work prioritization
-draft-source-of-truth safety
-Japanese source-of-truth guardrails
-simulation-layer coverage as toy demonstration only
-visual-rendering discipline
-release-history routing discipline
+AGENTS.md now narrows future work to repository completion
+docs/42_changelog_catchup_entry.md stores 0.8.0 through 0.11.0 compact entries
+drafts now state downstream/source-of-truth status directly
+docs/ja/README.md clarifies English source-of-truth status
+simulations/README.md links extended toy checks
+assets/figures/README.md links visual rendering audit
+docs/47_remaining_work_register.md narrows remaining work to repository completion
 ```
 
 ## Decisions recorded
 
 ### 1. Agent guidance
 
-Decision:
-
 ```text
-Future agents should treat the project as being in stabilization mode, not theory-expansion mode.
+Future agents should treat the project as GitHub repository completion and stabilization, not theory expansion.
 ```
 
 ### 2. Notation audit
-
-Decision:
 
 ```text
 No notation conflict currently breaks the model.
@@ -83,25 +71,19 @@ The main weakness is local index role clarity, especially around i.
 
 ### 3. Contraction rule
 
-Decision:
-
 ```text
 Do not add a new contraction equation now.
 Treat failed expansion tests as reduce, pause, re-observe, stop, or switch under existing value and boundary-risk conditions.
 ```
 
-### 4. Publication readiness
-
-Decision:
+### 4. Repository readiness
 
 ```text
-The repository is close to publishable as a scoped theory repository.
-It is not publishable as a validated empirical theory or high-stakes decision protocol.
+The repository is close to complete as a scoped GitHub theory repository.
+It is not a formal validation package.
 ```
 
 ### 5. README / overview compression
-
-Decision:
 
 ```text
 No immediate broad compression is required.
@@ -110,79 +92,36 @@ Future compression should be targeted and routing-preserving.
 
 ### 6. Draft cleanup
 
-Decision:
-
 ```text
-Draft files should state their downstream status directly, not only through drafts/README.md.
-```
-
-Completed first pass:
-
-```text
-drafts/paper_outline.md
-drafts/blog_post_jp.md
-drafts/short_manifesto.md
+Draft files should state their downstream status directly.
+Do not continue paperization or external-publication drafting unless explicitly requested.
 ```
 
 ### 7. Japanese guardrail sync
 
-Decision:
-
 ```text
-Japanese docs may clarify source-of-truth status now, but full Japanese expansion remains deferred.
-```
-
-Completed minimal guardrail sync:
-
-```text
-docs/ja/README.md
+Japanese docs may clarify source-of-truth status now.
+Full Japanese expansion remains deferred unless needed for repository readability.
 ```
 
 ### 8. Extended toy simulations
-
-Decision:
 
 ```text
 Simulation extensions may add toy sanity checks, but must not claim empirical validation.
 ```
 
-Completed extended toy pass:
-
-```text
-repeated-checking MOV_i
-boundary-risk sensitivity
-```
-
 ### 9. Visual rendering audit
-
-Decision:
 
 ```text
 Do not render every older Mermaid diagram now.
-Render older diagrams only when a publication, export, or reader-facing route needs them.
-```
-
-Current preferred render candidate if needed later:
-
-```text
-failure_decision_tree.mmd
+Render older diagrams only when a repository-facing route needs them.
 ```
 
 ### 10. Release-history routing
 
-Decision:
-
 ```text
 Do not treat direct CHANGELOG.md catch-up insertion as a public-release blocker.
 Use docs/42_changelog_catchup_entry.md as the catch-up ledger until CHANGELOG.md can be patched safely.
-```
-
-### 11. Remaining work
-
-Decision:
-
-```text
-Remaining work is mostly full Japanese sync after English wording stabilizes, optional simulation plots or further toy sensitivity checks, optional paper rewrite/citation insertion, and empirical validation only if a concrete study design exists.
 ```
 
 ## Current completion estimate
@@ -190,9 +129,12 @@ Remaining work is mostly full Japanese sync after English wording stabilizes, op
 Internal maintenance estimate:
 
 ```text
-public repository readiness: 92-94%
-paperization readiness: 64-68%
-empirical validation readiness: 10-15%
+GitHub repository completion: 94-96%
+repository readability / navigation: 92-94%
+guardrail and source-of-truth routing: 95%+
+toy simulation demonstration layer: 75-80%
+empirical validation: out of scope for this repository-completion pass
+paperization: out of scope for this repository-completion pass
 ```
 
 These are not external validation metrics.
@@ -214,13 +156,12 @@ drafts present the model; drafts do not define the model
 Recommended next action:
 
 ```text
-Full Japanese synchronization only after English wording stabilizes.
+Repository completion check across README, ROADMAP, AGENTS, docs/47, docs/48, simulations/README, and docs/ja/README.
 ```
 
-Other optional work:
+Other optional repository-only work:
 
 ```text
-simulation plots or further toy sensitivity checks
-full prose-level paper rewrite and citation insertion
-empirical validation design only with concrete domain and falsifiable criterion
+full Japanese synchronization only if needed for repository readability
+repository-facing simulation plots or further toy sensitivity checks
 ```
