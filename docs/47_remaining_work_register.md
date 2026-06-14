@@ -1,6 +1,6 @@
 # 47 Remaining Work Register
 
-This document records the remaining work after the first-pass agent guidance, notation audit, contraction-rule decision, publication-readiness audit, README/overview compression decision, roadmap update, changelog catch-up preparation, draft cleanup pass, minimal Japanese sync guardrail, extended toy simulation pass, visual rendering audit, and release-history routing decision.
+This document records the remaining work after the first-pass agent guidance, notation audit, contraction-rule decision, publication-readiness audit, README/overview compression decision, roadmap update, changelog catch-up preparation, draft cleanup pass, minimal Japanese sync guardrail, extended toy simulation pass, visual rendering audit, release-history routing decision, and repository completion check.
 
 The purpose is to keep the project in stabilization mode.
 
@@ -16,6 +16,7 @@ Completed in the latest stabilization pass:
 AGENTS.md added
 README linked to AGENTS.md
 README linked stabilization-pass documents from Development notes
+README repository status refreshed for repository-completion scope
 ROADMAP.md recorded v0.20 through v0.25 stabilization milestones
 docs/42_changelog_catchup_entry.md extended with 0.8.0 through 0.11.0 compact entries
 docs/43_notation_consistency_audit.md added
@@ -23,6 +24,7 @@ docs/44_contraction_rule_decision.md added
 docs/45_publication_readiness_audit.md added
 docs/46_readme_overview_compression_decision.md added
 docs/48_stabilization_pass_summary.md added
+docs/53_repository_completion_check.md added
 drafts/paper_outline.md source-of-truth disclaimer added and abstract wording softened
 drafts/blog_post_jp.md source-of-truth disclaimer added
 drafts/short_manifesto.md source-of-truth disclaimer added
@@ -45,13 +47,15 @@ docs/51_release_history_routing_decision.md added
 Status:
 
 ```text
-active
+first-pass complete
 ```
 
-Action:
+Completed:
 
 ```text
-Ensure README, ROADMAP, AGENTS, docs/47, docs/48, simulations/README, and docs/ja/README agree on the repository's current status and limits.
+docs/53_repository_completion_check.md added.
+README.md repository status refreshed.
+AGENTS.md and docs/48 now narrow scope to GitHub repository completion and stabilization.
 ```
 
 Do not:
@@ -251,6 +255,7 @@ draft source-of-truth disclaimer insertion
 minimal Japanese source-of-truth guardrail
 extended toy simulation pass
 older diagram rendering audit
+repository completion check
 ```
 
 ## Current release posture
@@ -258,7 +263,7 @@ older diagram rendering audit
 Repository can be treated as:
 
 ```text
-a mostly stabilized GitHub theory repository with clear guardrails
+a mostly completed GitHub theory repository with clear guardrails
 ```
 
 Repository should not be treated as:
